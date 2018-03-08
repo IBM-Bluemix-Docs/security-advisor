@@ -1,0 +1,15 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="security-advisor" audience="security" href="/docs/services/security-advisor/index.html"}
+Security Advisor
+
+    {: .navgroup id="learn"}
+    index.md
+    about.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    setup.md
+    {: .navgroup-end}
+
