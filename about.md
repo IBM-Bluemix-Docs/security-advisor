@@ -43,5 +43,5 @@ The Service CRN identifies the {{site.data.keyword.Bluemix_notm}} service involv
 - For Network Analytics findings, the service CRN is the Kubernetes cluster CRN.
 - For Vulnerability Advisor findings, the service CRN is the Container CRN.
 
-**Resource CRN**
+**Resource CRN**  
 The resource CRN identifies the resource involved in the finding.
