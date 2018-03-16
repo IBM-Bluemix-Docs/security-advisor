@@ -18,7 +18,7 @@ lastupdated: "2018-03-16"
 # Related links
 {: #rellinks}
 
-Use these other resources for information about {{site.data.keyword.Bluemix}} Security Advisor.
+You can use the following related links to learn more about and interact with {{site.data.keyword.Bluemix}} Security Advisor.
 {:shortdesc}
 
 Links related to the user interface:
