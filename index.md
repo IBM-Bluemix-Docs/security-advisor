@@ -21,11 +21,10 @@ lastupdated: "2018-03-16"
 Hit the ground running with {{site.data.keyword.Bluemix}} Security Advisor.
 {:shortdesc}
 
-1. [Log in to {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net).
+1. [Log in to {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net)
 2. In the dashboard menu, select **Security**
 3. In the Security Advisor tile, click **Launch Advisor**
-4. View security information from integrated tools.
-
+4. View security information from integrated tools
 
 
 Don't have any tools yet? With a few setup steps you can monitor:
