@@ -13,6 +13,8 @@ IBM Cloud Security Advisor
     Built-in insights
         network-insights.md
         activity-insights.md
+
+    demo-nmap.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
