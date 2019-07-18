@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-06-24"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -38,7 +37,7 @@ Avec {{site.data.keyword.security-advisor_long}}, vous pouvez explorer les probl
 {: shortdesc}
 
 
-Clé en main, {{site.data.keyword.security-advisor_short}} s'intègre à :
+Clé en main, {{site.data.keyword.security-advisor_short}} peut s'intégrer à :
 
 * Certificate Manager pour les notifications liées au cycle de vie et à l'expiration des certificats.
 * Vulnerability Advisor pour les détails relatifs à la vulnérabilité des images et aux problèmes de configuration.
@@ -71,9 +70,9 @@ Pour de l'aide afin de configurer votre instance NeuVector, voir [Solutions part
 ### Twistlock
 {: #integrate-twistlock}
 
-[Twistlock](https://www.twistlock.com){: external} est le seul à pouvoir prévenir les risques dans l'ensemble du SDLC en empêchant le déploiement d'images vulnérables dans votre environnement. L'application de règles automatisées et personnalisées permet un contrôle complet à chaque étape du cycle de vie de l'application.? Twistlock Intelligence Stream identifie et agrège les informations relatives à la vulnérabilité directement depuis 30 projets en amont (ou plus), sources commerciales et recherche exclusive des laboratoires Twistlock.
+[Twistlock](https://www.twistlock.com){: external} est le seul à pouvoir prévenir les risques dans l'ensemble du SDLC en empêchant le déploiement d'images vulnérables dans votre environnement. L'application de règles automatisées et personnalisées permet un contrôle complet à chaque étape du cycle de vie de l'application.? Twistlock Intelligence Stream identifie et agrège les informations relatives à la vulnérabilité directement depuis 30 projets en amont (ou plus), sources commerciales et recherche exclusive des laboratoires Twistlock.
 
-La priorité est de disposer des données les plus précises possible afin de couvrir toutes les couches de votre pile et de bénéficier d'une visibilité parfaite et du taux de faux positifs le plus faible.??Twistlock combine ces données avec les informations relatives aux déploiements réels, par exemple les conteneurs qui sont exposés sur Internet, ceux qui s'exécutent avec des privilèges élevés, et ceux pour lesquels des mesures de sécurité sont en place ; ainsi, vous savez toujours quelles sont les vulnérabilités les plus critiques dans votre environnement particulier.
+La priorité est de disposer des données les plus précises possible afin de couvrir toutes les couches de votre pile et de bénéficier d'une visibilité parfaite et du taux de faux positifs le plus faible.?? Twistlock combine ces données avec les informations relatives aux déploiements réels, par exemple les conteneurs qui sont exposés sur Internet, ceux qui s'exécutent avec des privilèges élevés, et ceux pour lesquels des mesures de sécurité sont en place ; ainsi, vous savez toujours quelles sont les vulnérabilités les plus critiques dans votre environnement particulier.
 
 Pour de l'aide afin de configurer votre instance NeuVector, voir [Solutions partenaires](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-twistlock).
 </br>

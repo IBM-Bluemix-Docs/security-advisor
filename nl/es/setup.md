@@ -2,11 +2,10 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -46,7 +45,7 @@ Obtenga más información acerca de [{{site.data.keyword.registryshort_notm}}](/
 {: #setup-before}
 
 Para poder empezar a trabajar con el registro, asegúrese de que tiene instaladas las siguientes CLI y plugins:
-* [La CLI de {{site.data.keyword.cloud_notm}})](/docs/cli?topic=cloud-cli-ibmcloud-cli)
+* [La CLI de {{site.data.keyword.cloud_notm}})](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 * El plugin Container Registry.
 
   ```

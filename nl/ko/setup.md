@@ -2,11 +2,10 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -46,7 +45,7 @@ lastupdated: "2019-06-05"
 {: #setup-before}
 
 레지스트리를 시작하기 전에 다음 CLI 및 플러그인이 설치되었는지 확인하십시오.
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 * 컨테이너 레지스트리 플러그인입니다.
 
   ```

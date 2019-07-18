@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -48,7 +47,7 @@ Avant de commencer à utiliser Activity Insights, assurez-vous de disposer des p
     ```
     {: codeblock}     
 - Le fichier binaire cURL mis à jour : pour CentOS et Red Hat, vous pouvez effectuer la mise à jour en exécutant `yum update -y nss curl libcurl`.
-- L'interface de ligne de commande [{{site.data.keyword.cloud_notm}} et les plug-in requis](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+- L'interface de ligne de commande [{{site.data.keyword.cloud_notm}} et les plug-in requis](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli).
 - L'[interface de ligne de commande Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} version 1.10.11 ou ultérieure.
 - Le [gestionnaire de package Kubernetes Helm](/docs/containers?topic=containers-helm) version 2.9.0 ou ultérieure.
 - Un cluster Kubernetes standard version 1.10.11 ou ultérieure.

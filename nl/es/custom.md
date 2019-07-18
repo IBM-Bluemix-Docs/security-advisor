@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-08"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -35,7 +35,7 @@ subcollection: security-advisor
 
 Para poder integrar hallazgos de la herramienta de terceros, asegúrese de cumplir los siguientes requisitos previos.
 
-1. Asegúrese de que el ID de usuario o de servicio que utiliza tiene asignado el [rol de IAM](https://cloud.ibm.com/iam#/users) de **Gestor**.
+1. Asegúrese de que el ID de usuario o de servicio que utiliza tiene asignado el [rol de IAM](https://cloud.ibm.com/iam/users){: external} de **Gestor**.
 
 2. Inicie sesión en {{site.data.keyword.cloud_notm}}.
 
@@ -123,7 +123,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 Respuesta de ejemplo:
 
 ```
-  {
+{
   "author": {
     "account_id": "account id",
       "email": "email id",
@@ -409,11 +409,11 @@ Ejemplo de carga útil:
 	"finding": {
 		"severity": "HIGH",
 		"next_steps": [{
-			"title": "Investigate which process are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
+			"title": "Investigate which processes are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
                         "url":"https://cloud.ibm.com/containers-kubernetes/clusters"
 		}],
-                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data",
-                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior"
+                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data.",
+                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior."
 	}
 }
 ```

@@ -2,11 +2,10 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -46,7 +45,7 @@ lastupdated: "2019-06-05"
     ```
     {: codeblock}     
 - 已更新 cURL 二進位：針對 CentOS 及 Red Hat，您可以執行 `yum update -y nss curl libcurl` 進行更新。
-- [{{site.data.keyword.cloud_notm}} CLI 及必要的外掛程式](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
+- [{{site.data.keyword.cloud_notm}} CLI 及必要的外掛程式](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 - [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} 1.10.11 版或更新版本
 - [Kubernetes Helm（套件管理程式）](/docs/containers?topic=containers-helm)2.9.0 版或更新版本。
 - 標準 Kubernetes 叢集 1.10.11 版或更新版本

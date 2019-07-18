@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-08"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -35,7 +35,7 @@ Avec {{site.data.keyword.security-advisor_short}}, vous pouvez intégrer vos out
 
 Avant d'intégrer les résultats de votre outil tiers, assurez-vous que les conditions préalables suivantes sont remplies.
 
-1. Assurez-vous que l'ID utilisateur ou l'ID de service que vous utilisez possède le [rôle IAM](https://cloud.ibm.com/iam#/users) **Gestionnaire**.
+1. Assurez-vous que l'ID utilisateur ou l'ID de service que vous utilisez possède le [rôle IAM](https://cloud.ibm.com/iam/users){: external} **Gestionnaire**.
 
 2. Connectez-vous à {{site.data.keyword.cloud_notm}}.
 
@@ -73,7 +73,7 @@ Les API suivent les spécifications d'API de métadonnées d'artefact de type Gr
 ### Etape 1 : Enregistrement d'un nouveau type de résultat
 {: #custom-register-finding}
 
-Pour enregistrer un nouveau type de résultats, vous pouvez créer une note. Pour créer la note, vous pouvez utiliser l'[API Findings](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Notes/createNote){: external}. Assurez-vous de choisir un ID de fournisseur unique afin d'identifier votre outil personnalisé. Si vous automatisez le processus, utilisez votre ID de service comme ID de fournisseur. 
+Pour enregistrer un nouveau type de résultats, vous pouvez créer une note. Pour créer la note, vous pouvez utiliser l'[API Findings](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Notes/createNote){: external}. Assurez-vous de choisir un ID de fournisseur unique afin d'identifier votre outil personnalisé. Si vous automatisez le processus, utilisez votre ID de service comme ID de fournisseur.
 
 Exemple de demande :
 
@@ -122,7 +122,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 Exemple de réponse :
 
 ```
-  {
+{
   "author": {
     "account_id": "account id",
       "email": "email id",
@@ -183,8 +183,8 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | Général | Description | 
 |:-----------------|:-----------------|
 | `kind` | `FINDING` |
-| `short_description` |Brève description qui récapitule le résultat (un ou deux mots maximum).|
-| `long_description` |Description plus longue qui fournit davantage de détails sur le résultat.|
+| `short_description` | Brève description qui récapitule le résultat (un ou deux mots maximum). |
+| `long_description` | Description plus longue qui fournit davantage de détails sur le résultat. |
 | `provider_id` | Votre outil de sécurité personnalisé. |
 | `id` | ID du type de résultat trouvé par votre outil de sécurité. |
 {: class="simple-tab-table"}
@@ -280,8 +280,8 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 |:-----------------|:-----------------|
 | `provider_id` | ID de votre outil de sécurité. |
 | `id` | ID du type de résultat trouvé par votre outil de sécurité. |
-| `short_description` |Brève description qui récapitule le résultat (un ou deux mots maximum).|
-| `long_description` |Description plus longue qui fournit davantage de détails sur le résultat.|
+| `short_description` | Brève description qui récapitule le résultat (un ou deux mots maximum). |
+| `long_description` | Description plus longue qui fournit davantage de détails sur le résultat. |
 {: class="simple-tab-table"}
 {: caption="Tableau 1. Description des composants généraux de la commande" caption-side="top"}
 {: #definecard1}
@@ -302,8 +302,8 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 |:-----------------|:-----------------|
 | `section` | Section dans laquelle vous souhaitez que la carte s'affiche. Vous pouvez avoir jusqu'à trois sections personnalisées avec six cartes dans chaque section. Nombre maximal de caractères : 30  |
 | Facultatif : `order` | Ordre dans lequel la carte est affichée au sein de la section spécifiée. L'ordre est spécifié dans une plage de 1 à 6. Si vous choisissez un numéro qui est déjà appliqué à une autre carte, la création échoue. Vous recevez le message d'erreur "Given order is already taken by other card in section." Si l'ordre fourni est supérieur au nombre de cartes actuelles plus 1, la création de carte échoue. Par exemple, si vous avez actuellement deux cartes et en créez une autre, vous ne pouvez pas spécifiez 5 dans l'ordre des cartes car vous n'avez que trois cartes au total. Si l'ordre de vos cartes n'est pas spécifié, elles sont classées par ordre alphabétique dans la section correspondante. |
-| `title` | Titre que vous souhaitez donner à votre carte. Nombre maximal de caractères : 28  |
-| `subtitle` | Sous-titre que vous souhaitez donner à votre carte. Nombre maximal de caractères : 30  |
+| `title` | Titre que vous souhaitez donner à votre carte. Nombre maximal de caractères : 28 |
+| `subtitle` | Sous-titre que vous souhaitez donner à votre carte. Nombre maximal de caractères : 30 |
 | `finding_note_names` | `providers//notes/my-custom-tool-findings-type` |
 {: class="simple-tab-table"}
 {: caption="Tableau 3. Description des composants de carte de la commande" caption-side="top"}
@@ -408,11 +408,11 @@ Exemple de contenu :
 	"finding": {
 		"severity": "HIGH",
 		"next_steps": [{
-			"title": "Investigate which process are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
+			"title": "Investigate which processes are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
                         "url":"https://cloud.ibm.com/containers-kubernetes/clusters"
 		}],
-                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data",
-                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior"
+                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data.",
+                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior."
 	}
 }
 ```

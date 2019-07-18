@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-08"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -35,7 +35,7 @@ Mit {{site.data.keyword.security-advisor_short}} können Sie Ihre vorhandenen an
 
 Stellen Sie vor dem Integrieren von Ergebnissen Ihres Drittanbietertools sicher, dass die folgenden Voraussetzungen erfüllt sind.
 
-1. Stellen Sie sicher, dass der Benutzer- oder Service-ID, die Sie verwenden, die [IAM-Rolle](https://cloud.ibm.com/iam#/users) **Manager** zugewiesen ist.
+1. Stellen Sie sicher, dass der Benutzer- oder Service-ID, die Sie verwenden, die [IAM-Rolle](https://cloud.ibm.com/iam/users){: external} eines **Managers** zugewiesen ist. 
 
 2. Melden Sie sich bei {{site.data.keyword.cloud_notm}} an.
 
@@ -122,7 +122,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<Konto-ID>/p
 Beispielantwort:
 
 ```
-  {
+{
   "author": {
     "account_id": "account id",
       "email": "email id",
@@ -300,7 +300,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<Konto-ID>/p
 
 | Karte | Beschreibung | 
 |:-----------------|:-----------------|
-| `section` | Abschnitt, in dem die Karte angezeigt werden soll. Es sind bis zu drei angepasste Abschnitte mit jeweils sechs Karten möglich. Maximale Anzahl Zeichen: 30 |
+| `section` | Abschnitt, in dem die Karte angezeigt werden soll. Es sind bis zu drei angepasste Abschnitte mit jeweils sechs Karten möglich. Maximale Anzahl Zeichen: 30  |
 | Optional: `order` | Reihenfolge, in der die Karten im angegebenen Abschnitt angezeigt werden. Die Reihenfolge wird mit den Zahlen 1 - 6 angegeben. Bei der Auswahl einer Zahl, die bereits für eine andere Karte angewendet wird, schlägt die Erstellung fehl. Sie erhalten die Fehlernachricht "Die angegebene Position in der Reihenfolge wird bereits für eine andere Karte im Abschnitt verwendet". Wenn die Angabe größer ist als die aktuelle Kartenanzahl plus 1, schlägt die Kartenerstellung fehl. Beispiel: Wenn 2 Karten vorhanden sind und Sie eine weitere erstellen, kann für die Position in der Reihenfolge nicht 5 angegeben werden, da insgesamt nur drei Karten vorhanden sind. Wird keine Reihenfolge für die Karten angegeben, werden sie im zugewiesenen Abschnitt alphabetisch aufgeführt. |
 | `title` | Der gewünschte Titel für die Karte. Maximale Anzahl Zeichen: 28 |
 | `subtitle` | Der gewünschte Untertitel für die Karte. Maximale Anzahl Zeichen: 30 |
@@ -316,7 +316,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<Konto-ID>/p
 | `kind` | Folgende Optionen sind möglich: `NUMERIC`, `TIME_SERIES` und `BREAKDOWN`. |
 | `text` | Der Text, der angezeigt werden soll. Bei der Angabe `NUMERIC` beträgt die maximale Anzahl 60 Zeichen. Bei der Angabe `TIME_SERIES` oder `BREAKDOWN` beträgt die maximale Anzahl 65 Zeichen. |
 | `default_time_range` | Der Zeitraum, der überprüft werden soll. Die Werte werden in Tagen festgelegt. Aktuelle Optionen: `1d`, `2d`, `3d` und `4d`. |
-| `value_type` | Die Art des Elements. Bei der Angabe `NUMERIC` lautet das Feld `value_type` und es sind bis zu vier Elemente pro Karte möglich. Bei der Angabe `TIME_SERIES` oder `BREAKDOWN` lautet das Feld `value_types`. Die maximale Anzahl sowohl für `TIME_SERIES` als auch für `BREAKDOWN` ist 1. Wenn nur numerische Einträge vorhanden sind, sind bis zu vier Elemente pro Karte möglich. Wenn Sie eine Kombination verwenden möchten, sind bis zu zwei numerische Einträge und ein Eintrag des Typs 'Zeitreihe' oder 'Aufgliederung' möglich. Es ist nicht möglich, sowohl Einträge des Typs 'Zeitreihe' als auch Einträge des Typs 'Aufgliederung' auf derselben Karte zu verwenden. Wenn Sie die Werttypen als Array für Zeitreihen definieren, sind bis zu drei Einträge möglich. |
+| `value_type` | Die Art des Elements. Bei der Angabe `NUMERIC` lautet das Feld `value_type` und es sind bis zu vier Elemente pro Karte möglich. Bei der Angabe `TIME_SERIES` oder `BREAKDOWN` lautet das Feld `value_types`. Die maximale Anzahl sowohl für `TIME_SERIES` als auch für `BREAKDOWN` ist 1. Wenn nur numerische Einträge vorhanden sind, sind bis zu vier Elemente pro Karte möglich. Wenn Sie eine Kombination verwenden möchten, sind bis zu zwei numerische Einträge und ein Eintrag des Typs 'Zeitreihe' oder 'Aufgliederung' möglich. Es ist nicht möglich, sowohl Einträge des Typs 'Zeitreihe' als auch Einträge des Typs 'Aufgliederung' auf derselben Karte zu verwenden. Wenn Sie die Werttypen als Array für Zeitreihen definieren, sind bis zu drei Einträge möglich.  |
 | `value_type`: `kind` | Der Typ des Werts. Folgende Optionen sind möglich: `KRI` und `FINDING_COUNT`. |
 | `value_type`: `finding_note_names` | Wenn für `kind` die Angabe `FINDING_COUNT` festgelegt wird, ist dies der Name der Untersuchungsergebnisse für die Anzeige auf der Karte. Die Angabe erfolgt als Array. |
 | `value_type`: `kri_note_names` | Wenn für `kind` die Angabe `FINDING_COUNT` festgelegt wird, ist dies der Name der Untersuchungsergebnisse für die Anzeige auf der Karte. Die Angabe erfolgt als Array. |
@@ -413,7 +413,7 @@ Beispielnutzdaten:
 		}],
                 "short_description": "Einer der Pods in Ihrem Cluster scheint übermäßig viele Daten zu verlieren.",
                 "long_description": "Einer der Pods in Ihrem Cluster nimmt Kontakt mit externen Servern auf und sendet ihnen Daten mit einem Volumen, das das normale Verhalten des Pods überschreitet."
-	}
+}
 }
 ```
 {: screen}

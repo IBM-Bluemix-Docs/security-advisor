@@ -2,11 +2,10 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -33,7 +32,7 @@ lastupdated: "2019-06-05"
 
 Network Analytics 기능을 현재 사용중인 경우 Network Insights를 설치하기 전에 [서비스 컴포넌트를 삭제](/docs/services/security-advisor?topic=security-advisor-setup-network#uninstall-analytics)해야 합니다. Network Insights를 시작하려면 다음 필수 소프트웨어가 있어야 합니다.
 
-- Windows 10에서 작업하고 있는 경우 Linux용 Windows Subsystem을 활성화하고 [Ubuntu 쉘](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external}을 설치하십시오. 
+- Windows 10에서 작업하고 있는 경우 Linux용 Windows Subsystem을 활성화하고 [Ubuntu 쉘](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external}을 설치하십시오.
 - yq CLI 설치:
   * [macOS와 Windows 10의 경우](http://mikefarah.github.io/yq/){: external}.
   * CentOS, Red Hat 및 Ubuntu의 경우 다음 명령을 실행하여 버전 1.15를 설치하십시오.
@@ -46,7 +45,7 @@ Network Analytics 기능을 현재 사용중인 경우 Network Insights를 설�
     ```
     {: codeblock}     
 - 업데이트된 cURL 바이너리: CentOS와 Red Hat의 경우 `yum update -y nss curl libcurl`을 실행하여 업데이트할 수 있습니다.
-- [{{site.data.keyword.cloud_notm}} CLI 및 필수 플러그인](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
+- [{{site.data.keyword.cloud_notm}} CLI 및 필수 플러그인](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 - [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} v1.10.11 이상
 - [Kubernetes Helm(패키지 관리자)](/docs/containers?topic=containers-helm) v2.9.0 이상.
 - 표준 Kubernetes 클러스터 버전 v1.10.11 이상
@@ -105,46 +104,46 @@ Kubernetes 클러스터에서 네트워크 플로우 로그를 수집하는 에�
     ```
     {: codeblock}
 
-  2. `가져오기`로 시작하는 출력을 복사한 후 터미널에 붙여넣어 `KUBECONFIG` 환경 변수를 설정하십시오.
+  2. `export`로 시작하는 출력을 복사한 후 터미널에 붙여넣어 `KUBECONFIG` 환경 변수를 설정하십시오.
 
-3. Kubernetes 클러스터의 버전을 가져오십시오. 
+3. Kubernetes 클러스터의 버전을 가져오십시오.
 
   ```
   kube_version=$(kubectl version --output json) echo $(echo $kube_version | yq r - serverVersion.major).$(echo $kube_version | yq r - serverVersion.minor)
   ```
   {: codeblock}
 
-3. Kubernetes Service v1.12.x를 사용 중인 경우 다음 명령을 사용하여 Helm을 설치하십시오. 이 버전을 사용하지 않는 경우 [공용 액세스로 클러스터에서 Helm을 설정](/docs/containers?topic=containers-helm#public_helm_install)하기 위해 수행해야 하는 설치 단계를 Kubernetes 문서에서 확인하십시오. 
+3. Kubernetes Service v1.12.x를 사용 중인 경우 다음 명령을 사용하여 Helm을 설치하십시오. 이 버전을 사용하지 않는 경우 [공용 액세스로 클러스터에서 Helm을 설정](/docs/containers?topic=containers-helm#public_helm_install)하기 위해 수행해야 하는 설치 단계를 Kubernetes 문서에서 확인하십시오.
 
-  1. 기존 배치를 삭제하십시오. 
+  1. 기존 배치를 삭제하십시오.
 
     ```
     kubectl delete deployment tiller-deploy -n kube-system
     ```
     {: codeblock}
 
-  2. Tiller RBAC 정책을 배치에 적용하십시오. 
+  2. Tiller RBAC 정책을 배치에 적용하십시오.
 
     ```
     kubectl apply -f https://raw.githubusercontent.com/IBM-Cloud/kube-samples/master/rbac/serviceaccount-tiller.yaml
     ```
     {: codeblock}
   
-  3. 클러스터에서 Helm을 초기화한 후 클러스터에 Tiller를 설치하십시오. 
+  3. 클러스터에서 Helm을 초기화한 후 클러스터에 Tiller를 설치하십시오.
 
     ```
     helm init --service-account tiller
     ```
     {: codeblock}
 
-  4. `tiller-deploy` 팟(Pod)의 상태가 `running`인지 확인하여 설치에 성공했는지 확인하십시오. 
+  4. `tiller-deploy` 팟(Pod)의 상태가 `running`인지 확인하여 설치에 성공했는지 확인하십시오.
 
     ```
     kubectl get pods -n kube-system -l app=helm
     ```
     {: codeblock}
 
-4. Kubernetes Service 버전이 1.11 이상인지 확인한 후 다음 저장소를 로컬 시스템으로 복제하십시오. 
+4. Kubernetes Service 버전이 1.11 이상인지 확인한 후 다음 저장소를 로컬 시스템으로 복제하십시오.
 
   ```
   git clone https://github.com/ibm-cloud-security/security-advisor-network-insights.git
@@ -156,7 +155,7 @@ Kubernetes 클러스터에서 네트워크 플로우 로그를 수집하는 에�
 
 5. `security-advisor-network-insights` 폴더로 변경하십시오.
 
-6. `v1.10+` 디렉토리로 변경하십시오. 
+6. `v1.10+` 디렉토리로 변경하십시오.
 
 7. 다음 명령을 실행하여 `.tar` 파일을 추출하십시오.
 
@@ -234,7 +233,7 @@ Network Insights를 더 이상 사용할 필요가 없으면 클러스터에서 
     ```
     {: codeblock}
 
-  2. `가져오기`로 시작하는 출력을 복사한 후 터미널에 붙여넣어 `KUBECONFIG` 환경 변수를 설정하십시오.
+  2. `export`로 시작하는 출력을 복사한 후 터미널에 붙여넣어 `KUBECONFIG` 환경 변수를 설정하십시오.
 
 3. Helm을 사용하여 컴포넌트를 삭제하십시오.
 
@@ -282,7 +281,7 @@ Network Analytics의 베타 버전을 사용한 경우 새 버전을 설치하�
     ```
     {: codeblock}
 
-  2. `가져오기`로 시작하는 출력을 복사한 후 터미널에 붙여넣어 `KUBECONFIG` 환경 변수를 설정하십시오.
+  2. `export`로 시작하는 출력을 복사한 후 터미널에 붙여넣어 `KUBECONFIG` 환경 변수를 설정하십시오.
 
 4. 추출된 아카이브 위치로 이동하고 설치 제거 프로그램 스크립트를 실행하십시오.
 

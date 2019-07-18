@@ -2,11 +2,10 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -46,7 +45,7 @@ lastupdated: "2019-06-05"
 {: #setup-before}
 
 在开始使用注册表之前，请确保您已安装以下 CLI 和插件：
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 * Container Registry 插件
 
   ```

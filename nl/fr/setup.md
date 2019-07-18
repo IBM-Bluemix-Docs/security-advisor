@@ -2,11 +2,10 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -46,7 +45,7 @@ En savoir plus sur [{{site.data.keyword.registryshort_notm}}](/docs/services/Reg
 {: #setup-before}
 
 Avant de démarrer avec le registre, assurez-vous que les interfaces de ligne de commande et plug-in suivants sont installés :
-* [L'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli)
+* [L'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 * Le plug-in Container Registry
 
   ```

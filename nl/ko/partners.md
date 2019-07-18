@@ -63,7 +63,7 @@ NeuVector를 {{site.data.keyword.security-advisor_short}}와 통합하려면 다
   1. 연결의 이름을 제공하십시오.
   2. NeuVector 대시보드 URL을 제공하십시오.
   3. NeuVector 구성 URL을 제공하십시오.
-    1. NeuVector에 로그인한 후 설정으로 이동하십시오. 
+    1. NeuVector에 로그인한 후 설정으로 이동하십시오.
     2. **URL 생성**을 클릭하십시오.
     3. URL을 복사하여 {{site.data.keyword.security-advisor_short}} 통합 마법사에 붙여넣으십시오.
   4. **다음**을 클릭하십시오.
@@ -86,7 +86,7 @@ NeuVector를 {{site.data.keyword.security-advisor_short}}와 통합하려면 다
 * 총 인시던트 및 감사: 클라우드 고유 워크로드에서 인시던트 또는 감사와 관련된 찾은 결과.
 * 총 방화벽 감사: 방화벽 문제와 관련된 찾은 결과.
 
-**Twistlock 취약점**으로 하나의 KRI가 도입되었습니다. 
+**Twistlock 취약점**으로 하나의 KRI가 도입되었습니다.
 
 * 새 취약점이 있는 총 이미지 수: 컨테이너 이미지에서 발견된 취약점과 관련된 찾은 결과.
 
@@ -119,7 +119,7 @@ Twistlock 문서에서 회사에 대한 자세한 정보를 확인할 수 있습
 ### 연결 확인
 {: #twistlock-verify}
 
-1. {{site.data.keyword.security-advisor_short}} 대시보드에서 Twistlock 카드가 예상대로 표시되는지 확인하십시오. 
+1. {{site.data.keyword.security-advisor_short}} 대시보드에서 Twistlock 카드가 예상대로 표시되는지 확인하십시오.
 
 2. Twistlock 대시보드에서 **경보** 탭을 새로 고치십시오. {{site.data.keyword.security-advisor_short}} 연결이 표시됩니다. 연결을 여십시오.
 

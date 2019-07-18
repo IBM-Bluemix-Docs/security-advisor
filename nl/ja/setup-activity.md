@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -35,7 +34,7 @@ subcollection: security-advisor
 
 Activity Insights を使い始めるにあたり、以下の前提条件を確認してください。
 
-- Windows 10 を使用している場合は、Windows Subsystem for Linux をアクティブにして [Ubuntu シェル](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external}をインストールする。
+- Windows 10 を使用している場合は、Linux 用の Windows サブシステムをアクティブにして [Ubuntu shell](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external} をインストールする。
 - yq CLI をインストールする。
   * [macOS および Windows 10](http://mikefarah.github.io/yq/){: external} の場合。
   * CentOS、Red Hat、および Ubuntu の場合は、以下のコマンドを実行してバージョン 1.15 をインストールする。
@@ -48,7 +47,7 @@ Activity Insights を使い始めるにあたり、以下の前提条件を確�
     ```
     {: codeblock}     
 - 更新された cURL バイナリー: CentOS および Red Hat の場合、`yum update -y nss curl libcurl` を実行することによって更新できます。
-- [{{site.data.keyword.cloud_notm}} CLI および必要なプラグイン](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
+- [{{site.data.keyword.cloud_notm}} CLI および必要なプラグイン](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 - [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} v1.10.11 以降
 - [Kubernetes Helm (パッケージ・マネージャー)](/docs/containers?topic=containers-helm) v2.9.0 以降。
 - 標準 Kubernetes クラスター v1.10.11 以降
@@ -176,16 +175,16 @@ Activity Insights を使い始めるにあたり、以下の前提条件を確�
 ルール・パッケージは、モニターするルールのリストを含む JSON ファイルです。 ルール・パッケージはダウンロードすることも、[独自のものを作成する](/docs/services/security-advisor?topic=security-advisor-activity#activity-packages)こともできます。 {{site.data.keyword.security-advisor_short}} エンジンは、それぞれのルールが正しい構文に従っているか検証します。
 {: shortdesc}
 
-1. 以下のリポジトリーを複製して、事前設定された複数のルール・パッケージを取得します。 `security-advisor-activity-insights` という名前のフォルダーがローカル・システム上に作成されます。
+1. 以下のリポジトリーを複製して、事前設定された複数のルール・パッケージを取得します。 `security-advisor-activity-insights` という名前でローカル・システム上にフォルダーが作成されます。
 
   ```
   https://github.com/ibm-cloud-security/security-advisor-activity-insights.git
   ```
   {: codeblock}
 
-2. `IBM.rules/activities` という名前のフォルダーをローカルに作成します。
+2. `IBM.rules/activities` という名前でローカルにフォルダーを作成します。
 
-3. JSON ファイルを `security-advisor-activity-insights/security-advisor-ata-rule-packages` から `IBM.rules/activities` にコピーします。
+3. JSON ファイルを `security-advisor-ata-rule-packages` から `IBM.rules/activities` にコピーします。
 
 4. {{site.data.keyword.cloud_notm}} ダッシュボードにナビゲートし、Activity Insights と関連付けられている COS サービス・インスタンスを選択します。
 

@@ -26,7 +26,7 @@ subcollection: security-advisor
 # 直接接続
 {: #setup-custom-gui}
 
-{{site.data.keyword.security-advisor_short}} には、既存のカスタム・セキュリティー・ツールを統合できます。オープン・ソースのサービス、カスタム開発したサービス、サード・パーティーのサービス、どのようなサービスでも統合できます。{{site.data.keyword.security-advisor_short}} から他のツールへの直接接続を作成するには、URL を統合リストに追加します。 リンクを作成することで、使用しているすべてのツールを簡単にモニターできます。
+{{site.data.keyword.security-advisor_short}} には、既存のカスタム・セキュリティー・ツールを統合できます。オープン・ソースのサービス、カスタム開発したサービス、サード・パーティーのサービス、どのようなサービスでも統合できます。 {{site.data.keyword.security-advisor_short}} から他のツールへの直接接続を作成するには、URL を統合リストに追加します。 リンクを作成することで、使用しているすべてのツールを簡単にモニターできます。
 {: shortdesc}
 
 

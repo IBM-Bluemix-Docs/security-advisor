@@ -2,11 +2,10 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -46,7 +45,7 @@ Wenn Sie gegenwärtig das Network Analytics-Feature verwenden, müssen Sie die [
     ```
     {: codeblock}     
 - Aktualisierte cURL-Binärdatei: Für CentOS und Red Hat können Sie die Aktualisierung durch Ausführen von `yum update -y nss curl libcurl` vornehmen.
-- [{{site.data.keyword.cloud_notm}}-CLI und erforderliche Plug-ins](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
+- [{{site.data.keyword.cloud_notm}}-CLI und erforderliche Plug-ins](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 - [Kubernetes-CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} der Version 1.10.11 oder höher
 - [Kubernetes Helm (Paketmanager)](/docs/containers?topic=containers-helm) der Version 2.9.0 oder höher
 - Standardmäßiger Kubernetes-Cluster der Version 1.10.11 oder höher

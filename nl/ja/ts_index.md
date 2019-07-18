@@ -36,9 +36,9 @@ lastupdated: "2019-06-06"
 情報を検索したりフォーラムで質問したりして役に立つ情報を得ることができます。 また、サポート・チケットを開くことができます。 フォーラムを利用して質問するときは、{{site.data.keyword.cloud_notm}} 開発チームの目に留まるように、質問にタグを付けてください。
 {: shortdesc}
 
-  * {{site.data.keyword.security-advisor_short}} に関する技術的質問がある場合は、[スタック・オーバーフロー](https://stackoverflow.com/){: external}に質問を投稿してください。必ず、`security-advisor` と `ibm-cloud` のタグを含めてください。
+  * {{site.data.keyword.security-advisor_short}} に関する技術的質問がある場合は、[スタック・オーバーフロー](https://stackoverflow.com/){: external}に質問を投稿してください。 必ず、`security-advisor` と `ibm-cloud` のタグを含めてください。
 
-  * サービスに関する質問や入門的な説明については、[dW Answers](https://developer.ibm.com/){: external} フォーラムをご利用ください。必ず、`security-advisor` と `ibm-cloud` のタグを含めてください。
+  * サービスや開始手順についての質問は、[dW Answers](https://developer.ibm.com/){: external} フォーラムをご利用ください。 必ず、`security-advisor` と `ibm-cloud` のタグを含めてください。
 
 
 サポートの利用方法について詳しくは、[必要なサポートを利用するには](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)を参照してください。
@@ -84,5 +84,5 @@ Insights の標準装備オファリングの 1 つをインストールする�
 これは、イメージが正しく表示されないという既知の問題です。
 
 {: tsResolve}
-更新したイメージを表示するには、ブラウザーを更新してください。直接接続のテーブルに新しいイメージが表示されます。
+更新したイメージを表示するには、ブラウザーを更新してください。 直接接続のテーブルに新しいイメージが表示されます。
 

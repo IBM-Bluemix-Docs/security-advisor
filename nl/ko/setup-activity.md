@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -35,7 +34,7 @@ subcollection: security-advisor
 
 Activity Insights를 시작하려면 다음 필수 소프트웨어가 있어야 합니다.
 
-- Windows 10에서 작업하고 있는 경우 Linux용 Windows Subsystem을 활성화하고 [Ubuntu 쉘](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external}을 설치하십시오. 
+- Windows 10에서 작업하고 있는 경우 Linux용 Windows Subsystem을 활성화하고 [Ubuntu 쉘](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external}을 설치하십시오.
 - yq CLI 설치:
   * [macOS와 Windows 10의 경우](http://mikefarah.github.io/yq/){: external}.
   * CentOS, Red Hat 및 Ubuntu의 경우 다음 명령을 실행하여 버전 1.15를 설치하십시오.
@@ -48,7 +47,7 @@ Activity Insights를 시작하려면 다음 필수 소프트웨어가 있어야 
     ```
     {: codeblock}     
 - 업데이트된 cURL 바이너리: CentOS와 Red Hat의 경우 `yum update -y nss curl libcurl`을 실행하여 업데이트할 수 있습니다.
-- [{{site.data.keyword.cloud_notm}} CLI 및 필수 플러그인](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
+- [{{site.data.keyword.cloud_notm}} CLI 및 필수 플러그인](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 - [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} v1.10.11 이상
 - [Kubernetes Helm(패키지 관리자)](/docs/containers?topic=containers-helm) v2.9.0 이상.
 - 표준 Kubernetes 클러스터 버전 v1.10.11 이상
@@ -124,7 +123,7 @@ COS 및 버킷의 기존 인스턴스가 있으면 다음 이름 지정 규칙�
     ```
     {: codeblock}
 
-  2. `가져오기`로 시작하는 출력을 복사한 후 터미널에 붙여넣어 `KUBECONFIG` 환경 변수를 설정하십시오.
+  2. `export`로 시작하는 출력을 복사한 후 터미널에 붙여넣어 `KUBECONFIG` 환경 변수를 설정하십시오.
 
 7. [Kubernetes Service 통합 문서](/docs/containers?topic=containers-helm)를 사용하여 Helm을 설치하십시오.
 
@@ -174,16 +173,16 @@ COS 및 버킷의 기존 인스턴스가 있으면 다음 이름 지정 규칙�
 규칙 패키지는 모니터하려는 규칙 목록이 포함된 JSON 파일입니다. 규칙 패키지를 다운로드하거나 [사용자 고유의 규칙 패키지를 작성](/docs/services/security-advisor?topic=security-advisor-activity#activity-packages)할 수 있습니다. {{site.data.keyword.security-advisor_short}} 엔진은 각 규칙이 올바른 구문을 준수하는지 유효성 검증합니다.
 {: shortdesc}
 
-1. 다음 저장소를 복제하여 몇 가지 사전된 설정 규칙 패키지를 가져오십시오. `security-advisor-activity-insights`라는 이름의 폴더가 로컬 시스템에 작성됩니다. 
+1. 다음 저장소를 복제하여 몇 가지 사전된 설정 규칙 패키지를 가져오십시오. `security-advisor-activity-insights`라는 이름의 폴더가 로컬 시스템에 작성됩니다.
 
   ```
   https://github.com/ibm-cloud-security/security-advisor-activity-insights.git
   ```
   {: codeblock}
 
-2. 로컬에서 이름이 `IBM.rules/activities`인 폴더를 작성하십시오. 
+2. 로컬에서 이름이 `IBM.rules/activities`인 폴더를 작성하십시오.
 
-3. JSON 파일을 `security-advisor-activity-insights/security-advisor-ata-rule-packages`에서 `IBM.rules/activities`로 복사하십시오. 
+3. JSON 파일을 `security-advisor-activity-insights/security-advisor-ata-rule-packages`에서 `IBM.rules/activities`로 복사하십시오.
 
 4. {{site.data.keyword.cloud_notm}} 대시보드로 이동하여 Activity Insights와 연관된 COS 서비스 인스턴스를 선택하십시오.
 

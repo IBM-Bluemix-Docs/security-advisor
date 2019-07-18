@@ -43,7 +43,7 @@ subcollection: security-advisor
 ## 이벤트 확인 위치
 {: #monitor}
 
-이벤트는 이벤트가 생성되는 {{site.data.keyword.cloud_notm}} 지역에서 사용 가능한 {{site.data.keyword.cloudaccesstrailshort}} **계정 도메인**에 사용할 수 있습니다. 
+이벤트는 이벤트가 생성되는 {{site.data.keyword.cloud_notm}} 지역에서 사용 가능한 {{site.data.keyword.cloudaccesstrailshort}} **계정 도메인**에 사용할 수 있습니다.
 
 1. {{site.data.keyword.cloud_notm}} 계정에 로그인하십시오.
 2. 카탈로그의 {{site.data.keyword.security-advisor_short}}의 인스턴스와 동일한 계정에서 {{site.data.keyword.cloudaccesstrailshort}} 서비스의 인스턴스를 프로비저닝하십시오.

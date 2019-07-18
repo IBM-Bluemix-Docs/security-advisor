@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-06-24"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -38,7 +37,7 @@ subcollection: security-advisor
 {: shortdesc}
 
 
-{{site.data.keyword.security-advisor_short}} 集成了以下开箱即用的功能：
+{{site.data.keyword.security-advisor_short}} 可以集成以下现成可用的功能：
 
 * Certificate Manager，用于与证书到期和生命周期相关的通知。
 * 漏洞顾问程序，用于获取有关映像漏洞和配置问题的详细信息。
@@ -71,9 +70,9 @@ subcollection: security-advisor
 ### Twistlock
 {: #integrate-twistlock}
 
-[Twistlock](https://www.twistlock.com){: external} 通过阻止在环境中部署易受攻击的映像，能够以独特的方式防范整个 SDLC 中的风险。仪表板中访问所有内容。通过自动化和定制策略强制实施，提供了对应用程序生命周期中每个阶段的完全控制。Twistlock Intelligence Stream 直接从 30 多个上游项目、商业来源以及 Twistlock Labs 的专项研究中获取并聚集漏洞信息。
+[Twistlock](https://www.twistlock.com){: external} 通过阻止在环境中部署易受攻击的映像，能够以独特的方式防范整个 SDLC 中的风险。仪表板中访问所有内容。通过自动化和定制策略强制实施，提供了对应用程序生命周期中每个阶段的完全控制。Twistlock Intelligence Stream 直接从 30 多个上游项目、商业来源以及 Twistlock Labs 的专项研究中获取并聚集漏洞信息。
 
-通过专注于提供覆盖您堆栈中所有层的最精确数据，您可以获得准确的可视性和最低的误报率。Twistlock 将这些数据与您实际部署中的情况（例如，哪些容器公开到因特网，哪些容器以高特权运行，哪些实施了其他安全缓解措施）相结合，因此您始终可以了解哪些漏洞在特定环境中最为严重。
+通过专注于提供覆盖您堆栈中所有层的最精确数据，您可以获得准确的可视性和最低的误报率。Twistlock 将这些数据与您实际部署中的情况（例如，哪些容器公开到因特网，哪些容器以高特权运行，哪些实施了其他安全缓解措施）相结合，因此您始终可以了解哪些漏洞在特定环境中最为严重。
 
 有关设置 Twistlock 实例的帮助，请参阅[合作伙伴解决方案](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-twistlock)。
 </br>

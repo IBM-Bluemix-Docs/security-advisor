@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-06-24"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -50,10 +49,10 @@ subcollection: security-advisor
 ## 파트너 통합
 {: #integrate-partner}
 
-파트너 통합은 {{site.data.keyword.security-advisor_short}}와 IBM과 함께 작업하는 다른 보안 도구 간의 연결을 작성하여 {{site.data.keyword.cloud_notm}} 배치의 보안을 강화하기 위한 방법입니다.
+파트너 통합은 원활한 사용자 경험을 위해 {{site.data.keyword.security-advisor_short}}와 IBM과 함께 작업하는 다른 보안 도구 간의 연결을 작성하여 {{site.data.keyword.cloud_notm}} 배치의 보안을 강화하기 위한 방법입니다.
 {: shortdesc}
 
-현재 {{site.data.keyword.security-advisor_short}} 파트너에는 NeuVector와 Twistlock이 포함됩니다. 
+현재 {{site.data.keyword.security-advisor_short}} 파트너에는 NeuVector와 Twistlock이 포함됩니다.
 
 귀하는 파트너로서 솔루션을 {{site.data.keyword.security-advisor_short}}와 통합하는 데 관심이 있습니까? Matt Ward(wardm@us.ibm.com)를 통해 IBM 팀에 문의하십시오!
 {: tip}
@@ -71,9 +70,9 @@ NeuVector 인스턴스 설정에 대한 도움말은 [파트너 솔루션](/docs
 ### Twistlock
 {: #integrate-twistlock}
 
-[Twistlock](https://www.twistlock.com){: external}은 사용자 환경 전체에서 취약한 이미지의 배치를 방지하여 SDLC 전반에 걸쳐 위험을 방지할 수 있습니다. 자동화된 사용자 정의 정책 적용은 애플리케이션 라이프사이클의 모든 단계에서 완전한 제어를 제공합니다. Twistlock Intelligence Stream은 30개 이상의 업스트림 프로젝트, 상업 소스 및 Twistlock 연구소의 자체 연구를 통해 직접 취약성 정보를 수집하고 집계합니다.
+[Twistlock](https://www.twistlock.com){: external}은 사용자 환경 전체에서 취약한 이미지의 배치를 방지하여 SDLC 전반에 걸쳐 위험을 방지할 수 있습니다. 자동화된 사용자 정의 정책 적용은 애플리케이션 라이프사이클의 모든 단계에서 완전한 제어를 제공합니다. Twistlock Intelligence Stream은 30개 이상의 업스트림 프로젝트, 상업 소스 및 Twistlock 연구소의 자체 연구를 통해 직접 취약성 정보를 수집하고 집계합니다.
 
-가장 정확한 데이터를 사용하여 스택의 모든 계층을 처리할 수 있으므로 정확한 가시성과 가장 낮은 오탐지율을 확보할 수 있습니다.Twistlock은 이 데이터를 인터넷에 어떤 컨테이너가 노출되어 있는지, 높은 권한으로 실행되는지, 다른 보안 완화 기능이 있는지 등 실제 배치 지식과 결합하므로 사용자는 특정 환경에서 가장 심각한 취약점을 항상 확인할 수 있습니다.
+가장 정확한 데이터를 사용하여 스택의 모든 계층을 처리할 수 있으므로 정확한 가시성과 가장 낮은 오탐지율을 확보할 수 있습니다. Twistlock은 이 데이터를 인터넷에 어떤 컨테이너가 노출되어 있는지, 높은 권한으로 실행되는지, 다른 보안 완화 기능이 있는지 등 실제 배치 지식과 결합하므로 사용자는 특정 환경에서 가장 심각한 취약점을 항상 확인할 수 있습니다.
 
 Twistlock 인스턴스 설정에 대한 도움말은 [파트너 솔루션](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-twistlock)을 참조하십시오.
 </br>

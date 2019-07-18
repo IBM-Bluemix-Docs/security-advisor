@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-06-24"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -53,7 +52,7 @@ subcollection: security-advisor
 パートナー統合を利用すると、{{site.data.keyword.security-advisor_short}} と、IBM と連携する他のセキュリティー・ツールとの間に接続を作成して、シームレスなユーザー・エクスペリエンスを実現し、{{site.data.keyword.cloud_notm}} デプロイメントのセキュリティーを強化できます。
 {: shortdesc}
 
-現行の {{site.data.keyword.security-advisor_short}} のパートナーとしては、NeuVector や Twistlock などがあります。
+現行の {{site.data.keyword.security-advisor_short}} のパートナーとして、NeuVector と Twistlock が挙げられます。
 
 ご自分のソリューションと {{site.data.keyword.security-advisor_short}} との統合に関心があるパートナーですか? wardm@us.ibm.com で Matt Ward と連絡を取ってチームに接触してください。
 {: tip}
@@ -71,9 +70,11 @@ NeuVector インスタンスのセットアップについては、[パートナ
 ### Twistlock
 {: #integrate-twistlock}
 
-[Twistlock](https://www.twistlock.com){: external} は、脆弱なイメージがお客様の環境にデプロイされないようにすることで、SDLC 全体にわたってリスクを防止する、独自の機能を備えています。自動化されたカスタム・ポリシーの適用によって、アプリケーション・ライフサイクルの全ステージで完全な管理を実現します。 Twistlock Intelligence Stream は、脆弱性情報を 30 以上のアップストリーム・プロジェクト、商業ソース、Twistlock Labs の専有リサーチ結果から直接収集して集約します。
+[Twistlock](https://www.twistlock.com){: external} は、脆弱なイメージがお客様の環境にデプロイされないようにすることで、SDLC 全体にわたってリスクを防止する、独自の機能を備えています。 自動化されたカスタム・ポリシーの適用によって、アプリケーション・ライフサイクルの全ステージで完全な管理を実現します。Twistlock Intelligence Stream は、脆弱性情報を 30 以上のアップストリーム・プロジェクト、商業ソース、Twistlock Labs の専有リサーチ結果から直接収集して集約します。
 
-お客様のテクノロジー・スタックのあらゆる層に及ぶ詳細データを収集することに注力して、正確な可視性を実現し、誤検出を最小限に抑えます。Twistlock はそれらのデータと、実際のデプロイメントに関する情報 (例えば、どのコンテナーが、インターネット上に公開されているか、高い特権によって実行されているか、他のセキュリティー対策を実装しているか) とを組み合わせて、お客様の特定の環境内で最も重大な脆弱性を常に把握できるようにします。Twistlock インスタンスのセットアップについては、[パートナー・ソリューション](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-twistlock)を参照してください。
+お客様のテクノロジー・スタックのあらゆる層に及ぶ詳細データを収集することに注力して、正確な可視性を実現し、誤検出を最小限に抑えます。Twistlock はそれらのデータと、実際のデプロイメントに関する情報 (例えば、どのコンテナーが、インターネット上に公開されているか、高い特権によって実行されているか、他のセキュリティー対策を実装しているか) とを組み合わせて、お客様の特定の環境内で最も重大な脆弱性を常に把握できるようにします。
+
+Twistlock インスタンスのセットアップについては、[パートナー・ソリューション](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-twistlock)を参照してください。
 </br>
 
 

@@ -69,7 +69,7 @@ namespaces “security-advisor-insights” is forbidden: User “system:servicea
 사용자 정의 솔루션 발생을 작성하려고 했으나 정보가 브라우저에 표시되지 않고 오류 메시지가 수신되지 않았습니다.
 
 {: tsCauses}
-선택한 이름이 사용 중이므로 발생 작성에 실패했습니다. 
+선택한 이름이 사용 중이므로 발생 작성에 실패했습니다.
 
 {: tsResolve}
 발생에 다른 이름을 선택하십시오.
@@ -78,11 +78,11 @@ namespaces “security-advisor-insights” is forbidden: User “system:servicea
 {: #ts-known-cant-edit}
 
 {: tsSymptoms}
-직접 연결 이미지를 업로드하거나 편집할 때 이미지가 즉시 표시되지 않습니다. 
+직접 연결 이미지를 업로드하거나 편집할 때 이미지가 즉시 표시되지 않습니다.
 
 {: tsCauses}
-이미지가 올바르게 표시되지 않는 알려진 문제입니다. 
+이미지가 올바르게 표시되지 않는 알려진 문제입니다.
 
 {: tsResolve}
-업데이트된 이미지를 표시하려면 브라우저를 새로 고치십시오. 직접 연결 테이블에 새 이미지가 표시됩니다. 
+업데이트된 이미지를 표시하려면 브라우저를 새로 고치십시오. 직접 연결 테이블에 새 이미지가 표시됩니다.
 

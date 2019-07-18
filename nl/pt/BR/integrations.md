@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-06-24"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -38,7 +37,7 @@ Com o {{site.data.keyword.security-advisor_long}}, é possível obter insight so
 {: shortdesc}
 
 
-Fora da caixa, o  {{site.data.keyword.security-advisor_short}}  se integra ao:
+Prontamente, o {{site.data.keyword.security-advisor_short}} pode se integrar ao:
 
 * Certificate Manager para notificações relacionadas à expiração e ao ciclo de vida do certificado.
 * Vulnerability Advisor para obter detalhes sobre vulnerabilidades de imagem e problemas de configuração.
@@ -71,9 +70,9 @@ Para obter ajuda com a configuração de sua instância do NeuVector, consulte [
 ### Twistlock
 {: #integrate-twistlock}
 
-[O Twistlock](https://www.twistlock.com){: external} é exclusivamente capaz de impedir o risco em todo o SDLC, impedindo a implementação de imagens vulneráveis em seu ambiente. O cumprimento de política automatizada e customizada oferece controle completo em cada estágio do ciclo de vida do aplicativo. O Twistlock Intelligence Stream origina e agrega informações de vulnerabilidade diretamente de mais de 30 projetos de envio de dados, origens comerciais e pesquisa de proprietário dos Twistlock Labs.
+[Twistlock](https://www.twistlock.com){: external} é exclusivamente capaz de evitar o risco em todo o SDLC, impedindo a implementação de imagens vulneráveis em seu ambiente. O cumprimento de política automatizada e customizada oferece controle completo em cada estágio do ciclo de vida do aplicativo. O Twistlock Intelligence Stream origina e agrega informações de vulnerabilidade diretamente de mais de 30 projetos de envio de dados, origens comerciais e pesquisa de proprietário dos Twistlock Labs.
 
-Com um foco em ter os dados mais precisos disponíveis para abranger todas as camadas de sua pilha, para que você tenha visibilidade precisa e a menor taxa de falsos positivos.O Twistlock combina esses dados com conhecimento de suas implementações reais, tais como quais contêineres são expostos à Internet, quais são executados com alto privilégio e quais possuem outras mitigações de segurança no local, para que você possa sempre ver quais vulnerabilidades são mais críticas em seu ambiente específico.
+Com um foco em ter os dados mais precisos disponíveis para abranger todas as camadas de sua pilha, para que você tenha visibilidade precisa e a menor taxa de falsos positivos. O Twistlock combina esses dados com conhecimento de suas implementações reais, tais como quais contêineres são expostos à Internet, quais são executados com alto privilégio e quais possuem outras mitigações de segurança no local, para que você possa sempre ver quais vulnerabilidades são mais críticas em seu ambiente específico.
 
 Para obter ajuda com a configuração de sua instância do Twistlock, consulte [Soluções de parceiros](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-twistlock).
 </br>

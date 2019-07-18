@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-08"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -35,7 +35,7 @@ Con {{site.data.keyword.security-advisor_short}}, puoi integrare i tuoi strument
 
 Prima di integrare le ricerche dal tuo strumento di terze parti, assicurati di avere i seguenti prerequisiti.
 
-1. Assicurati che all'utente o all'ID servizio che stai utilizzando sia stato assegnato il [ruolo IAM](https://cloud.ibm.com/iam#/users) di **Gestore**.
+1. Assicurati che all'utente o all'ID servizio che stai utilizzando sia stato assegnato il [ruolo IAM](https://cloud.ibm.com/iam/users){: external} di **Gestore**.
 
 2. Accedi a {{site.data.keyword.cloud_notm}}.
 
@@ -122,7 +122,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 Risposta di esempio:
 
 ```
-  {
+{
   "author": {
     "account_id": "account id",
       "email": "email id",
@@ -303,7 +303,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `section` | La sezione in cui vuoi visualizzare la scheda. Puoi avere fino a tre sezioni personalizzate con sei schede in ogni sezione. Numero massimo di caratteri: 30  |
 | Facoltativo: `order` | L'ordine in cui la scheda viene visualizzata all'interno della sezione specificata. L'ordine viene specificato nell'intervallo 1 - 6. Se scegli un numero che è già applicato a un'altra scheda, la creazione non riesce. Ricevi un messaggio di errore che indica "Given order is already taken by other card in section." Se l'ordine fornito è superiore al numero corrente di schede più 1, la creazione della scheda non riesce. Ad esempio, se al momento hai due schede e ne stai creando un'altra, non puoi specificare 5 nell'ordine delle schede perché, nell'insieme, hai un totale di tre schede. Se l'ordine per le schede non viene specificato, vengono disposte in ordine alfabetico nella sezione assegnata. |
 | `title` | Il titolo che vuoi assegnare alla tua scheda. Numero massimo di caratteri: 28 |
-| `subtitle` | Il sottotitolo che vuoi assegnare alla tua scheda. Numero massimo di caratteri: 30  |
+| `subtitle` | Il sottotitolo che vuoi assegnare alla tua scheda. Numero massimo di caratteri: 30 |
 | `finding_note_names` | `providers//notes/my-custom-tool-findings-type` |
 {: class="simple-tab-table"}
 {: caption="Tabella 3. Descrizione dei componenti di scheda del comando" caption-side="top"}
@@ -318,8 +318,8 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `default_time_range` | La quantità di tempo che vuoi verificare. I valori sono impostati in giorni. Le opzioni correnti includono: `1d`, `2d`, `3d` e `4d`. |
 | `value_type` | Il tipo di elemento. Se il tipo è `NUMERIC`, il campo è `value_type` e puoi avere fino a quattro elementi per ogni scheda. Se il tipo è `TIME_SERIES` o `BREAKDOWN`, il campo è `value_types`. Il numero massimo di `TIME_SERIES` o `BREAKDOWN` è 1. Se hai solo voci numeriche, puoi avere fino a quattro elementi per ogni scheda. Se vuoi utilizzare una combinazione, puoi avere fino a due voci numeriche e una serie temporale o una suddivisione. Non puoi avere sia serie temporali che suddivisioni nella stessa scheda. Se definisci i tuoi tipi di valore come array per le serie temporali, puoi avere fino a tre voci.  |
 | `value_type`: `kind` | Il tipo di valore. Le opzioni includono: `KRI` e `FINDING_COUNT`. |
-| `value_type`: `finding_note_names` |Se `kind` è `FINDING_COUNT`, il nome delle ricerche che vuoi visualizzare nella tua scheda, che è specificato come array. |
-| `value_type`: `kri_note_names` |Se `kind` è `FINDING_COUNT`, il nome delle ricerche che vuoi visualizzare nella tua scheda, che è specificato come array. |
+| `value_type`: `finding_note_names` | Se `kind` è `FINDING_COUNT`, il nome delle ricerche che vuoi visualizzare nella tua scheda, che è specificato come array. |
+| `value_type`: `kri_note_names` | Se `kind` è `FINDING_COUNT`, il nome delle ricerche che vuoi visualizzare nella tua scheda, che è specificato come array. |
 | `value_type`: `text` | Il testo del tipo di elemento. Il numero massimo di caratteri è 22. |
 {: class="simple-tab-table"}
 {: caption="Tabella 4. Descrizione dei componenti di elemento del comando" caption-side="top"}
@@ -408,11 +408,11 @@ Payload di esempio:
 	"finding": {
 		"severity": "HIGH",
 		"next_steps": [{
-			"title": "Investigate which process are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
+			"title": "Investigate which processes are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
                         "url":"https://cloud.ibm.com/containers-kubernetes/clusters"
 		}],
-                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data",
-                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior"
+                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data.",
+                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior."
 	}
 }
 ```

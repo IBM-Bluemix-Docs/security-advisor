@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -48,7 +47,7 @@ subcollection: security-advisor
     ```
     {: codeblock}     
 - 更新的 cURL 二进制文件：对于 CentOS 和 Red Hat，可以通过运行 `yum update -y nss curl libcurl` 进行更新。
-- [{{site.data.keyword.cloud_notm}} CLI 和必需的插件](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
+- [{{site.data.keyword.cloud_notm}} CLI 和必需的插件](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 - [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} V1.10.11 或更高版本
 - [Kubernetes Helm（包管理器）](/docs/containers?topic=containers-helm)V2.9.0 或更高版本。
 - 标准 Kubernetes V1.10.11 或更高版本集群

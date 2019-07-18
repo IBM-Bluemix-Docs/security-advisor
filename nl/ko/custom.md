@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-08"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -33,9 +33,9 @@ subcollection: security-advisor
 ## 시작하기 전에
 {: #custom-before-api}
 
-서드파티 도구에서 찾은 결과를 통합하려면 먼저 다음 전제조건을 충족해야 합니다. 
+서드파티 도구에서 찾은 결과를 통합하려면 먼저 다음 전제조건을 충족해야 합니다.
 
-1. 사용 중인 사용자 또는 서비스 ID에 **관리자** [IAM 역할](https://cloud.ibm.com/iam#/users)이 지정되어 있는지 확인하십시오.
+1. 사용 중인 사용자 또는 서비스 ID에 **관리자** [IAM 역할](https://cloud.ibm.com/iam/users){: external}이 지정되어 있는지 확인하십시오.
 
 2. {{site.data.keyword.cloud_notm}}에 로그인하십시오.
 
@@ -73,7 +73,7 @@ API는 보안 도구 및 서비스로 보고되는 찾은 결과에 대한 중�
 ### 1단계: 새 찾은 결과 유형 등록
 {: #custom-register-finding}
 
-새 찾은 결과 유형을 등록하기 위해 노트를 작성할 수 있습니다. 노트를 작성하려면 [찾은 결과 API](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Notes/createNote){: external}를 사용하십시오. 사용자 정의 도구를 식별하기 위해 고유 제공자 ID를 선택해야 합니다. 프로세스를 자동화하는 경우 서비스 ID를 제공자 ID로 사용할 수 있습니다. 
+새 찾은 결과 유형을 등록하기 위해 노트를 작성할 수 있습니다. 노트를 작성하려면 [찾은 결과 API](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Notes/createNote){: external}를 사용하십시오. 사용자 정의 도구를 식별하기 위해 고유 제공자 ID를 선택해야 합니다. 프로세스를 자동화하는 경우 서비스 ID를 제공자 ID로 사용할 수 있습니다.
 
 요청 예제:
 
@@ -97,7 +97,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 
 | 컨텍스트 |설명 | 
 |:-----------------|:-----------------|
-| `region` | 찾은 결과가 발생한 위치입니다. |
+| `region` | 찾은 결과가 발생한 위치입니다.  |
 | `resource_id` | 리소스 ID입니다. |
 | `resource_name` | 리소스 이름입니다. |
 | `resource_type` | 리소스 유형입니다. |
@@ -122,7 +122,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 응답 예제:
 
 ```
-  {
+{
   "author": {
     "account_id": "account id",
       "email": "email id",
@@ -168,7 +168,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 ### 2단계: 찾은 결과 게시
 {: #custom-post-findings}
 
-찾은 결과를 Security Advisor 대시보드에 KRI 또는 이벤트로 게시하려면 [발생](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Occurrences/createOccurrence){: external}을 작성하십시오. 
+찾은 결과를 Security Advisor 대시보드에 KRI 또는 이벤트로 게시하려면 [발생](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Occurrences/createOccurrence){: external}을 작성하십시오.
 
 각 카드에는 두 개의 KRI를 정의할 수 있습니다.
 {: note}
@@ -267,7 +267,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 ### 3단계: 표시할 카드 정의
 {: #custom-define-card}
 
-[노트](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Notes/createNote){: external}를 작성하여 카드에서 찾은 결과를 대시보드에 표시하는 방식을 정의하십시오. 
+[노트](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Notes/createNote){: external}를 작성하여 카드에서 찾은 결과를 대시보드에 표시하는 방식을 정의하십시오.
 
 요청 예제: 
 
@@ -300,7 +300,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 
 |카드 |설명 | 
 |:-----------------|:-----------------|
-| `section` | 카드를 표시할 섹션입니다. 각 섹션에는 6개의 카드가 포함된 최대 3개의 사용자 정의 섹션이 있을 수 있습니다. 최대 문자 수: 30 |
+| `section` | 카드를 표시할 섹션입니다. 각 섹션에는 6개의 카드가 포함된 최대 3개의 사용자 정의 섹션이 있을 수 있습니다. 최대 문자 수: 30  |
 | 선택사항: `order` | 지정된 섹션에서 카드가 표시되는 순서입니다. 순서는 1 - 6 범위로 지정됩니다. 다른 카드에 이미 적용된 숫자를 선택할 경우 작성이 실패합니다. "제공한 순서는 이미 섹션의 다른 카드에 사용되었습니다."라는 오류 메시지가 표시됩니다. 제공한 순서가 현재 카드 수 +1보다 클 경우 카드 작성이 실패합니다. 예를 들어 현재 두 개의 카드가 있는 상태에서 다른 카드를 작성할 경우, 총 3개의 카드가 있으므로 카드 순서에 5를 지정할 수 없습니다. 카드 순서를 지정하지 않을 경우 카드가 지정된 섹션에 알파벳순으로 배열됩니다. |
 | `title` | 카드에 지정할 제목입니다. 최대 문자 수: 28 |
 | `subtitle` | 카드에 지정할 부제입니다. 최대 문자 수: 30 |
@@ -316,7 +316,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `kind` |옵션에는 `NUMERIC`, `TIME_SERIES`, `BREAKDOWN`이 있습니다. |
 | `text` | 표시할 텍스트입니다. kind가 `NUMERIC`일 경우 최대 문자 수는 60입니다. kind가 `TIME_SERIES` 또는 `BREAKDOWN`일 경우, 최대 문자 수는 65입니다. |
 | `default_time_range` |확인할 시간입니다. 값은 일 수로 설정됩니다. 현재 옵션에는 `1d`, `2d`, `3d`, `4d`가 있습니다. |
-| `value_type` | 요소의 종류입니다. kind가 `NUMERIC`일 경우 필드는 `value_type`이며 카드당 최대 4개의 요소를 포함할 수 있습니다. kind가 `TIME_SERIES` 또는 `BREAKDOWN`일 경우 필드는 `value_types`입니다. `TIME_SERIES` 또는 `BREAKDOWN`의 최대 개수는 1입니다. 숫자 항목만 있을 경우 카드당 최대 4개의 요소가 있을 수 있습니다. 조합을 사용하려는 경우 최대 두 개의 숫자 항목과 time series 또는 breakdown 중 하나를 포함할 수 있습니다. time series와 breakdown이 동일한 카드에 포함될 수는 없습니다. 값 유형을 time series에 대한 배열로 정의한 경우 최대 세 개의 항목을 포함할 수 있습니다. |
+| `value_type` | 요소의 종류입니다. kind가 `NUMERIC`일 경우 필드는 `value_type`이며 카드당 최대 4개의 요소를 포함할 수 있습니다. kind가 `TIME_SERIES` 또는 `BREAKDOWN`일 경우 필드는 `value_types`입니다. `TIME_SERIES` 또는 `BREAKDOWN`의 최대 개수는 1입니다. 숫자 항목만 있을 경우 카드당 최대 4개의 요소가 있을 수 있습니다. 조합을 사용하려는 경우 최대 두 개의 숫자 항목과 time series 또는 breakdown 중 하나를 포함할 수 있습니다. time series와 breakdown이 동일한 카드에 포함될 수는 없습니다. 값 유형을 time series에 대한 배열로 정의한 경우 최대 세 개의 항목을 포함할 수 있습니다.  |
 | `value_type`: `kind` | 값 유형입니다. 옵션에는 `KRI` 및 `FINDING_COUNT`가 있습니다. |
 | `value_type`: `finding_note_names` | `kind`가 `FINDING_COUNT`일 경우, 카드에 표시하려는 찾은 결과의 이름이며, 배열로 지정됩니다. |
 | `value_type`: `kri_note_names` | `kind`가 `FINDING_COUNT`일 경우, 카드에 표시하려는 찾은 결과의 이름이며, 배열로 지정됩니다. |
@@ -337,21 +337,21 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
       "id": "user id",
       "kind": "user"
 },
-    "card": {
+"card": {
   "elements": [
-        {
+    {
       "default_time_range": "1d",
-          "kind": "NUMERIC",
-          "text": "Count of findings reported by my security tool",
-          "value_type": {
+      "kind": "NUMERIC",
+      "text": "Count of findings reported by my security tool",
+      "value_type": {
         "finding_note_names": [
           "providers/my-custom-tool/notes/my-custom-tool-findings-type"
         ],
-            "kind": "FINDING_COUNT"
-          }
+        "kind": "FINDING_COUNT"
+      }
     }
   ],
-      "finding_note_names": [
+  "finding_note_names": [
     "providers/my-custom-tool/notes/my-custom-tool-findings-type"
   ],
   "section": "My Security Tools",
@@ -362,24 +362,24 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 "context": {
   "account_id": "<account id>"
 },
-    "create_time": "2018-09-04T11:49:36.056047Z",
-    "create_timestamp": 1536061776056,
-    "id": "custom-tool-card",
-    "kind": "CARD",
-    "long_description": "Details about why this is security risk to be fixed",
-    "name": "<account id>/providers/my-custom-tool/notes/custom-tool-card",
-    "provider_id": "my-custom-tool",
-    "provider_name": "<account id>/providers/my-custom-tool",
-    "reported_by": {
+"create_time": "2018-09-04T11:49:36.056047Z",
+"create_timestamp": 1536061776056,
+"id": "custom-tool-card",
+"kind": "CARD",
+"long_description": "Details about why this is security risk to be fixed",
+"name": "<account id>/providers/my-custom-tool/notes/custom-tool-card",
+"provider_id": "my-custom-tool",
+"provider_name": "<account id>/providers/my-custom-tool",
+"reported_by": {
   "id": "my-custom-tool",
-      "title": "My Security Tool"
+  "title": "My Security Tool"
 },
-    "shared": true,
-    "short_description": "security risk found by my custom tool",
-    "update_time": "2018-09-04T11:49:36.056066Z",
-    "update_timestamp": 1536061776056,
-    "update_week_date": "2018-W36-2"
-  }
+"shared": true,
+"short_description": "security risk found by my custom tool",
+"update_time": "2018-09-04T11:49:36.056066Z",
+"update_timestamp": 1536061776056,
+"update_week_date": "2018-W36-2"
+}
 ```
 {: screen}
 
@@ -408,11 +408,11 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 	"finding": {
 		"severity": "HIGH",
 		"next_steps": [{
-			"title": "Investigate which process are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
+			"title": "Investigate which processes are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
                         "url":"https://cloud.ibm.com/containers-kubernetes/clusters"
 		}],
-                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data",
-                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior"
+                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data.",
+                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior."
 	}
 }
 ```

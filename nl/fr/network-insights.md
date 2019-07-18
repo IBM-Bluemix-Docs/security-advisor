@@ -79,7 +79,7 @@ Du point de vue de la sécurité, il est recommandé de purger vos données coll
 {: shortdesc}
 
 
-Les modèles comportementaux des clients qui sont considérés par IBM X-Force comme distribuant des logiciels malveillants utilisés comme scanners, dans le cadre d'un réseau de zombies, afin d'exploiter une cryptomonnaie, ou pour des services d'anonymisation, sont tous surveillés en permanence. Si ce type de client approche l'un des clusters que vous surveillez et présente un comportement préoccupant, Network Insights émet un résultat. 
+Les modèles comportementaux des clients qui sont considérés par IBM X-Force comme distribuant des logiciels malveillants utilisés comme scanners, dans le cadre d'un réseau de zombies, afin d'exploiter une cryptomonnaie, ou pour des services d'anonymisation, sont tous surveillés en permanence. Si ce type de client approche l'un des clusters que vous surveillez et présente un comportement préoccupant, Network Insights émet un résultat.
 
 
 La carte comporte deux nouveaux indicateurs clé de risques :
@@ -112,9 +112,9 @@ La carte comporte deux nouveaux indicateurs clé de risques :
 
 Les résultats peuvent inclure des conteneurs qui :
 
-* Envoient des quantités de données anormalement élevées à un serveur suspect. 
-* Extraient une quantité de données élevée depuis un serveur suspect. 
-* Envoient un nombre de demandes élevé à un serveur suspect. 
+* Envoient des quantités de données anormalement élevées à un serveur suspect.
+* Extraient une quantité de données élevée depuis un serveur suspect.
+* Envoient un nombre de demandes élevé à un serveur suspect.
 
 
 ## Network: Anomalies in traffic (expérimental)
@@ -132,9 +132,9 @@ La carte comporte deux nouveaux indicateurs clé de risques :
 
 Un résultat peut inclure :  
 
-* Des conteneurs qui approchent des serveurs qui n'ont jamais été approchés auparavant. 
-* Des conteneurs qui envoient ou consomment une quantité de données plus élevée que la normale à ou depuis des homologues spécifiques. 
-* Le niveau d'interrogation d'un conteneur particulier, qui a augmenté considérablement. 
+* Des conteneurs qui approchent des serveurs qui n'ont jamais été approchés auparavant.
+* Des conteneurs qui envoient ou consomment une quantité de données plus élevée que la normale à ou depuis des homologues spécifiques.
+* Le niveau d'interrogation d'un conteneur particulier, qui a augmenté considérablement.
 
 Une fois le modèle développé, des écarts par rapport au modèle généré sont détectés, et lorsqu'un changement préoccupant a lieu, Network Insights publie un résultat dans le tableau de bord Security Advisor. Les résultats sont résumés dans la carte "Network: Anomalies in Traffic". La carte comporte deux nouveaux indicateurs clé de risques. L'indicateur clé de risques "Higher than normal reconnaissance or data exchange activity" compte les résultats qui sont liés à des interactions anormales détectées entre le cluster et des homologues externes. L'indicateur clé de risques 'Outbound approach to a new server' compte les résultats qui sont liés aux nouveaux serveurs détectés approchés par le cluster.  
 

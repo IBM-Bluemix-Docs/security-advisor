@@ -41,7 +41,7 @@ subcollection: security-advisor
   <dt>중앙 집중식 보안 관리</dt>
     <dd>모든 {{site.data.keyword.cloud_notm}} 보안 서비스 및 통합 파트너 서비스에 대한 통합 보기가 표시됩니다. {{site.data.keyword.cloud_notm}} 카탈로그에서 다양한 서비스를 선택하여 등록할 수 있습니다.</dd>
   <dt>위협 발견</dt>
-    <dd>{{site.data.keyword.security-advisor_short}}는 IBM X-Force, 기타 {{site.data.keyword.cloud_notm}} 서비스 및 파트너 솔루션에서 수집된 정보를 활용하여 보안 문제로 발전하기 전에 위험 및 위협을 발견합니다. 이 서비스는 취약성 데이터 및 네트워크 활동 데이터 이외에도 분석도 제공합니다. </dd>
+    <dd>{{site.data.keyword.security-advisor_short}}는 IBM X-Force, 기타 {{site.data.keyword.cloud_notm}} 서비스 및 파트너 솔루션에서 수집된 정보를 활용하여 보안 문제로 발전하기 전에 위험 및 위협을 발견합니다. 이 서비스는 취약성 데이터 및 네트워크 활동 데이터 이외에도 분석도 제공합니다.</dd>
 </dl>
 
 
@@ -118,9 +118,9 @@ subcollection: security-advisor
   <dt>제공자</dt>
     <dd>제공자는 찾은 결과의 유형(참고)을 정의한 후 해당 찾은 결과의 발생을 서비스로 전송하는 도구 또는 서비스입니다.</dd>
   <dt>서비스 CRN</dt>
-    <dd>서비스 CRN은 찾은 결과에 포함된 {{site.data.keyword.cloud_notm}} 서비스를 식별합니다. 예를 들어 인증서 만기 찾은 결과의 경우 찾은 결과를 보고하는 Certificate Manager 서비스 인스턴스의 서비스 인스턴스 ID 또는 CRN이 포함됩니다. </dd>
+    <dd>서비스 CRN은 찾은 결과에 포함된 {{site.data.keyword.cloud_notm}} 서비스를 식별합니다. 예를 들어 인증서 만기 찾은 결과의 경우 찾은 결과를 보고하는 Certificate Manager 서비스 인스턴스의 서비스 인스턴스 ID 또는 CRN이 포함됩니다.</dd>
   <dt>리소스 CRN</dt>
-    <dd>리소스 CRN은 찾은 결과에 포함된 특정 리소스를 식별합니다. 네트워크 분석에서 찾은 결과를 보고하는 경우 영향을 받는 클러스터 또는 리소스를 식별하기 위해 Kubernetes 클러스터 CRN이 포함됩니다. </dd>
+    <dd>리소스 CRN은 찾은 결과에 포함된 특정 리소스를 식별합니다. 네트워크 분석에서 찾은 결과를 보고하는 경우 영향을 받는 클러스터 또는 리소스를 식별하기 위해 Kubernetes 클러스터 CRN이 포함됩니다.</dd>
 </dl>
 
 
@@ -130,4 +130,4 @@ subcollection: security-advisor
 {{site.data.keyword.security-advisor_short}}는 고가용성의 다중 지역 서비스입니다.
 {: shortdesc}
 
-{{site.data.keyword.security-advisor_short}}는 현재 댈러스 및 런던 지역에서 모두 지원됩니다. 이 서비스는 지원되는 각각의 지역에 있는 여러 [가용성 구역](https://www.ibm.com/cloud/blog/announcements/improving-app-availability-multizone-clusters){: external}에서 실행됩니다. {{site.data.keyword.security-advisor_short}}는 지역별로 재해 복구를 수행합니다. 이 서비스는 세 시간 내에 신속하게 복원할 수 있는 백업 데이터베이스를 유지보수합니다. 이전 24시간을 제외한 모든 서비스 데이터가 제공됩니다. 
+{{site.data.keyword.security-advisor_short}}는 현재 댈러스 및 런던 지역에서 모두 지원됩니다. 이 서비스는 지원되는 각각의 지역에 있는 여러 [가용성 구역](https://www.ibm.com/cloud/blog/announcements/improving-app-availability-multizone-clusters){: external}에서 실행됩니다. {{site.data.keyword.security-advisor_short}}는 지역별로 재해 복구를 수행합니다. 이 서비스는 세 시간 내에 신속하게 복원할 수 있는 백업 데이터베이스를 유지보수합니다. 이전 24시간을 제외한 모든 서비스 데이터가 제공됩니다.

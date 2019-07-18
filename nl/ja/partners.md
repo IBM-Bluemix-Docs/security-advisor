@@ -27,7 +27,7 @@ subcollection: security-advisor
 # パートナー
 {: #setup-partner}
 
-IBM ビジネス・パートナー統合によって、サード・パーティー・プロバイダーの重要なアラートと検出事項を {{site.data.keyword.security-advisor_long}} ダッシュボードに取り込むことができます。これらのパートナーと IBM はお客様のために協力して統合エクスペリエンスを構築し、シンプルにして、案内しています。
+IBM ビジネス・パートナー統合は、サード・パーティー・プロバイダーからの重要なアラートと検出事項を {{site.data.keyword.security-advisor_long}} ダッシュボードに取り込む手段となります。 これらのパートナーと IBM はお客様のために協力して統合エクスペリエンスを構築し、シンプルにして、案内しています。
 {: shortdesc}
 
 ## 始めに
@@ -42,18 +42,18 @@ IBM ビジネス・パートナー統合によって、サード・パーティ�
 ## 統合ウィザード
 {: #wizard}
 
-{{site.data.keyword.cloud_notm}} とパートナーの両方のアカウントに管理権限を持つ管理者は、統合ウィザードを使用して素早く作業を開始できます。このウィザードには以下の 4 つの基本手順があります。
+{{site.data.keyword.cloud_notm}} とパートナーの両方のアカウントに管理権限を持つ管理者は、統合ウィザードを使用して素早く作業を開始できます。 このウィザードには以下の 4 つの基本手順があります。
 
 * 信頼を確立し、{{site.data.keyword.cloud_notm}} アカウントとパートナー・アカウントを関連付ける
 * アカウント間で資格情報や URL などの必須情報をコピーする
-* パートナーの検出事項のメタデータを {{site.data.keyword.security-advisor_short}} 内にインストールする
-* パートナーからの検出事項を {{site.data.keyword.security-advisor_short}} に通知して、ペア化を検証する
+* パートナーの検出事項メタデータを {{site.data.keyword.security-advisor_short}} 内にインストールする
+* パートナーからの検出事項を {{site.data.keyword.security-advisor_short}} に送付して、ペア化を検証する
 
 
 ## NeuVector の統合
 {: #setup-neuvector}
 
-[NeuVector](https://neuvector.com){: external} を使用すると、ネットワークの脅威や違反を検出し、コンテナー・ベースのアプリケーションの攻撃を防ぐことができます。モニターにより、コンテナーやホスト内での root 権限の昇格、ポート・スキャン、リバース・シェル、不審なファイル・システム・アクティビティーを検出して、悪用や突破を防ぐことができます。
+[NeuVector](https://neuvector.com){: external} を使用すると、ネットワークの脅威や違反を検出し、コンテナー・ベースのアプリケーションへの攻撃を防ぐことができます。 モニターにより、コンテナーやホスト内での root 権限の昇格、ポート・スキャン、リバース・シェル、不審なファイル・システム・アクティビティーを検出して、悪用や突破を防ぐことができます。
 {: shortdesc}
 
 NeuVector を {{site.data.keyword.security-advisor_short}} に統合するには、以下の手順に従います。
@@ -119,8 +119,8 @@ NeuVector を {{site.data.keyword.security-advisor_short}} に統合するには
 ### 接続の検証
 {: #twistlock-verify}
 
-1. {{site.data.keyword.security-advisor_short}} ダッシュボードで、Twistlock カードが予期したとおりに表示されているか確認します。
+1. {{site.data.keyword.security-advisor_short}} ダッシュボードで、Twistlock カードが適切に表示されているか確認します。
 
-2. Twistlock ダッシュボードで、**「アラート (Alerts)」**タブを最新表示します。 {{site.data.keyword.security-advisor_short}} 接続が表示されます。その接続を開いてください。
+2. Twistlock ダッシュボードで、**「アラート (Alerts)」**タブを最新表示します。 {{site.data.keyword.security-advisor_short}} 接続が表示されます。 その接続を開いてください。
 
 3. 通知させるアラート・タイプがチェックされていることを確認してから、**「検証 (Verify)」**をクリックし、接続が完了したことを確認します。

@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-06-24"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -38,7 +37,7 @@ subcollection: security-advisor
 {: shortdesc}
 
 
-依預設，{{site.data.keyword.security-advisor_short}} 會與下列項目整合：
+依預設，{{site.data.keyword.security-advisor_short}} 可以與下列項目整合：
 
 * Certificate Manager - 用於與憑證期限及生命週期相關的通知。
 * Vulnerability Advisor - 用於取得映像檔漏洞及配置問題的詳細資料。
@@ -71,9 +70,9 @@ subcollection: security-advisor
 ### Twistlock
 {: #integrate-twistlock}
 
-[Twistlock](https://www.twistlock.com){: external} 可以獨一無二地防止在整個環境中部署有漏洞的映像檔，來防止整個 SDLC 的風險。自動化及自訂原則強制執行可在應用程式生命週期的每個階段提供完整控制。Twistlock Intelligence Stream 會直接從 30+ 個來自 Twistlock Labs 的上游專案、商業來源及所有權研究獲得及聚集漏洞資訊。
+[Twistlock](https://www.twistlock.com){: external} 可以獨一無二地防止在整個環境中部署有漏洞的映像檔，來防止整個 SDLC 的風險。自動化及自訂原則強制執行可在應用程式生命週期的每個階段提供完整控制。Twistlock Intelligence Stream 會直接從 30+ 個來自 Twistlock Labs 的上游專案、商業來源及所有權研究獲得及聚集漏洞資訊。
 
-聚焦於讓最精確的資料可涵蓋堆疊的所有層，讓您具有精確的可見性及最低的誤判率。Twistlock 會結合此資料與實際部署的知識，例如，向網際網路公開的容器、以高專用權執行的容器，以及已有其他安全降低的容器，讓您隨時都能查看特定環境中最重要的漏洞。
+聚焦於讓最精確的資料可涵蓋堆疊的所有層，讓您具有精確的可見性及最低的誤判率。Twistlock 會結合此資料與實際部署的知識，例如，向網際網路公開的容器、以高專用權執行的容器，以及已有其他安全降低的容器，讓您隨時都能查看特定環境中最重要的漏洞。
 
 如需設定 Twistlock 實例的協助，請參閱[合作夥伴解決方案](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-twistlock)。
 </br>

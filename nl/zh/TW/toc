@@ -1,15 +1,18 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="security-advisor" audience="security" arm="4033739" href="/docs/services/security-advisor?topic=security-advisor-getting-started#getting-started" path="services/security-advisor"}
+{: .toc subcollection="security-advisor" audience="security" category="security" arm="4033739" href="/docs/services/security-advisor?topic=security-advisor-getting-started#getting-started" path="services/security-advisor"}
 IBM Cloud Security Advisor
 
     {: .navgroup id="learn"}
-    index.md
+    getting-started.md
     about.md
     integrations.md
-    network-insights.md
-    activity-insights.md
+
+    {: .topicgroup}
+    內建 Insights
+        network-insights.md
+        activity-insights.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -31,7 +34,7 @@ IBM Cloud Security Advisor
     {: .navgroup id="reference"}
     [發現項目 API](https://cloud.ibm.com/apidocs/security-advisor)
     [服務儀表板](https://cloud.ibm.com/security-advisor/#/dashboard)
-    [部落格](https://www.ibm.com/blogs/bluemix/tag/security-advisor/)
+    [部落格](https://www.ibm.com/cloud/blog)
     [Grafeas 規格](https://grafeas.io/)
     at-events.md
     {: .navgroup-end}

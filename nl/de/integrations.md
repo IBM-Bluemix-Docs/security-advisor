@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-06-24"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -38,7 +37,7 @@ Mit {{site.data.keyword.security-advisor_long}} können Sie mithilfe von integri
 {: shortdesc}
 
 
-Ohne Vorbereitungs- oder Anpassungsaufwand ist {{site.data.keyword.security-advisor_short}} mit Folgendem integriert:
+Ohne Vorbereitungs- oder Anpassungsaufwand kann {{site.data.keyword.security-advisor_short}} mit Folgendem integriert werden:
 
 * Certificate Manager für Benachrichtigungen, die sich auf den Ablauf von Zertifikaten und den Lebenszyklus beziehen.
 * Vulnerability Advisor für Details zu Sicherheitslücken von Images und Konfigurationsproblemen.
@@ -73,7 +72,7 @@ Hilfe bei der Einrichtung Ihrer NeuVector-Instanz finden Sie unter [Partnerlösu
 
 [Twistlock](https://www.twistlock.com){: external} ist in einzigartiger Weise in der Lage, Risiken im Verlauf des gesamten SDLC zu vermeiden, indem es die Bereitstellung von gefährdeten Images in Ihrer Umgebung verhindert. Die automatisierte und angepasste Richtliniendurchsetzung bietet volle Kontrolle in jeder Phase des Anwendungslebenszyklus. Der Twistlock Intelligence Stream verwendet über 30 vorgelagerte Projekte, kommerzielle Quellen sowie die proprietäre Forschung von Twistlock Labs als Quelle und aggregiert direkt aus ihnen Informationen zu Schwachstellen und Sicherheitslücken.
 
-Der Fokus liegt auf der Verfügbarkeit der präzisesten Daten, um alle Schichten Ihres Stacks abzudecken, damit Sie eine korrekte Sichtbarkeit erhalten und die niedrigste Rate an 'falsch-positiv'-Situationen haben.Twistlock kombiniert diese Daten mit dem Wissen um Ihre tatsächlichen Bereitstellungen, z.B. welche Container gegenüber dem Internet zugänglich sind, welche mit umfangreichen Rechten ausgeführt werden und welche anderen Sicherheitsmaßnahmen getroffen wurden, so dass Sie stets im Blick haben, welche Schwachstellen in Ihrer speziellen Umgebung am kritischsten sind.
+Der Fokus liegt auf der Verfügbarkeit der präzisesten Daten, um alle Schichten Ihres Stacks abzudecken, damit Sie eine korrekte Sichtbarkeit erhalten und die niedrigste Rate an 'falsch-positiv'-Situationen haben. Twistlock kombiniert diese Daten mit dem Wissen um Ihre tatsächlichen Bereitstellungen, z.B. welche Container gegenüber dem Internet zugänglich sind, welche mit umfangreichen Rechten ausgeführt werden und welche anderen Sicherheitsmaßnahmen getroffen wurden, so dass Sie stets im Blick haben, welche Schwachstellen in Ihrer speziellen Umgebung am kritischsten sind.
 
 Hilfe bei der Einrichtung Ihrer Twistlock-Instanz finden Sie unter [Partnerlösungen](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-twistlock).
 </br>

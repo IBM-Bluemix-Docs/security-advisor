@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-08"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -35,7 +35,7 @@ subcollection: security-advisor
 
 整合來自協力廠商工具的發現項目之前，請確定您具有下列必要條件。
 
-1. 確定您使用的使用者或服務 ID 已獲指派**管理員** [IAM 角色](https://cloud.ibm.com/iam#/users)。
+1. 確定您使用的使用者或服務 ID 已獲指派**管理員** [IAM 角色](https://cloud.ibm.com/iam/users){: external}。
 
 2. 登入 {{site.data.keyword.cloud_notm}}。
 
@@ -122,7 +122,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 範例回應：
 
 ```
-  {
+{
   "author": {
       "account_id": "account id",
       "email": "email id",
@@ -408,11 +408,11 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 	"finding": {
 		"severity": "HIGH",
 		"next_steps": [{
-			"title": "Investigate which process are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
+			"title": "Investigate which processes are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
                         "url":"https://cloud.ibm.com/containers-kubernetes/clusters"
 		}],
-                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data",
-                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior"
+                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data.",
+                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior."
 	}
 }
 ```

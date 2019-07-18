@@ -28,7 +28,7 @@ subcollection: security-advisor
 # サービス・アクセスの管理
 {: #service-access}
 
-アカウント所有者は、{{site.data.keyword.cloud_notm}} の Identity and Access Management (IAM) を使用して、{{site.data.keyword.security-advisor_long}} のインスタンスへのアクセスを管理できます。ユーザーに応じたアクセス・レベルになるようにアカウント内にポリシーを設定することで、{{site.data.keyword.security-advisor_short}} の各インスタンスを保護できます。
+アカウント所有者は、{{site.data.keyword.cloud_notm}} の ID およびアクセス管理 (IAM) を使用して、{{site.data.keyword.security-advisor_long}} のインスタンスへのアクセスを管理できます。 ユーザーに応じたアクセス・レベルになるようにアカウント内にポリシーを設定することで、{{site.data.keyword.security-advisor_short}} の各インスタンスを保護できます。
 {: shortdesc}
 
 IAM について詳しくは、[IAM のアクセス権限](/docs/iam?topic=iam-userroles)を参照してください。

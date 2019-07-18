@@ -27,7 +27,7 @@ subcollection: security-advisor
 # Activity Insights (プレビュー)
 {: #activity}
 
-{{site.data.keyword.security-advisor_long}} で {{site.data.keyword.cloud_notm}} Activity Tracker を使用すると、{{site.data.keyword.cloud_notm}} アカウント内の不審なユーザー・アクティビティーを検出できます。
+{{site.data.keyword.security-advisor_long}} で {{site.data.keyword.cloud_notm}} Activity Tracker を使用すると、お客様の {{site.data.keyword.cloud_notm}} アカウントにおける不審なユーザー・アクティビティーを検出できます。
 {: shortdesc}
 
 

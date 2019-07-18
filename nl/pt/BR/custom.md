@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-08"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -35,7 +35,7 @@ Com o {{site.data.keyword.security-advisor_short}}, é possível integrar as sua
 
 Antes de integrar descobertas por meio de sua ferramenta de terceiro, certifique-se de ter os pré-requisitos a seguir.
 
-1. Certifique-se de que o ID do usuário ou do serviço que esteja usando esteja designado à [função do IAM](https://cloud.ibm.com/iam#/users) de **Gerente**.
+1. Certifique-se de que o ID do usuário ou do serviço que você está usando tenha designada a [função do IAM](https://cloud.ibm.com/iam/users){: external} de **Gerenciador**.
 
 2. Efetue login no {{site.data.keyword.cloud_notm}}.
 
@@ -97,7 +97,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 
 | Contexto | Descrição | 
 |:-----------------|:-----------------|
-| `region` | O local no qual a descoberta ocorreu. |
+| `region` | O local no qual a descoberta ocorreu.  |
 | `resource_id` | O ID para o recurso. |
 | `resource_name` | O nome do recurso. |
 | `resource_type` | O tipo do recurso. |
@@ -122,7 +122,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 Resposta de exemplo:
 
 ```
-  {
+{
   "author": {
     "account_id": "account id",
       "email": "email id",
@@ -297,7 +297,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `section` | A seção na qual você deseja que o cartão seja exibido. É possível ter até três seções customizadas com seis placas em cada seção. Caracteres máximos: 30  |
 | Opcional: `order` | A ordem na qual o cartão é exibido dentro da seção especificada. O pedido é especificado no intervalo de 1 a 6. Se você escolher um número que já está aplicado a outro cartão, a criação falhará. Você recebe uma mensagem de erro que indica que "O pedido fornecido já está tomado por outro cartão na seção." Se o pedido fornecido for maior que o número atual de cartões mais 1, a criação do cartão falhará. Por exemplo, se você tiver atualmente dois cartões e estiver criando outro, não será possível especificar 5 no pedido do cartão porque todos juntos, você tem um total de três cartões. Se o pedido para os cartões não for especificado, eles serão organizados alfabeticamente na seção designada. |
 | `title` | O título que você deseja que o seu cartão tenha. Caracteres máximos: 28 |
-| `subtitle` | O subtítulo que você deseja que o seu cartão tenha. Caracteres máximos: 30  |
+| `subtitle` | O subtítulo que você deseja que o seu cartão tenha. Caracteres máximos: 30 |
 | `finding_note_names` | `providers//notes/my-custom-tool-findings-type` |
 {: class="simple-tab-table"}
 {: caption="Tabela 3. Entendendo os componentes de cartão do comando" caption-side="top"}
@@ -310,7 +310,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `kind` | As opções incluem: `NUMERIC`, `TIME_SERIES` e `BREAKDOWN`. |
 | `text` | O texto que você deseja exibir. Se o tipo for `NUMERIC`, o número máximo de caracteres será 60. Se o tipo for `TIME_SERIES` ou `BREAKDOWN`, o número máximo de caracteres será 65. |
 | `default_time_range` | A quantidade de tempo que você deseja verificar. Os valores são configurados em dias. As opções atuais incluem: `1d`, `2d`, `3d` e `4d`. |
-| `value_type` | O tipo de elemento. Se o tipo for `NUMERIC`, o campo será `value_type` e você poderá ter até quatro elementos por cartão. Se o tipo for `TIME_SERIES` ou `BREAKDOWN`, o campo será `value_types`. O número máximo de ambos `TIME_SERIES` ou `BREAKDOWN` é 1. Se você tiver entradas numéricas apenas, poderá ter até quatro elementos por cartão. Se você desejar usar uma combinação, poderá ter até duas entradas numéricas e uma de série temporal ou detalhamento. Não é possível ter ambos a série temporal e o detalhamento no mesmo cartão. Se você definir os seus tipos de valor como uma matriz para série temporal, poderá ter até três entradas. |
+| `value_type` | O tipo de elemento. Se o tipo for `NUMERIC`, o campo será `value_type` e você poderá ter até quatro elementos por cartão. Se o tipo for `TIME_SERIES` ou `BREAKDOWN`, o campo será `value_types`. O número máximo de ambos `TIME_SERIES` ou `BREAKDOWN` é 1. Se você tiver entradas numéricas apenas, poderá ter até quatro elementos por cartão. Se você desejar usar uma combinação, poderá ter até duas entradas numéricas e uma de série temporal ou detalhamento. Não é possível ter ambos a série temporal e o detalhamento no mesmo cartão. Se você definir os seus tipos de valor como uma matriz para série temporal, poderá ter até três entradas.  |
 | `value_type`: `kind` | O tipo de valor. As opções incluem: `KRI` e `FINDING_COUNT`. |
 | `value_type`: `finding_note_names` | Se `kind` for `FINDING_COUNT`, o nome das descobertas que você deseja ver em seu cartão, que é especificado como uma matriz. |
 | `value_type`: `kri_note_names` | Se `kind` for `FINDING_COUNT`, o nome das descobertas que você deseja ver em seu cartão, que é especificado como uma matriz. |
@@ -402,11 +402,11 @@ Carga útil de exemplo:
 	"finding": {
 		"severity": "HIGH",
 		"next_steps": [{
-			"title": "Investigate which process are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
+			"title": "Investigate which processes are running in your cluster. If you suspect one of your pods was hacked, restart it, and look for image vulnerabilities",
                         "url":"https://cloud.ibm.com/containers-kubernetes/clusters"
 		}],
-                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data",
-                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior"
+                "short_description": "One of the pods in your cluster appears to be leaking an excessive amount of data.",
+                "long_description": "One of the pods in your cluster is approaching external servers and sending them data in volumes that exceed that pod’s normal behavior."
 	}
 }
 ```

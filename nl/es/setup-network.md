@@ -2,11 +2,10 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -46,7 +45,7 @@ Si actualmente utiliza la característica Network Analytics, debe [suprimir los 
     ```
     {: codeblock}     
 - Binario de cURL actualizado: para CentOS y Red Hat, puede actualizar con el mandato `yum update -y nss curl libcurl`.
-- La [CLI de {{site.data.keyword.cloud_notm}} y los plugins necesarios](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
+- La [CLI de {{site.data.keyword.cloud_notm}} y los plugins necesarios](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 - La [CLI de Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} v1.10.11 o posterior
 - El [Helm de Kubernetes (gestor de paquetes)](/docs/containers?topic=containers-helm) v2.9.0 o posterior.
 - Un clúster de Kubernetes estándar versión v1.10.11 o posterior
@@ -189,7 +188,7 @@ Asegúrese de repetir la instalación para cada clúster que desee supervisar.
     </tr>
     <tr>
       <td><code>cos_api_key</code></td>
-      <td>La [clave de API](/docs/services/cloud-object-storage/iam?topic=cloud-object-storage-service-credentials) que ha creado para acceder a la instancia y al grupo de COS. La clave debe tener el rol de `escritor` de la plataforma.</td>
+      <td>La [clave de API](/docs/services/cloud-object-storage/iam?topic=cloud-object-storage-service-credentials) que ha creado para acceder a la instancia y al grupo de COS. La clave debe tener el rol de plataforma de`escritor`.</td>
     </tr>
   </table>
 

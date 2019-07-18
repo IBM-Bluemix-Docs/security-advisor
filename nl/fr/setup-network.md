@@ -2,11 +2,10 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -46,7 +45,7 @@ Si vous utilisez la fonction Network Analytics, vous devez [supprimer les compos
     ```
     {: codeblock}     
 - Le fichier binaire cURL mis à jour : pour CentOS et Red Hat, vous pouvez effectuer la mise à jour en exécutant `yum update -y nss curl libcurl`.
-- L'interface de ligne de commande [{{site.data.keyword.cloud_notm}} et les plug-in requis](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+- L'interface de ligne de commande [{{site.data.keyword.cloud_notm}} et les plug-in requis](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli).
 - L'[interface de ligne de commande Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} version 1.10.11 ou ultérieure.
 - Le [gestionnaire de package Kubernetes Helm](/docs/containers?topic=containers-helm) version 2.9.0 ou ultérieure.
 - Un cluster Kubernetes standard version 1.10.11 ou ultérieure.
@@ -144,7 +143,7 @@ Assurez-vous de procéder à l'installation pour chaque cluster à surveiller.
     ```
     {: codeblock}
 
-4. Vérifiez que votre service Kubernetes appartient à la version 1.11 ou à une version ultérieure puis clonez le référentiel suivant dans votre système local. 
+4. Vérifiez que votre service Kubernetes appartient à la version 1.11 ou à une version ultérieure puis clonez le référentiel suivant dans votre système local.
 
   ```
   git clone https://github.com/ibm-cloud-security/security-advisor-network-insights.git

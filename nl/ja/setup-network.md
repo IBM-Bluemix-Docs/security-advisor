@@ -2,11 +2,10 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-07-08"
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -33,7 +32,7 @@ lastupdated: "2019-06-05"
 
 現在 Network Analytics 機能を使用している場合は、Network Insights をインストールする前に、[サービス・コンポーネントを削除する](/docs/services/security-advisor?topic=security-advisor-setup-network#uninstall-analytics)必要があります。 Network Insights を使い始めるにあたり、以下の前提条件を確認してください。
 
-- Windows 10 を使用している場合は、Windows Subsystem for Linux をアクティブにして [Ubuntu シェル](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external}をインストールする。
+- Windows 10 を使用している場合は、Linux 用の Windows サブシステムをアクティブにして [Ubuntu shell](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external} をインストールする。
 - yq CLI をインストールする。
   * [macOS および Windows 10](http://mikefarah.github.io/yq/){: external} の場合。
   * CentOS、Red Hat、および Ubuntu の場合は、以下のコマンドを実行してバージョン 1.15 をインストールする。
@@ -46,7 +45,7 @@ lastupdated: "2019-06-05"
     ```
     {: codeblock}     
 - 更新された cURL バイナリー: CentOS および Red Hat の場合、`yum update -y nss curl libcurl` を実行することによって更新できます。
-- [{{site.data.keyword.cloud_notm}} CLI および必要なプラグイン](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
+- [{{site.data.keyword.cloud_notm}} CLI および必要なプラグイン](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
 - [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} v1.10.11 以降
 - [Kubernetes Helm (パッケージ・マネージャー)](/docs/containers?topic=containers-helm) v2.9.0 以降。
 - 標準 Kubernetes クラスター v1.10.11 以降
@@ -62,7 +61,7 @@ lastupdated: "2019-06-05"
 
 3. 前提条件セクションで、**「COS インスタンスとバスケットの作成 (Create COS instance and bucket)」**をクリックします。 適切な命名規則と IAM 許可により COS インスタンスとバケットが自動的に作成されます。
 
-既存の COS のインスタンスとバケットがある場合、`sa.<account_id>.telemetric.<cos_region>` という命名規則が使用されていることを確認してください。COS インスタンスに格納されているデータをサービスで読み取れるようにするために、{{site.data.keyword.cloud_notm}} IAM を使用して
+既存の COS のインスタンスとバケットがある場合、`sa.<account_id>.telemetric.<cos_region>` という命名規則が使用されていることを確認してください。 COS インスタンスに格納されているデータをサービスで読み取れるようにするために、{{site.data.keyword.cloud_notm}} IAM を使用して
 [サービス間の許可](/docs/iam?topic=iam-serviceauth)をセットアップします。 `source` を `{{site.data.keyword.security-advisor_short}}`、`target` をご使用の COS インスタンスに設定してください。 `「リーダー」`の IAM 役割を割り当ててください。
 
 
@@ -115,7 +114,7 @@ lastupdated: "2019-06-05"
   ```
   {: codeblock}
 
-3. Kubernetes Service v1.12.x を使用している場合は、以下のコマンドを使用して Helm をインストールします。使用していない場合は、Kubernetes の資料を参照し、[パブリック・アクセスが可能なクラスターでの Helm のセットアップ](/docs/containers?topic=containers-helm#public_helm_install)を行うためのインストール手順を確認してください。
+3. Kubernetes Service v1.12.x を使用している場合は、以下のコマンドを使用して Helm をインストールします。 使用していない場合は、Kubernetes の資料を参照し、[パブリック・アクセスが可能なクラスターでの Helm のセットアップ](/docs/containers?topic=containers-helm#public_helm_install)を行うためのインストール手順を確認してください。
 
   1. 既存のデプロイメントを削除します。
 
@@ -152,7 +151,7 @@ lastupdated: "2019-06-05"
   ```
   {: codeblock}
 
-  Kubernetes Service バージョン 1.10 は非推奨で、サポートされていません。v1.10+ が既にインストール済みの場合は、Helm コマンド `helm upgrade --recreate-pods network-insights` を実行し、アナライザー・ポッドを再始動して、既存のイメージの脆弱性を解決してください。
+  Kubernetes Service バージョン 1.10 は非推奨で、サポートされていません。 v1.10+ が既にインストール済みの場合は、Helm コマンド `helm upgrade --recreate-pods network-insights` を実行し、アナライザー・ポッドを再始動して、既存のイメージの脆弱性を解決してください。
   {: deprecated}
 
 5. `security-advisor-network-insights` フォルダーに変更します。
