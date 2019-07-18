@@ -62,7 +62,7 @@ To get started with {{site.data.keyword.security-advisor_short}}, install the sa
 1. Clone the following repository to use Nmap as an example or clone the repository for your own third-party tool or service. 
 
     ```
-    https://github.com/ibm-cloud-security/security-advisor-nmap-integration
+    https://github.com/ibm-cloud-security/security-advisor-nmap-integration.git
     ```
     {: codeblock}
 
