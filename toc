@@ -30,11 +30,14 @@ IBM Cloud Security Advisor
     Enabling Insights
         setup-network.md
         setup-activity.md
+    
+    notifications.md
     iam.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Findings API](https://cloud.ibm.com/apidocs/security-advisor)
+    [Findings API](https://test.cloud.ibm.com/apidocs/security-advisor/findings)
+    [Notifications API](https://test.cloud.ibm.com/apidocs/security-advisor/notifications)
     [Service dashboard](https://cloud.ibm.com/security-advisor/#/dashboard)
     [Blogs](https://www.ibm.com/cloud/blog)
     [Grafeas spec](https://grafeas.io/)
