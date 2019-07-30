@@ -117,7 +117,7 @@ You can update your configuration by clicking **Edit** in the overflow menu of t
 2. Run the following cURL command.
 
   ```
-  curl -x POST "{INSERT URL}/notifications/v1/{account_id}/notifications/channels"
+  curl -x POST "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{account_id}/notifications/channels"
   -H "accept: application/json"
   -H "Authorization: Bearer <IAM_Token>"
   -d {
@@ -125,7 +125,6 @@ You can update your configuration by clicking **Edit** in the overflow menu of t
     "description": "test-notification",
     "type": "Webhook",
     "endpoint": "<Endpoint>"
-    "endpoint": "<Endpoint>",
     "enabled": true
   }
   ```
@@ -144,7 +143,7 @@ You can update your configuration by clicking **Edit** in the overflow menu of t
 3. Test your connection.
 
   ```
-  curl -X GET "https://security-advisor.us-south.containers.appdomain.cloud/notifications/v1/{ACCOUNT_ID}/test/notification/channel/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
+  curl -X GET "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{ACCOUNT_ID}/test/notification/channel/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
 
@@ -170,7 +169,7 @@ Example payload:
          "issuer-url":"https://cloud.ibm.com/security-advisor#/findings?id=291266ca760e037c079edd4523242386/providers/test-provider/occurrences/ce90dc1-1-1-7",
          "id":"291266ca760e037c079edd4523242386/providers/test-provider/occurrences/ce90dc1-1-1-7",
          "payload-type":"findings",
-         "payload-link":"https://security-advisor.us-south.containers.appdomain.cloud/findings",
+         "payload-link":"https://us-south.secadvisor.cloud.ibm.com/findings",
          "provider":"cert-mgr",
          "payload":{
             "author":{
@@ -270,7 +269,7 @@ You can verify the payload by using the API.
 2. Download the public key.
 
   ```
-  curl -X GET "https://us-south.secadvisor.cloud.ibm.com/notifications/v1/{Account_ID}/download_public_key" -H "accept: application/json" -H "Authorization: {IAM-token}"
+  curl -X GET "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{Account_ID}/download_public_key" -H "accept: application/json" -H "Authorization: {IAM-token}"
   ```
   {: codeblock}
 
@@ -336,14 +335,14 @@ You can delete your channel configurations from the
 2. Obtain your channel ID.
 
   ```
-  curl -X GET "https://security-advisor.us-south.containers.appdomain.cloud/notifications/v1/{ACCOUNT_ID}/notifications/channels" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
+  curl -X GET "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{ACCOUNT_ID}/notifications/channels" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
 
 3. Delete the channel.
 
   ```
-  curl -X DELETE "https://security-advisor.us-south.containers.appdomain.cloud/notifications/v1/{ACCOUNT_ID}/notifications/channels/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
+  curl -X DELETE "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{ACCOUNT_ID}/notifications/channels/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
 
