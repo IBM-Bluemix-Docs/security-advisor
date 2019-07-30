@@ -117,7 +117,7 @@ You can update your configuration by clicking **Edit** in the overflow menu of t
 2. Run the following cURL command.
 
   ```
-  curl -x POST "{INSERT URL}/notifications/v1/{account_id}/notifications/channels"
+  curl -x POST "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{account_id}/notifications/channels"
   -H "accept: application/json"
   -H "Authorization: Bearer <IAM_Token>"
   -d {
@@ -125,7 +125,6 @@ You can update your configuration by clicking **Edit** in the overflow menu of t
     "description": "test-notification",
     "type": "Webhook",
     "endpoint": "<Endpoint>"
-    "endpoint": "<Endpoint>",
     "enabled": true
   }
   ```
