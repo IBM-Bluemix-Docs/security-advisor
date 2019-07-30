@@ -148,7 +148,7 @@ You can update your configuration by clicking **Edit** in the overflow menu of t
   ```
   {: codeblock}
 
-To edit your channel configuration, you can make an API call to the [`/update endpoint`] ( Insert Link When Live ){: external}.
+To edit your channel configuration, you can make an API call to the [`/update endpoint`](https://cloud.ibm.com/apidocs/security-advisor/notifications#update-a-channel){: external}.
 {: tip}
 
 
