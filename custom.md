@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-07-11"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -73,7 +73,7 @@ The APIs follow Grafeas like artifact metadata specifications to store, query, a
 ### Step 1: Registering a new finding type
 {: #custom-register-finding}
 
-To register a new type of findings, you can create a note. To create the note, you can use the [Findings API](https://test.cloud.ibm.com/apidocs/security-advisor/findings#create-a-new-note){: external}. Be sure that you choose a unique provider ID to identify your custom tool. If you're automating the process by using your service ID as your provider ID.
+To register a new type of findings, you can create a note. To create the note, you can use the [Findings API](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Notes/createNote){: external}. Be sure that you choose a unique provider ID to identify your custom tool. If you're automating the process by using your service ID as your provider ID.
 
 Example request:
 
@@ -168,7 +168,7 @@ Be sure to remember the name of the note that is returned as part of the respons
 ### Step 2: Posting findings
 {: #custom-post-findings}
 
-Create an [occurrence](https://cloud.ibm.com/apidocs/security-advisor/findings#creates-a-new-occurrence){: external} to post findings as KRIs or events to your security advisor dashboard.
+Create an [occurrence](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Occurrences/createOccurrence){: external} to post findings as KRIs or events to your security advisor dashboard.
 
 For each card, you can define two KRIs.
 {: note}
@@ -267,7 +267,7 @@ Example response:
 ### Step 3: Defining the card to display
 {: #custom-define-card}
 
-Define how you want your card to display your findings in your dashboard by creating a [note](https://cloud.ibm.com/apidocs/security-advisor/findings#create-a-new-note){: external}.
+Define how you want your card to display your findings in your dashboard by creating a [note](https://us-south.secadvisor.cloud.ibm.com/findings/v1/docs/#/Findings_Notes/createNote){: external}.
 
 Example request: 
 
