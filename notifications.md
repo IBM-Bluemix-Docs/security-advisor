@@ -124,7 +124,7 @@ You can update your configuration by clicking **Edit** in the overflow menu of t
     "name": "test-notification-channel",
     "description": "test-notification",
     "type": "Webhook",
-    "endpoint": "<Endpoint>"
+    "endpoint": "<Endpoint>",
     "enabled": true
   }
   ```
