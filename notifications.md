@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-24"
+lastupdated: "2019-07-30"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -125,18 +125,8 @@ You can update your configuration by clicking **Edit** in the overflow menu of t
     "description": "test-notification",
     "type": "Webhook",
     "endpoint": "<Endpoint>"
-    "severity": {
-      "high": true,
-      "medium": true,
-      "low": true
-    },
-    "frequency": "As they happen",
-    "enabled": true,
-    "alertSource": [
-      {
-        "findings_source": "All"
-      }
-    ]
+    "endpoint": "<Endpoint>",
+    "enabled": true
   }
   ```
   {: code}
