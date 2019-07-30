@@ -144,11 +144,11 @@ You can update your configuration by clicking **Edit** in the overflow menu of t
 3. Test your connection.
 
   ```
-  curl -X GET "https://security-advisor-dev.us-south.containers.appdomain.cloud/notifications/v1/{ACCOUNT_ID}/test/notification/channel/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
+  curl -X GET "https://security-advisor.us-south.containers.appdomain.cloud/notifications/v1/{ACCOUNT_ID}/test/notification/channel/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
 
-To edit your channel configuration, you can make an API call to the [`/update endpoint`] ( Insert Link When Live ){: external}.
+To edit your channel configuration, you can make an API call to the [`/update endpoint`](https://cloud.ibm.com/apidocs/security-advisor/notifications#update-a-channel){: external}.
 {: tip}
 
 
@@ -167,15 +167,15 @@ Example payload:
       {
          "severity":"LOW",
          "issuer":"IBM Security Advisor",
-         "issuer-url":"https://dev.console.test.cloud.ibm.com/security-advisor#/findings?id=291266ca760e037c079edd4523242386/providers/test-provider-jag/occurrences/ce90dc1-1-1-7",
-         "id":"291266ca760e037c079edd4523242386/providers/test-provider-jag/occurrences/ce90dc1-1-1-7",
+         "issuer-url":"https://cloud.ibm.com/security-advisor#/findings?id=291266ca760e037c079edd4523242386/providers/test-provider/occurrences/ce90dc1-1-1-7",
+         "id":"291266ca760e037c079edd4523242386/providers/test-provider/occurrences/ce90dc1-1-1-7",
          "payload-type":"findings",
-         "payload-link":"https://security-advisor-dev.us-south.containers.appdomain.cloud/findings",
+         "payload-link":"https://security-advisor.us-south.containers.appdomain.cloud/findings",
          "provider":"cert-mgr",
          "payload":{
             "author":{
                "account_id":"291266ca760e037c079edd4523242386",
-               "email":"jagkuma3@in.ibm.com",
+               "email":"user@test.com",
                "id":"IBMid-3100013FP0",
                "kind":"user"
             },
@@ -208,14 +208,14 @@ Example payload:
                ],
                "severity":"LOW"
             },
-            "id":"ce90dc11-jag-1",
+            "id":"ce90dc11-1",
             "insertion_timestamp":1557282940339,
             "kind":"FINDING",
             "long_description":"Certificate expiring in 90 days",
-            "name":"291266ca760e037c079edd4523242386/providers/test-provider-jag/occurrences/ce90dc1-1-1-7",
+            "name":"291266ca760e037c079edd4523242386/providers/test-provider/occurrences/ce90dc1-1-1-7",
             "note_name":"29104aa4ec94471284be7d33bf1b1391/providers/security-advisor/notes/certmgr-expiring_90day_cert",
-            "provider_id":"test-provider-jag",
-            "provider_name":"291266ca760e037c079edd4523242386/providers/test-provider-jag",
+            "provider_id":"test-provider",
+            "provider_name":"291266ca760e037c079edd4523242386/providers/test-provider",
             "reported_by":{
                "id":"certificate-manager",
                "title":"IBM Cloud Certificate Manager",
@@ -336,14 +336,14 @@ You can delete your channel configurations from the
 2. Obtain your channel ID.
 
   ```
-  curl -X GET "https://security-advisor-dev.us-south.containers.appdomain.cloud/notifications/v1/{ACCOUNT_ID}/notifications/channels" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
+  curl -X GET "https://security-advisor.us-south.containers.appdomain.cloud/notifications/v1/{ACCOUNT_ID}/notifications/channels" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
 
 3. Delete the channel.
 
   ```
-  curl -X DELETE "https://security-advisor-dev.us-south.containers.appdomain.cloud/notifications/v1/{ACCOUNT_ID}/notifications/channels/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
+  curl -X DELETE "https://security-advisor.us-south.containers.appdomain.cloud/notifications/v1/{ACCOUNT_ID}/notifications/channels/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
 
