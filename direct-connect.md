@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-08-02"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -49,7 +49,7 @@ Before you can add the integration, you must first have an account with the part
 
   1. Give your solution a name. You can use only alpha-numeric characters, white spaces, and dashes (-) in the name.
 
-  2. Enter the URL for the solution in the format: `www.<website>.<domain>`.
+  2. Enter the URL for the solution in one of the following formats: `http://www.<website>.<domain>` or `https://www.<website>.<domain>`.
 
   3. Upload an icon or image to represent the tool.
 
