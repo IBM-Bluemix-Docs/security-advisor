@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-08-02"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -54,8 +53,6 @@ Check out the following image to see the flow of information.
 
 Activity Tracker collects events that describe user interactions against {{site.data.keyword.cloud_notm}} APIs. You can then store the logs in an Object Storage bucket for further analysis.
 {: shortdesc}
-
-Activity Tracker collects events that describe user interactions against {{site.data.keyword.cloud_notm}} APIs.
 
 Collected information includes:
 
