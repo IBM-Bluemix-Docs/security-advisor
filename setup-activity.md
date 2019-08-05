@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-08-05"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -100,6 +100,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
   {: codeblock}
 
   <table>
+    <caption>Table 1. IBM Cloud Endpoints by region</caption>
     <tr>
       <th>Region</th>
       <th>Endpoint</th>
@@ -140,6 +141,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
   {: tip}
 
   <table>
+    <caption>Table 2. Install command components explained</caption>
     <tr>
       <th>Variable</th>
       <th>Description</th>

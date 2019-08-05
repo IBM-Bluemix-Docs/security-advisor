@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-08-05"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -301,7 +301,7 @@ curl -X POST "https://us-south.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | Card | Description | 
 |:-----------------|:-----------------|
 | `section` | The section in which you want the card to display. You can have up to three custom sections with six cards in each section. Maximum characters: 30  |
-| Optional: `order` | The order in which the card is displayed within the specified section. The order is specified in range 1 - 6. If you choose a number that is already applied to another card, the creation fails. You receive an error message that states "Given order is already taken by other card in section." If the order provided is greater than the current number of cards plus 1, then card creation fails. For example, if you currently have two cards and are creating another, you could not specify 5 in the card order because all together, you have three cards total. If the order for the cards is not specified, they are arranged alphabetically in the assigned section. |
+| Optional: `order` | The order in which the card is displayed within the specified section. The order is specified in range 1 - 6. If you choose a number that is already applied to another card, the creation fails. You receive an error message that states `Given order is already taken by other card in section.` If the order provided is greater than the current number of cards plus 1, then card creation fails. For example, if you currently have two cards and are creating another, you could not specify 5 in the card order because all together, you have three cards total. If the order for the cards is not specified, they are arranged alphabetically in the assigned section. |
 | `title` | The title that you want your card to have. Maximum characters: 28 |
 | `subtitle` | The subtitle that you want your card to have. Maximum characters: 30 |
 | `finding_note_names` | `providers//notes/my-custom-tool-findings-type` |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-08-05"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -35,9 +35,8 @@ With {{site.data.keyword.security-advisor_long}}, you can gain insights based on
 
 The Network Insights feature is an add-on to the {{site.data.keyword.security-advisor_short}} service. With the feature enabled and configured, cluster network communication, both incoming and outgoing, between your cluster and external entities is collected and continuously monitored and analyzed.
 
-Check out the following image to see the flow of information.
-
-![Network Insights flow diagram](images/network-insights-flow.png)
+![This image shows the flow of information for Network Insights. The information in the image can be found in the surrounding text.](images/network-insights-flow.png)
+Figure. Network Insights information flow.
 
 1. As an account administrator, you can install Network Insights into each cluster that you want to monitor.
 2. Network flow logs are forwarded to a Cloud Object Storage bucket where they are stored until you decide to delete them. When you use the {{site.data.keyword.security-advisor_short}} GUI to create the bucket, service to service IAM roles are assigned so that the service can view the logs.
@@ -136,7 +135,7 @@ A finding might include:
 * Containers that send out or consume significantly more data than normal to or from specific peers.
 * The level of surveying of a particular container has significantly increased.
 
-After the model is developed, deviations from the learned model are detected, and when an alarming change is exhibited, Network Insights posts a finding to the Security Advisor dashboard. Findings are summarized in the "Network: Anomalies in Traffic" card. The card introduces two Key Risk Indicators (KRIs). The "Higher than normal reconnaissance or data exchange activity" KRI counts findings that are related to abnormal interactions detected between the cluster and external peers. The "Outbound approach to a new server" KRI counts findings that are related to new detected servers approaches by the cluster.  
+After the model is developed, deviations from the learned model are detected, and when an alarming change is exhibited, Network Insights posts a finding to the Security Advisor dashboard. Findings are summarized in the **Network: Anomalies in Traffic** card. The card introduces two Key Risk Indicators (KRIs). The *Higher than normal reconnaissance or data exchange activity* KRI counts findings that are related to abnormal interactions detected between the cluster and external peers. The *Outbound approach to a new server* KRI counts findings that are related to new detected servers approaches by the cluster.  
 
 ## Next steps
 {: #network-next}

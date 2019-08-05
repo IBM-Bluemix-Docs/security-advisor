@@ -2,15 +2,15 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-08-05"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
+
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -61,6 +61,7 @@ Check out the following table for a list of the events that are sent to {{site.d
 {: shortdesc}
 
 <table>
+  <caption>Table 1. {{site.data.keyword.cloudaccesstrailshort}} events</caption>
   <tr>
     <th>Action</th>
     <th>Description</th>

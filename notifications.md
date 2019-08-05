@@ -65,6 +65,7 @@ To start receiving notifications immediately, you can configure a notification c
 3. Using the following table as a guide, provide the following information.
 
   <table>
+    <caption>Table 1. Configuring notifications with the GUI</caption>
     <tr>
       <th colspan= "2">Notification configurations</th>
     </tr>
@@ -74,7 +75,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Description</td>
-      <td>Describe what the channel is used for. For example: "This channel sends high severity notifications as they happen."</td>
+      <td>Describe what the channel is used for. For example: <i>This channel sends high severity notifications as they happen.</i></td>
     </tr>
     <tr>
       <td>Channel endpoint</td>
