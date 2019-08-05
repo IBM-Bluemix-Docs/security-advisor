@@ -82,11 +82,11 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
   </table>
 
-3. Click **Save**. The channel is added to a list where you can track all of your channel configurations.
+4. Click **Save**. The channel is added to a list where you can track all of your channel configurations.
 
-4. Test the connection by clicking the overflow menu in the row for the channel that you created.
+5. Test the connection by clicking the overflow menu in the row for the channel that you created.
 
-5. Select **Test the connection**. A test notification is sent to your endpoint. A test channel connection request triggers an alert as shown in the following example:
+6. Select **Test the connection**. A test notification is sent to your endpoint. A test channel connection request triggers an alert as shown in the following example:
 
      ```
      {
@@ -98,7 +98,8 @@ To start receiving notifications immediately, you can configure a notification c
      
      Be sure to exclude alerts that are sent by the **Security Advisor channel test** issuer from your final webhook implementation.
      {: note}
-6. Optional: Update your configuration by clicking **Edit** in the overflow menu of the connection that you want to change.
+
+7. Optional: Update your configuration by clicking **Edit** in the overflow menu of the connection that you want to change.
 
 
 ### With the API
