@@ -86,7 +86,7 @@ To start receiving notifications immediately, you can configure a notification c
 
 4. Test the connection by clicking the overflow menu in the row for the channel that you created.
 
-5. Select **Test the connection**. A test notification is sent to your endpoint. A test channel connection request will trigger an alert as shown in the following example:
+5. Select **Test the connection**. A test notification is sent to your endpoint. A test channel connection request triggers an alert as shown in the following example:
 
      ```
      {
