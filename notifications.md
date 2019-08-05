@@ -94,6 +94,7 @@ To start receiving notifications immediately, you can configure a notification c
         payload : {}
      }
      ``` 
+     {: screen}
      
      Be sure to exclude alerts that are sent by the **Security Advisor channel test** issuer from your final webhook implementation.
      {: note}
