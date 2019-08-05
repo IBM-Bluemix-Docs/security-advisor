@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-08-05"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -97,9 +97,7 @@ To start receiving notifications immediately, you can configure a notification c
      
      Be sure to exclude alerts that are sent by the **Security Advisor channel test** issuer from your final webhook implementation.
      {: note}
-
 6. Optional: Update your configuration by clicking **Edit** in the overflow menu of the connection that you want to change.
-
 
 
 ### With the API
