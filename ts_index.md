@@ -83,11 +83,15 @@ When you upload or edit an image for a direct connection it doesn't immediately 
 {: tsCauses}
 It is a known issue that images are not displaying correctly.
 
-## Known issue: Direct link to finding details (from notification payload) takes 5 seconds to display in Security Advisor Dashboard
+{: tsResolve}
+To see the updated image, refresh your browser. The new image is displayed in the direct connection table.
+
+
+## Known issue: Finding details from a notification payload direct link take 5 seconds to display in the dashboard
 {: #ts-known-display-direct-link}
 
 {: tsSymptoms}
-When you try to access the findings details link (`issuer-url`) from notification payload, it takes 5 seconds to display in SA Dashboard after the table is loaded
+When you try to access the findings details link found in the `issuer-url` of your notification payload, it takes 5 seconds to display in the service dashboard after the table is loaded.
 
 {: tsCauses}
-It is a known issue that there is a delay in finding details pop up to show up in SA Dashboard while accessing the link directly.
+It is a known issue that there is a delay in displaying findings details when you access it from a direct link.
