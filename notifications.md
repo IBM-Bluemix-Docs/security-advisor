@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-08-06"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -242,9 +242,8 @@ Example payload:
 ```
 {: screen}
 
-In the previous example, `payload-link` refers to the Security Advisor findings API endpoint, where a user can get more information about the findings that they can use to take appropriate action.
+In the previous example, `payload-link` refers to the Security Advisor findings API endpoint where a user can get more information about the findings that they can use to take appropriate action.
 {: note}
-
 
 ### With the GUI
 {: #payload-gui}
