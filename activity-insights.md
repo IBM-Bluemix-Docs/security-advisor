@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-02"
+lastupdated: "2019-08-05"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -35,9 +35,8 @@ With {{site.data.keyword.security-advisor_long}}, you can detect suspicious user
 
 The Activity Insights feature is an add-on to the {{site.data.keyword.security-advisor_short}} service. With the feature enabled and configured, user behavior is logged and analyzed to identify suspicious activity based on rules. You can use default rules, or you can create custom rules to fit your organization.
 
-Check out the following image to see the flow of information.
-
-![Activity Insights flow diagram](images/activity-insights-flow.png)
+![This image shows the flow of information for Activity Insights. The information in the image can be found in the surrounding text.](images/activity-insights-flow.png)
+Figure. Activity Insights information flow.
 
 1. An an account administrator, you can install Activity Insights into your cluster.
 2. With the add-on installed into one cluster, it can monitor Activity Tracker logs for your entire account.
@@ -116,6 +115,7 @@ Example:
 In addition to a condition and an event, rules can also contain the fields that are found in the following table.
 
 <table>
+	<caption>Table 1. Rule components</caption>
 	<tr>
 		<th colspan=2><img src="images/idea.png" alt="light bulb icon"/> Understanding the components of a rule</th>
 	</tr>
@@ -161,6 +161,7 @@ Example:
 {: screen}
 
 <table>
+	<caption>Table 2. Rule components</caption>
 	<tr>
 		<th colspan=2><img src="images/idea.png" alt="light bulb icon"/> Understanding the components of a condition</th>
 	</tr>

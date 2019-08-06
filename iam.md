@@ -2,15 +2,15 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-08-05"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
+
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -41,7 +41,8 @@ Every user that accesses an instance of the {{site.data.keyword.security-advisor
 
 The actions are customized and defined by the {{site.data.keyword.cloud_notm}} service as operations that are allowed to be performed in the service. The actions are then mapped to IAM service user roles. In the following table, the actions and required permissions for {{site.data.keyword.security-advisor_short}} are mapped.
 
-<table><caption>Which roles can perform which actions?</caption>
+<table>
+  <caption>Table 1. Which roles can perform which actions?</caption>
   <col width="40%">
   <col width="40%">
   <col width="20%">
@@ -178,3 +179,4 @@ How do those roles correspond to the API? Check out the following table to see h
 | GET    | /v1/{account_id}/providers/{provider_id}/occurrences/{occurrence_id}      | security-advisor.findings.read   |
 | PUT    | /v1/{account_id}/providers/{provider_id}/occurrences/{occurrence_id}      | security-advisor.findings.update |
 | DELETE | /v1/{account_id}/providers/{provider_id}/occurrences/{occurrence_id}      | security-advisor.findings.delete |
+{: caption="Table 2. API commands and role mappings" caption-side="top"}

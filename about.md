@@ -2,15 +2,15 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-08-05"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
+
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -32,7 +32,8 @@ subcollection: security-advisor
 ## Benefits of using the service
 {: #about-benefits}
 
-![{{site.data.keyword.security-advisor_short}} architecture](images/sa-benefits.png)
+![The benefits of using {{site.data.keyword.security-advisor_short}} can be found further outlined in the surrounding text.](images/sa-benefits.png)
+Figure. {{site.data.keyword.security-advisor_short}} benefits
 
 
 <dl>
@@ -58,15 +59,15 @@ The service receives findings from:
 * IBM Business Partners like NeuVector and Twistlock
 * Custom integrations with your other security tools
 
-Check out the following image to see the way that {{site.data.keyword.security-advisor_short}} components fit together.
 
-![{{site.data.keyword.security-advisor_short}} architecture](images/how-it-works.png)
-
+![This image shows the way in which the components of {{site.data.keyword.security-advisor_short}} fit together. The service receives findings from varying sources such as Buil in insights or custom tools and then displays them in the dashboard where your security advisor can see an overview of your security posture.](images/how-it-works.png)
+Figure. How the {{site.data.keyword.security-advisor_short}} fit together.
 
 
 {{site.data.keyword.security-advisor_short}} is most helpful for security administrators. That role can take many names. Check out the following table for some example users:
 
 <table>
+  <caption>Table 1. Types of Security Administrators</caption>
   <tr>
     <th colspan=2><img src="images/idea.png" alt="light bulb icon"/> Security administrators</th>
   </tr>

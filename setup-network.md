@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -81,6 +81,7 @@ Be sure to repeat the installation for each cluster that you want to monitor.
   {: codeblock}
 
   <table>
+    <caption>Table 1. IBM Cloud Endpoints by region</caption>
     <tr>
       <th>Region</th>
       <th>Endpoint</th>
@@ -178,6 +179,7 @@ Be sure to repeat the installation for each cluster that you want to monitor.
   {: codeblock}
 
   <table>
+    <caption>Table 2. Install command components explained</caption>
     <tr>
       <th>Variable</th>
       <th>Description</th>
