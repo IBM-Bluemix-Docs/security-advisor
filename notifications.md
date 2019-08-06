@@ -241,7 +241,7 @@ Example payload:
 ```
 {: screen}
 
-`payload-link` is the above sample refers to the Security Advisor findings API endpoint, user can get further details of findings through this api endpoint and can take appropriate action like deleting the finding etc.
+In the previous example, `payload-link` refers to the Security Advisor findings API endpoint, where a user can get more information about the findings that they can use to take appropriate action.
 {: note}
 
 
