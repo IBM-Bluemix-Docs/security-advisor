@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-18"
+lastupdated: "2019-08-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -40,14 +40,14 @@ Before you get into the tutorial, let's take a minute to examine the sample code
 | `adapters` | Files that are related to the Findings API can be found in the `adapters` folder. The files help to generate the card and then record the findings in the dashboard. |
 | `scanners` | Files that are related to any security scan that you run can be placed in a `scanners` folder. For this example, the scanner files are related to Nmap. The files in this folder also convert the findings to the appropriate format that can be consumed by the Findings API adapter. |
 | `src` | Files that are related to the various commands and parameters that are required to be passed by the scanner. |
-| `utils` | Files that are related to general utilities. `IAMClient.js` and `restClient.js` generate an access token that is used for authentication. `nmapScanner.js` actually starts the scan. You can replace the information in this file with your own custom tool. `logger.js` is a Winston logger for logging information that can help with debugging. |
+| `utils` | Files that are related to general utilities. `IAMClient.js` and `restClient.js` generate an access token that is used for authentication. `nmapScanner.js` starts the scan. You can replace the information in this file with your own custom tool. `logger.js` is a Winston logger for logging information that can help with debugging. |
 {: caption="Table 1. Understanding the sample code" caption-side="top"}
 
 
 ## Before you begin
 {: #nmap-before}
 
-Before you get started, be sure that you have the following prerequistes installed and that you are assigned the **Manager** [IAM role](https://cloud.ibm.com/iam/users){: external} the account that you're using.
+Before you get started, be sure that you have the following prerequisites installed and that you are assigned the **Manager** [IAM role](https://cloud.ibm.com/iam/users){: external} the account that you're using.
 
 * [Nmap](https://nmap.org/download.html){: external}: The command for your custom tool must be available in the system's path. This tutorial uses `nmap`.
 * [Node.js](https://nodejs.org/en/download){: external}: The `node` command must be available in the system's path.
@@ -89,7 +89,7 @@ In order for the executable to know where to display the findings, set your IBM 
     1. In the {{site.data.keyword.cloud_notm}} dashboard, click **Manage > Access (IAM)**.
     2. Select **{{site.data.keyword.cloud_notm}} API keys**.
     3. Click **Create an {{site.data.keyword.cloud_notm}} API key**
-    4. Give your key a name and describe it. Click **Create**. A screen displays with your your key.
+    4. Give your key a name and describe it. Click **Create**. A screen displays with your key.
     5. Click **Copy** or **Download** your key. When you close the screen, you can no longer access the key.
  
 3. Set the following variables by using the command line.
@@ -150,7 +150,7 @@ If you make a change, be sure to run the scan with the `--updateDashboardCard` s
 ### Format the results
 {: #nmap-format}
 
-When you run the service, in this case the Nmap scan, the findings that are returned can be returned in different forms. To display your findings in the dashboard, you must modify the scan results to match the format that is required by the Findings API. For example, the results that Nmap returns are shown as a string: `Port10(open)response10ms:`. In order to show in the dashboard, the Findings API accepts the results as: `Findingname(), prioritylevel()`. To see an example of reformatting, check out the scanners folder in the GitHub source repository.
+When you run the service, in this case the Nmap scan, the findings can be returned in different forms. To display your findings in the dashboard, you must modify the scan results to match the format that is required by the Findings API. For example, the results that Nmap returns are shown as a string: `Port10(open)response10ms:`. In order to show in the dashboard, the Findings API accepts the results as: `Findingname(), prioritylevel()`. To see an example of reformatting, check out the scanners folder in the GitHub source repository.
 
 
 ### Run the scan
@@ -165,7 +165,7 @@ node ./src/app.js <scan_type> -t 'IPv4 address'
 ```
 {: codeblock}
 
-For MacOS/OSX and unix systems, append command with `sudo -E`:
+For MacOS/OSX and UNIX systems, append command with `sudo -E`:
 
 ```
 sudo -E node ./src/app.js <scan_type> -t 'IPv4 address' --updateDashboardCard 'yes'
@@ -197,7 +197,7 @@ sudo -E node ./src/app.js <scan_type> -t 'IPv4 address' --updateDashboardCard 'y
 {: tab-title="Options"}
 {: tab-group="run-scan"}
 
-IPv6 and IP ranges are not currently supported.
+IPV6 and IP ranges are not currently supported.
 {: note}
 
 
