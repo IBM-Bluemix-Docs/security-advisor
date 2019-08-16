@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-15"
+lastupdated: "2019-08-16"
 
 ---
 
@@ -26,3 +26,4 @@ To suggest changes:
 2. When you're ready for review, make a PR to the master branch and tag Shawna Guilianelli (`smguilia`) for review.
 3. Shawna will review your suggestions with the Security Advisor development team and make any necessary adjustments.
 4. Shawna will merge the content into the repo.
+
