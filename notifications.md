@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-08"
+lastupdated: "2019-09-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -106,7 +106,7 @@ To start receiving notifications immediately, you can configure a notification c
 ### With the API
 {: #channel-create-api}
 
-1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/services/docs/iam?topic=iam#iam-getstarted).
+1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/iam?topic=iam-getstarted).
 
   1. In the IBM Cloud dashboard, click **Manage > Access (IAM)**.
   2. Select **IBM Cloud API keys**.
@@ -176,7 +176,7 @@ Example payload:
    "findings":[
       {
          "severity":"LOW",
-         "issuer":"IBM Security Advisor",
+         "issuer":"IBM Cloud Security Advisor",
          "issuer-url":"https://cloud.ibm.com/security-advisor#/findings?id=291266ca760e037c079edd4523242386/providers/test-provider/occurrences/ce90dc1-1-1-7",
          "id":"291266ca760e037c079edd4523242386/providers/test-provider/occurrences/ce90dc1-1-1-7",
          "payload-type":"findings",
@@ -260,7 +260,7 @@ You can verify the payload by using the GUI.
 You can verify the payload by using the API.
 {: shortdesc}
 
-1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/services/docs/iam?topic=iam#iam-getstarted).
+1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/iam?topic=iam-getstarted).
 
   1. In the IBM Cloud dashboard, click **Manage > Access (IAM)**.
   2. Select **IBM Cloud API keys**.
@@ -326,7 +326,7 @@ To delete several notifications at once:
 
 You can delete your channel configurations from the 
 
-1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/services/docs/iam?topic=iam#iam-getstarted).
+1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/iam?topic=iam-getstarted).
 
   1. In the IBM Cloud dashboard, click **Manage > Access (IAM)**.
   2. Select **IBM Cloud API keys**.

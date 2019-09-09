@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-09-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -75,7 +75,7 @@ If you have an existing instance of COS and bucket, be sure that it uses the nam
 You can install an agent to collect audit flow logs from your {{site.data.keyword.cloud_notm}} account. The logs are stored in your Cloud Object Storage instance where you can enable Activity Insights to analyze your logs for suspicious behavior.
 {: shortdesc}
 
-1. Clone the following repository to your local system.
+1. Clone the [Activity Insights](https://github.com/ibm-cloud-security/security-advisor-activity-insights){: external} repository to your local system.
 
   ```
   git clone https://github.com/ibm-cloud-security/security-advisor-activity-insights.git
