@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-09"
+lastupdated: "2019-09-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -25,7 +25,7 @@ subcollection: security-advisor
 # Activity Insights
 {: #setup-activity}
 
-With {{site.data.keyword.security-advisor_long}}, you can continuously monitor your {{site.data.keyword.cloud_notm}} Activity Tracker logs to identify unauthorized or suspicious behavior and changes in your resources. You can use rule packages that are based on best practices that are provided by the service or create your own custom rules.
+With {{site.data.keyword.security-advisor_long}}, you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious behavior and changes in your resources. You can use rule packages that are based on best practices that are provided by the service or create your own custom rules.
 {: shortdesc}
 
 
@@ -83,16 +83,20 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
   {: codeblock}
 
 2. Change into the `security-advisor-activity-insights` folder.
+3. Current supported versions:        
+   - v1.0 : Change to `v1.0` folder.                                  
+      **Note**: This version will not work after 30th Sept 2019 and will be removed.
+   - v2.0 : Change to `v2.0` folder.
 
-3. Extract the `.tar` file by running the following command.
+4. Extract the `.tar` file by running the following command.
 
   ```
   tar -xvf security-advisor-activity-insights.tar
   ```
   {: codeblock}
 
-4. Change into `security-advisor-activity-insights` folder.
-5. Log in to the {{site.data.keyword.cloud_notm}} CLI. Follow the prompts in the CLI to finish logging in.
+5. Change into `security-advisor-activity-insights` folder.
+6. Log in to the {{site.data.keyword.cloud_notm}} CLI. Follow the prompts in the CLI to finish logging in.
 
   ```
   ibmcloud login -a cloud.ibm.com -r <region>
@@ -115,7 +119,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     </tr>
   </table>
 
-6. Set the context for your cluster.
+7. Set the context for your cluster.
 
   1. Get the command to set the environment variable and download the Kubernetes configuration files.
 
@@ -126,14 +130,14 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
 
   2. Copy the output beginning with `export` and paste it into your terminal to set the `KUBECONFIG` environment variable.
 
-7. Install Helm by using the [Kubernetes Service integration docs](/docs/containers?topic=containers-helm).
+8. Install Helm by using the [Kubernetes Service integration docs](/docs/containers?topic=containers-helm).
 
-8. Optional: [Enable TLS](https://github.com/helm/helm/blob/master/docs/tiller_ssl.md){: external}. If you're using your workstation to handle the installation of analytics components in multiple clusters and TLS is enabled, be sure that the TLS configurations are current and match the current cluster where you plan to install the components.
+9. Optional: [Enable TLS](https://github.com/helm/helm/blob/master/docs/tiller_ssl.md){: external}. If you're using your workstation to handle the installation of analytics components in multiple clusters and TLS is enabled, be sure that the TLS configurations are current and match the current cluster where you plan to install the components.
 
-9. Run the following command to install the Insights. The command validates the naming convention of your bucket, creates Kubernetes secrets, updates the values with your cluster GUID, and deploys Activity Insights.
+10. Run the following command to install the Insights. The command validates the naming convention of your bucket, creates Kubernetes secrets, updates the values with your cluster GUID, and deploys Activity Insights.
 
   ```
-  ./activity-insight-install.sh <cos_region> <cos_api_key> <at_region> <account_api_key> <account_spaces>
+  ./activity-insight-install.sh <cos_region> <cos_api_key> <at_region> <at_service_api_key>
   ```
   {: codeblock}
 
@@ -156,15 +160,11 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     </tr>
     <tr>
       <td><code>at_region</code></td>
-      <td>The region in which you created your COS instance and bucket. Options include: <code>us-south</code> and <code>eu-gb</code>.</td>
+      <td>The region of the <a href="/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-regions">{{site.data.keyword.at_short instance}}</a>. Example: <code>us-south</code>.</td>
     </tr>
     <tr>
-      <td><code>account_api_key</code></td>
-      <td>The platform API key for your {{site.data.keyword.cloud_notm}} account.</td>
-    </tr>
-    <tr>
-      <td><code>account_spaces</code></td>
-      <td>A comma-separated list of the space GUIDs for your {{site.data.keyword.cloud_notm}} account.</td>
+      <td><code>at_service_api_key</code></td>
+      <td>Is a {{site.data.keyword.at_short instance}} [service key](https://cloud.ibm.com/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-export#api) for your {{site.data.keyword.at_short instance}} instance.</td>
     </tr>
   </table>
 
@@ -186,7 +186,7 @@ A rule package is a JSON file that contains a list of rules that you want to mon
 
 3. Copy the JSON files from `security-advisor-activity-insights/security-advisor-ata-rule-packages` to `IBM.rules/activities`.
 
-4. Navigate to your {{site.data.keyword.cloud_notm}} Dashboard and select the COS service instance that is associated with Activity Insights.
+4. Navigate to your {{site.data.keyword.cloud_notm}} dashboard and select the COS service instance that is associated with Activity Insights.
 
 5. On the **Buckets** tab of the service dashboard, select the bucket that is associated with Activity Insights.
 
@@ -218,6 +218,11 @@ If you no longer need to use Activity Insights, you can delete the service compo
 2. Delete the Kubernetes secrets.
 
   ```
-  kubectl delete ns security-advisor-insights
+  kubectl delete ns security-advisor-activity-insights
   ```
   {: codeblock}
+  
+  To uninstall `v1.0`, run `kubectl delete ns security-advisor-insights`
+  {: note}
+  
+  
