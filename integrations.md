@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-24"
+lastupdated: "2019-09-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -108,4 +108,4 @@ With Network Insights (beta), you can monitor and analyze cluster network commun
 ### Activity Insights (preview)
 {: #integrate-activity-insights}
 
-With Activity Insights (preview), you can continuously monitor your {{site.data.keyword.cloud_notm}} Activity Tracker logs to identify unauthorized or suspicious activity that is made by users or apps by using rule packages. You can use the rules packages that are provided by the service which are based on security best practices or you can customize the rules to fit your needs. To learn more, check out [Activity Insights](/docs/services/security-advisor?topic=security-advisor-activity).
+With Activity Insights (preview), you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious activity that is made by users or apps by using rule packages. You can use the rules packages that are provided by the service which are based on security best practices or you can customize the rules to fit your needs. To learn more, check out [Activity Insights](/docs/services/security-advisor?topic=security-advisor-activity).

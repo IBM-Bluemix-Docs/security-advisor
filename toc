@@ -15,6 +15,7 @@ IBM Cloud Security Advisor
         activity-insights.md
 
     demo-nmap.md
+    [Blogs](https://www.ibm.com/cloud/blog)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -36,10 +37,12 @@ IBM Cloud Security Advisor
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Findings API](https://cloud.ibm.com/apidocs/security-advisor/findings)
-    [Notifications API](https://cloud.ibm.com/apidocs/security-advisor/notifications)
+    {: .topicgroup}
+    APIs
+        [Findings API](https://cloud.ibm.com/apidocs/security-advisor/findings)
+        [Notifications API](https://cloud.ibm.com/apidocs/security-advisor/notifications)
+    
     [Service dashboard](https://cloud.ibm.com/security-advisor/#/dashboard)
-    [Blogs](https://www.ibm.com/cloud/blog)
     [Grafeas spec](https://grafeas.io/)
     at-events.md
     {: .navgroup-end}
