@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-09-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -26,7 +26,7 @@ subcollection: security-advisor
 # Activity Insights (preview)
 {: #activity}
 
-With {{site.data.keyword.security-advisor_long}}, you can detect suspicious user activity in your {{site.data.keyword.cloud_notm}} account by using {{site.data.keyword.cloud_notm}} Activity Tracker.
+With {{site.data.keyword.security-advisor_long}}, you can detect suspicious user activity in your {{site.data.keyword.cloud_notm}} account by using {{site.data.keyword.at_short}}.
 {: shortdesc}
 
 
@@ -39,7 +39,7 @@ The Activity Insights feature is an add-on to the {{site.data.keyword.security-a
 Figure. Activity Insights information flow.
 
 1. An an account administrator, you can install Activity Insights into your cluster.
-2. With the add-on installed into one cluster, it can monitor Activity Tracker logs for your entire account.
+2. With the add-on installed into one cluster, it can monitor {{site.data.keyword.at_short}} logs for your entire account.
 3. The activity logs are forwarded to a Cloud Object Storage bucket where they are stored until you decide to delete them. When you use the {{site.data.keyword.security-advisor_short}} GUI to create the bucket, service to service IAM roles are assigned so that the service can view the logs.
 4. With Activity Insights enabled, the raw data in your COS bucket is analyzed based on rules that can be predefined by the service or customized by you.
 5. When a possible security issue is flagged, the finding is forwarded to the Findings database.
@@ -50,7 +50,7 @@ Figure. Activity Insights information flow.
 ## Collecting data
 {: #activity-data}
 
-Activity Tracker collects events that describe user interactions against {{site.data.keyword.cloud_notm}} APIs. You can then store the logs in an Object Storage bucket for further analysis.
+{{site.data.keyword.at_short}} collects events that describe user interactions against {{site.data.keyword.cloud_notm}} APIs. You can then store the logs in an Object Storage bucket for further analysis.
 {: shortdesc}
 
 Collected information includes:
@@ -167,7 +167,7 @@ Example:
 	</tr>
 	<tr>
 		<td><code>fact</code></td>
-		<td>The Activity Tracker CADF event that is being inspected.</td>
+		<td>The {{site.data.keyword.at_short}} CADF event that is being inspected.</td>
 	</tr>
 	<tr>
 		<td><code>operator</code></td>
