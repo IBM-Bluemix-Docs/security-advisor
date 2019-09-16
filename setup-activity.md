@@ -160,11 +160,11 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     </tr>
     <tr>
       <td><code>at_region</code></td>
-      <td>The region of the <a href="/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-regions">{{site.data.keyword.at_short instance}}</a>. Example: <code>us-south</code>.</td>
+      <td>The region of the <a href="/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
-      <td>Is a {{site.data.keyword.at_short instance}} [service key](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-export#api) for your {{site.data.keyword.at_short instance}} instance.</td>
+      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
     </tr>
   </table>
 
