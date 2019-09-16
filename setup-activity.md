@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-10"
+lastupdated: "2019-09-16"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -164,7 +164,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
-      <td>Is a {{site.data.keyword.at_short instance}} [service key](https://cloud.ibm.com/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-export#api) for your {{site.data.keyword.at_short instance}} instance.</td>
+      <td>Is a {{site.data.keyword.at_short instance}} [service key](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-export#api) for your {{site.data.keyword.at_short instance}} instance.</td>
     </tr>
   </table>
 
