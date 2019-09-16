@@ -178,7 +178,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Provider</td>
-      <td>The source of the finding that is received. Provider options include: Vulnerable images <code>VA</code>, Network Insights <code>NA</code>, Activity Insights <code>ATA</code>, Certificate Manager <code>CERT</code>, and <code>ALL</code>. The default is <code>ALL</code>, which includes the other options. There is no need to specify another option if you specify <code>ALL</code>. If you're not sure which providers are available in your account, you can query the providers API: <code>/findings/v1/{accountId}/providers</code>. Note: If you configure your channel from the GUI, then <code>ALL</code> is automatically set for you. To specify a provider, you must use the API.</td>
+      <td>The source of the finding that is received. Provider options include: Vulnerable images <code>VA</code>, Network Insights <code>NA</code>, Activity Insights <code>ATA</code>, Certificate Manager <code>CERT</code>, and <code>ALL</code>. The default is <code>ALL</code>, which includes the other options. There is no need to specify another option if you specify <code>ALL</code>. If you're not sure which providers are available in your account, you can query the providers API: <code>/findings/v1/{accountId}/providers</code>. Note: If you configure your channel from the GUI, then <code>ALL</code> is automatically set for you. To choose a specific provider, you must use the API.</td>
     </tr>
   </table>
 
