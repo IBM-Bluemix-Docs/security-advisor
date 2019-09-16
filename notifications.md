@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-09"
+lastupdated: "2019-09-16"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -67,7 +67,8 @@ To start receiving notifications immediately, you can configure a notification c
   <table>
     <caption>Table 1. Configuring notifications with the GUI</caption>
     <tr>
-      <th colspan= "2">Notification configurations</th>
+      <th>Variable</th>
+      <th>Description</th>
     </tr>
     <tr>
       <td>Name</td>
@@ -78,8 +79,16 @@ To start receiving notifications immediately, you can configure a notification c
       <td>Describe what the channel is used for. For example: <i>This channel sends high severity notifications as they happen.</i></td>
     </tr>
     <tr>
+      <td>Type</td>
+      <td>Current options include <code>Webhook</code>.</td>
+    </tr>
+    <tr>
       <td>Channel endpoint</td>
       <td>The location where you want to be notified. Examples include a slack channel, an email address, or a PagerDuty service.</td>
+    </tr>
+    <tr>
+      <td>Severity</td>
+      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, and <code>high</code>. By default, <code>medium</code> and <code>high</code> are turned on.</td>
     </tr>
   </table>
 
@@ -140,6 +149,38 @@ To start receiving notifications immediately, you can configure a notification c
   }
   ```
   {: code}
+
+  <table>
+    <caption>Table 2. Configuring notifications with the API</caption>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>The name of the channel.</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Describe what the channel is used for. For example: <i>This channel sends high severity notifications as they happen.</i></td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>Current options include <code>Webhook</code>.</td>
+    </tr>
+    <tr>
+      <td>Channel endpoint</td>
+      <td>The location where you want to be notified. Examples include a slack channel, an email address, or a PagerDuty service.</td>
+    </tr>
+    <tr>
+      <td>Severity</td>
+      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, and <code>high</code>. By default, <code>medium</code> and <code>high</code> are turned on.</td>
+    </tr>
+    <tr>
+      <td>Provider</td>
+      <td>The source of the finding that is received. Provider options include: Vulnerable images <code>VA</code>, Network Insights <code>NA</code>, Activity Insights <code>ATA</code>, Certificate Manager <code>CERT</code>, and <code>ALL</code>. The default is <code>ALL</code>, which includes the other options. There is no need to specify another option if you specify <code>ALL</code>. If you're not sure which providers are available in your account, you can query the providers API: <code>/findings/v1/{accountId}/providers</code>. Note: If you configure your channel from the GUI, then <code>ALL</code> is automatically set for you. To specify a provider, you must use the API.</td>
+    </tr>
+  </table>
 
   Example response:
 
