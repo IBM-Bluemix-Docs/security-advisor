@@ -88,15 +88,13 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Severity</td>
-      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, and <code>high</code>. By default, <code>medium</code> and <code>high</code> are turned on.</td>
+      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, and <code>high</code>. You must select at least one option when configuring your channel through the GUI.</td>
     </tr>
   </table>
 
 4. Click **Save**. The channel is added to a list where you can track all of your channel configurations.
 
-5. Test the connection by clicking the overflow menu in the row for the channel that you created.
-
-6. Select **Test the connection**. A test notification is sent to your endpoint. A test channel connection request triggers an alert as shown in the following example:
+5. Test the connection by clicking the overflow menu in the row for the channel that you created. Select **Test the connection**. A test notification is sent to your endpoint. A test channel connection request triggers an alert as shown in the following example:
 
      ```
      {
