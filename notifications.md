@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-16"
+lastupdated: "2019-09-17"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -146,6 +146,10 @@ To start receiving notifications immediately, you can configure a notification c
     "type": "Webhook",
     "endpoint": "<Endpoint>"
     "enabled": true
+    "severity": ["low"]
+    "alertSource": [
+      "provider_name": "ALL"
+    ]
   }
   ```
   {: code}
@@ -170,7 +174,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Channel endpoint</td>
-      <td>The location where you want to be notified. Examples include a slack channel, an email address, or a PagerDuty service.</td>
+      <td>The location where you want to be notified. Examples include a valid callback URL.</td>
     </tr>
     <tr>
       <td>Severity</td>
