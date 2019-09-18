@@ -32,7 +32,6 @@ IBM Cloud Security Advisor
     Enabling Insights
         setup-network.md
         setup-activity.md
-
     
     notifications.md
     iam.md
