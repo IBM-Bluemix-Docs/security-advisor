@@ -15,7 +15,6 @@ IBM Cloud Security Advisor
         activity-insights.md
 
     demo-nmap.md
-    
     [Blogs](https://www.ibm.com/cloud/blog)
     {: .navgroup-end}
 
