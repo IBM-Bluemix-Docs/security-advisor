@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-09-16"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -28,40 +28,39 @@ subcollection: security-advisor
 # {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at_events}
 
-You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.cloudaccesstrailshort}} service.
+You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.at_short}} service.
 {: shortdesc}
 
 
+For more information about how the service works, see the [{{site.data.keyword.at_short}} docs](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-cloud_services#cloud_services).
 
-
-
-
-For more information about how the service works, see the [{{site.data.keyword.cloudaccesstrailshort}} docs](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started).
 
 
 
 ## Where to view events
 {: #monitor}
 
-Events are available in the {{site.data.keyword.cloudaccesstrailshort}} **account domain** that is available in the {{site.data.keyword.cloud_notm}} region where the events are generated.
+Events are available in the {{site.data.keyword.at_short}} **account domain** that is available in the {{site.data.keyword.cloud_notm}} region where the events are generated.
+
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
-2. From the catalog, provision an instance of the {{site.data.keyword.cloudaccesstrailshort}} service in the same account as your instance of {{site.data.keyword.security-advisor_short}}.
-3. On the **Manage** tab of the {{site.data.keyword.cloudaccesstrailshort}} dashboard, click the **View in Kibana**.
-4. Set the time frame that you want to view logs for. The default is 15 min.
-5. In the **Available Fields** list, click **type**. Click the magnifying glass icon for **Activity Tracker** to limit the logs to only those tracked by the service.
-6. You can use the other available fields to narrow your search.
+2. From the catalog, provision an instance of the {{site.data.keyword.at_short}} service in the same account as your {{site.data.keyword.appid_short_notm}} instance.
+3. From the **Observability > Activity Tracker** tab, verify the information for the instance that you created.
+4. Click **View LogDNA** and make sure you're on the **Everything** dashboard. Any events that meet the qualifications for your {{site.data.keyword.at_short}} payment plan are visible. You can filter your results by tags, sources, apps or levels. You can also search for specific events or jump to a specific timeframe.
 
+
+For users other than the account owner to view logs, you must use the premium plan. To let other users view events, see [Granting permissions to see account events](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-iam_manage_events).
+{: tip}
 
 
 ## List of events
 {: #events}
 
-Check out the following table for a list of the events that are sent to {{site.data.keyword.cloudaccesstrailshort}}.
+Check out the following table for a list of the events that are sent to {{site.data.keyword.at_short}}.
 {: shortdesc}
 
 <table>
-  <caption>Table 1. {{site.data.keyword.cloudaccesstrailshort}} events</caption>
+  <caption>Table 1. {{site.data.keyword.at_short}} events</caption>
   <tr>
     <th>Action</th>
     <th>Description</th>

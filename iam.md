@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-09-18"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -154,6 +154,26 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
   <tr>
     <td><code>security-advisor.insights-cos.create</code></td>
     <td>Create a Cloud Object Storage instance through {{site.data.keyword.security-advisor_short}} for network and activity insights.</td>
+    <td>Manager</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.notification-channels.read</code></td>
+    <td>List your {{site.data.keyword.security-advisor_short}} notification channels.</td>
+    <td>Manager, Reader, Writer</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.notification-channels.create</code></td>
+    <td>Create a {{site.data.keyword.security-advisor_short}} notification channel.</td>
+    <td>Manager</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.notification-channels.delete</code></td>
+    <td>Delete a {{site.data.keyword.security-advisor_short}} notification channel.</td>
+    <td>Manager</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.notification-channels.update</code></td>
+    <td>Update a {{site.data.keyword.security-advisor_short}} notification channel.</td>
     <td>Manager</td>
   </tr>
 </table>
