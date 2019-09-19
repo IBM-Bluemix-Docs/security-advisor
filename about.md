@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-09-18"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -60,7 +60,7 @@ The service receives findings from:
 * Custom integrations with your other security tools
 
 
-![This image shows the way in which the components of {{site.data.keyword.security-advisor_short}} fit together. The service receives findings from varying sources such as Buil in insights or custom tools and then displays them in the dashboard where your security advisor can see an overview of your security posture.](images/how-it-works.png)
+![This image shows the way in which the components of {{site.data.keyword.security-advisor_short}} fit together. The service receives findings from varying sources such as Built in insights or custom tools and then displays them in the dashboard where your security advisor can see an overview of your security posture.](images/how-it-works.png)
 Figure. How the {{site.data.keyword.security-advisor_short}} fit together.
 
 
