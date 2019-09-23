@@ -184,7 +184,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 |:-----------------|:-----------------|
 | `kind` | `FINDING` |
 | `short_description` | A short description that summaries the finding; no more than a couple of words. |
-| `long_description` | A longer description that contains more details about the finding. For formatting purposes, the following HTML tags are supported: `&lt;br&gt;, &lt;i&gt;, &lt;/i&gt;, &lt;b&gt;, &lt;/b&gt;, &lt;br/&gt;`.|
+| `long_description` | A longer description that contains more details about the finding. For formatting purposes, the following HTML tags are supported: `<br>, <i>, </i>, <b>, </b>, <br/>`.|
 | `provider_id` | Your custom security tool. |
 | `id` | An ID for the type of finding that your security tool found. |
 {: class="simple-tab-table"}
@@ -281,7 +281,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `provider_id` | The ID of your security tool. |
 | `id` | An ID for the type of finding that your security tool found. |
 | `short_description` | A short description that summaries the finding; no more than a couple of words. |
-| `long_description` | A longer description that contains more details about the finding. For formatting purposes, the following HTML tags are supported: `&lt;br&gt;, &lt;i&gt;, &lt;/i&gt;, &lt;b&gt;, &lt;/b&gt;, &lt;br/&gt;`.|
+| `long_description` | A longer description that contains more details about the finding. For formatting purposes, the following HTML tags are supported: `<br>, <i>, </i>, <b>, </b>, <br/>`.|
 {: class="simple-tab-table"}
 {: caption="Table 1. Understanding the command's general components" caption-side="top"}
 {: #definecard1}
