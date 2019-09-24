@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-16"
+lastupdated: "2019-09-23"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -41,7 +41,6 @@ For more information about how the service works, see the [{{site.data.keyword.a
 {: #monitor}
 
 Events are available in the {{site.data.keyword.at_short}} **account domain** that is available in the {{site.data.keyword.cloud_notm}} region where the events are generated.
-
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 2. From the catalog, provision an instance of the {{site.data.keyword.at_short}} service in the same account as your {{site.data.keyword.appid_short_notm}} instance.

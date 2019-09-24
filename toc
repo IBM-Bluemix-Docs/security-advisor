@@ -14,11 +14,12 @@ IBM Cloud Security Advisor
         network-insights.md
         activity-insights.md
 
-    demo-nmap.md
+    config-advisor-findings.md
     [Blogs](https://www.ibm.com/cloud/blog)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    demo-nmap.md
     setup.md
 
     {: .topicgroup}
@@ -31,7 +32,8 @@ IBM Cloud Security Advisor
     Enabling Insights
         setup-network.md
         setup-activity.md
-    
+
+    config-advisor-tutorial.md
     notifications.md
     iam.md
     {: .navgroup-end}
