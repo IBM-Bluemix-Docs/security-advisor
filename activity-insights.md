@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-10"
+lastupdated: "2019-09-25"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -23,7 +23,7 @@ subcollection: security-advisor
 {:download: .download}
 
 
-# Activity Insights (preview)
+# Activity Insights (Preview)
 {: #activity}
 
 With {{site.data.keyword.security-advisor_long}}, you can detect suspicious user activity in your {{site.data.keyword.cloud_notm}} account by using {{site.data.keyword.at_short}}.
