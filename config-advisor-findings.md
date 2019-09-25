@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-24"
+lastupdated: "2019-09-25"
 
 keywords: centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -34,7 +34,6 @@ IBM Cloud Config Advisor allows you to run as ad-hoc assessment of your account 
   
 These type of findings inform you about configuration problems concerning the security of connections over the web between
 browsers and your cloud services. Can be viewd in the Edge Protection card under IBM Security Advisor dashboard.
-
 
 
 
@@ -128,7 +127,7 @@ Not running with the same baseline of recommended Web Application Firewall rule
 
 - Find your CIS instance
 - Go to "Web Application Firewall".
-- Enable the specific rule that is mentioned in this finding.
+- Enable the specific rule that is mentioned in this finding. 
 
 ### Missing or misconfigured deny-all rule
 {: #deny-all-rule}
@@ -167,6 +166,8 @@ Unsynchronised whitelists increase the chance of hacking into the system. 
 **Remediation Steps**
 
 Update the calico whitelists to match the current CIS whitelists
+
+
 
 ## Cloud Object Storage (COS) Findings
 
