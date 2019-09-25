@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-16"
+lastupdated: "2019-09-25"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -22,7 +22,7 @@ subcollection: security-advisor
 {:deprecated: .deprecated}
 {:download: .download}
 
-# Activity Insights
+# Activity Insights (Preview)
 {: #setup-activity}
 
 With {{site.data.keyword.security-advisor_long}}, you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious behavior and changes in your resources. You can use rule packages that are based on best practices that are provided by the service or create your own custom rules.
