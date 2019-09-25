@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-24"
+lastupdated: "2019-09-25"
 
 keywords: Configuration issues, centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -23,7 +23,7 @@ subcollection: security-advisor
 {:download: .download}
 
 
-# Assessing your configuration
+# Config Advisor (Preview)
 {: #config-setup}
 
 With {{site.data.keyword.security-advisor_long}}, you can easily perform an assessment of the current configuration of the resources in your 
