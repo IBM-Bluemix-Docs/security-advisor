@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-09-25"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -23,7 +23,7 @@ subcollection: security-advisor
 {:download: .download}
 
 
-# Network Insights (beta)
+# Network Insights (Beta)
 {: #network}
 
 With {{site.data.keyword.security-advisor_long}}, you can gain insights based on threat intelligence, behavioral patterns, and machine learning for potentially compromised containers that run on your {{site.data.keyword.containerlong_notm}} clusters.

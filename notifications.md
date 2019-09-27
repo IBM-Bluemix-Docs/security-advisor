@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-17"
+lastupdated: "2019-09-26"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -288,19 +288,19 @@ Example payload:
 In the previous example, `payload-link` refers to the Security Advisor findings API endpoint where a user can get more information about the findings that they can use to take appropriate action.
 {: note}
 
-### With the GUI
+### Obtaining the public key with the GUI
 {: #payload-gui}
 
-You can verify the payload by using the GUI.
+You can obtain the payload by using the GUI.
 {: shortdesc}
 
 1. Navigate to the **Notifications channels** tab of the Security Advisor dashboard.
 2. Click **Download key**.
 
-### With the API
+### Obtaining the public key with the API
 {: #payload-api}
 
-You can verify the payload by using the API.
+You can obtain the payload by using the API.
 {: shortdesc}
 
 1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/iam?topic=iam-getstarted).
@@ -330,6 +330,23 @@ You can verify the payload by using the API.
   {: codeblock}
 
 
+### Decrypting your public key
+{: #channel-decrypt}
+
+Now that you have your public key, you can use [JWT](https://jwt.io/){: external} to decrypt and verify your payload. If you are working with Node.JS, your code snippet would look similar to the following.
+
+```
+const jwt = require("jsonwebtoken");
+var decodedData = {}
+try {
+    decodedData = jwt.verify(<encrypted_payload_received>, <public_key>, { algorithms: ["RS256"] });
+  } catch (err) {
+    console.log(`JWT error : ${JSON.stringify(err)}`);
+}
+```
+{: codeblock}
+
+
 ## Deleting a notification channel
 {: #channel-delete}
 
@@ -344,23 +361,13 @@ Want to take a break from receiving notifications but don't want to delete your 
 
 You can delete a single notification or bulk delete a group of notifications that you select.
 
-To delete a single notification:
 
 1. Navigate to the **Notifications channels** tab of the Security Advisor dashboard.
 
-2. Click the overflow menu in the row of the channel that you want to delete.
+2. Click the overflow menu in the row of the channel that you want to delete. Or, if you're deleting multiple channels at once, check the boxes for the channels that you would like to remove.
 
 3. Select **Delete**.
 
-
-
-To delete several notifications at once:
-
-1. Navigate to the **Notifications channels** tab of the Security Advisor dashboard.
-
-2. Check the box for the channels that you would like to remove.
-
-3. Click **Delete**.
 
 
 
