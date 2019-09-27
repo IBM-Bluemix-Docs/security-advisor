@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-26"
+lastupdated: "2019-09-27"
 
 keywords: centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -44,7 +44,7 @@ When the scan is run, you might see results in the **Edge protection** card of t
 | `Mismatch between Calico and CIS whitelists` | Without properly synchronized whitelists, the chances of your system being hacked increase. | Update your calico whitelists to match your current CIS whitelists. |
 {: class="simple-tab-table"}
 {: caption="Table 1. High severity edge protection findings and their remediation steps" caption-side="top"}
-{: #edge-protection1}
+{: #edge-protection-high}
 {: tab-title="High severity"}
 {: tab-group="edge-protection"}
 
@@ -56,7 +56,7 @@ When the scan is run, you might see results in the **Edge protection** card of t
 | `WAF rules do not conform with expected` | Your configuration does not follow the recommended WAF rules. | To fix the issue, turn on CIS security by finding the specific CIS instance and zone. Then, enable the rule that is returned in the finding in the **Web Application Firewall** tab. |
 {: class="simple-tab-table"}
 {: caption="Table 2. Medium severity edge protection findings and their remediation steps" caption-side="top"}
-{: #edge-protection2}
+{: #edge-protection-medium}
 {: tab-title="Medium severity"}
 {: tab-group="edge-protection"}
 
@@ -78,7 +78,7 @@ When the scan is run, you might see results in the **Object Storage** card of th
 | `COS object is publicly accessible via canned ACLs` | By using the predefined rules of your S3 canned ACL, your data is publicly accessible. | To fix the issue, consider customizing your ACLs. |
 {: class="simple-tab-table"}
 {: caption="Table 3. High severity COS findings and their remediation steps" caption-side="top"}
-{: #edge-protection1}
+{: #cos-high}
 {: tab-title="High severity"}
 {: tab-group="cos"}
 
@@ -87,7 +87,7 @@ When the scan is run, you might see results in the **Object Storage** card of th
 | `The number of COS managers is above the given threshold` | Manager access to COS instances should follow the `least privileged` principle. This means that users exist at a need-to-know information level. Users that are not managers should not be given manager access as they are then able to perform all operations that are granted to that role. | To fix the issue, revise the list of users that are assigned the manager role in COS and verify that only those that need that level of access, have it. |
 {: class="simple-tab-table"}
 {: caption="Table 4. Medium severity COS findings and their remediation steps" caption-side="top"}
-{: #edge-protection2}
+{: #cos-medium}
 {: tab-title="Medium severity"}
 {: tab-group="cos"}
 
@@ -111,7 +111,7 @@ When the scan is run, you might see results in the **User access** card of the d
 | `User with role outside of access group` | Assigning users to access groups allows for immediate control of the user in the group. You can easily revoke or update privileges for several users at once. By not leveraging access groups for everyone, a user might go unnoticed and might compromise your data. | To fix the issue, revise your user permissions and verify that your users are part of the correct groups. For more information and best practices, see [IBM Cloud IAM account setup](/docs/iam?topic=iam-account_setup).  |
 {: class="simple-tab-table"}
 {: caption="Table 5. Medium severity IAM findings and their remediation steps" caption-side="top"}
-{: #edge-protection2}
+{: #iam-medium}
 {: tab-title="Medium severity"}
 {: tab-group="iam"}
 
