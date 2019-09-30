@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-27"
+lastupdated: "2019-09-30"
 
 keywords: Configuration issues, centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -49,7 +49,7 @@ Before you can work with Config Advisor, you must have the following prerequisit
 ## Assigning the needed permissions
 {: #config-permissions}
 
-In order to run the config advisor scan, the service ID that is used must have the following permissions assigned. 
+In order to run the Config Advisor scan, the service ID that is used must have the following permissions assigned. 
 
 1. Open the {{site.data.keyword.cloud_notm}} dashboard.
 
@@ -173,7 +173,7 @@ For more information about the specific issues that might be found and how you c
   To use specific versions of Config Advisor you can use tagging. To see your options, run `ibmcloud cr image-list --include-ibm --restrict ibm/config-advisor`.
   {: tip}
 
-5. Go to your [{{site.data.keyword.security-advisor_short}} dashboard](https://cloud.ibm.com/security/dashboard) in the `us-south` region and verify that you can see the created cards with any configuration issues.
+5. Go to your [{{site.data.keyword.security-advisor_short}} dashboard](https://cloud.ibm.com/security/dashboard) in the `us-south` region and verify that you can see the created cards.
 
-For more information about any findings that are returned, see [Config Advisor Findings](/docs/services/security-advisor#security-advisor-config-advisor-findings).
+For more information about any issues that are returned, see [Config Advisor Findings](/docs/services/security-advisor#security-advisor-config-advisor-findings).
 {: note}
