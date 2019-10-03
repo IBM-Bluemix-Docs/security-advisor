@@ -173,7 +173,7 @@ For more information about the specific issues that might be found and how you c
   To use specific versions of Config Advisor you can use tagging. To see your options, run `ibmcloud cr image-list --include-ibm --restrict ibm/config-advisor`.
   {: tip}
 
-5. Go to your [{{site.data.keyword.security-advisor_short}} dashboard](https://cloud.ibm.com/security#/dashboard) in the `us-south` region and verify that you can see the created cards.
+5. Go to your [{{site.data.keyword.security-advisor_short}} dashboard](https://cloud.ibm.com/security-advisor#/dashboard) in the `us-south` region and verify that you can see the created cards.
 
 For more information about any issues that are returned, see [Config Advisor Findings](/docs/services/security-advisor#security-advisor-config-advisor-findings).
 {: note}
