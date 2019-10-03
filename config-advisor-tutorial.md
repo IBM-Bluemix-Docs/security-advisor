@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-25"
+lastupdated: "2019-10-03"
 
 keywords: Configuration issues, centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -30,7 +30,7 @@ With {{site.data.keyword.security-advisor_long}}, you can easily perform an asse
 {{site.data.keyword.cloud_notm}} account. The Config Advisor assessment combines known security and compliance policies and best practices to identify potential issues in your configuration. By running the scan and addressing any vulnerabilities that are found, you can ensure that you're being diligent in your security efforts.
 {: shortdesc}
 
-The configuration data that is scanned does not leave the local machine on which the assessment is run. The identified violations are sent to {{site.data.keyword.security-advisor_short}}, but not include any personal or private data.
+The configuration data that is scanned does not leave the local machine on which the assessment is run. The identified violations are sent to {{site.data.keyword.security-advisor_short}}, but do not include any personal or private data.
 {: note}
 
 
@@ -49,7 +49,7 @@ Before you can work with Config Advisor, you must have the following prerequisit
 ## Assigning the needed permissions
 {: #config-permissions}
 
-In order to run the config advisor scan, the service ID that is used must have the following permissions assigned. 
+In order to run the Config Advisor scan, the service ID that is used must have the following permissions assigned. 
 
 1. Open the {{site.data.keyword.cloud_notm}} dashboard.
 
@@ -114,7 +114,7 @@ When you run the Config Advisor command, findings are created that are displayed
 For more information about the specific issues that might be found and how you can begin remediation, check out [Config Advisor Findings](/docs/services/security-advisor?topic=security-advisor-config-advisor-findings).
 {: tip}
 
-1. Log in to {{site.data.keyword.cloud_notm}} by using the command line. Use the prompts to finish the log in process.
+1. Log in to {{site.data.keyword.cloud_notm}} by using the command prompt. Use the prompts to finish the log in process.
 
   ```
   ibmcloud login
@@ -170,9 +170,10 @@ For more information about the specific issues that might be found and how you c
     </tr>
   </table>
 
-  Try using tags to use specific versions of Config Advisor. To see your options, run `ibmcloud cr image-list --include-ibm --restrict ibm/config-advisor`.
+  To use specific versions of Config Advisor you can use tagging. To see your options, run `ibmcloud cr image-list --include-ibm --restrict ibm/config-advisor`.
   {: tip}
 
-5. Go to your [{{site.data.keyword.security-advisor_short}} dashboard](https://cloud.ibm.com/security/dashboard) in the `us-south` region and verify that you can see the created cards with any configuration issues.
+5. Go to your [{{site.data.keyword.security-advisor_short}} dashboard](https://cloud.ibm.com/security-advisor#/dashboard) in the `us-south` region and verify that you can see the created cards.
 
-
+For more information about any issues that are returned, see [Config Advisor Findings](/docs/services/security-advisor#security-advisor-config-advisor-findings).
+{: note}

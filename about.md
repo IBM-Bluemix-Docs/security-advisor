@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-09-27"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -32,9 +32,7 @@ subcollection: security-advisor
 ## Benefits of using the service
 {: #about-benefits}
 
-![The benefits of using {{site.data.keyword.security-advisor_short}} can be found further outlined in the surrounding text.](images/sa-benefits.png)
-Figure. {{site.data.keyword.security-advisor_short}} benefits
-
+![The benefits of using {{site.data.keyword.security-advisor_short}} can be found further outlined in the surrounding text.](images/sa-benefits.png){: caption="Figure 1. {{site.data.keyword.security-advisor_short}} benefits" caption-side="bottom"}
 
 <dl>
   <dt>Security risk and posture</dt>
@@ -60,8 +58,7 @@ The service receives findings from:
 * Custom integrations with your other security tools
 
 
-![This image shows the way in which the components of {{site.data.keyword.security-advisor_short}} fit together. The service receives findings from varying sources such as Built in insights or custom tools and then displays them in the dashboard where your security advisor can see an overview of your security posture.](images/how-it-works.png)
-Figure. How the {{site.data.keyword.security-advisor_short}} fit together.
+![This image shows the way in which the components of {{site.data.keyword.security-advisor_short}} fit together. The service receives findings from varying sources such as Built in insights or custom tools and then displays them in the dashboard where your security advisor can see an overview of your security posture.](images/how-it-works.png){: caption="Figure 2. How the components of {{site.data.keyword.security-advisor_short}} fit together" caption-side="bottom"}
 
 
 {{site.data.keyword.security-advisor_short}} is most helpful for security administrators. That role can take many names. Check out the following table for some example users:
