@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-10-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -51,7 +51,7 @@ Ready to get started? You can get to the service dashboard in one of the followi
     <ol>
       <li>Log in to <a href="https://cloud.ibm.com/login" target="_blank">{{site.data.keyword.cloud_notm}}<img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.</li>
       <li>Navigate to the **Catalog** and click **Security and Identity**.</li>
-      <li>Select the {{site.data.keyword.security-advisor_short}} tile. A dashboard opens where you can view security information for the preconfigured integrated tools such as vulnerability advisor and certificate manager.</li>
+      <li>Select the {{site.data.keyword.security-advisor_short}} tile. A dashboard opens where you can view security information for the preconfigured integrated tools such as Vulnerability Advisor and Certificate Manager.</li>
     </ol>
   </li>
   <li>By using the menu:
