@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-03"
+lastupdated: "2019-10-09"
 
 keywords: Configuration issues, centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -175,5 +175,5 @@ For more information about the specific issues that might be found and how you c
 
 5. Go to your [{{site.data.keyword.security-advisor_short}} dashboard](https://cloud.ibm.com/security-advisor#/dashboard) in the `us-south` region and verify that you can see the created cards.
 
-For more information about any issues that are returned, see [Config Advisor Findings](/docs/services/security-advisor#security-advisor-config-advisor-findings).
+For more information about any issues that are returned, see [Config Advisor Findings](/docs/services/security-advisor?topic=security-advisor-config-advisor-findings).
 {: note}

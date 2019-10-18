@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-10-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -68,7 +68,7 @@ To get started with {{site.data.keyword.security-advisor_short}}, install the sa
 
 2. Change into the directory on your local system.
 
-3. Install the dependencies that are needed to work with nmap.
+3. Install the dependencies that are needed to work with Nmap.
 
     ```
     npm install
