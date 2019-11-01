@@ -2,15 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-11-01"
 
-keywords: centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
 ---
 
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -53,7 +52,7 @@ As an administrator with administrative permissions in both the {{site.data.keyw
 ## Integrating NeuVector
 {: #setup-neuvector}
 
-With [NeuVector](https://neuvector.com){: external}, you can detect network threats and violations to prevent attacks of your container-based applications. Through monitoring, you can prevent exploits and breakouts by detecting root privilege escalations, port scans, reverse shells, and suspicious file system activity in your containers and hosts.
+With [NeuVector](https://neuvector.com/){: external}, you can detect network threats and violations to prevent attacks of your container-based applications. Through monitoring, you can prevent exploits and breakouts by detecting root privilege escalations, port scans, reverse shells, and suspicious file system activity in your containers and hosts.
 {: shortdesc}
 
 To integrate NeuVector with {{site.data.keyword.security-advisor_short}}, you can use the following steps:

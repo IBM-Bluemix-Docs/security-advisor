@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-10"
+lastupdated: "2019-11-01"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -60,7 +60,7 @@ Are you a partner and interested in integrating your solution with {{site.data.k
 ### NeuVector
 {: #integrate-neuvector}
 
-[NeuVector](https://neuvector.com){: external} provides a highly integrated, automated security platform for Kubernetes and Red Hat OpenShift that allows you to monitor and protect container network traffic. Specifically, East-West network traffic.
+[NeuVector](https://neuvector.com/){: external} provides a highly integrated, automated security platform for Kubernetes and Red Hat OpenShift that allows you to monitor and protect container network traffic. Specifically, East-West network traffic.
 
 With NeuVector, you can detect network threats and violations to prevent attacks of your container-based applications. Through monitoring, you can prevent exploits and breakouts by detecting root privilege escalations, port scans, reverse shells, and suspicious file system activity in your containers and hosts.
 
