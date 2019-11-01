@@ -89,7 +89,6 @@ When you configure the partner connection, two cards are created in your dashboa
 
 * Total images with new vulnerabilities: Findings that are related to vulnerabilities found in your container images.
 
-You can learn more about the company in the Twistlock docs.
 
 ### Configuring Twistlock
 {: #configure-twistlock}
