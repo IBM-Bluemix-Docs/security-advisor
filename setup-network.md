@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-09"
+lastupdated: "2019-11-01"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -117,7 +117,7 @@ Be sure to repeat the installation for each cluster that you want to monitor.
   ```
   {: codeblock}
 
-3. If you're using Kubernetes Service v1.12.x, install Helm by using the following commands. If not, check out the Kubernetes documentation to see which installation steps that you should take to [set up Helm in a cluster with public access](/docs/containers?topic=containers-helm#public_helm_install).
+3. If you're using Kubernetes Service `v1.12.x`, install Helm by using the following commands. If not, check out the Kubernetes documentation to see which installation steps that you should take to [set up Helm in a cluster with public access](/docs/containers?topic=containers-helm#public_helm_install).
 
   1. Delete any existing deployments.
 
