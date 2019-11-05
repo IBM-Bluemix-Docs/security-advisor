@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-23"
+lastupdated: "2019-11-05"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -73,7 +73,7 @@ The APIs follow Grafeas like artifact metadata specifications to store, query, a
 ### Step 1: Registering a new finding type
 {: #custom-register-finding}
 
-To register a new type of findings, you can create a note. To create the note, you can use the [Findings API](https://test.cloud.ibm.com/apidocs/security-advisor/findings#create-a-new-note){: external}. Be sure that you choose a unique provider ID to identify your custom tool. If you're automating the process by using your service ID as your provider ID.
+To register a new type of findings, you can create a note. To create the note, you can use the [Findings API](https://cloud.ibm.com/apidocs/security-advisor/findings#create-a-new-note){: external}. Be sure that you choose a unique provider ID to identify your custom tool. If you're automating the process by using your service ID as your provider ID.
 
 Request:
 

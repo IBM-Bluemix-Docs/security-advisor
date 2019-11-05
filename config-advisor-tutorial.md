@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-09"
+lastupdated: "2019-11-05"
 
 keywords: Configuration issues, centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -39,7 +39,7 @@ The configuration data that is scanned does not leave the local machine on which
 
 Before you can work with Config Advisor, you must have the following prerequisites.
 
-- A stable version of the [{{site.data.keyword.cloud_notm}} CLI](https://test.cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started).
+- A stable version of the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
 - A stable version of [Docker](https://www.docker.com/products/docker-desktop){: external} installed locally.
 
