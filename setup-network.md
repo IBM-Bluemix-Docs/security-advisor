@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-01"
+lastupdated: "2019-11-11"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -172,7 +172,7 @@ Be sure to repeat the installation for each cluster that you want to monitor.
 
 9. Install Helm by using the [Kubernetes Service integration docs](/docs/containers?topic=containers-helm).
 
-10. Optional: [Enable TLS](https://github.com/helm/helm/blob/master/docs/tiller_ssl.md){: external}. If you're using your workstation to handle the installation of analytics components in multiple clusters and TLS is enabled, be sure that the TLS configurations are current and match the current cluster where you plan to install the components.
+10. Optional: [Enable TLS](https://helm.sh/docs/tiller_ssl/#using-ssl-between-helm-and-tiller){: external}. If you're using your workstation to handle the installation of analytics components in multiple clusters and TLS is enabled, be sure that the TLS configurations are current and match the current cluster where you plan to install the components.
 
 11. Run the following command to install the Helm chart and its dependencies. The command validates that your bucket uses the correct naming convention, creates Kubernetes secrets, updates the values with your cluster GUID, and deploys the Network Insights Helm chart. If you encounter an error, try running `helm init --upgrade`.
 
