@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-25"
+lastupdated: "2019-11-11"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -132,7 +132,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
 
 8. Install Helm by using the [Kubernetes Service integration docs](/docs/containers?topic=containers-helm).
 
-9. Optional: [Enable TLS](https://github.com/helm/helm/blob/master/docs/tiller_ssl.md){: external}. If you're using your workstation to handle the installation of analytics components in multiple clusters and TLS is enabled, be sure that the TLS configurations are current and match the current cluster where you plan to install the components.
+9. Optional: [Enable TLS](https://helm.sh/docs/tiller_ssl/#using-ssl-between-helm-and-tiller){: external}. If you're using your workstation to handle the installation of analytics components in multiple clusters and TLS is enabled, be sure that the TLS configurations are current and match the current cluster where you plan to install the components.
 
 10. Run the following command to install the Insights. The command validates the naming convention of your bucket, creates Kubernetes secrets, updates the values with your cluster GUID, and deploys Activity Insights.
 
