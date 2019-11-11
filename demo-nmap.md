@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-09"
+lastupdated: "2019-11-11"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -50,7 +50,7 @@ Before you get into the tutorial, let's take a minute to examine the sample code
 Before you get started, be sure that you have the following prerequisites installed and that you are assigned the **Manager** [IAM role](https://cloud.ibm.com/iam/users){: external} the account that you're using.
 
 * [Nmap](https://nmap.org/download.html){: external}: The command for your custom tool must be available in the system's path. This tutorial uses `nmap`.
-* [Node.js](https://nodejs.org/en/download){: external}: The `node` command must be available in the system's path.
+* [Node.js](https://nodejs.org/en/download/){: external}: The `node` command must be available in the system's path.
 
 
 ## Step 1: Install sample code
