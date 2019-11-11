@@ -92,7 +92,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Alert source</td>
-      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select from any or all of the sources and any or all of the finding types for each source. There are 4 built-in providers, including Vulnerable images VA, Network Insights NA, Activity Insights ATA, and Certificate Manager CERT, and each provider has its own list of finding types.</td>
+      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select from any or all of the sources and any or all of the finding types for each source. There are 4 built-in providers, including Vulnerable images (VA), Network Insights (NA), Activity Insights (ATA), and Certificate Manager (CERT), and each provider has its own list of finding types.</td>
     </tr>
   </table>
 
