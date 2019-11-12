@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-11"
+lastupdated: "2019-11-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -219,7 +219,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
    </table>
    
-   `ALL` can be selected as the provider_name, which includes all providers and finding types. If `ALL` is specified as the `provider_name`, then a specific value can't be provided for `finding_types`. In this case, you can omit `finding_types` or specify `ALL`.
+   `ALL` can be selected as the `provider_name`, which includes all providers and finding types. If `ALL` is specified as the `provider_name`, then a specific value can't be provided for `finding_types`. In this case, you can omit `finding_types` or specify `ALL`.
    {: tip}
 
   Example response:
