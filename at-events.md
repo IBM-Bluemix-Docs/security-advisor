@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2019
 lastupdated: "2019-11-18"
 
-keywords: Centralized security, security management, alerts, security risk, , insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
 
@@ -28,7 +28,7 @@ subcollection: security-advisor
 # {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at_events}
 
-You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.at_short}} service. 
+You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.at_short}} service.
 {: shortdesc}
 
 
