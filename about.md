@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-27"
+lastupdated: "2019-11-18"
 
-keywords: Centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
 subcollection: security-advisor
 
@@ -28,6 +28,8 @@ subcollection: security-advisor
 
 {{site.data.keyword.security-advisor_long}} enables centralized security management through a unified dashboard that alerts security admins to issues and guides them to understand, prioritize, manage, and resolve security issues that are related to their cloud applications and workloads.
 {: shortdesc}
+
+
 
 ## Benefits of using the service
 {: #about-benefits}
