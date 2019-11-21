@@ -2,7 +2,8 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-26"
+
+lastupdated: "2019-11-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
