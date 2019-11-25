@@ -2,12 +2,12 @@
 
 copyright:
   years: 2017, 2019
+lastupdated: "2019-11-25"
 
-lastupdated: "2019-11-12"
-
-keywords: Centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
 subcollection: security-advisor
+
 ---
 
 {:external: target="_blank" .external}
@@ -26,8 +26,7 @@ subcollection: security-advisor
 # Configuring notifications
 {: #notifications}
 
-
-By configuring an IBM Cloud Security Advisor notification channel, you can be alerted to any reported vulnerabilities as soon as the report is available. With a fast alert time, you're able to immediately start an investigation into any reported issue and fix the vulnerability before it becomes a larger problem in your application. 
+By configuring an {{site.data.keyword.security-advisor_long}} notification channel, you can be alerted to any reported vulnerabilities as soon as the report is available. With a fast alert time, you're able to immediately start an investigation into any reported issue and fix the vulnerability before it becomes a larger problem in your application. 
 {: shortdesc}
 
 With a process in place to handle alerts you can ensure that you're in compliance and prepared if or when an issue occurs. For example, some compliance standards require that issues must be responded to and closed within 24 hours, and the response is audited. With Security Advisor alerts in place, you are notified and can start resolving issues immediately.
@@ -43,7 +42,6 @@ Before you get started with notifications, you must be assigned the proper IAM r
 {: #notification-method}
 
 You can use a Callback URL to post notifications to the tools that you use. For example, you can send notifications to report to PagerDuty or automatically open an issue in GitHub.
-{: shortdesc}
 
 **Important:** Your Callback URL endpoint must meet the following requirements:
 * The endpoint must use the HTTPS protocol.
@@ -56,7 +54,6 @@ You can use a Callback URL to post notifications to the tools that you use. For 
 {: #channel-create}
 
 To start receiving notifications immediately, you can configure a notification channel by using either the dashboard or the API.
-{: shortdesc}
 
 ### With the GUI
 {: #channel-create-gui}
@@ -90,6 +87,10 @@ To start receiving notifications immediately, you can configure a notification c
     <tr>
       <td>Severity</td>
       <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, and <code>high</code>. You must select at least one option when configuring your channel through the GUI.</td>
+    </tr>
+    <tr>
+      <td>Alert source</td>
+      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select from any or all of the sources and any or all of the finding types for each source. There are 4 built-in providers, including Vulnerable images (VA), Network Insights (NA), Activity Insights (ATA), and Certificate Manager (CERT), and each provider has its own list of finding types.</td>
     </tr>
   </table>
 
@@ -147,7 +148,10 @@ To start receiving notifications immediately, you can configure a notification c
     "enabled": true
     "severity": ["low"]
     "alertSource": [
-      "provider_name": "ALL"
+      {
+        "provider_name": "ALL",
+        "finding_types": ["ALL"]
+      }
     ]
   }
   ```
@@ -181,9 +185,40 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Provider</td>
-      <td>The source of the finding that is received. Provider options include: Vulnerable images <code>VA</code>, Network Insights <code>NA</code>, Activity Insights <code>ATA</code>, Certificate Manager <code>CERT</code>, and <code>ALL</code>. The default is <code>ALL</code>, which includes the other options. There is no need to specify another option if you specify <code>ALL</code>. If you're not sure which providers are available in your account, you can query the providers API: <code>/findings/v1/{accountId}/providers</code>. Note: If you configure your channel from the GUI, then <code>ALL</code> is automatically set for you. To choose a specific provider, you must use the API.</td>
+      <td>The source and type of the finding that is received. <code>provider_name</code> is the ID of any provider in the account. If you're not sure which providers are available in your account, you can query the providers API: <code>/findings/v1/{accountId}/providers</code>. <code>finding_types</code> is the list of valid finding types for the provider name. If you're not sure which notes are available for each provider in your account, you can query the notes API: <code>/findings/v1/{account_id}/providers/{provider_id}/notes</code>. The <code>ALL</code> option can be specified for the <code>finding_types</code> which means that all notes for that provider are selected. There are 4 built-in providers in addition to custom alert source providers. For more information about the 4 providers and the supported finding types for each, review the following table.</td>
     </tr>
   </table>
+  
+  <table>
+    <caption>Table 3. Built-in providers and supported finding types</caption>
+    <tr>
+      <th>provider_name</th>
+      <th>Supported finding types</th>
+    </tr>
+    <tr>
+      <td>VA</td>
+      <td><code>image_with_vulnerabilities</code>, <code>image_with_config_issues</code></td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td><code>anonym_server</code>, <code>malware_server</code>, <code>bot_server</code>, <code>miner_server</code>, <code>server_suspected_ratio</code>, <code>server_response</code>, <code>data_extrusion</code>, <code>server_weaponized_total</code></td>
+    </tr>
+    <tr>
+      <td>ATA</td>
+      <td><code>appid</code>, <code>cos</code>, <code>iks</code>, <code>iam</code>, <code>kms</code>, <code>cert</code>, <code>account</code>, <code>app</code></td>
+    </tr>
+    <tr>
+      <td>CERT</td>
+      <td><code>expired_cert</code>, <code>expiring_1day_cert</code>, <code>expiring_10day_cert</code>, <code>expiring_30day_cert</code>, <code>expiring_60day_cert</code>, <code>expiring_90day_cert</code></td>
+    </tr>
+    <tr>
+      <td>ALL</td>
+      <td><code>ALL</code></td>
+    </tr>
+   </table>
+   
+   `ALL` can be selected as the `provider_name`, which includes all providers and finding types. If `ALL` is specified as the `provider_name`, then a specific value can't be provided for `finding_types`. In this case, you can omit `finding_types` or specify `ALL`.
+   {: tip}
 
   Example response:
 
