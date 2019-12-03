@@ -13,7 +13,7 @@ IBM Cloud Security Advisor
     Built-in insights
         network-insights.md
         activity-insights.md
-
+   
     config-advisor-findings.md
     [Blogs](https://www.ibm.com/cloud/blog)
     {: .navgroup-end}
