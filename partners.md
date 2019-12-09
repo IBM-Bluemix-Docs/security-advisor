@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-01"
+lastupdated: "2019-12-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -23,30 +23,30 @@ subcollection: security-advisor
 {:download: .download}
 
 
-# Partners
+# Business partners
 {: #setup-partner}
 
-IBM Business Partner integrations are a way to bring critical alerts and findings from third party providers into the {{site.data.keyword.security-advisor_long}} dashboard. These partners are working with IBM to help create, simplify, and guide the integration experience for you.
+IBM business partner integrations are a way to bring critical alerts and findings from third party providers into the {{site.data.keyword.security-advisor_long}} dashboard. These business partners work with IBM to help create, simplify, and guide the integration experience for you.
 {: shortdesc}
 
 ## Before you begin
 {: #partner-before}
 
-Before you start integrating partners, be sure that you have the following prerequisites.
+Before you start integrating business partners, be sure that you have the following prerequisites.
 
-* Ensure that you have an account with the partner that you want to integrate.
-* Ensure that you have the required administrative permissions to generate the integration URL for the partner service.
+* Ensure that you have an account with the business partner that you want to integrate.
+* Ensure that you have the required administrative permissions to generate the integration URL for the business partner service.
 * Ensure that you have IAM administrative access to {{site.data.keyword.cloud_notm}} and manager access to {{site.data.keyword.security-advisor_short}}.
 
 ## Integration wizard
 {: #wizard}
 
-As an administrator with administrative permissions in both the {{site.data.keyword.cloud_notm}} and Partner accounts, you can use the integration wizard to quickly get up and running. The wizard has four basic steps:
+As an administrator with administrative permissions in both the {{site.data.keyword.cloud_notm}} and business partner accounts, you can use the integration wizard to quickly get up and running. The wizard has four basic steps:
 
-* Establish trust and associate your {{site.data.keyword.cloud_notm}} and partner accounts
+* Establish trust and associate your {{site.data.keyword.cloud_notm}} and business partner accounts
 * Copy the required information such as credentials and URLs between the accounts
-* Install the partner's finding metadata into {{site.data.keyword.security-advisor_short}}
-* Validate the pairing by posting a finding from the partner into {{site.data.keyword.security-advisor_short}}
+* Install the business partner's finding metadata into {{site.data.keyword.security-advisor_short}}
+* Validate the pairing by posting a finding from the business partner into {{site.data.keyword.security-advisor_short}}
 
 
 ## Integrating NeuVector
@@ -75,10 +75,10 @@ To integrate NeuVector with {{site.data.keyword.security-advisor_short}}, you ca
 ## Integrating Twistlock
 {: #setup-twistlock}
 
-You can prevent risk by stopping the deployment of vulnerable images in your environment. With automated and custom policy enforcement, [Twistlock](https://www.twistlock.com){: external} offers complete control at every stage of the application lifecycle.
+You can prevent risk by stopping the deployment of vulnerable images in your environment. With automated and custom policy enforcement, [Twistlock](https://www.twistlock.com){: external} offers complete control at every stage of the application lifecycle.
 {: shortdesc}
 
-When you configure the partner connection, two cards are created in your dashboard that summarize the findings from Twistlock.
+When you configure the business partner connection, two cards are created in your dashboard that summarize the findings from Twistlock.
 
 **Twistlock Runtime** introduces two Key Risk Indicators (KRIs):
 
