@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-09-09"
+lastupdated: "2019-12-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -23,6 +23,8 @@ subcollection: security-advisor
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
+{:troubleshoot: data-hd-content-type='troubleshoot'} 
+{:support: data-reuse='support'}
 
 # Troubleshooting
 {: #troubleshooting}
@@ -49,6 +51,8 @@ For more information about getting support, see [how do I get the support that I
 
 ## Error: namespaces "security-advisor-insights" is forbidden
 {: #ts-error-helm-install}
+{: troubleshoot} 
+{: support}
 
 {: tsSymptoms}
 When you try to install Network or Activity Insights, you encounter the error:
@@ -67,6 +71,8 @@ Prior to installing one of the Built-in Insights offerings, you must install Hel
 
 ## Known issue: You can't create a custom solution occurrence
 {: #ts-custom-occurrence}
+{: troubleshoot} 
+{: support}
 
 {: tsSymptoms}
 You try to create a custom solution occurrence but the information doesn't show in a browser and you receive no error message.
