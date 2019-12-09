@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-05"
+lastupdated: "2019-12-03"
 
 keywords: Configuration issues, centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -177,3 +177,5 @@ For more information about the specific issues that might be found and how you c
 
 For more information about any issues that are returned, see [Config Advisor Findings](/docs/services/security-advisor?topic=security-advisor-config-advisor-findings).
 {: note}
+
+

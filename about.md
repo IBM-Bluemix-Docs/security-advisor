@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-18"
+lastupdated: "2019-12-09"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -40,23 +40,23 @@ subcollection: security-advisor
   <dt>Security risk and posture</dt>
     <dd>Application security remains important with constant news articles that announce a new data breach or hack. Security risks will always be a part of development and although attacks can be difficult to predict, one way to prevent them is by closely monitoring your cloud deployments. For example, the risks can be related to vulnerabilities in your container images that are in use, expiring certificates that can cause outage of your cloud service or application or suspicious clients or servers with a known bad reputation interacting with your clusters.</dd>
   <dt>Centralized security management</dt>
-    <dd>You can see a consolidated view of all of your {{site.data.keyword.cloud_notm}} security services and integrated partner services. You can select and subscribe to different services from the {{site.data.keyword.cloud_notm}} catalog.</dd>
+    <dd>You can see a consolidated view of all of your {{site.data.keyword.cloud_notm}} security services and integrated business partner services. You can select and subscribe to different services from the {{site.data.keyword.cloud_notm}} catalog.</dd>
   <dt>Threat detection</dt>
-    <dd>{{site.data.keyword.security-advisor_short}} leverages the information that is gathered by IBM X-Force, other {{site.data.keyword.cloud_notm}} services, and partner solutions to detect risks and threats before they become a security issue. The service also provides analytics in addition to vulnerability data and network activity data.</dd>
+    <dd>{{site.data.keyword.security-advisor_short}} leverages the information that is gathered by IBM X-Force, other {{site.data.keyword.cloud_notm}} services, and business partner solutions to detect risks and threats before they become a security issue. The service also provides analytics in addition to vulnerability data and network activity data.</dd>
 </dl>
 
 
 ## How it works
 {: #how-it-works}
 
-To make maintaining security at a large scale, {{site.data.keyword.security-advisor_short}} is designed as a micro-service on {{site.data.keyword.cloud_notm}}. The core micro-service that is provided is the findings API, which implements the mechanism for {{site.data.keyword.cloud_notm}} and partner services to send security findings to your service dashboard.
+To make maintaining security at a large scale, {{site.data.keyword.security-advisor_short}} is designed as a micro-service on {{site.data.keyword.cloud_notm}}. The core micro-service that is provided is the findings API, which implements the mechanism for {{site.data.keyword.cloud_notm}} and business partner services to send security findings to your service dashboard.
 {: shortdesc}
 
 The service receives findings from:
 * Pre-integrated {{site.data.keyword.cloud_notm}} services like Certificate Manager and Vulnerability Advisor
 * Network Insights
 * Activity Insights
-* IBM Business Partners like NeuVector and Twistlock
+* IBM business partners like NeuVector and Twistlock
 * Custom integrations with your other security tools
 
 

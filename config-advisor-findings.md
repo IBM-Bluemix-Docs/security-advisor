@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-02"
+lastupdated: "2019-12-03"
 
 keywords: centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -129,5 +129,7 @@ When the scan is run, you might see results in the **User access** card of the d
 {: #iam-medium}
 {: tab-title="Medium severity"}
 {: tab-group="iam"}
+
+
 
 
