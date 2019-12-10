@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-12-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -176,6 +176,7 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
     <td>Update a {{site.data.keyword.security-advisor_short}} notification channel.</td>
     <td>Manager</td>
   </tr>
+  <tr>
 </table>
 
 ## API mappings
