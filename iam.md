@@ -176,7 +176,6 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
     <td>Update a {{site.data.keyword.security-advisor_short}} notification channel.</td>
     <td>Manager</td>
   </tr>
-  <tr>
 </table>
 
 ## API mappings
