@@ -57,7 +57,7 @@ Ready to get started? You can get to the service dashboard in one of the followi
   <li>By using the menu:
     <ol>
       <li>Log in to <a href="https://cloud.ibm.com/login" target="_blank">{{site.data.keyword.cloud_notm}}<img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.</li>
-      <li>From your dashboard, click the hamburger menu to expand your options.</li>
+      <li>From your dashboard, click the Navigation menu to expand your options.</li>
       <li>Click **Security**. An overview of the security dashboard opens.</li>
       <li>Click **Getting Started** in the navigation to see general overview information about the service, or click **Dashboard** if you prefer to learn by seeing the service in action.</li>
     </ol>
