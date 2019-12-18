@@ -14,7 +14,6 @@ IBM Cloud Security Advisor
         network-insights.md
         activity-insights.md
    
-    config-advisor-findings.md
     [Blogs](https://www.ibm.com/cloud/blog)
     {: .navgroup-end}
 
@@ -32,8 +31,12 @@ IBM Cloud Security Advisor
     Enabling Insights
         setup-network.md
         setup-activity.md
-
-    config-advisor-tutorial.md
+    
+    {: .topicgroup}
+    Config advisor (Beta)
+        config-advisor-tutorial.md
+        config-advisor-findings.md
+    
     notifications.md
     iam.md
     {: .navgroup-end}
