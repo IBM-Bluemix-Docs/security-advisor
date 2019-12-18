@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-25"
+lastupdated: "2019-12-18"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -21,7 +21,6 @@ subcollection: security-advisor
 {:important: .important}
 {:deprecated: .deprecated}
 {:download: .download}
-
 
 # Configuring notifications
 {: #notifications}
@@ -61,8 +60,8 @@ To start receiving notifications immediately, you can configure a notification c
 1. Navigate to the **Notifications channels** tab of the Security Advisor dashboard.
 2. Click **Add notification channel**.
 3. Using the following table as a guide, provide the following information.
-
-  <table>
+  
+ <table>
     <caption>Table 1. Configuring notifications with the GUI</caption>
     <tr>
       <th>Variable</th>
@@ -90,9 +89,10 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Alert source</td>
-      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select from any or all of the sources and any or all of the finding types for each source. There are 4 built-in providers, including Vulnerable images (VA), Network Insights (NA), Activity Insights (ATA), and Certificate Manager (CERT), and each provider has its own list of finding types.</td>
+      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include Vulnerable images (VA), Network Insights (NA), Activity Insights (ATA), Certificate Manager (CERT), Config advisor (config-advisor) and All. Each built-in provider has their list of finding types.</td>
     </tr>
   </table>
+  
 
 4. Click **Save**. The channel is added to a list where you can track all of your channel configurations.
 
@@ -189,7 +189,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
   </table>
   
-  <table>
+<table>
     <caption>Table 3. Built-in providers and supported finding types</caption>
     <tr>
       <th>provider_name</th>
@@ -211,6 +211,10 @@ To start receiving notifications immediately, you can configure a notification c
       <td>CERT</td>
       <td><code>expired_cert</code>, <code>expiring_1day_cert</code>, <code>expiring_10day_cert</code>, <code>expiring_30day_cert</code>, <code>expiring_60day_cert</code>, <code>expiring_90day_cert</code></td>
     </tr>
+    <tr>
+      <td>config-advisor</td>
+      <td><code>appprotection-dns_not_proxied</code>, <code>appprotection-dnssec_off</code>, <code>appprotection-ssl_not_strict</code>, <code>appprotection-tls_min_version</code>, <code>appprotection-waf_off</code>, <code>appprotection-waf_rules</code>, <code>calico-deny_all_rule</code>, <code>calico-nonstandard_ports</code>, <code>calico-update_cis_whitelist</code>, <code>datacos-cos_managers</code>, <code>datacos-not_encrypted_via_kp</code>, <code>datacos-not_in_private_network</code>, <code>datacos-public_bucket_acl</code>, <code>datacos-public_bucket_iam</code>, <code>datacos-public_object_acl</code>, <code>iam-account_admins</code>, <code>iam-all_resource_managers</code>, <code>iam-all_resource_readers</code>, <code>iam-identity_admins</code>, <code>iam-kms_managers</code>, <code>iam-out_of_group</code></td>
+  </tr>
     <tr>
       <td>ALL</td>
       <td><code>ALL</code></td>
