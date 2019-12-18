@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-12-10"
+lastupdated: "2019-12-18"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -174,6 +174,11 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
   <tr>
     <td><code>security-advisor.notification-channels.update</code></td>
     <td>Update a {{site.data.keyword.security-advisor_short}} notification channel.</td>
+    <td>Manager</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.config-insights.scan</code></td>
+    <td>Run a config advisor scan</td>
     <td>Manager</td>
   </tr>
 </table>
