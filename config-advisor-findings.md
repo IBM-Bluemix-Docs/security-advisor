@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-12-18"
+  years: 2017, 2020
+lastupdated: "2020-01-20"
 
 keywords: centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -50,7 +50,6 @@ When a scan is run, you might see results on the **Edge protection** card of the
 
 
 
-
 ## Data protection findings
 {: #config-cos}
 
@@ -58,7 +57,7 @@ When a scan is run, you might see results on the **Data protection** card of the
 
 | Finding           | Severity and Risk              | Remediation           |
 |:------------------|:------------------|:----------------------|
-| `COS bucket is not encrypted with BYOK` | High severity: You do not control your encryption keys. | To fix the issue, use {{site.data.keyword.keymanagementservicelong_notm}} to manage keys to protect your {{site.data.keyword.cos_full_notm}} bucket. |
+| `COS bucket is not encrypted with a user-managed key` | High severity: A storage bucket is not encrypted by a key that is managed with {{site.data.keyword.keymanagementservicelong_notm}} or {{site.data.keyword.hscrypto}}. | To fix the issue, use a key management service, such as {{site.data.keyword.keymanagementservicelong_notm}} or {{site.data.keyword.hscrypto}}, to control the encryption key for the bucket. |
 | `COS bucket is not in a private network` | High severity: By not using a private network, you're missing an extra layer of protection. Sensitive data might travel through a public network. | To fix the issue, be sure that your bucket is configured with a list of authorized IPs if your data needs to remain private. |
 | `COS bucket is publicly accessible via S3 canned ACLs` | High severity: By using the predefined rules of your S3 canned ACL, your data is publicly accessible. | To fix the issue, consider customizing your ACLs. |
 | `COS object is publicly accessible via canned ACLs` | High severity: By using the predefined rules of your S3 canned ACL, your data is publicly accessible. | To fix the issue, consider customizing your ACLs. |
