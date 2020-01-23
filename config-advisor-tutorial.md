@@ -22,7 +22,7 @@ subcollection: security-advisor
 {:deprecated: .deprecated}
 {:download: .download}
 
-# Running Config advisor scans
+# Running config advisor scans
 {: #config-setup}
 
 With {{site.data.keyword.security-advisor_long}}, you can gain visibility into security issues and vulnerabilities in your {{site.data.keyword.cloud_notm}} account. The config advisor feature of {{site.data.keyword.security-advisor_short}} runs scans that combine known security and compliance policies and best practices to identify potential issues in the configurations of resources in your account. By running the scans, evaluating the findings, and addressing any vulnerabilities that are found, you can ensure that you're being diligent in your security efforts.
