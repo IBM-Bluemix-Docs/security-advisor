@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-21"
+lastupdated: "2020-01-23"
 
 keywords: centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -28,7 +28,7 @@ subcollection: security-advisor
 With {{site.data.keyword.security-advisor_long}}, you can assess the configuration of your {{site.data.keyword.Bluemix_notm}} resources according to security and compliance best practices by running scans with config advisor. You can view details about any issues that are found during the scan on the Config advisor page for {{site.data.keyword.security-advisor_short}}.
 {: shortdesc}
 
-
+The scans run and find issues with {{site.data.keyword.cis_full_notm}}, {{site.data.keyword.cos_full_notm}}, and Identity and Access Management configurations in your account.
 
 If you run a scan, and don't see any findings returned for your account, check to be sure that you have all of the [required access](/docs/services/security-advisor?topic=security-advisor-config-setup#config-permissions).
 {: note}
