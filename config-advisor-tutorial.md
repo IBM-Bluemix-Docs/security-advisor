@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-21"
+lastupdated: "2020-01-23"
 
 keywords: Configuration issues, centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -56,7 +56,8 @@ If you want a user in your account to only view the findings of the scans, and n
 
 The config advisor scans and provides findings only when you choose to run it, which means that you don't get new findings each time you log in. Instead, you can choose how often you want to run the scans and evaluate the latest findings for the configurations in your account. 
 
-
+The scans run and find issues with {{site.data.keyword.cis_full_notm}}, {{site.data.keyword.cos_full_notm}}, and Identity and Access Management configurations in your account.
+{: note}
 
 When you run the config advisor scan, the findings are displayed on three separate cards on the config advisor page. For findings related to user access configuration issues, see the **User access** card. For network and workload protection issues, see the **Edge protection** card. And last, see the **Data protection** card for all data configuration issues. To start a scan, complete the following steps:
 
