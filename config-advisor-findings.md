@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-23"
+lastupdated: "2020-01-30"
 
 keywords: centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -56,7 +56,7 @@ When a scan is run, you might see results on the **Edge protection** card of the
 ## Data protection findings
 {: #config-cos}
 
-When a scan is run, you might see results on the **Data protection** card of the dashboard. These findings alert you to the potential misconfigurations that can lead to your private data being leaked. 
+When a scan is run, you might see results on the **Data protection** card of the dashboard. These findings alert you to the possibility of your private data being leaked by identifying any misconfigurations that might exist.
 
 | Finding           | Severity and Risk              | Remediation           |
 |:------------------|:------------------|:----------------------|
@@ -77,7 +77,7 @@ When the scan is run, you might see results on the **User access** card of the d
 |:------------------|:------------------|:----------------------|
 | `The number of account admins is higher the given threshold` | High severity: A user with administrative access is no longer meant to have it. | To fix the issue, revise your list of administrators and verify that only the users that need the access are included in the list. |
 | `The number of 'All resources' managers is higher than the given threshold` | High severity: Your account IAM policies do not follow the `pricinciple of least privilege`. Users with access to all of your resources can perform create, retrieve, update, and delete operations and have control of your {{site.data.keyword.cloud_notm}} instances. |  To fix the issue, revise your list of administrators and verify that only the users that need the access are included in the list. |
-| `The number of IAM admins is higher than the given threshold` | High severity: Your account IAM policies do not follow the `pricinciple of least privilege`. An IAM admin can grant access to other users that might not have a need for that access. | To fix the issue, revise your list of IAM admins and verify that only the users that need the access are included in the list. |
+| `The number of IAM admins is higher than the given threshold` | High severity: Your account IAM policies do not follow the `pricinciple of least privilege`. An IAM admin can grant access to other users that might not have a need for that access. | To fix the issue, revise your list of IAM administrators and verify that only the users that need the access are included in the list. |
 | `The number of {{site.data.keyword.keymanagementserviceshort}} managers is higher than the given threshold` | High severity: Your {{site.data.keyword.keymanagementserviceshort}} manager list does not follow the `pricinciple of least privilege`. Users with access to your {{site.data.keyword.keymanagementserviceshort}} instances can perform create, retrieve, update, and delete operations. A malicious user might delete a key, which would render the data that the key was protecting as inaccessible. | To fix the issue, revise your list of {{site.data.keyword.keymanagementserviceshort}} managers and verify that only the users that need the access are included in the list. |
 | `Too many users are 'All resources' readers` | Medium severity: Your account IAM policies do not follow the `pricinciple of least privilege`. This finding can indicate data leakage as users that should not have read access might view the data. | To fix the issue, revise your list of `All resources` readers and verify that only the users that need the access are included in the list. |
 | `User with role outside of access group` | Medium severity: Assigning users to access groups allows for immediate control of the user in the group. You can easily revoke or update privileges for several users at one time. By not using access groups for everyone, a user might go unnoticed and might compromise your data. | To fix the issue, revise your user permissions and verify that your users are part of the correct groups. For more information and best practices, see [{{site.data.keyword.cloud_notm}} IAM account setup](/docs/iam?topic=iam-account_setup).  |
