@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-23"
+lastupdated: "2020-02-04"
 
 keywords: Configuration issues, centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -69,5 +69,5 @@ When you run the config advisor scan, the findings are displayed on three separa
 Scans can take a few minutes to complete depending on the number of resources that must be scanned in your account. The identified violations for your account don't include any personal or private data.
 {: note}
 
-For more information about the specific issues that might be found and how you can start addressing them, check out [Config advisor findings](/docs/services/security-advisor?topic=security-advisor-config-advisor-findings).
+For more information about the specific issues that might be found and how you can start addressing them, check out [Config advisor findings](/docs/security-advisor?topic=security-advisor-config-advisor-findings).
 {: tip}

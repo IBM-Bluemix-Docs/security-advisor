@@ -4,7 +4,7 @@
 Welcome to the docs repo for Security Advisor! Feedback and updates are always welcome.
 
 
-Documentation: https://cloud.ibm.com/docs/services/security-advisor?topic=security-advisor-getting-started
+Documentation: https://cloud.ibm.com/docs/security-advisor?topic=security-advisor-getting-started
 
 
 

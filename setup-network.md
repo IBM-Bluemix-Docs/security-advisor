@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-15"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -33,7 +33,7 @@ As of 20 January 2019, Network Insights (beta) replaces the Network Analytics fe
 ## Before you begin
 {: #network-prereq}
 
-If you are currently using the Network Analytics feature, you must [delete the service components](/docs/services/security-advisor?topic=security-advisor-setup-network#uninstall-analytics) before you can install Network Insights. To get started with Network Insights, be sure that you have the following prerequisites.
+If you are currently using the Network Analytics feature, you must [delete the service components](/docs/security-advisor?topic=security-advisor-setup-network#uninstall-analytics) before you can install Network Insights. To get started with Network Insights, be sure that you have the following prerequisites.
 
 - If you are working on Windows 10, activate Windows Subsystem for Linux and install an [Ubuntu shell](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external}.
 - Install the yq CLI:
@@ -191,7 +191,7 @@ Be sure to repeat the installation for each cluster that you want to monitor.
     </tr>
     <tr>
       <td><code>cos_api_key</code></td>
-      <td>The [API key](/docs/services/cloud-object-storage/iam?topic=cloud-object-storage-service-credentials) that you created to access your COS instance and bucket. The key must have the platform role `writer`.</td>
+      <td>The [API key](/docs/cloud-object-storage/iam?topic=cloud-object-storage-service-credentials) that you created to access your COS instance and bucket. The key must have the platform role `writer`.</td>
     </tr>
   </table>
 

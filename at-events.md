@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-09-23"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
-keywords: Centralized security, security management, alerts, security risk, insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, , insights, threat detection
 
 subcollection: security-advisor
 
@@ -28,11 +28,11 @@ subcollection: security-advisor
 # {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at_events}
 
-You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.at_short}} service.
+You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.at_short}} service. 
 {: shortdesc}
 
 
-For more information about how the service works, see the [{{site.data.keyword.at_short}} docs](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-cloud_services#cloud_services).
+For more information about how the service works, see the [{{site.data.keyword.at_short}} docs](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-cloud_services#cloud_services).
 
 
 
@@ -48,7 +48,7 @@ Events are available in the {{site.data.keyword.at_short}} **account domain** th
 4. Click **View LogDNA** and make sure you're on the **Everything** dashboard. Any events that meet the qualifications for your {{site.data.keyword.at_short}} payment plan are visible. You can filter your results by tags, sources, apps or levels. You can also search for specific events or jump to a specific timeframe.
 
 
-For users other than the account owner to view logs, you must use the premium plan. To let other users view events, see [Granting permissions to see account events](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-iam_manage_events).
+For users other than the account owner to view logs, you must use the premium plan. To let other users view events, see [Granting permissions to see account events](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-iam_manage_events).
 {: tip}
 
 

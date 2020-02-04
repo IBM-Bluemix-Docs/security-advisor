@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-11"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -214,6 +214,6 @@ node ./src/app.js deleteCard
 ```
 {: codeblock}
 
-Ready to start integrating your own security tools? Check out the [custom findings documentation](/docs/services/security-advisor?topic=security-advisor-setup_custom).
+Ready to start integrating your own security tools? Check out the [custom findings documentation](/docs/security-advisor?topic=security-advisor-setup_custom).
 {: tip}
 

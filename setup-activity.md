@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-15"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -154,15 +154,15 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     </tr>
     <tr>
       <td><code>cos_api_key</code></td>
-      <td>The [API key](/docs/services/cloud-object-storage/iam?topic=cloud-object-storage-service-credentials) that you created to access your COS instance and bucket. The key must have the platform role `writer`.</td>
+      <td>The [API key](/docs/cloud-object-storage/iam?topic=cloud-object-storage-service-credentials) that you created to access your COS instance and bucket. The key must have the platform role `writer`.</td>
     </tr>
     <tr>
       <td><code>at_region</code></td>
-      <td>The region of the <a href="/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
+      <td>The region of the <a href="/docs/Log-Analysis-with-LogDNA?topic=LogDNA-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
-      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
+      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
     </tr>
   </table>
 
@@ -170,7 +170,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
 ## Adding rule packages to COS
 {: #activity-adding-rules}
 
-A rule package is a JSON file that contains a list of rules that you want to monitor. You can download rule packages or [create your own](/docs/services/security-advisor?topic=security-advisor-activity#activity-packages). The {{site.data.keyword.security-advisor_short}} engine validates that each rule follows the correct syntax.
+A rule package is a JSON file that contains a list of rules that you want to monitor. You can download rule packages or [create your own](/docs/security-advisor?topic=security-advisor-activity#activity-packages). The {{site.data.keyword.security-advisor_short}} engine validates that each rule follows the correct syntax.
 {: shortdesc}
 
 1. Clone the following repository to get several preset rule packages. A folder is created on your local system with the name `security-advisor-activity-insights`.
@@ -196,7 +196,7 @@ A rule package is a JSON file that contains a list of rules that you want to mon
 
 8. Click **Upload**.
 
-Want to use your own packages? Use one of the JSON files as a guide and create rules that fit your organizations needs. After you create the file, add it to the *IBM.rules/activities* folder in your COS instance. For more information about the types of rules and formatting, check out [Understanding rule packages](/docs/services/security-advisor?topic=security-advisor-activity).
+Want to use your own packages? Use one of the JSON files as a guide and create rules that fit your organizations needs. After you create the file, add it to the *IBM.rules/activities* folder in your COS instance. For more information about the types of rules and formatting, check out [Understanding rule packages](/docs/security-advisor?topic=security-advisor-activity).
 {: tip}
 
 

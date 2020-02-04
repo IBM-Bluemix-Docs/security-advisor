@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2019
-lastupdated: "2019-09-09"
+  years: 2014, 2020
+lastupdated: "2020-02-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -41,7 +41,7 @@ Although you do not have to do anything to create the connection between {{site.
 With {{site.data.keyword.registryshort_notm}}, you have access to Vulnerability Advisor, which continuously scans the images in your {{site.data.keyword.registryshort_notm}} instance for potential security issues. If issues are found, you are alerted and can view a comprehensive report in your {{site.data.keyword.security-advisor_short}} dashboard.
 {:shortdesc}
 
-Learn more about [{{site.data.keyword.registryshort_notm}}](/docs/services/Registry?topic=registry-getting-started).
+Learn more about [{{site.data.keyword.registryshort_notm}}](/docs/Registry?topic=registry-getting-started).
 
 
 ### Before you begin
@@ -109,7 +109,7 @@ Depending on the expiration data of the certificate that you upload to {{site.da
 
 To trigger a manual update, you might try uploading a certificate that expires in a day to your {{site.data.keyword.cloudcerts_short}} instance. When the import is successful, you can see that the Key Risk Indicator (KRI) and findings are visible in the {{site.data.keyword.security-advisor_short}} dashboard.
 
-You can learn more about [{{site.data.keyword.cloudcerts_long_notm}}](/docs/services/certificate-manager?topic=certificate-manager-getting-started) by reading the docs.
+You can learn more about [{{site.data.keyword.cloudcerts_long_notm}}](/docs/certificate-manager?topic=certificate-manager-getting-started) by reading the docs.
 {: tip}
 
 ### Creating a certificate

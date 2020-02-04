@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-12-18"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -34,7 +34,7 @@ With a process in place to handle alerts you can ensure that you're in complianc
 ## Before you begin
 {: #notifications-before}
 
-Before you get started with notifications, you must be assigned the proper IAM roles. Check out the following table to see which roles you need to interact with the service. For more information about roles, see [managing service access](/docs/services/security-advisor?topic=security-advisor-service-access).
+Before you get started with notifications, you must be assigned the proper IAM roles. Check out the following table to see which roles you need to interact with the service. For more information about roles, see [managing service access](/docs/security-advisor?topic=security-advisor-service-access).
 
 
 ## Configuring a notification method
@@ -312,7 +312,7 @@ Example payload:
             "reported_by":{
                "id":"certificate-manager",
                "title":"IBM Cloud Certificate Manager",
-               "url":"https://cloud.ibm.com/docs/services/certificate-manager?topic=certificate-manager-gettingstarted#gettingstarted"
+               "url":"https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-gettingstarted#gettingstarted"
             },
             "short_description":"Certificate expiring in 90 days",
             "update_time":"2019-05-08T02:35:40.338792Z",

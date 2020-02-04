@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-02-04"
 
 keywords: centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -30,7 +30,7 @@ With {{site.data.keyword.security-advisor_long}}, you can assess the configurati
 
 The scans run and find issues with {{site.data.keyword.cis_full_notm}}, {{site.data.keyword.cos_full_notm}}, and Identity and Access Management configurations in your account.
 
-If you run a scan, and don't see any findings returned for your account, check to be sure that you have all of the [required access](/docs/services/security-advisor?topic=security-advisor-config-setup#config-permissions).
+If you run a scan, and don't see any findings returned for your account, check to be sure that you have all of the [required access](/docs/security-advisor?topic=security-advisor-config-setup#config-permissions).
 {: note}
 
 
