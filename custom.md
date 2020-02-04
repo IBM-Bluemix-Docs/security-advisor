@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-05"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -78,7 +78,7 @@ To register a new type of findings, you can create a note. To create the note, y
 Request:
 
 ```
-curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>/providers/my-custom-tool/notes" -H  "accept: application/json" -H  "Authorization: <IAM_token>" -H  "Content-Type: application/json" -d "{  \"kind\": \"FINDING\",  \"short_description\": \"My security tool finding\",  \"long_description\": \"Longer description of what the security tool found.\",  \"provder_id\": \"my-custom-tool\",  \"id\": \"my-custom-tool-findings-type\",  \"reported_by\": {    \"id\": \"my-custom-tool\",    \"title\": \"My custom security tool\"  } ,  \"finding\": {    \"severity\": \"MEDIUM\",    \"next_steps\": [      {        \"title\": \"Explain why it's reported as a risk.\"      }    ]  }}"
+curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>/providers/my-custom-tool/notes" -H  "accept: application/json" -H  "Authorization: <IAM_token>" -H  "Content-Type: application/json" -d "{  \"kind\": \"FINDING\",  \"short_description\": \"My security tool finding\",  \"long_description\": \"Longer description of what the security tool found.\",  \"provider_id\": \"my-custom-tool\",  \"id\": \"my-custom-tool-findings-type\",  \"reported_by\": {    \"id\": \"my-custom-tool\",    \"title\": \"My custom security tool\"  } ,  \"finding\": {    \"severity\": \"MEDIUM\",    \"next_steps\": [      {        \"title\": \"Explain why it's reported as a risk.\"      }    ]  }}"
 ```
 {: codeblock}
 
@@ -90,7 +90,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `provider_id` | Your custom security tool. |
 | `id` | An ID for the type of finding that your security tool found. |
 {: class="simple-tab-table"}
-{: caption="Table 1. Understanding the command's general components" caption-side="top"}
+{: caption="Table 1a. Understanding the command's general components" caption-side="top"}
 {: #registerfindingtable1}
 {: tab-title="General"}
 {: tab-group="register"}
@@ -103,7 +103,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `resource_type` | The type of resource. |
 | `service_name` | The name of the service. |
 {: class="simple-tab-table"}
-{: caption="Table 2. Understanding the command's context components" caption-side="top"}
+{: caption="Table 1b. Understanding the command's context components" caption-side="top"}
 {: #registerfinding2}
 {: tab-title="Context"}
 {: tab-group="register"}
@@ -114,7 +114,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `next_steps` | The steps that can be taken to remediate the issue. |
 | `url` | A URL where the details of the finding can be found. |
 {: class="simple-tab-table"}
-{: caption="Table 3. Understanding the command's finding components" caption-side="top"}
+{: caption="Table 1c. Understanding the command's finding components" caption-side="top"}
 {: #registerfinding3}
 {: tab-title="Finding"}
 {: tab-group="register"}
@@ -188,7 +188,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `provider_id` | Your custom security tool. |
 | `id` | An ID for the type of finding that your security tool found. |
 {: class="simple-tab-table"}
-{: caption="Table 2. Understanding the command's general components" caption-side="top"}
+{: caption="Table 2a. Understanding the command's general components" caption-side="top"}
 {: #postfinding1}
 {: tab-title="General"}
 {: tab-group="post"}
@@ -198,7 +198,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `id` | The ID of the security tool that reported the finding.  |
 | `title` | The title of the security tool that reported the finding. |
 {: class="simple-tab-table"}
-{: caption="Table 2. Understanding the command's reported by components" caption-side="top"}
+{: caption="Table 2b. Understanding the command's reported by components" caption-side="top"}
 {: #postfinding2}
 {: tab-title="Reported by"}
 {: tab-group="post"}
@@ -209,7 +209,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `next_steps` | The steps that can be taken to remediate the issue. |
 | `title` | The title of the finding. |
 {: class="simple-tab-table"}
-{: caption="Table 3. Understanding the command's finding components" caption-side="top"}
+{: caption="Table 2c. Understanding the command's finding components" caption-side="top"}
 {: #postfinding3}
 {: tab-title="Finding"}
 {: tab-group="post"}
@@ -269,10 +269,10 @@ Example response:
 
 Define how you want your card to display your findings in your dashboard by creating a [note](https://cloud.ibm.com/apidocs/security-advisor/findings#create-a-new-note){: external}.
 
-Request: 
+To create a note, run the following command:
 
 ```
-curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>/providers/my-custom-tool/notes" -H  "accept: application/json" -H  "Authorization: <IAM_token>" -H  "Content-Type: application/json" -d "{    \"kind\": \"CARD\",        \"provider_id\": \"my-custom-tool\",    \"id\": \"custom-tool-card\",    \"short_description\": \"Security risk found by my custom tool\",        \"long_description\": \"More detailed description about why this security risk needs to be fixed\",    \"reported_by\": {      \"id\": \"my-custom-tool\",      \"title\": \"My security tool\"    },        \"card\": {      \"section\": \"My security tools\",      \"order\": 1 ,     \"title\": \"My security tool findings\",      \"subtitle\": \"My security tool\",      \"finding_note_names\": [        \"providers/my-custom-tool/notes/my-custom-tool-findings-type\"      ],      \"elements\": [        {          \"kind\": \"NUMERIC\",          \"text\": \"Count of findings reported by my security tool\",          \"default_time_range\": \"1d\",          \"value_type\": {            \"kind\": \"FINDING_COUNT\",            \"finding_note_names\": [              \"providers/my-custom-tool/notes/my-custom-tool-findings-type\"            ]          }        }      ]    }  }"
+curl -X POST "https://<region>.secadvisor.cloud.ibm.com/findings/v1/<account_ID>/providers/<provider_ID>/notes" -H  "accept: application/json" -H  "Authorization: <IAM_token>" -H  "Content-Type: application/json" -d "{    \"kind\": \"CARD\",        \"provider_id\": \"my-custom-tool\",    \"id\": \"custom-tool-card\",    \"short_description\": \"Security risk found by my custom tool\",        \"long_description\": \"More detailed description about why this security risk needs to be fixed\",    \"reported_by\": {      \"id\": \"my-custom-tool\",      \"title\": \"My security tool\"    },        \"card\": {      \"section\": \"My security tools\",      \"order\": 1 ,     \"title\": \"My security tool findings\",      \"subtitle\": \"My security tool\",      \"finding_note_names\": [        \"providers/my-custom-tool/notes/my-custom-tool-findings-type\"      ],      \"elements\": [        {          \"kind\": \"NUMERIC\",          \"text\": \"Count of findings reported by my security tool\",          \"default_time_range\": \"1d\",          \"value_type\": {            \"kind\": \"FINDING_COUNT\",            \"finding_note_names\": [              \"providers/my-custom-tool/notes/my-custom-tool-findings-type\"            ]          }        }      ]    }  }"
 ```
 {: codeblock}
 
@@ -283,7 +283,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `short_description` | A short description that summaries the finding; no more than a couple of words. |
 | `long_description` | A longer description that contains more details about the finding. For formatting purposes, the following HTML tags are supported: `<br>, <i>, </i>, <b>, </b>, <br/>`.|
 {: class="simple-tab-table"}
-{: caption="Table 1. Understanding the command's general components" caption-side="top"}
+{: caption="Table 3a. Understanding the command's general components" caption-side="top"}
 {: #definecard1}
 {: tab-title="General"}
 {: tab-group="card"}
@@ -293,7 +293,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `id` | The ID of the security tool that reported the finding.  |
 | `title` | The title of the security tool that reported the finding. |
 {: class="simple-tab-table"}
-{: caption="Table 2. Understanding the command's reported by components" caption-side="top"}
+{: caption="Table 3b. Understanding the command's reported by components" caption-side="top"}
 {: #definecard2}
 {: tab-title="Reported by"}
 {: tab-group="card"}
@@ -304,9 +304,9 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | Optional: `order` | The order in which the card is displayed within the specified section. The order is specified in range 1 - 6. If you choose a number that is already applied to another card, the creation fails. You receive an error message that states `Given order is already taken by other card in section.` If the order provided is greater than the current number of cards plus 1, then card creation fails. For example, if you currently have two cards and are creating another, you could not specify 5 in the card order because all together, you have three cards total. If the order for the cards is not specified, they are arranged alphabetically in the assigned section. |
 | `title` | The title that you want your card to have. Maximum characters: 28 |
 | `subtitle` | The subtitle that you want your card to have. Maximum characters: 30 |
-| `finding_note_names` | `providers//notes/my-custom-tool-findings-type` |
+| `finding_note_names` | `providers/my-custom-tool/notes/my-custom-tool-findings-type` |
 {: class="simple-tab-table"}
-{: caption="Table 3. Understanding the command's card components" caption-side="top"}
+{: caption="Table 3c. Understanding the command's card components" caption-side="top"}
 {: #definecard3}
 {: tab-title="Card"}
 {: tab-group="card"}
@@ -322,7 +322,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `value_type`: `kri_note_names` | If `kind` is `FINDING_COUNT`, the name of the findings that you want to see in your card, which is specified as an array. |
 | `value_type`: `text` | The text of the element type. The maximum number of characters is 22. |
 {: class="simple-tab-table"}
-{: caption="Table 4. Understanding the command's element components" caption-side="top"}
+{: caption="Table 3d. Understanding the command's element components" caption-side="top"}
 {: #definecard4}
 {: tab-title="Elements"}
 {: tab-group="card"}
