@@ -34,8 +34,10 @@ With a process in place to handle alerts you can ensure that you're in complianc
 ## Before you begin
 {: #notifications-before}
 
-Before you get started with notifications, you must be assigned the proper IAM roles. Check out the following table to see which roles you need to interact with the service. For more information about roles, see [managing service access](/docs/security-advisor?topic=security-advisor-service-access).
+Before you get started with notifications, you must have the following prerequisites:
 
+* The [Manager IAM role](/docs/security-advisor?topic=security-advisor-service-access).
+* A configured webhook. If you don't have one already, try using [Cloud Functions](/docs/openwhisk?topic=cloud-functions-getting-started).
 
 ## Configuring a notification method
 {: #notification-method}
@@ -48,7 +50,6 @@ You can use a Callback URL to post notifications to the tools that you use. For 
 * The endpoint must return a `200 OK` status code to indicate a successful notification delivery.
 
 
-
 ## Creating a notification channel
 {: #channel-create}
 
@@ -57,7 +58,7 @@ To start receiving notifications immediately, you can configure a notification c
 ### With the GUI
 {: #channel-create-gui}
 
-1. Navigate to the **Notifications channels** tab of the Security Advisor dashboard.
+1. Go to the **Notifications channels** tab of the Security Advisor dashboard.
 2. Click **Add notification channel**.
 3. Using the following table as a guide, provide the following information.
   
