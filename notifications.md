@@ -42,9 +42,9 @@ Before you get started with notifications, you must have the following prerequis
 ## Configuring a notification method
 {: #notification-method}
 
-You can use a Callback URL to post notifications to the tools that you use. For example, you can send notifications to report to PagerDuty or automatically open an issue in GitHub.
+You can use a callback URL to post notifications to the tools that you use. For example, you can send notifications to report to PagerDuty or automatically open an issue in GitHub.
 
-**Important:** Your Callback URL endpoint must meet the following requirements:
+**Important:** Your callback URL endpoint must meet the following requirements:
 * The endpoint must use the HTTPS protocol.
 * The endpoint must not require HTTP headers. This requirement includes authorization headers.
 * The endpoint must return a `200 OK` status code to indicate a successful notification delivery.
