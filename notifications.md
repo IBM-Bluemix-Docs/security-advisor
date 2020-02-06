@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-06"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -81,7 +81,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Channel endpoint</td>
-      <td>The location where you want to be notified. Examples include a slack channel, an email address, or a PagerDuty service.</td>
+      <td>The location where you want to be notified. Options include a valid callback URL.</td>
     </tr>
     <tr>
       <td>Severity</td>
