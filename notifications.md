@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-02-07"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -90,7 +90,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Alert source</td>
-      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include Vulnerable images (VA), Network Insights (NA), Activity Insights (ATA), Certificate Manager (CERT), Config advisor (config-advisor) and All. Each built-in provider has their list of finding types.</td>
+      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include Vulnerable images (<code>VA), Network Insights (<code>NA</code>), Activity Insights (<code>ATA</code>), Certificate Manager (<code>CERT</code>), Config advisor (<code>config-advisor</code>) and <code>ALL</code>. Each built-in provider has their list of finding types.</td>
     </tr>
   </table>
   
