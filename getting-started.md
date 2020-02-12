@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-12-16"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, security advisor
 
@@ -64,13 +64,13 @@ Ready to get started? You can get to the service dashboard in one of the followi
   </li>
 </ul>
 
-Are your pre-integrated findings not displaying any information? You might not have any certificates or images for {{site.data.keyword.security-advisor_short}} to monitor. Learn more about what {{site.data.keyword.security-advisor_short}} needs to populate the dashboard cards in [Taking advantage of pre-integrated services](/docs/services/security-advisor?topic=security-advisor-setup-services).
+Are your pre-integrated findings not displaying any information? You might not have any certificates or images for {{site.data.keyword.security-advisor_short}} to monitor. Learn more about what {{site.data.keyword.security-advisor_short}} needs to populate the dashboard cards in [Taking advantage of pre-integrated services](/docs/security-advisor?topic=security-advisor-setup-services).
 
 
 ## Next steps
 {: #start-next}
 
-Now that you've seen the dashboard in action, [learn more](/docs/services/security-advisor?topic=security-advisor-about) about how {{site.data.keyword.security-advisor_short}} can help you. You can also send user feedback by using [dW Answers](https://developer.ibm.com){: external} to contribute ideas for the service as it develops.
+Now that you've seen the dashboard in action, [learn more](/docs/security-advisor?topic=security-advisor-about) about how {{site.data.keyword.security-advisor_short}} can help you. You can also send user feedback by using [dW Answers](https://developer.ibm.com){: external} to contribute ideas for the service as it develops.
 
 
 ## Availability

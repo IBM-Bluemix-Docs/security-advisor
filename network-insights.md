@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-09-25"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -68,7 +68,7 @@ The following information is collected:
 The actual data that is exchanged is not collected.
 {: tip}
 
-From a security point of view, it's a good idea to purge your collected data when legal or company requirements allow for it to be deleted. For more information, check out [Deleting Objects](/docs/services/cloud-object-storage/info?topic=cloud-object-storage-security#deletion).
+From a security point of view, it's a good idea to purge your collected data when legal or company requirements allow for it to be deleted. For more information, check out [Deleting Objects](/docs/cloud-object-storage/info?topic=cloud-object-storage-security#deletion).
 
 
 ## Network: Suspicious inbound traffic
@@ -140,4 +140,4 @@ After the model is developed, deviations from the learned model are detected, an
 ## Next steps
 {: #network-next}
 
-Ready to get started? Check out [Enabling Network Insights](/docs/services/security-advisor?topic=security-advisor-setup-network)!
+Ready to get started? Check out [Enabling Network Insights](/docs/security-advisor?topic=security-advisor-setup-network)!

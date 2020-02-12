@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-12-18"
+  years: 2017, 2020
+lastupdated: "2020-02-07"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -34,19 +34,20 @@ With a process in place to handle alerts you can ensure that you're in complianc
 ## Before you begin
 {: #notifications-before}
 
-Before you get started with notifications, you must be assigned the proper IAM roles. Check out the following table to see which roles you need to interact with the service. For more information about roles, see [managing service access](/docs/services/security-advisor?topic=security-advisor-service-access).
+Before you get started with notifications, you must have the following prerequisites:
 
+* The [Manager IAM role](/docs/security-advisor?topic=security-advisor-service-access).
+* A configured webhook. If you don't have one already, try using [Cloud Functions](/docs/openwhisk?topic=cloud-functions-getting-started).
 
 ## Configuring a notification method
 {: #notification-method}
 
-You can use a Callback URL to post notifications to the tools that you use. For example, you can send notifications to report to PagerDuty or automatically open an issue in GitHub.
+You can use a callback URL to post notifications to the tools that you use. For example, you can send notifications to report to PagerDuty or automatically open an issue in GitHub.
 
-**Important:** Your Callback URL endpoint must meet the following requirements:
-* The endpoint must use the HTTPS protocol.
-* The endpoint must not require HTTP headers. This requirement includes authorization headers.
-* The endpoint must return a `200 OK` status code to indicate a successful notification delivery.
-
+**Note:** Your callback URL endpoint must:
+* use the HTTPS protocol.
+* not require HTTP headers. This requirement includes authorization headers.
+* return a `200 OK` status code to indicate a successful notification delivery.
 
 
 ## Creating a notification channel
@@ -57,7 +58,7 @@ To start receiving notifications immediately, you can configure a notification c
 ### With the GUI
 {: #channel-create-gui}
 
-1. Navigate to the **Notifications channels** tab of the Security Advisor dashboard.
+1. Go to the **Notifications channels** tab of the Security Advisor dashboard.
 2. Click **Add notification channel**.
 3. Using the following table as a guide, provide the following information.
   
@@ -81,7 +82,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Channel endpoint</td>
-      <td>The location where you want to be notified. Examples include a slack channel, an email address, or a PagerDuty service.</td>
+      <td>The location where you want to be notified. Options include a valid callback URL.</td>
     </tr>
     <tr>
       <td>Severity</td>
@@ -89,7 +90,7 @@ To start receiving notifications immediately, you can configure a notification c
     </tr>
     <tr>
       <td>Alert source</td>
-      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include Vulnerable images (VA), Network Insights (NA), Activity Insights (ATA), Certificate Manager (CERT), Config advisor (config-advisor) and All. Each built-in provider has their list of finding types.</td>
+      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include Vulnerable images (<code>VA), Network Insights (<code>NA</code>), Activity Insights (<code>ATA</code>), Certificate Manager (<code>CERT</code>), Config advisor (<code>config-advisor</code>) and <code>ALL</code>. Each built-in provider has their list of finding types.</td>
     </tr>
   </table>
   
@@ -312,7 +313,7 @@ Example payload:
             "reported_by":{
                "id":"certificate-manager",
                "title":"IBM Cloud Certificate Manager",
-               "url":"https://cloud.ibm.com/docs/services/certificate-manager?topic=certificate-manager-gettingstarted#gettingstarted"
+               "url":"https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-gettingstarted#gettingstarted"
             },
             "short_description":"Certificate expiring in 90 days",
             "update_time":"2019-05-08T02:35:40.338792Z",

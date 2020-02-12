@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-01"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -42,7 +42,7 @@ Out of the box, {{site.data.keyword.security-advisor_short}} can integrate with:
 * Certificate Manager for notifications that are related to certificate expiry and lifecycle.
 * Vulnerability Advisor for details on image vulnerabilities and configuration issues.
 
-To learn more, check out [Taking advantage of pre-integrated services](/docs/services/security-advisor?topic=security-advisor-setup-services)!
+To learn more, check out [Taking advantage of pre-integrated services](/docs/security-advisor?topic=security-advisor-setup-services)!
 
 </br>
 
@@ -64,7 +64,7 @@ Are you a partner and interested in integrating your solution with {{site.data.k
 
 With NeuVector, you can detect network threats and violations to prevent attacks of your container-based applications. Through monitoring, you can prevent exploits and breakouts by detecting root privilege escalations, port scans, reverse shells, and suspicious file system activity in your containers and hosts.
 
-For help with setting up your NeuVector instance, see [Partner solutions](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-neuvector).
+For help with setting up your NeuVector instance, see [Partner solutions](/docs/security-advisor?topic=security-advisor-setup-partner#setup-neuvector).
 
 
 ### Twistlock
@@ -74,7 +74,7 @@ For help with setting up your NeuVector instance, see [Partner solutions](/docs/
 
 With a focus on having the most precise data available to cover all of the layers of your stack, so you have accurate visibility and the lowest rate of false positives. Twistlock combines this data with knowledge of your actual deployments such as which containers are exposed to the internet, which run with high privilege, and which have other security mitigations in place, so you can always see what vulnerabilities are most critical in your specific environment.
 
-For help with setting up your Twistlock instance, see [Partner solutions](/docs/services/security-advisor?topic=security-advisor-setup-partner#setup-twistlock).
+For help with setting up your Twistlock instance, see [Partner solutions](/docs/security-advisor?topic=security-advisor-setup-partner#setup-twistlock).
 </br>
 
 
@@ -103,9 +103,9 @@ With built-in insights, you can detect potential issues by continuously monitori
 ### Network Insights (beta)
 {: #integrate-network-insights}
 
-With Network Insights (beta), you can monitor and analyze cluster network communication, both incoming and outgoing, between your Kubernetes cluster and external entities. By using integrated threat intelligence and anomaly detection, the service can identify reconnaissance attacks and potentially compromised assets. To learn more, check out [Network Insights](/docs/services/security-advisor?topic=security-advisor-network).
+With Network Insights (beta), you can monitor and analyze cluster network communication, both incoming and outgoing, between your Kubernetes cluster and external entities. By using integrated threat intelligence and anomaly detection, the service can identify reconnaissance attacks and potentially compromised assets. To learn more, check out [Network Insights](/docs/security-advisor?topic=security-advisor-network).
 
 ### Activity Insights (preview)
 {: #integrate-activity-insights}
 
-With Activity Insights (preview), you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious activity that is made by users or apps by using rule packages. You can use the rules packages that are provided by the service which are based on security best practices or you can customize the rules to fit your needs. To learn more, check out [Activity Insights](/docs/services/security-advisor?topic=security-advisor-activity).
+With Activity Insights (preview), you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious activity that is made by users or apps by using rule packages. You can use the rules packages that are provided by the service which are based on security best practices or you can customize the rules to fit your needs. To learn more, check out [Activity Insights](/docs/security-advisor?topic=security-advisor-activity).
