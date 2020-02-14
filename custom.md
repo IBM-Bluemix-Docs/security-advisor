@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-14"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -383,6 +383,17 @@ Example response:
 ```
 {: screen}
 
+**Note**: During note creation call, the following norms are required to be followed:
+  - If kind is `CARD`, the note definition must have only `card` element in it and not `kpi`/`finding` element.
+  - If kind is `FINDING`, the note definition must have only `finding` element in it and not `kpi`/`card` element.
+  - If kind is `KPI`, the note definition must have only `kpi` element in it and not `card`/`finding` element.
+  
+*Sample error in case user tries to create a note with kind `FINDING` and having a `card` element in it:*         
+
+```
+kpi or card field are not allowed for kind FINDING, having status code as 400
+```
+{: screen}
 
 ## Example usage
 {: #custom-example}
