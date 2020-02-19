@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-12-09"
+  years: 2017, 2020
+lastupdated: "2020-02-19"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -26,10 +26,8 @@ subcollection: security-advisor
 # About {{site.data.keyword.security-advisor_short}}
 {: #about}
 
-{{site.data.keyword.security-advisor_long}} enables centralized security management through a unified dashboard that alerts security admins to issues and guides them to understand, prioritize, manage, and resolve security issues that are related to their cloud applications and workloads.
+{{site.data.keyword.security-advisor_long}} enables centralized security management through a unified dashboard that provides alerts for security admins. The alerts notify security admins to issues and guide them to understand, prioritize, manage, and resolve security issues that are related to their cloud applications and workloads.
 {: shortdesc}
-
-
 
 ## Benefits of using the service
 {: #about-benefits}
@@ -63,7 +61,7 @@ The service receives findings from:
 ![This image shows the way in which the components of {{site.data.keyword.security-advisor_short}} fit together. The service receives findings from varying sources such as Built in insights or custom tools and then displays them in the dashboard where your security advisor can see an overview of your security posture.](images/how-it-works.png){: caption="Figure 2. How the components of {{site.data.keyword.security-advisor_short}} fit together" caption-side="bottom"}
 
 
-{{site.data.keyword.security-advisor_short}} is most helpful for security administrators. That role can take many names. Check out the following table for some example users:
+{{site.data.keyword.security-advisor_short}} is most helpful for security administrators. That role can take many names. The described roles might be performed by a single person or multiple people - depending on the size of your company. However, the offering was created to address the day-to-day requirements of a CISO or Security focal. Check out the following table for some example users:
 
 <table>
   <caption>Table 1. Types of Security Administrators</caption>
@@ -84,7 +82,9 @@ The service receives findings from:
   </tr>
 </table>
 
-The described roles might be performed by a single person or multiple people - depending on the size of your company. However, the offering was created to address the day-to-day requirements of a CISO or Security focal.
+
+
+
 
 
 ### The Findings API
@@ -122,6 +122,7 @@ Learn about different concepts that you might use while you work with {{site.dat
   <dt>Resource CRN</dt>
     <dd>The resource CRN identifies the specific resource that is involved in the finding. When Network Analytics reports a finding, the Kubernetes cluster CRN is included to identify the cluster or resource affected.</dd>
 </dl>
+
 
 
 ## High-availability and disaster recovery
