@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-19"
+lastupdated: "2020-02-20"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -47,7 +47,7 @@ subcollection: security-advisor
 ## How it works
 {: #how-it-works}
 
-To make maintaining security at a large scale, {{site.data.keyword.security-advisor_short}} is designed as a micro-service on {{site.data.keyword.cloud_notm}}. The core micro-service that is provided is the findings API, which implements the mechanism for {{site.data.keyword.cloud_notm}} and business partner services to send security findings to your service dashboard.
+To make maintaining security at a large scale easy, {{site.data.keyword.security-advisor_short}} is designed as a micro-service on {{site.data.keyword.cloud_notm}}. The core micro-service that is provided is the findings API, which implements the mechanism for {{site.data.keyword.cloud_notm}} and business partner services to send security findings to your service dashboard.
 {: shortdesc}
 
 The service receives findings from:

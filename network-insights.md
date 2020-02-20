@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-20"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -81,7 +81,7 @@ From a security point of view, it's a good idea to purge your collected data whe
 The behavioral patterns of clients that are classified by IBM X-Force as distributing malware that is used as scanners, as part of a botnet, for mining cryptocurrency or for anonymization services are all continuously monitored. If that type of client approaches a monitored cluster and exhibits an alarming behavior, network insights issues a finding.
 
 
-The card introduces two Key Risk Indicators (KRIs):
+The card introduces two Key Performance Indicators (KPIs):
 
 * Reconnaissance by suspicious clients: Includes findings that are related to clients that access the cluster.
 * Abnormally large payloads sent by suspicious clients: Includes findings that are related to data volumes that are sent between clients and the cluster. An abnormal payload is anything that is out of character for your cluster.
@@ -103,7 +103,7 @@ Findings might include suspicious clients that:
 
 The service continuously monitors the behavioral patterns of containers that access clients that are classified by IBM X-Force as distributing malware that is used as scanners, as part of a botnet, for mining cryptocurrency, or for anonymization services. After a container on a monitored cluster approaches the suspicious peers and exhibits alarming behavior, network insights issues a finding.
 
-The card introduces two Key Risk Indicators (KRIs):
+The card introduces two KPIs:
 
 * Outbound approaches to suspicious servers: Findings that are related to a cluster that access the servers.
 * Abnormally large payloads exchanged with suspicious servers: Findings that are related to data volumes that are sent between the cluster and servers.
@@ -124,7 +124,7 @@ In this experimental feature, {{site.data.keyword.security-advisor_short}} monit
 
 A model of normal container behavior is created by monitoring the behavioral patterns between a container and its peers. When the model is captured, it is monitored for specific changes. If an alarming change is exhibited, then Network Insights issues a finding.
 
-The card introduces two Key Risk Indicators (KRIs):
+The card introduces two KPIs:
 
 * Higher than normal reconnaissance or data exchange activity: Findings that are related to abnormal interactions that are detected between the cluster and any external peers.
 * Outbound approach to a new server: Findings that are related to new detected servers that the cluster approaches.
@@ -135,7 +135,7 @@ A finding might include:
 * Containers that send out or consume significantly more data than normal to or from specific peers.
 * The level of surveying of a particular container has significantly increased.
 
-After the model is developed, deviations from the learned model are detected, and when an alarming change is exhibited, Network Insights posts a finding to the Security Advisor dashboard. Findings are summarized in the **Network: Anomalies in Traffic** card. The card introduces two Key Risk Indicators (KRIs). The *Higher than normal reconnaissance or data exchange activity* KRI counts findings that are related to abnormal interactions detected between the cluster and external peers. The *Outbound approach to a new server* KRI counts findings that are related to new detected servers approaches by the cluster.  
+After the model is developed, deviations from the learned model are detected, and when an alarming change is exhibited, Network Insights posts a finding to the Security Advisor dashboard. Findings are summarized in the **Network: Anomalies in Traffic** card. The card introduces two KPIs. The *Higher than normal reconnaissance or data exchange activity* KPI counts findings that are related to abnormal interactions detected between the cluster and external peers. The *Outbound approach to a new server* KPI counts findings that are related to new detected servers approaches by the cluster.  
 
 ## Next steps
 {: #network-next}

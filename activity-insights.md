@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-20"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -71,7 +71,7 @@ From a security point of view, it's generally a good idea to purge your collecte
 
 The Activity Insights card in the service dashboard summarizes any indication of unexpected or alarming account activity by your users and services. Activity out of the ordinary might be misbehavior by legitimate users and services, or it could be a sign that your account is compromised. The findings that you see on the card are determined based on the {{site.data.keyword.security-advisor_short}} provided default rule packages.
 
-The card introduces two Key Risk Indicators (KRIs):
+The card introduces two Key Performance Indicators (KPIs):
 
 * Identity and Access: Findings that are related to the Identity and Access Management (IAM) or {{site.data.keyword.appid_short_notm}}  services.
 * Data and Kubernetes: Findings that are related to Key Protect, Kubernetes Service, Cloud Object Storage, or Certificate Manager.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-20"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -107,7 +107,7 @@ Did you know that {{site.data.keyword.cloudcerts_long_notm}} can help to monitor
 
 Depending on the expiration data of the certificate that you upload to {{site.data.keyword.cloudcerts_short}}, the findings appear in the {{site.data.keyword.security-advisor_short}} dashboard 90, 60, 10, and 1 day before the certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start the day after your certificate expires.
 
-To trigger a manual update, you might try uploading a certificate that expires in a day to your {{site.data.keyword.cloudcerts_short}} instance. When the import is successful, you can see that the Key Risk Indicator (KRI) and findings are visible in the {{site.data.keyword.security-advisor_short}} dashboard.
+To trigger a manual update, you might try uploading a certificate that expires in a day to your {{site.data.keyword.cloudcerts_short}} instance. When the import is successful, you can see that the Key Performance Indicator (KPI) and findings are visible in the {{site.data.keyword.security-advisor_short}} dashboard.
 
 You can learn more about [{{site.data.keyword.cloudcerts_long_notm}}](/docs/certificate-manager?topic=certificate-manager-getting-started) by reading the docs.
 {: tip}
