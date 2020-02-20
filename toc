@@ -7,7 +7,6 @@ IBM Cloud Security Advisor
     {: .navgroup id="learn"}
     getting-started.md
     about.md
-    
     integrations.md
 
     {: .topicgroup}
