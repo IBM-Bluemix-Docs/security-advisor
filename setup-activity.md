@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-21"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -56,7 +56,7 @@ To get started with Activity Insights, be sure that you have the following prere
 ## Creating a COS bucket
 {: #activity-setup-cos}
 
-By using the {{site.data.keyword.security-advisor_short}} GUI, you can create a new COS instance and bucket.
+By using the {{site.data.keyword.security-advisor_short}} GUI, you can create a new COS instance and bucket in the Default resource group.
 
 1. Navigate to the **Integrations** tab of the service dashboard.
 
