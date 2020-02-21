@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-12-09"
+  years: 2017, 2020
+lastupdated: "2020-02-20"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -80,12 +80,12 @@ You can prevent risk by stopping the deployment of vulnerable images in your env
 
 When you configure the business partner connection, two cards are created in your dashboard that summarize the findings from Twistlock.
 
-**Twistlock Runtime** introduces two Key Risk Indicators (KRIs):
+**Twistlock Runtime** introduces two Key Performance Indicators (KPIs):
 
 * Total incidents and audits: Findings that are related to incidents or audits on your cloud-native workloads.
 * Total firewall audits: Findings that are related to issues with your firewall.
 
-**Twistlock vulnerabilities** introduce one KRI:
+**Twistlock vulnerabilities** introduce one KI:
 
 * Total images with new vulnerabilities: Findings that are related to vulnerabilities found in your container images.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-14"
+lastupdated: "2020-02-20"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -63,10 +63,10 @@ Before you integrate findings from your third-party tool, be sure that you have 
 
 
 
-## Importing findings and KRIs
+## Importing findings and KPIs
 {: #custom-adding}
 
-The APIs follow Grafeas like artifact metadata specifications to store, query, and retrieve the critical metadata for the findings that are reported by your security tools and services. The integration can be done by using the APIs to configure key risk indicators (KRIs).
+The APIs follow Grafeas like artifact metadata specifications to store, query, and retrieve the critical metadata for the findings that are reported by your security tools and services. The integration can be done by using the APIs to configure key performance indicators (KPIs).
 {: shortdesc}
 
 
@@ -168,9 +168,9 @@ Be sure to remember the name of the note that is returned as part of the respons
 ### Step 2: Posting findings
 {: #custom-post-findings}
 
-Create an [occurrence](https://cloud.ibm.com/apidocs/security-advisor/findings#creates-a-new-occurrence){: external} to post findings as KRIs or events to your security advisor dashboard.
+Create an [occurrence](https://cloud.ibm.com/apidocs/security-advisor/findings#creates-a-new-occurrence){: external} to post findings as KPIs or events to your security advisor dashboard.
 
-For each card, you can define two KRIs.
+For each card, you can define two KPIs.
 {: note}
 
 Request: 
@@ -317,9 +317,9 @@ curl -X POST "https://<region>.secadvisor.cloud.ibm.com/findings/v1/<account_ID>
 | `text` | The text that you want to display. If kind is `NUMERIC`, the maximum number of characters is 60. If kind is `TIME_SERIES` or `BREAKDOWN`, the maximum number of characters is 65. |
 | `default_time_range` | The amount of time that you want to check. The values are set in days. Current options include: `1d`, `2d`, `3d`, and `4d`. |
 | `value_type` | The type of element. If kind is `NUMERIC`, the field is `value_type` and you can have up to four elements per card. If kind is `TIME_SERIES` or `BREAKDOWN`, the field is `value_types`. The maximum number of both `TIME_SERIES` or `BREAKDOWN` is 1. If you have numeric entries only, you can have up to four elements per card. If you want to use a combination, you can have up to two numeric entries and one of either time series or breakdown. You cannot have both time series and breakdown in the same card. If you define your value types as an array for time series, you can have up to three entries.  |
-| `value_type`: `kind` | The type of value. Options include: `KRI` and `FINDING_COUNT`. |
+| `value_type`: `kind` | The type of value. Options include: `KPI` and `FINDING_COUNT`. |
 | `value_type`: `finding_note_names` | If `kind` is `FINDING_COUNT`, the name of the findings that you want to see in your card, which is specified as an array. |
-| `value_type`: `kri_note_names` | If `kind` is `FINDING_COUNT`, the name of the findings that you want to see in your card, which is specified as an array. |
+| `value_type`: `kpi_note_names` | If `kind` is `FINDING_COUNT`, the name of the findings that you want to see in your card, which is specified as an array. |
 | `value_type`: `text` | The text of the element type. The maximum number of characters is 22. |
 {: class="simple-tab-table"}
 {: caption="Table 3d. Understanding the command's element components" caption-side="top"}
