@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-07"
+lastupdated: "2020-02-21"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -54,6 +54,9 @@ You can use a callback URL to post notifications to the tools that you use. For 
 {: #channel-create}
 
 To start receiving notifications immediately, you can configure a notification channel by using either the dashboard or the API.
+
+You can create up to 15 channels.
+{: note}
 
 ### With the GUI
 {: #channel-create-gui}
