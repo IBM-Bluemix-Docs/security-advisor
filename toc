@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="security-advisor" audience="security" category="security" href="/docs/security-advisor?topic=security-advisor-getting-started" path="security-advisor"}
-IBM Cloud Security Advisor
+Security Advisor
 
     {: .navgroup id="learn"}
     getting-started.md
