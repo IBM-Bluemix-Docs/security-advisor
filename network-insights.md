@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-20"
+lastupdated: "2020-03-15"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -68,8 +68,7 @@ The following information is collected:
 The actual data that is exchanged is not collected.
 {: tip}
 
-From a security point of view, it's a good idea to purge your collected data when legal or company requirements allow for it to be deleted. For more information, check out [Deleting Objects](/docs/cloud-object-storage/info?topic=cloud-object-storage-security#deletion).
-
+From a security point of view, it's a good idea to purge your collected data when legal or company requirements allow for it to be deleted. For more information, check out [Deleting Objects](/docs/cloud-object-storage/info?topic=cloud-object-storage-security).
 
 ## Network: Suspicious inbound traffic
 {: #network-suspicious-inbound}
