@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-21"
+lastupdated: "2020-03-15"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -113,7 +113,8 @@ Be sure to repeat the installation for each cluster that you want to monitor.
 3. Get the version of your Kubernetes cluster.
 
   ```
-  kube_version=$(kubectl version --output json) echo $(echo $kube_version | yq r - serverVersion.major).$(echo $kube_version | yq r - serverVersion.minor)
+  kube_version=$(kubectl version --output json) 
+  echo $(echo $kube_version | yq r - serverVersion.major).$(echo $kube_version | yq r - serverVersion.minor)
   ```
   {: codeblock}
 
