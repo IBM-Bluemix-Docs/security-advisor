@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-20"
+lastupdated: "2020-03-16"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -10,17 +10,28 @@ subcollection: security-advisor
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{:screen: .screen}
 {:download: .download}
+{:external: target="_blank" .external}
+{:new_window: target="_blank"}
+{:faq: data-hd-content-type='faq'}
+{:gif: data-image-type='gif'}
+{:important: .important}
+{:note: .note}
+{:pre: .pre}
+{:tip: .tip}
+{:preview: .preview}
+{:deprecated: .deprecated}
+{:shortdesc: .shortdesc}
+{:support: data-reuse='support'}
+{:table: .aria-labeledby="caption"}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:help: data-hd-content-type='help'}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms}
+
 
 
 # Activity Insights (Preview)
@@ -63,7 +74,7 @@ Collected information includes:
 
 The raw data that is collected is stored in a Cloud Object Storage bucket where you can determine the length of time that it is stored. You own and control the collected data, which means that you're responsible for storing, securing, and deleting it. {{site.data.keyword.security-advisor_short}} maintains findings for 90 days. During that time, the results are presented on the **Activity Insights** card in the service dashboard. So, although you will no longer see the finding in your dashboard after 90 days, you might still have the raw data in storage.
 
-From a security point of view, it's generally a good idea to purge your collected data when legal or company requirements allow for it to be deleted. For more information, check out [Deleting objects](/docs/cloud-object-storage/info?topic=cloud-object-storage-security#deletion).
+From a security point of view, it's generally a good idea to purge your collected data when legal or company requirements allow for it to be deleted. For more information, check out [Deleting objects](/docs/cloud-object-storage/info?topic=cloud-object-storage-security).
 {: tip}
 
 ## Activity Insights: Access

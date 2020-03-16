@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="security-advisor" audience="security" category="security" href="/docs/security-advisor?topic=security-advisor-getting-started" path="security-advisor"}
+{: .toc subcollection="security-advisor" audience="security" category="security" href="/docs/security-advisor?topic=security-advisor-getting-started" product-page="https://www.ibm.com/cloud/security-advisor" console-page="/security-advisor#/overview" path="security-advisor"}
 Security Advisor
 
     {: .navgroup id="learn"}
