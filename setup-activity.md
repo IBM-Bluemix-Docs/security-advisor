@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-03-18"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -45,7 +45,7 @@ With {{site.data.keyword.security-advisor_long}}, you can continuously monitor y
 
 To get started with Activity Insights, be sure that you have the following prerequisites.
 
-- If you are working on Windows 10, activate Windows Subsystem for Linux and install an [Ubuntu shell](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external}.
+- If you are working on Windows 10, activate [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){: external}.
 - Install the yq CLI:
   * For [macOS and Windows 10](http://mikefarah.github.io/yq/){: external}.
   * For CentOS, Red Hat, and Ubuntu run the following commands to install version 1.15.
