@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-03-19"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -55,13 +55,16 @@ You can find help by searching for information or by asking questions through a 
 For more information about getting support, see [how do I get the support that I need](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).
 
 
+
+
+
 ## Error: namespaces "security-advisor-insights" is forbidden
 {: #ts-error-helm-install}
 {: troubleshoot} 
 {: support}
 
 {: tsSymptoms}
-When you try to install Network or Activity Insights, you encounter the error:
+When you try to install Network or Activity Insights, you encounter the following error.
 
 ```
 namespaces “security-advisor-insights” is forbidden: User “system:serviceaccount:kube-system:default” cannot get resource “namespaces” in API group “” in the namespace “security-advisor-insights”
