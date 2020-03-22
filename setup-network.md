@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-03-19"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -24,6 +24,7 @@ subcollection: security-advisor
 {:deprecated: .deprecated}
 {:shortdesc: .shortdesc}
 {:support: data-reuse='support'}
+{:script: data-hd-video='script'}
 {:table: .aria-labeledby="caption"}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:help: data-hd-content-type='help'}
@@ -46,7 +47,7 @@ As of 20 January 2019, Network Insights (beta) replaces the Network Analytics fe
 
 If you are currently using the Network Analytics feature, you must [delete the service components](/docs/security-advisor?topic=security-advisor-setup-network#uninstall-analytics) before you can install Network Insights. To get started with Network Insights, be sure that you have the following prerequisites.
 
-- If you are working on Windows 10, activate Windows Subsystem for Linux and install an [Ubuntu shell](https://win10faq.com/install-run-ubuntu-bash-windows-10/){: external}.
+- If you are working on Windows 10, activate [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){: external}.
 - Install the yq CLI:
   * For [macOS and Windows 10](http://mikefarah.github.io/yq/){: external}.
   * For CentOS, Red Hat, and Ubuntu run the following commands to install version 1.15.
