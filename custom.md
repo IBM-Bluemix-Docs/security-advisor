@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-24"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -288,6 +288,9 @@ curl -X POST "https://<region>.secadvisor.cloud.ibm.com/findings/v1/<account_ID>
 ```
 {: codeblock}
 
+curl -X POST "https://<region>.secadvisor.cloud.ibm.com/findings/v1/<account_ID>/providers/<provider_ID>/notes" -H  "accept: application/json" -H  "Authorization: <IAM_token>" -H  "Content-Type: application/json" -d  '{"kind":"CARD","id":"custom-tool-card","short_description":"Security risk found by my custom tool","long_description":"More detailed description about why this security risk needs to be fixed","reported_by":{"id":"my-custom-tool","title":"My security tool"},"card":{"section":"My security tools","order":1,"title":"My security tool findings","subtitle":"My security tool","badge_text":"<badge_text>","badge_image":"<badge_image>","finding_note_names":["providers/my-custom-tool/notes/my-custom-tool-findings-type"],"elements":[{"kind":"NUMERIC","text":"Count of findings reported by my security tool","default_time_range":"1d","value_type":{"kind":"FINDING_COUNT","finding_note_names":["providers/my-custom-tool/notes/my-custom-tool-findings-type"]}}]}}'
+
+
 | General | Description | 
 |:-----------------|:-----------------|
 | `provider_id` | The ID of your security tool. |
@@ -316,6 +319,8 @@ curl -X POST "https://<region>.secadvisor.cloud.ibm.com/findings/v1/<account_ID>
 | Optional: `order` | The order in which the card is displayed within the specified section. The order is specified in range 1 - 6. If you choose a number that is already applied to another card, the creation fails. You receive an error message that states `Given order is already taken by other card in section.` If the order provided is greater than the current number of cards plus 1, then card creation fails. For example, if you currently have two cards and are creating another, you could not specify 5 in the card order because all together, you have three cards total. If the order for the cards is not specified, they are arranged alphabetically in the assigned section. |
 | `title` | The title that you want your card to have. Maximum characters: 28 |
 | `subtitle` | The subtitle that you want your card to have. Maximum characters: 30 |
+| `badge_text` | The text that displays in the event that there are no findings to show. |
+| `badge_image` | The image that displays in the event that there are no findings to show. |
 | `finding_note_names` | `providers/my-custom-tool/notes/my-custom-tool-findings-type` |
 {: class="simple-tab-table"}
 {: caption="Table 3c. Understanding the command's card components" caption-side="top"}
