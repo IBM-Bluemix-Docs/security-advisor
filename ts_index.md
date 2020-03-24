@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-24"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -56,6 +56,26 @@ You can find help by searching for information or by asking questions through a 
 For more information about getting support, see [how do I get the support that I need](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).
 
 
+
+## Error: Unable to access `secadvisor.cloud.ibm.com` when you create a card
+{: #ts-error-cloudflare}
+{: troubleshoot}
+{: support}
+
+
+{: tsSymptoms}
+When you create a note type of card, you encounter the following error.
+
+```
+You have been blocked. You are unable to access secadvisor.cloud.ibm.com
+```
+{: screen}
+
+{: tsCauses}
+The value that you provided for `badge_image` could be the wrong type.
+
+{: tsResolve}
+To resolve the issue, provide an optimized and compressed SVG value for `badge_image`.
 
 
 
