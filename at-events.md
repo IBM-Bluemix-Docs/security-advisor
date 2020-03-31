@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-31"
 
 keywords: Centralized security, security management, alerts, security risk, , insights, threat detection
 
@@ -34,8 +34,6 @@ subcollection: security-advisor
 {:tsSymptoms: .tsSymptoms}
 
 
-
-
 # {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at_events}
 
@@ -44,8 +42,6 @@ You can view, manage, and audit user-initiated activities made in your {{site.da
 
 
 For more information about how the service works, see the [{{site.data.keyword.at_short}} docs](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-cloud_services#cloud_services).
-
-
 
 
 ## Where to view events
