@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2020
 lastupdated: "2020-03-31"
 
-keywords: Centralized security, security management, alerts, security risk, , insights, threat detection
+keywords: Centralized security, security management, alerts, security risk, risk, insights, threat detection
 
 subcollection: security-advisor
 
@@ -37,7 +37,7 @@ subcollection: security-advisor
 # {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at_events}
 
-You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.at_short}} service. 
+You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.at_short}} service. Keeping an eye on the actions performed by users in your account using {{site.data.keyword.security-advisor_short}} can help you keep track of and evaluate security risks in your account.
 {: shortdesc}
 
 
@@ -154,5 +154,25 @@ Check out the following table for a list of the events that are sent to {{site.d
   <tr>
     <td><code>security-advisor.insights-cos.create</code></td>
     <td>Create a Cloud Object Storage instance through {{site.data.keyword.security-advisor_short}} for network and activity insights.</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.notification-channels.read</code></td>
+    <td>View your Security Advisor notification channels.</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.notification-channels.create</code></td>
+    <td>Create a Security Advisor notification channel.</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.notification-channels.update</code></td>
+    <td>Update a Security Advisor notification channel.</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.notification-channels.delete</code></td>
+    <td>Delete a Security Advisor notification channel.</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.config-insights.scan</code></td>
+    <td>Invoke a Config Advisor scan.</td>
   </tr>
 </table>
