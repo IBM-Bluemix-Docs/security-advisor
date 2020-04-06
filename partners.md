@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-06"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -67,6 +67,8 @@ As an administrator with administrative permissions in both the {{site.data.keyw
 With [NeuVector](https://neuvector.com/){: external}, you can detect network threats and violations to prevent attacks of your container-based applications. Through monitoring, you can prevent exploits and breakouts by detecting root privilege escalations, port scans, reverse shells, and suspicious file system activity in your containers and hosts.
 {: shortdesc}
 
+
+  
 To integrate NeuVector with {{site.data.keyword.security-advisor_short}}, you can use the following steps:
 
 1. Navigate to **Integrations > Partner Integrations** and select **NeuVector** from the options provided.
@@ -81,6 +83,8 @@ To integrate NeuVector with {{site.data.keyword.security-advisor_short}}, you ca
 3. Verify that you give permission for the service to generate a service ID and API key and create the connection with the service by clicking **Next**.
 4. Click **Done**.
 5. Go to your service dashboard to review a test finding that was sent to {{site.data.keyword.containershort_notm}} by NeuVector.
+
+
 
 
 
