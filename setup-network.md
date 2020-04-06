@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-06"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -39,8 +39,11 @@ subcollection: security-advisor
 With {{site.data.keyword.security-advisor_long}}, you can monitor behavior by using machine learning, learned patterns, and threat intelligence to detect potentially compromised containers that run on your {{site.data.keyword.containerlong_notm}} clusters.
 {: shortdesc}
 
+Built-in insights are available for Kubernetes clusters on classic infrastructure only.
+{: preview}
+
 As of 20 January 2019, Network Insights (beta) replaces the Network Analytics feature. Any analytics cards in your service dashboard are deleted, but the findings remain in the findings database.
-{: important}
+{: deprecated}
 
 ## Before you begin
 {: #network-prereq}
@@ -273,6 +276,7 @@ Be sure to delete the process for each cluster that you want to remove the agent
 
 If you used the beta version of Network Analytics, you must uninstall the old {{site.data.keyword.security-advisor_short}} components before you can install the new ones. Be sure to repeat this process for each cluster that contains any service components.
 {: shortdesc}
+
 
 1. Log in to {{site.data.keyword.cloud_notm}}.
 

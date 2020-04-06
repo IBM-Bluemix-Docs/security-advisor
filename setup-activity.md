@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-06"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -39,6 +39,9 @@ subcollection: security-advisor
 
 With {{site.data.keyword.security-advisor_long}}, you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious behavior and changes in your resources. You can use rule packages that are based on best practices that are provided by the service or create your own custom rules.
 {: shortdesc}
+
+Built-in insights are available for Kubernetes clusters on classic infrastructure only.
+{: preview}
 
 
 ## Before you begin
