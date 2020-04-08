@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-07"
+lastupdated: "2020-04-08"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -70,7 +70,7 @@ With [NeuVector](https://neuvector.com/){: external}, you can detect network thr
 
 When you configure the business partner connection, a card is created in your dashboard that summarizes the findings that are flagged by NeuVector.
 
-The NeuVector security events report introduces one key performance indicator (KPIs) and a chart that represents findings data as it is updated daily. The chart contains the:
+The NeuVector security report introduces one key performance indicator (KPIs) and a chart that represents findings data as it is updated daily. The chart contains the:
 
 * Security events: Daily details of findings that are related to network threats and violations in your containers and hosts.
 * Security events count: The total amount of findings that are related to network threats and violations in your containers and hosts.
