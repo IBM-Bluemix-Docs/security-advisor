@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-06"
+lastupdated: "2020-04-13"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -33,7 +33,7 @@ subcollection: security-advisor
 {:tsSymptoms: .tsSymptoms}
 
 
-# Network Insights (Beta)
+# Network Insights (beta)
 {: #setup-network}
 
 With {{site.data.keyword.security-advisor_long}}, you can monitor behavior by using machine learning, learned patterns, and threat intelligence to detect potentially compromised containers that run on your {{site.data.keyword.containerlong_notm}} clusters.
@@ -42,8 +42,6 @@ With {{site.data.keyword.security-advisor_long}}, you can monitor behavior by us
 Built-in insights are available for Kubernetes clusters on classic infrastructure only.
 {: preview}
 
-As of 20 January 2019, Network Insights (beta) replaces the Network Analytics feature. Any analytics cards in your service dashboard are deleted, but the findings remain in the findings database.
-{: deprecated}
 
 ## Before you begin
 {: #network-prereq}
@@ -68,6 +66,8 @@ If you are currently using the Network Analytics feature, you must [delete the s
 - The [Kubernetes Helm (package manager)](/docs/containers?topic=containers-helm) v2.9.0 or higher.
 - A standard Kubernetes cluster version v1.10.11 or higher
 
+
+
 ## Creating a COS bucket
 {: #network-setup-cos}
 
@@ -80,6 +80,9 @@ By using the {{site.data.keyword.security-advisor_short}} GUI, you can create a 
 3. In the prerequisites section, click **Create COS instance and bucket**. Your COS instance and bucket are automatically created for you with the proper naming convention and IAM permissions.
 
 If you have an existing instance of COS and bucket, be sure that it uses the naming convention: `sa.<account_id>.telemetric.<cos_region>`. To allow the service to read the data that is stored in your COS instance, set up [service-to-service authorization](/docs/iam?topic=iam-serviceauth) by using {{site.data.keyword.cloud_notm}} IAM. Set `source` to `{{site.data.keyword.security-advisor_short}}` and `target` to your COS instance. Assign the `Reader` IAM role.
+
+
+
 
 
 ## Installing {{site.data.keyword.security-advisor_short}} components
@@ -271,48 +274,4 @@ If you no longer have a need to use Network Insights, you can delete the service
 Be sure to delete the process for each cluster that you want to remove the agents from.
 {: tip}
 
-## Uninstalling Network Analytics
-{: #uninstall-analytics}
 
-If you used the beta version of Network Analytics, you must uninstall the old {{site.data.keyword.security-advisor_short}} components before you can install the new ones. Be sure to repeat this process for each cluster that contains any service components.
-{: shortdesc}
-
-
-1. Log in to {{site.data.keyword.cloud_notm}}.
-
-  ```
-  ibmcloud login -a https://api.us-south.ibm.cloud.com --sso
-  ```
-  {: codeblock}
-
-2. List all of the clusters in your account to get the name of the cluster.
-
-  ```
-  ibmcloud ks clusters
-  ```
-  {: codeblock}
-
-3. Set the context for your cluster.
-
-  1. Get the command to set the environment variable and download the Kubernetes configuration files.
-
-    ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
-    ```
-    {: codeblock}
-
-  2. Copy the output beginning with `export` and paste it into your terminal to set the `KUBECONFIG` environment variable.
-
-4. Navigate to the extracted archive location and run the uninstaller script.
-
-  ```
-  ./uninstall.sh
-  ```
-  {: codeblock}
-
-5. Optional: Uninstall the Helm server component from the cluster.
-
-  ```
-  helm reset
-  ```
-  {: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-06"
+lastupdated: "2020-04-13"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -68,6 +68,7 @@ To get started with Activity Insights, be sure that you have the following prere
 - A standard Kubernetes cluster version v1.10.11 or higher
 
 
+
 ## Creating a COS bucket
 {: #activity-setup-cos}
 
@@ -82,6 +83,9 @@ By using the {{site.data.keyword.security-advisor_short}} GUI, you can create a 
 4. In the prerequisites section, click **Create COS instance and bucket**. Your COS instance and bucket are automatically created for you with the proper naming convention and IAM permissions. The bucket information is displayed.
 
 If you have an existing instance of COS and bucket, be sure that it uses the naming convention `sa.<account_id>.telemetric.<cos_region>`. To allow the service to read the data that is stored in your COS instance, set up [service-to-service authorization](/docs/iam?topic=iam-serviceauth) by using {{site.data.keyword.cloud_notm}} IAM. Set `source` to `{{site.data.keyword.security-advisor_short}}` and `target` to your COS instance. Assign the `Reader` IAM role.
+
+
+
 
 
 ## Installing {{site.data.keyword.security-advisor_short}} components
