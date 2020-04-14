@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-04-14"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -140,14 +140,10 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
 
 7. Set the context for your cluster.
 
-  1. Get the command to set the environment variable and download the Kubernetes configuration files.
-
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-  2. Copy the output beginning with `export` and paste it into your terminal to set the `KUBECONFIG` environment variable.
 
 8. Install Helm by using the [Kubernetes Service integration docs](/docs/containers?topic=containers-helm).
 
