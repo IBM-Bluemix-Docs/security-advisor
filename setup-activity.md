@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-14"
+lastupdated: "2020-04-15"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -34,7 +34,7 @@ subcollection: security-advisor
 {:tsSymptoms: .tsSymptoms}
 
 
-# Activity Insights (Preview)
+# Activity Insights (beta)
 {: #setup-activity}
 
 With {{site.data.keyword.security-advisor_long}}, you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious behavior and changes in your resources. You can use rule packages that are based on best practices that are provided by the service or create your own custom rules.
