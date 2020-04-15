@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-09"
+lastupdated: "2020-04-15"
 
 keywords: Centralized security, security management, alerts, security risk, risk, insights, threat detection
 
@@ -34,8 +34,7 @@ subcollection: security-advisor
 {:tsSymptoms: .tsSymptoms}
 
 
-
-# {{site.data.keyword.cloudaccesstrailshort}} events
+# Auditing events for {{site.data.keyword.security-advisor_short}}
 {: #at_events}
 
 You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.at_short}} service. Keeping an eye on the actions performed by users in your account using {{site.data.keyword.security-advisor_short}} can help you keep track of and evaluate security risks in your account.
