@@ -38,7 +38,11 @@ Security Advisor
         config-advisor-findings.md
     
     notifications.md
-    iam.md
+
+    {: topicgroup}
+    Enhancing security for Security Advisor
+        iam.md
+        at-events.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -49,7 +53,6 @@ Security Advisor
     
     [Service dashboard](https://cloud.ibm.com/security-advisor/#/dashboard)
     [Grafeas spec](https://grafeas.io/)
-    at-events.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
