@@ -33,7 +33,7 @@ Security Advisor
         setup-activity.md
     
     {: .topicgroup}
-    Config advisor
+    Config advisor (Beta)
         config-advisor-tutorial.md
         config-advisor-findings.md
     
