@@ -33,14 +33,14 @@ Security Advisor
         setup-activity.md
     
     {: .topicgroup}
-    Config advisor (Beta)
+    Config advisor (beta)
         config-advisor-tutorial.md
         config-advisor-findings.md
     
     notifications.md
 
     {: topicgroup}
-    Enhancing security for Security Advisor
+    Enhancing security for Security Advisor 
         iam.md
         at-events.md
     {: .navgroup-end}
