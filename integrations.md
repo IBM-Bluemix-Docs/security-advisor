@@ -117,7 +117,7 @@ With built-in insights, you can detect potential issues by continuously monitori
 
 With Network Insights (beta), you can monitor and analyze cluster network communication, both incoming and outgoing, between your Kubernetes cluster and external entities. By using integrated threat intelligence and anomaly detection, the service can identify reconnaissance attacks and potentially compromised assets. To learn more, check out [Network Insights](/docs/security-advisor?topic=security-advisor-network).
 
-### Activity Insights (preview)
+### Activity Insights (beta)
 {: #integrate-activity-insights}
 
 With Activity Insights (preview), you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious activity that is made by users or apps by using rule packages. You can use the rules packages that are provided by the service which are based on security best practices or you can customize the rules to fit your needs. To learn more, check out [Activity Insights](/docs/security-advisor?topic=security-advisor-activity).
