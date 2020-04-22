@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-22"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -61,4 +61,4 @@ IBM X-Force Research is one of the most renowned commercial security research te
 {: #partner}
 {: faq}
 
-Happy to hear that you're interested in integrating your solution with {{site.data.keyword.security-advisor_short}}. Reach out to our team by contacting Matt Ward at wardm@us.ibm.com to get started!
+Happy to hear that you're interested in integrating your solution with {{site.data.keyword.security-advisor_short}}. Reach out to our team by contacting Tim Branter at timmy@us.ibm.com to get started!
