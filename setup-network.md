@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-04-27"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -46,7 +46,7 @@ Built-in insights are available for Kubernetes clusters on classic infrastructur
 ## Before you begin
 {: #network-prereq}
 
-If you are currently using the Network Analytics feature, you must [delete the service components](/docs/security-advisor?topic=security-advisor-setup-network#uninstall-analytics) before you can install Network Insights. To get started with Network Insights, be sure that you have the following prerequisites.
+To get started with Network Insights, be sure that you have the following prerequisites.
 
 - If you are working on Windows 10, activate [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){: external}.
 - Install the yq CLI:

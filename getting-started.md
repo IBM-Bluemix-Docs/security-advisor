@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-10"
+lastupdated: "2020-04-27"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, security advisor
 
@@ -81,7 +81,7 @@ Are your pre-integrated findings not displaying any information? You might not h
 ## Next steps
 {: #start-next}
 
-Now that you've seen the dashboard in action, [learn more](/docs/security-advisor?topic=security-advisor-about) about how {{site.data.keyword.security-advisor_short}} can help you or start [integrating custom findings](/docs/security-advisor?topic=security-advisor-custom).
+Now that you've seen the dashboard in action, [learn more](/docs/security-advisor?topic=security-advisor-about) about how {{site.data.keyword.security-advisor_short}} can help you or start [integrating custom findings](/docs/security-advisor?topic=security-advisor-setup_custom).
 
 
 ## Availability
