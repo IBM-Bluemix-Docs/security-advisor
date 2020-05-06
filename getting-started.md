@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-27"
+lastupdated: "2020-05-06"
 
-keywords: Centralized security, security management, alerts, security risk, insights, threat detection, security advisor
+keywords: getting started tutorial, getting started, security advisor, centralized security, security management, alerts, security risk, insights, threat detection, security advisor
 
 subcollection: security-advisor
 
@@ -34,7 +34,7 @@ subcollection: security-advisor
 {:tsSymptoms: .tsSymptoms}
 
 
-# Getting started tutorial
+# Getting started {{site.data.keyword.security-advisor_short}}
 {: #getting-started}
 
 With {{site.data.keyword.security-advisor_long}}, you can instantly view the security posture of your {{site.data.keyword.cloud_notm}} services through a single, centralized dashboard.
@@ -52,7 +52,7 @@ Through pre-integrated findings, you can monitor:
 
 
 
-## Getting to the service dashboard
+## Step 1: Get to the service dashboard
 {: #start-dashboard}
 
 Ready to get started? You can get to the service dashboard in one of the following ways:
