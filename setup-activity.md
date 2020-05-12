@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-15"
+lastupdated: "2020-05-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -69,22 +69,21 @@ To get started with Activity Insights, be sure that you have the following prere
 
 
 
-## Creating a COS bucket
-{: #activity-setup-cos}
+## Enabling Activity Insights
+{: #activity-enable}
 
-By using the {{site.data.keyword.security-advisor_short}} GUI, you can create a new COS instance and bucket in the Default resource group.
+You can connect an instance of Cloud Object Storage and enable Activity Insights by using the Security Advisor UI.
 
-1. Navigate to the **Integrations** tab of the service dashboard.
-
-2. Toggle **Analysis Disabled** in the Activity Insights box to **Analysis Enabled**.
-
-3. Click **Go to set up**.
-
-4. In the prerequisites section, click **Create COS instance and bucket**. Your COS instance and bucket are automatically created for you with the proper naming convention and IAM permissions. The bucket information is displayed.
-
-If you have an existing instance of COS and bucket, be sure that it uses the naming convention `sa.<account_id>.telemetric.<cos_region>`. To allow the service to read the data that is stored in your COS instance, set up [service-to-service authorization](/docs/iam?topic=iam-serviceauth) by using {{site.data.keyword.cloud_notm}} IAM. Set `source` to `{{site.data.keyword.security-advisor_short}}` and `target` to your COS instance. Assign the `Reader` IAM role.
-
-
+1. Navigate to the [Security dashboard](https://{DomainName}/security-advisor#/overview) in the console.
+2. Go to the **Settings** tab.
+3. Click **Add bucket**. A modal appears.
+4. Choose whether to create a bucket or use a bucket that you already have.
+5. Select an option for **Resource group** and **Cloud Object Storage instance**. If you selected to use your own bucket, be sure to specify the bucket that you want to use.
+6. Choose **Activity Insights**.
+7. Describe your what your bucket is used for.
+8. Click **Add bucket**.
+9. Go to the **Integrations > Built-in Insights** tab.
+10. Enable analysis for **Activity Insights**. Don't forget to install the needed components to finish enabling the feature.
 
 
 
