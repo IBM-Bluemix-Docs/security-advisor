@@ -36,13 +36,13 @@ subcollection: security-advisor
 # Network Insights (beta)
 {: #setup-network}
 
+
+
 With {{site.data.keyword.security-advisor_long}}, you can monitor behavior by using machine learning, learned patterns, and threat intelligence to detect potentially compromised containers that run on your {{site.data.keyword.containerlong_notm}} clusters.
 {: shortdesc}
 
 Built-in insights are available for Kubernetes clusters on classic infrastructure only.
 {: preview}
-
-
 
 ## Before you begin
 {: #network-prereq}
@@ -70,7 +70,7 @@ To get started with Network Insights, be sure that you have the following prereq
 ## Enabling Network Insights
 {: #network-enable}
 
-You can connect an instance of Cloud Object Storage and enable Network Insights by using the Security Advisor UI.
+You can connect an instance of Cloud Object Storage and enable Network Insights by using the {{site.data.keyword.security-advisor_short}} UI.
 
 1. Navigate to the [Security dashboard](https://{DomainName}/security-advisor#/overview) in the console.
 2. Go to the **Settings** tab.
