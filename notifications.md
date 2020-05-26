@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-05-26"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -49,7 +49,7 @@ With a process in place to handle alerts you can ensure that you're in complianc
 Before you get started with notifications, you must have the following prerequisites:
 
 * The [Manager IAM role](/docs/security-advisor?topic=security-advisor-service-access).
-* A configured webhook. If you don't have one already, try using [Cloud Functions](/docs/openwhisk?topic=cloud-functions-getting-started).
+* A configured webhook. If you don't have one already, try using [Cloud Functions](/docs/openwhisk?topic=openwhisk-getting-started).
 
 ## Configuring a notification method
 {: #notification-method}
@@ -105,7 +105,7 @@ You can create up to 15 channels.
     </tr>
     <tr>
       <td>Alert source</td>
-      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include vulnerable images (<code>VA), Network Insights (<code>NA</code>), Activity Insights (<code>ATA</code>), Certificate Manager (<code>CERT</code>), Config advisor (<code>config-advisor</code>) and <code>ALL</code>. Each built-in provider has their list of finding types.</td>
+      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include vulnerable images (<code>VA</code>), Network Insights (<code>NA</code>), Activity Insights (<code>ATA</code>), Certificate Manager (<code>CERT</code>), Config advisor (<code>config-advisor</code>) and <code>ALL</code>. Each built-in provider has their list of finding types.</td>
     </tr>
   </table>
   
