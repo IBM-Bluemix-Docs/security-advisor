@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-26"
+lastupdated: "2020-05-27"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -172,11 +172,11 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     </tr>
     <tr>
       <td><code>at_region</code></td>
-      <td>The region of the <a href="/docs/Log-Analysis-with-LogDNA?topic=Activity-Tracker-with-LogDNA-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
+      <td>The region of the <a href="/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
-      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=Activity-Tracker-with-LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
+      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
     </tr>
   </table>
 
