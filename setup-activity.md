@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-12"
+lastupdated: "2020-05-27"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -62,7 +62,7 @@ To get started with Activity Insights, be sure that you have the following prere
     ```
     {: codeblock}     
 - Updated cURL binary: For CentOS and Red Hat, you can update by running `yum update -y nss curl libcurl`.
-- The [{{site.data.keyword.cloud_notm}} CLI and required plug-ins](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
+- The [{{site.data.keyword.cloud_notm}} CLI and required plug-ins](/docs/cli/reference/ibmcloud?topic=cli-install-ibmcloud-cli)
 - The [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} v1.10.11 or higher
 - The [Kubernetes Helm (package manager)](/docs/containers?topic=containers-helm) v2.9.0 or higher.
 - A standard Kubernetes cluster version v1.10.11 or higher
@@ -172,11 +172,11 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     </tr>
     <tr>
       <td><code>at_region</code></td>
-      <td>The region of the <a href="/docs/Log-Analysis-with-LogDNA?topic=LogDNA-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
+      <td>The region of the <a href="/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
-      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
+      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
     </tr>
   </table>
 

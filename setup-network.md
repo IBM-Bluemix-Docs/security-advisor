@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-12"
+lastupdated: "2020-05-26"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -36,12 +36,13 @@ subcollection: security-advisor
 # Network Insights (beta)
 {: #setup-network}
 
+
+
 With {{site.data.keyword.security-advisor_long}}, you can monitor behavior by using machine learning, learned patterns, and threat intelligence to detect potentially compromised containers that run on your {{site.data.keyword.containerlong_notm}} clusters.
 {: shortdesc}
 
 Built-in insights are available for Kubernetes clusters on classic infrastructure only.
 {: preview}
-
 
 ## Before you begin
 {: #network-prereq}
@@ -61,16 +62,15 @@ To get started with Network Insights, be sure that you have the following prereq
     ```
     {: codeblock}     
 - Updated cURL binary: For CentOS and Red Hat, you can update by running `yum update -y nss curl libcurl`.
-- The [{{site.data.keyword.cloud_notm}} CLI and required plug-ins](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
+- The [{{site.data.keyword.cloud_notm}} CLI and required plug-ins](/docs/cli/reference/ibmcloud?topic=cli-install-ibmcloud-cli)
 - The [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl){: external} v1.10.11 or higher
 - The [Kubernetes Helm (package manager)](/docs/containers?topic=containers-helm) v2.9.0 or higher.
 - A standard Kubernetes cluster version v1.10.11 or higher
 
-
 ## Enabling Network Insights
 {: #network-enable}
 
-You can connect an instance of Cloud Object Storage and enable Network Insights by using the Security Advisor UI.
+You can connect an instance of Cloud Object Storage and enable Network Insights by using the {{site.data.keyword.security-advisor_short}} UI.
 
 1. Navigate to the [Security dashboard](https://{DomainName}/security-advisor#/overview) in the console.
 2. Go to the **Settings** tab.
@@ -78,7 +78,7 @@ You can connect an instance of Cloud Object Storage and enable Network Insights 
 4. Choose whether to create a bucket or use a bucket that you already have.
 5. Select an option for **Resource group** and **Cloud Object Storage instance**. If you selected to use your own bucket, be sure to specify the bucket that you want to use.
 6. Choose **Network Insights**.
-7. Describe your what your bucket is used for.
+7. Describe what your bucket is used for.
 8. Click **Add bucket**.
 9. Go to the **Integrations > Built-in Insights** tab.
 10. Enable analysis for **Network Insights**. Don't forget to install the needed components to finish enabling the feature.
@@ -265,5 +265,7 @@ If you no longer have a need to use Network Insights, you can delete the service
 
 Be sure to delete the process for each cluster that you want to remove the agents from.
 {: tip}
+
+
 
 

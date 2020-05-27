@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-11"
+lastupdated: "2020-05-27"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -142,4 +142,7 @@ Learn about different concepts that you might use while you work with {{site.dat
 {{site.data.keyword.security-advisor_short}} is a highly available, multi-region service.
 {: shortdesc}
 
-{{site.data.keyword.security-advisor_short}} is currently supported in both the Dallas and London regions. In each supported region, the service runs in several [availability zones](https://www.ibm.com/cloud/blog/announcements/improving-app-availability-multizone-clusters){: external}. {{site.data.keyword.security-advisor_short}} has regional disaster recovery in place. The service maintains a back up database that can be quickly restored within three hours. All of the service data, except for the previous twelve hours, is provided.
+{{site.data.keyword.security-advisor_short}} is currently supported in both the Dallas and London regions. In each supported region, the service runs in several [availability zones](https://www.ibm.com/cloud/blog/announcements/improving-app-availability-multizone-clusters){: external}. {{site.data.keyword.security-advisor_short}} supports cross-regional failover between `us-south` and `us-east`. The service also provides failover from `eu-gb` and `eu-de` if there is a failure in the `eu-gb` region. The `eu-de` region is not available for cross-regional failover.
+
+In every region, a highly available Cloudant cluster contains 3 copies of the data. A daily backup of data to Cloud Object Storage is done and the backup is kept for 7 days. In the event of a failure, the data is automatically recovered by {{site.data.keyword.security-advisor_short}}.
+
