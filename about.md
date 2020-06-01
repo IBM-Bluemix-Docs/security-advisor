@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-06-01"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -77,7 +77,8 @@ The service receives findings from:
 <table>
   <caption>Table 1. Types of Security Administrators</caption>
   <tr>
-    <th colspan=2><img src="images/idea.png" alt="light bulb icon"/> Security administrators</th>
+    <th>Security role</th>
+    <th>Description</th>
   </tr>
   <tr>
     <td>CIO</td>
@@ -94,45 +95,6 @@ The service receives findings from:
 </table>
 
 
-
-
-
-
-### The Findings API
-{: #api}
-
-Out of the box, the service comes with pre-integrated findings that are flagged by the API.
-{: shortdesc}
-
-The {{site.data.keyword.security-advisor_short}} findings API follows [Grafeas](https://grafeas.io/){: external} artifact metadata API specification to store, query, and retrieve critical metadata. The findings are reported by security services and tools.
-
-{{site.data.keyword.security-advisor_short}} is enabled by default for all {{site.data.keyword.cloud_notm}} accounts. As such, you do not need to provision any instance of the service. An instance of {{site.data.keyword.security-advisor_short}} is automatically created on either the initial access of the dashboard or when an initial finding is reported. The service allows 18,000 findings, approximately 200 per day, for each account, in a 90-day period. At the end of the 90 days, the finds are purged. Finding limits are monitored and should the account reach the limit before 90 days, the total findings are reduced to 50% in a FIFO (First in, First Out) model. When the service receives an account delete notification all of the findings related to that account are  purged. You can retrieve all of the findings for your account by using the API and store them yourself for any future use or audit purpose.
-
-
-## Key concepts
-{: #concepts}
-
-Learn about different concepts that you might use while you work with {{site.data.keyword.security-advisor_short}}.
-{: shortdesc}
-
-<dl>
-  <dt>Finding</dt>
-    <dd>A finding is a priority security issue that is created when raw events are processed. Findings are made up of the key pieces of information that are needed to identify the who, what, when, and where of the issue. As a security admin, you can use {{site.data.keyword.security-advisor_short}} findings to prioritize and react to detected situations.</br> Findings are few and small in size but contain important insight that requires immediate attention. For example, your server is infected with malware or a certificate is about to expire.</dd>
-  <dt>Key Risk Indicator (KRI)</dt>
-    <dd>The Key Risk Indicator (KRI) is a measure that is used to indicate the risk of the findings to the security focal. KRIs provide an early signal of increasing risk exposures in various areas of enterprise cloud resources to the security focal. A KRI is triggered when a finding's value is out of bounds from the range of acceptable performance for specific security controls on services and workloads.</dd>
-  <dt>Note</dt>
-    <dd>A particular type of finding is defined as a note. Grafeas divides the metadata information into notes and occurrences. Notes are high-level descriptions of particular types of metadata. You can create different notes for each type of finding submitted by different providers.</dd>
-  <dt>Occurrence</dt>
-    <dd>An occurrence describes provider-specific details of a note. The occurrence contains the vulnerability details, remediation steps, and other general information.</dd>
-  <dt>Card</dt>
-    <dd>Metadata that is used to visualize the findings in the service dashboard is defined by note kind - <code>CARD</code>. {{site.data.keyword.security-advisor_short}} supports three types of KRI elements for a card: <ul><li>Numeric</li><li>Breakdown</li><li>Time series</li></ul></dd>
-  <dt>Provider</dt>
-    <dd>A provider is the tool or service that defines the type of finding (note) and then sends an occurrence of the finding to the service.</dd>
-  <dt>Service CRN</dt>
-    <dd>The Service CRN identifies the {{site.data.keyword.cloud_notm}} service that is involved in the finding. For instance, in a certificate expiry finding, the service instance ID, or CRN of the Certificate Manager service instance that reports the findings is included.</dd>
-  <dt>Resource CRN</dt>
-    <dd>The resource CRN identifies the specific resource that is involved in the finding. When Network Analytics reports a finding, the Kubernetes cluster CRN is included to identify the cluster or resource affected.</dd>
-</dl>
 
 
 
