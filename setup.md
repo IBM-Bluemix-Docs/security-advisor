@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2020-05-26"
+lastupdated: "2020-06-01"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -53,7 +53,7 @@ Although you do not have to do anything to create the connection between {{site.
 With {{site.data.keyword.registryshort_notm}}, you have access to Vulnerability Advisor, which continuously scans the images in your {{site.data.keyword.registryshort_notm}} instance for potential security issues. If issues are found, you are alerted and can view a comprehensive report in your {{site.data.keyword.security-advisor_short}} dashboard.
 {:shortdesc}
 
-Learn more about [{{site.data.keyword.registryshort_notm}}](/docs/Registry?topic=registry-getting-started).
+Learn more about [{{site.data.keyword.registryshort_notm}}](/docs/Registry?topic=Registry-getting-started).
 
 
 ### Before you begin
