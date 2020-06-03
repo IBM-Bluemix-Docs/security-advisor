@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-03"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -36,36 +36,22 @@ subcollection: security-advisor
 # Network Insights (beta)
 {: #setup-network}
 
-
-
-With {{site.data.keyword.security-advisor_long}}, you can monitor behavior by using machine learning, learned patterns, and threat intelligence to detect potentially compromised containers that run on your {{site.data.keyword.containerlong_notm}} clusters.
+With {{site.data.keyword.security-advisor_long}}, you can collect and analyze your Kubernetes cluster network flow logs to detect any suspicious network activity by using learned patterns and threat intelligence. Network Insights is built with a community version of Skydive. 
 {: shortdesc}
+
 
 Built-in insights are available for Kubernetes clusters on classic infrastructure only.
 {: preview}
 
+
 ## Before you begin
-{: #network-prereq}
+{: #before-network}
+Before you get started, be sure that you have the following prerequistes:
 
-To get started with Network Insights, be sure that you have the following prerequisites.
+* A standard Kubernetes Service cluster version 1.14.10_1552 or higher.
+* The [{{site.data.keyword.cloud_notm}} CLI and Kubernetes Service plug-in](/docs/cli?topic=cli-install-ibmcloud-cli)
+* If you choose to install with Helm, you must also have the [Kubernetes Helm (package manager)](/docs/containers?topic=containers-helm) version 3 or higher
 
-- If you are working on Windows 10, activate [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){: external}.
-- Install the yq CLI:
-  * For [macOS and Windows 10](http://mikefarah.github.io/yq/){: external}.
-  * For CentOS, Red Hat, and Ubuntu run the following commands to install version 1.15.
-    ```
-    wget https://github.com/mikefarah/yq/releases/download/1.15.0/yq_linux_amd64       
-    mv yq_linux_amd64 yq   
-    chmod +x yq    
-    mv yq /usr/local/bin/     
-    yq -V
-    ```
-    {: codeblock}     
-- Updated cURL binary: For CentOS and Red Hat, you can update by running `yum update -y nss curl libcurl`.
-- The [{{site.data.keyword.cloud_notm}} CLI and required plug-ins](/docs/cli?topic=cli-install-ibmcloud-cli)
-- The [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl){: external} v1.10.11 or higher
-- The [Kubernetes Helm (package manager)](/docs/containers?topic=containers-helm) v2.9.0 or higher.
-- A standard Kubernetes cluster version v1.10.11 or higher
 
 ## Enabling Network Insights
 {: #network-enable}
@@ -78,168 +64,189 @@ You can connect an instance of Cloud Object Storage and enable Network Insights 
 4. Choose whether to create a bucket or use a bucket that you already have.
 5. Select an option for **Resource group** and **Cloud Object Storage instance**. If you selected to use your own bucket, be sure to specify the bucket that you want to use.
 6. Choose **Network Insights**.
-7. Describe what your bucket is used for.
-8. Click **Add bucket**.
-9. Go to the **Integrations > Built-in Insights** tab.
-10. Enable analysis for **Network Insights**. Don't forget to install the needed components to finish enabling the feature.
+7. Describe what your bucket is used for and click **Add bucket**.
+8. Go to the **Integrations > Built-in Insights** tab.
+9. Enable analysis for **Network Insights**.
+
+## Obtaining service credentials
+{: #cos-credentials}
+
+After you've created your bucket, you can create a set of service credentials for your instance of Cloud Object Storage to use as part of your deployment.
+
+1. In the Cloud Object Storage dashboard, click **Service Credentials**.
+2. Click **New credential** and give your credential a name.
+3. Assign the `Writer` IAM role.
+4. Click **Add**.
 
 
 ## Installing {{site.data.keyword.security-advisor_short}} components
 {: #network-install-components}
 
-You can install an agent to collect network flow logs from your Kubernetes cluster. The logs are stored in your Cloud Object Storage instance. You can then enable Network Insights to analyze your logs and detect and alert you to suspicious network activity.
+You can use Helm to install an agent that collects network flow logs from your Kubernetes cluster and store them in Cloud Object Storage. You can then enable Network Insights to analyze your logs and detect and alert you to suspicious network activity.
 {: shortdesc}
 
 Be sure to repeat the installation for each cluster that you want to monitor.
 {: note}
 
-1. Log in to the {{site.data.keyword.cloud_notm}} CLI. Follow the prompts in the CLI to complete finish logging in.
+
+
+To install the open source version of Skydive by using Helm, complete the following steps.
+
+1. Clone the Skydive repository.
+
+  ```
+  git clone https://github.com/skydive-project/skydive-operator.git
+  ```
+  {: codeblock}
+
+2. Locally, change in to the Skydive repository.
+
+  ```
+  cd skydive-operator/helm-charts/skydive/
+  ```
+  {: codeblock}
+
+3. Log in to the {{site.data.keyword.cloud_notm}} CLI. Follow the prompts in the CLI to complete finish logging in.
 
   ```
   ibmcloud login -a cloud.ibm.com -r <region>
   ```
   {: codeblock}
 
-  <table>
-    <caption>Table 1. IBM Cloud Endpoints by region</caption>
-    <tr>
-      <th>Region</th>
-      <th>Endpoint</th>
-    </tr>
-    <tr>
-      <td>United Kingdom</td>
-      <td><code>eu-gb</code></td>
-    </tr>
-    <tr>
-      <td>US South</td>
-      <td><code>us-south</code></td>
-    </tr>
-  </table>
-
-2. Set the context for your cluster.
+4. Set the context for your cluster.
 
     ```
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
 
-3. Get the version of your Kubernetes cluster.
+5. Optional: Create a namespace in your cluster. If you choose not to create a namespace, you can install the components into your default namespace.
 
   ```
-  kube_version=$(kubectl version --output json) 
-  echo $(echo $kube_version | yq r - serverVersion.major).$(echo $kube_version | yq r - serverVersion.minor)
-  ```
-  {: codeblock}
-
-3. If you're using Kubernetes Service `v1.12.x`, install Helm by using the following commands. If not, check out the Kubernetes documentation to see which installation steps that you should take to [set up Helm in a cluster with public access](/docs/containers?topic=containers-helm#public_helm_install).
-
-  1. Delete any existing deployments.
-
-    ```
-    kubectl delete deployment tiller-deploy -n kube-system
-    ```
-    {: codeblock}
-
-  2. Apply the Tiller RBAC policies to your deployment.
-
-    ```
-    kubectl apply -f https://raw.githubusercontent.com/IBM-Cloud/kube-samples/master/rbac/serviceaccount-tiller.yaml
-    ```
-    {: codeblock}
-  
-  3. Initialize Helm in your cluster and install Tiller in your cluster.
-
-    ```
-    helm init --service-account tiller
-    ```
-    {: codeblock}
-
-  4. Check if your installation is successful by verifying that the status of the `tiller-deploy` pod is `running`.
-
-    ```
-    kubectl get pods -n kube-system -l app=helm
-    ```
-    {: codeblock}
-
-4. Ensure that your Kubernetes Service is version 1.11 or later and then clone the following repository to your local system.
-
-  ```
-  git clone https://github.com/ibm-cloud-security/security-advisor-network-insights.git
+  kubectl create ns insight
   ```
   {: codeblock}
 
-  Kubernetes Service version 1.10 is deprecated and is not supported. If you already have v1.10+ installed, fix the vulnerabilities in the existing image by restarting the analyzer pods by running the following Helm command: `helm upgrade --recreate-pods network-insights`.
-  {: deprecated}
-
-5. Change into the `security-advisor-network-insights` folder.
-
-6. Change into the `v1.10+` directory.
-
-7. Extract the `.tar` file by running the following command.
+6. Get your public subnet CIDR. If you don't currently have one, you can add a portable IP address. [Learn more](/docs/containers?topic=containers-subnets#adding_ips).
 
   ```
-  tar -xvf security-advisor-network-insights.tar
+  ibmcloud ks cluster get --cluster <cluster_name> --show-resources
   ```
   {: codeblock}
 
-8. Change into the `security-advisor-network-insights` folder.
-
-9. Install Helm by using the [Kubernetes Service integration docs](/docs/containers?topic=containers-helm).
-
-10. Run the following command to install the Helm chart and its dependencies. The command validates that your bucket uses the correct naming convention, creates Kubernetes secrets, updates the values with your cluster GUID, and deploys the Network Insights Helm chart. If you encounter an error, try running `helm init --upgrade`.
+7. To define your configuration, open the `values.yaml` file and use the following information as a guide to update the variables.
 
   ```
-  ./network-insight-install.sh <cos_region> <cos_api_key>
+  exporter:
+  enabled: true
+  store:
+  bucket: <bucket name>
+  objectPrefix: "IBM/netflow/<bucket_region_name>/<cluster_id>/0"
+  write:
+  s3:
+    endpoint: <endpoint>
+    installLocalMinio: false
+    region: <bucket_region_name>
+    use_api_key: true
+    api_key: <api_key>
+  env_exporter:
+    - name: SKYDIVE_PIPELINE_CLASSIFY_CLUSTER_NET_MASKS
+        value: "10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 <public_subnet_CIDR>"
   ```
-  {: codeblock}
+  {: screen}
 
   <table>
-    <caption>Table 2. Install command components explained</caption>
     <tr>
-      <th>Variable</th>
-      <th>Description</th>
+      <th>Parameter</th>
+      <th>Value</th>
     </tr>
     <tr>
-      <td><code>cos_region</code></td>
-      <td>The region where your COS instance is deployed. Options include: <code>us-south</code> and <code>eu-gb</code>.</td>
+      <td><code>exporter.enabled</code></td>
+      <td><code>true</code></td>
     </tr>
     <tr>
-      <td><code>cos_api_key</code></td>
-      <td>The [API key](/docs/cloud-object-storage/iam?topic=cloud-object-storage-service-credentials) that you created to access your COS instance and bucket. The key must have the platform role `writer`.</td>
+      <td><code>exporter.write.s3.endpoint</code></td>
+      <td>The endpoint for your instance of Object Storage. For example: <code>https://s3.&lt;region&gt;.cloud-object-storage.&lt;app_domain&gt;.cloud</code></td>
+    </tr>
+    <tr>
+      <td><code>exporter.write.s3.installLocalMinio</code></td>
+      <td><code>false</code> </br>If this value is set to <code>true</code>, a default minio OS is installed locally into a container for testing purposes.</td>
+    </tr>
+    <tr>
+      <td><code>exporter.write.s3.region</code></td>
+      <td>The region where your instance of Cloud Object Storage is deployed. Options include: <code>us-south</code> and <code>eu-gb</code>.</td>
+    </tr>
+    <tr>
+      <td><code>exporter.write.s3.use_api_key</code></td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>exporter.write.s3.api_key</code></td>
+      <td>The <code>api_key</code> that is found in the service credentials that you created in step 1.</td>
+    </tr>
+    <tr>
+      <td><code>exporter.store.bucket</code></td>
+      <td>The name of your bucket.</td>
+    </tr>
+    <tr>
+      <td><code>exporter.store.objectPrefix</code></td>
+      <td><code>IBM/netflow/&lt;bucket_region_name&gt;/&lt;cluster_id&gt;/0</code></td>
+    </tr>
+    <tr>
+      <td><code>exporter.env_exporter.value</code></td>
+      <td>The public subnet CIDR for your cluster.</td>
     </tr>
   </table>
 
-You successfully configured your cluster to work with {{site.data.keyword.security-advisor_short}} Network Insights!
+8. Install the components. If you encounter an error, try running `helm init --upgrade`.
+
+  ```
+  helm install <release_name> -f values.yaml . --namespace insight
+  ```
+  {: codeblock}
+
+  The release name is determined by you. It can be anything.
+  {: tip}
+
+You successfully configured your cluster to work with {{site.data.keyword.security-advisor_short}} Network Insights! Be sure to check the service dashboard regularly to quickly address any findings.
 
 
 
-## Deleting the components
+## Verifying the install
+{: #network-check-logs}
+
+To verify that everything is working correctly, you can check the logs and pod information for your Kubernetes cluster.
+
+1. List all of the Skydive pods, including the agent and analyzer pods.
+
+  ```
+  kubectl get pods -n insight |grep 'skydive'
+  ```
+  {: codeblock}
+
+2. Check the exporter logs to verify that objects are being sent to Cloud Object Storage.
+
+  ```
+  kubectl logs -f <skydive-analyzer-pod-name> -n insight skydive-exporter
+  ```
+  {: codeblock}
+
+
+
+## Uninstalling Network Insights
 {: #network-delete}
 
 If you no longer have a need to use Network Insights, you can delete the service components from your cluster.
 {: shortdesc}
 
+
+
 1. Log in to the {{site.data.keyword.cloud_notm}} CLI. Follow the prompts in the CLI to complete finish logging in.
 
   ```
   ibmcloud login -a cloud.ibm.com -r <region>
   ```
   {: codeblock}
-
-  <table>
-    <tr>
-      <th>Region</th>
-      <th>Endpoint</th>
-    </tr>
-    <tr>
-      <td>United Kingdom</td>
-      <td><code>eu-gb</code></td>
-    </tr>
-    <tr>
-      <td>US South</td>
-      <td><code>us-south</code></td>
-    </tr>
-  </table>
 
 2. Set the context for your cluster.
 
@@ -248,24 +255,21 @@ If you no longer have a need to use Network Insights, you can delete the service
     ```
     {: codeblock}
 
-
-3. Delete the components by using Helm.
-
-  ```
-  helm del --purge network-insights [--tls]
-  ```
-  {: codeblock}
-
-4. Delete the Kubernetes secrets.
+3. Delete the components.
 
   ```
-  kubectl delete ns security-advisor-insights
+  helm delete my-release -n insight
   ```
   {: codeblock}
 
-Be sure to delete the process for each cluster that you want to remove the agents from.
+4. Optional: If you created a namespace during installation, you can delete it.
+
+  ```
+  kubectl delete ns insight
+  ```
+  {: codeblock}
+
+Be sure to delete the components for each cluster that you want to remove the agent from.
 {: tip}
-
-
 
 
