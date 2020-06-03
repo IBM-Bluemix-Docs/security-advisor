@@ -41,7 +41,7 @@ With {{site.data.keyword.security-advisor_long}}, you can collect and analyze yo
 
 
 Built-in insights are available for Kubernetes clusters on classic infrastructure only.
-{: preview}
+{: important}
 
 
 ## Before you begin
