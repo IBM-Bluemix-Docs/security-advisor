@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-15"
+lastupdated: "2020-06-03"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -129,7 +129,8 @@ In addition to a condition and an event, rules can also contain the fields that 
 <table>
 	<caption>Table 1. Rule components</caption>
 	<tr>
-		<th colspan=2><img src="images/idea.png" alt="light bulb icon"/> Understanding the components of a rule</th>
+		<th>Component</th>
+		<th>Description</th>
 	</tr>
 	<tr>
 		<td><code>comment</code></td>
@@ -175,7 +176,8 @@ Example:
 <table>
 	<caption>Table 2. Rule components</caption>
 	<tr>
-		<th colspan=2><img src="images/idea.png" alt="light bulb icon"/> Understanding the components of a condition</th>
+		<th>Condition</th>
+		<th>Description</th>
 	</tr>
 	<tr>
 		<td><code>fact</code></td>

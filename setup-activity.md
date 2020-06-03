@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-06-03"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -41,7 +41,7 @@ With {{site.data.keyword.security-advisor_long}}, you can continuously monitor y
 {: shortdesc}
 
 Built-in insights are available for Kubernetes clusters on classic infrastructure only.
-{: preview}
+{: important}
 
 
 ## Before you begin
