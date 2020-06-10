@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-03"
+lastupdated: "2020-06-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -170,7 +170,7 @@ To install the open source version of Skydive by using Helm, complete the follow
     </tr>
     <tr>
       <td><code>exporter.write.s3.installLocalMinio</code></td>
-      <td><code>false</code> </br>If this value is set to <code>true</code>, a default minio OS is installed locally into a container for testing purposes.</td>
+      <td><code>false</code> </br>If this value is set to <code>true</code>, a default MinIO OS is installed locally into a container for testing purposes.</td>
     </tr>
     <tr>
       <td><code>exporter.write.s3.region</code></td>
