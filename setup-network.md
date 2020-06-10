@@ -82,11 +82,15 @@ After you've created your bucket, you can create a set of service credentials fo
 ## Installing {{site.data.keyword.security-advisor_short}} components
 {: #network-install-components}
 
-You can use Helm to install an agent that collects network flow logs from your Kubernetes cluster and store them in Cloud Object Storage. You can then enable Network Insights to analyze your logs and detect and alert you to suspicious network activity.
+You can use Helm or Operator to install an agent that collects network flow logs from your Kubernetes cluster and store them in Cloud Object Storage. You can then enable Network Insights to analyze your logs and detect and alert you to suspicious network activity.
 {: shortdesc}
 
 Be sure to repeat the installation for each cluster that you want to monitor.
 {: note}
+
+
+### Installing with Helm
+{: #install-network-helm}
 
 
 
@@ -139,6 +143,8 @@ To install the open source version of Skydive by using Helm, complete the follow
   ```
   exporter:
   enabled: true
+  classify:
+    cluster_net_masks: "10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 <public_subnet_CIDR>"
   store:
   bucket: <bucket name>
   objectPrefix: "IBM/netflow/<bucket_region_name>/<cluster_id>/0"
@@ -149,9 +155,7 @@ To install the open source version of Skydive by using Helm, complete the follow
     region: <bucket_region_name>
     use_api_key: true
     api_key: <api_key>
-  env_exporter:
-    - name: SKYDIVE_PIPELINE_CLASSIFY_CLUSTER_NET_MASKS
-        value: "10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 <public_subnet_CIDR>"
+
   ```
   {: screen}
 
@@ -163,6 +167,10 @@ To install the open source version of Skydive by using Helm, complete the follow
     <tr>
       <td><code>exporter.enabled</code></td>
       <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>exporter.classify.cluster_net_masks</code></td>
+      <td>The public subnet CIDR for your cluster.</td>
     </tr>
     <tr>
       <td><code>exporter.write.s3.endpoint</code></td>
@@ -192,10 +200,6 @@ To install the open source version of Skydive by using Helm, complete the follow
       <td><code>exporter.store.objectPrefix</code></td>
       <td><code>IBM/netflow/&lt;bucket_region_name&gt;/&lt;cluster_id&gt;/0</code></td>
     </tr>
-    <tr>
-      <td><code>exporter.env_exporter.value</code></td>
-      <td>The public subnet CIDR for your cluster.</td>
-    </tr>
   </table>
 
 8. Install the components. If you encounter an error, try running `helm init --upgrade`.
@@ -209,6 +213,114 @@ To install the open source version of Skydive by using Helm, complete the follow
   {: tip}
 
 You successfully configured your cluster to work with {{site.data.keyword.security-advisor_short}} Network Insights! Be sure to check the service dashboard regularly to quickly address any findings.
+
+
+
+### Installing with an operator
+{: #network-install-operator}
+
+To install the open source version of Skydive by using an operator, complete the following steps.
+
+1. Log in to the {{site.data.keyword.cloud_notm}} CLI. Follow the prompts in the CLI to complete finish logging in.
+
+  ```
+  ibmcloud login -a cloud.ibm.com -r <region>
+  ```
+  {: codeblock}
+
+2. Set the context for your cluster.
+
+    ```
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ```
+    {: codeblock}
+
+3. Create the required resources and install the Skydive operator.
+
+  ```
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_netflowcollectors_crd.yaml
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_skydives_crd.yaml
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/service_account.yaml
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role.yaml
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role_binding.yaml
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/operator.yaml
+  ```
+  {: codeblock}
+
+4. Define your configuration by locally creating a file named `charts.helm.k8s.io_v1alpha1_netflowcollector_cr.yaml` using the following code block as a guide.
+
+  ```
+  apiVersion: charts.helm.k8s.io/v1alpha1
+  kind: NetflowCollector
+  metadata:
+    name: netflow-collector
+  spec:
+    exporter:
+      enabled: true
+      classify:
+        cluster_net_masks: "10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 <public_subnet_CIDR>"
+      store:
+        bucket: "<bucket_name>"
+        objectPrefix: "IBM/netflow/<bucket_region_name>/<cluster_id>/0"
+      write:
+        s3:
+          endpoint: "https://<object_storage_endpoint>"
+          installLocalMinio: false
+          region: "<bucket_region_name>"
+          use_api_key: true
+          api_key: "<api_key>"
+  ```
+  {: screen}
+
+  <table>
+    <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td><code>exporter.enabled</code></td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>exporter.classify.cluster_net_masks</code></td>
+      <td>The public subnet CIDR for your cluster.</td>
+    </tr>
+    <tr>
+      <td><code>exporter.write.s3.endpoint</code></td>
+      <td>The endpoint for your instance of Object Storage. For example: <code>https://s3.&lt;region&gt;.cloud-object-storage.&lt;app_domain&gt;.cloud</code></td>
+    </tr>
+    <tr>
+      <td><code>exporter.write.s3.installLocalMinio</code></td>
+      <td><code>false</code> </br>If this value is set to <code>true</code>, a default minio OS is installed locally into a container for testing purposes.</td>
+    </tr>
+    <tr>
+      <td><code>exporter.write.s3.region</code></td>
+      <td>The region where your instance of Cloud Object Storage is deployed. Options include: <code>us-south</code> and <code>eu-gb</code>.</td>
+    </tr>
+    <tr>
+      <td><code>exporter.write.s3.use_api_key</code></td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>exporter.write.s3.api_key</code></td>
+      <td>The <code>api_key</code> that is found in the service credentials that you created in step 1.</td>
+    </tr>
+    <tr>
+      <td><code>exporter.store.bucket</code></td>
+      <td>The name of your bucket.</td>
+    </tr>
+    <tr>
+      <td><code>exporter.store.objectPrefix</code></td>
+      <td><code>IBM/netflow/&lt;bucket_region_name&gt;/&lt;cluster_id&gt;/0</code></td>
+    </tr>
+  </table>
+
+5. Create the deployment.
+
+  ```
+  kubectl create -f charts.helm.k8s.io_v1alpha1_netflowcollector_cr.yaml
+  ```
+  {: codeblock}
 
 
 
@@ -238,6 +350,13 @@ To verify that everything is working correctly, you can check the logs and pod i
 
 If you no longer have a need to use Network Insights, you can delete the service components from your cluster.
 {: shortdesc}
+
+
+
+### Uninstalling with Helm
+{: #uninstall-network-helm}
+
+To uninstall the components by using Helm, you must have used Helm to install them. To uninstall the components, you can use the following steps.
 
 
 
@@ -271,5 +390,53 @@ If you no longer have a need to use Network Insights, you can delete the service
 
 Be sure to delete the components for each cluster that you want to remove the agent from.
 {: tip}
+
+
+
+### Uninstalling with an operator
+{: #uninstall-insights-operator}
+
+1. Log in to the {{site.data.keyword.cloud_notm}} CLI. Follow the prompts in the CLI to complete finish logging in.
+
+  ```
+  ibmcloud login -a cloud.ibm.com -r <region>
+  ```
+  {: codeblock}
+
+2. Set the context for your cluster.
+
+    ```
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ```
+    {: codeblock}
+
+3. Delete the custom resource to remove all Skydive related components.
+
+  ```
+  kubectl delete -f charts.helm.k8s.io_v1alpha1_netflowcollector_cr.yaml
+  ```
+  {: codeblock}
+
+4. Delete the operator and related resources.
+
+  ```
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/operator.yaml
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role_binding.yaml
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role.yaml
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/service_account.yaml
+  ```
+  {: codeblock}
+
+5. Optional: Remove the CRDs.
+
+  ```
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_netflowcollectors_crd.yaml
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_skydives_crd.yaml
+  ```
+  {: codeblock}
+
+To learn more about the [operator](https://github.com/skydive-project/skydive-operator)
+
+
 
 
