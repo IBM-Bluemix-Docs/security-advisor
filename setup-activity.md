@@ -252,14 +252,6 @@ If you no longer need to use Activity Insights, you can delete the service compo
   ```
   {: codeblock}
 
-2. Delete the Kubernetes secrets.
 
-  ```
-  kubectl delete ns security-advisor-activity-insights
-  ```
-  {: codeblock}
-  
-  To uninstall `v1.0`, run `kubectl delete ns security-advisor-insights`
-  {: note}
   
   
