@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-03"
+lastupdated: "2020-06-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -101,10 +101,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
   {: codeblock}
 
 2. Change into the `security-advisor-activity-insights` folder.
-3. Current supported versions:        
-   - v1.0 : Change to `v1.0` folder.                                  
-      **Note**: This version will not work after 30th Sept 2019 and will be removed.
-   - v2.0 : Change to `v2.0` folder.
+3. Change into the directory for the version of the chart that you're using. Current supported versions include `v2.0` and `v3.0`.       
 
 4. Extract the `.tar` file by running the following command.
 
@@ -149,7 +146,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
 9. Run the following command to install the Insights. The command validates the naming convention of your bucket, creates Kubernetes secrets, updates the values with your cluster GUID, and deploys Activity Insights.
 
   ```
-  ./activity-insight-install.sh <cos_region> <cos_api_key> <at_region> <at_service_api_key>
+  ./activity-insight-install.sh <cos_region> <cos_api_key> <cos_bucket> <at_region> <at_service_api_key> <default_memory_request> <memory_limit>
   ```
   {: codeblock}
 
@@ -171,12 +168,24 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
       <td>The [API key](/docs/cloud-object-storage/iam?topic=cloud-object-storage-service-credentials) that you created to access your COS instance and bucket. The key must have the platform role `writer`.</td>
     </tr>
     <tr>
+      <td><code>cos_bucket</code></td>
+      <td>The name of the bucket that you created in Cloud Object Storage to use with Activity Insights.</td>
+    </tr>
+    <tr>
       <td><code>at_region</code></td>
       <td>The region of the <a href="/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
       <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
+    </tr>
+    <tr>
+      <td><code>default_memory_request</code></td>
+      <td>The default memory that is requested when the pod is created during installation. If not provided, the default is <code>256Mi</code>.</td>
+    </tr>
+    <tr>
+      <td><code>memory_limit</code></td>
+      <td>The maximum amount of memory that is provided to the pod by the cluster. If not provided, the default is <code>512Mi</code>.</td>
     </tr>
   </table>
 
@@ -222,8 +231,24 @@ If you no longer need to use Activity Insights, you can delete the service compo
 
 1. Delete the service components by using Helm. Be sure to use the `-tls` flag if you have TLS enabled.
 
+  If you installed version 2 of the chart, use the following command to delete the components.
+
+    ```
+    helm del --purge activity-insights [--tls]
+    ```
+    {: codeblock}
+  
+  If you installed version 3 of the chart, use the following command to delete the components.
+
+    ```
+    helm uninstall activity-insights --namespace security-advisor-activity-insights
+    ```
+    {: codeblock}
+
+2. To clean up your cluster, run the following command.
+
   ```
-  helm del --purge activity-insights [--tls]
+  kubectl delete ns security-advisor-activity-insights
   ```
   {: codeblock}
 
