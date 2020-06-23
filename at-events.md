@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-26"
+lastupdated: "2020-06-23"
 
 keywords: Centralized security, security management, alerts, security risk, risk, insights, threat detection
 
@@ -128,10 +128,6 @@ Check out the following table for a list of the events that are sent to {{site.d
     <td>Add a partner solution to your service instance.</td>
   </tr>
   <tr>
-    <td><code>security-advisor.partner-solution.update</code></td>
-    <td>Update a partner solution in your service instance.</td>
-  </tr>
-  <tr>
     <td><code>security-advisor.partner-solution.delete</code></td>
     <td>Delete a partner solution from your service instance.</td>
   </tr>
@@ -150,10 +146,6 @@ Check out the following table for a list of the events that are sent to {{site.d
   <tr>
     <td><code>security-advisor.activity-insights.disable</code></td>
     <td>Disable the Activity Insights feature that is provided by {{site.data.keyword.security-advisor_short}}.</td>
-  </tr>
-  <tr>
-    <td><code>security-advisor.insights-cos.create</code></td>
-    <td>Create a Cloud Object Storage instance through {{site.data.keyword.security-advisor_short}} for network and activity insights.</td>
   </tr>
   <tr>
     <td><code>security-advisor.notification-channels.read</code></td>
