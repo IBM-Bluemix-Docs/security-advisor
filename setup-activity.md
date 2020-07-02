@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-10"
+lastupdated: "2020-07-01"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -78,6 +78,12 @@ You can connect an instance of Cloud Object Storage and enable Activity Insights
 2. Go to the **Settings** tab.
 3. Click **Add bucket**. A modal appears.
 4. Choose whether to create a bucket or use a bucket that you already have.
+  
+  If you choose to create a bucket through Security Advisor, the naming convention `<bucketName><uuid>.<region>` is used. For example, `sa.telemetric.12ab45.us-south`. If you want to provide your own name, you can create a bucket in Cloud Object Storage and then connect it to Security Advisor by choosing the existing bucket option.
+  
+  Only one bucket can be used with Activity Insights at a time.
+  {: tip}
+
 5. Select an option for **Resource group** and **Cloud Object Storage instance**. If you selected to use your own bucket, be sure to specify the bucket that you want to use.
 6. Choose **Activity Insights**.
 7. Describe your what your bucket is used for.
