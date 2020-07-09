@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-01"
+lastupdated: "2020-07-09"
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 subcollection: security-advisor
 ---
@@ -10,7 +10,6 @@ subcollection: security-advisor
 {:screen: .screen}
 {:download: .download}
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
 {:faq: data-hd-content-type='faq'}
 {:gif: data-image-type='gif'}
 {:important: .important}

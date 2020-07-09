@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-29"
+lastupdated: "2020-07-09"
 
 keywords: getting started tutorial, getting started, security advisor, centralized security, security management, alerts, security risk, insights, threat detection, security advisor
 
@@ -14,7 +14,6 @@ subcollection: security-advisor
 {:screen: .screen}
 {:download: .download}
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
 {:faq: data-hd-content-type='faq'}
 {:gif: data-image-type='gif'}
 {:important: .important}
@@ -60,14 +59,14 @@ Ready to get started? You can get to the service dashboard in one of the followi
 <ul>
   <li>By using the tile:
     <ol>
-      <li>Log in to <a href="https://cloud.ibm.com/login" target="_blank">{{site.data.keyword.cloud_notm}}<img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.</li>
+      <li>Log in to <a href="https://cloud.ibm.com/login" target="_blank">{{site.data.keyword.cloud_notm}}<img src="../icons/launch-glyph.svg" alt="External link icon"></a>.</li>
       <li>Navigate to the **Catalog** and click **Security and Identity**.</li>
       <li>Select the {{site.data.keyword.security-advisor_short}} tile. A dashboard opens where you can view security information for the preconfigured integrated tools such as Vulnerability Advisor and Certificate Manager.</li>
     </ol>
   </li>
   <li>By using the menu:
     <ol>
-      <li>Log in to <a href="https://cloud.ibm.com/login" target="_blank">{{site.data.keyword.cloud_notm}}<img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.</li>
+      <li>Log in to <a href="https://cloud.ibm.com/login" target="_blank">{{site.data.keyword.cloud_notm}}<img src="../icons/launch-glyph.svg" alt="External link icon"></a>.</li>
       <li>From your dashboard, click the Navigation menu to expand your options.</li>
       <li>Click **Security**. An overview of the security dashboard opens.</li>
       <li>Click **Getting Started** in the navigation to see general overview information about the service, or click **Dashboard** if you prefer to learn by seeing the service in action.</li>
