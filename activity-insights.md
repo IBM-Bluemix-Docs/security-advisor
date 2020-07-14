@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-13"
+lastupdated: "2020-07-14"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -197,124 +197,27 @@ Example:
 ### What is an event?
 {: #ai-event}
 
-An event is composed of two fields: `type` and `params`. The first is a unique identifier for a rule, while `params` is an object that consists of the following:
-
-- **findingType**: It is the name of the finding that is issued to the service. The finding name allows for the finding to be displayed on the {{site.data.keyword.security-advisor_short}} dashboard.
-- **custom**: It defines if the finding that is to be sent is a custom finding or a builtin one. If not specified `custom` defaults to `false` and thus the finding specified in findingType field will be treated as a builtin finding. If custom is set to `true` a note and card should be created by user before uploading the custom rule. For example, if the findingType is `custom-finding` a note with id `ata-custom-finding` should be created beforehand. Refer to the examples below for payload of card and note.
-- **providerId**: The provider you used to create the custom-note. If not specified, `provider_id` defaults to `security-advisor`.
 
 
-Example event with builtin findingType:
+An event is composed of two fields: type and params.findingType. The first is a unique identifier for a rule, while params.findingType is the name of the finding that is issued to the service. The finding name allows for the finding to be displayed on the Security Advisor dashboard.
+
+Example:
 
 ```
 {
-	"conditions": { 	… },
-	"event": {
-		"type": "IKS high risk API",
-		"params": {
-			"findingType": "IKS-high-risk"
-		}
-	}
+    "conditions": {     … },
+    "event": {
+        "type": "IKS high risk API",
+        "params": {"findingType": "IKS-high-risk"}
+    }
 }
 ```
-Example event with custom findingType:
-
-```
-{
-	"conditions": { 	… },
-	"event": {
-		"type": "Custom high risk operation",
-		"params": {
-			"findingType": "custom-finding",
-			"custom": true,
-			"providerId": "custom-provider"
-		}
-	}
-}
-```
-
-Example card and note  for  custom findingType:
-
-Note:
-```
-{
-	"kind": "FINDING",
-	"provider_id": "custom-provider",
-	"id": "ata-custom-finding",
-	"short_description": "Custom service instance change detected.",
-	"long_description": "A change to Custom instance create, delete or update was detected.",
-	"reported_by": {
-		"id": "ata",
-		"title": "Security Advisor"
-	},
-	"finding": {
-		"severity": "HIGH",
-		"next_steps": [
-			{
-				"title": "Search in AT for event with action equal to custom.instance.*"
-			},
-			{
-				"title": "Find the initiator.name and timestamp of this event"
-			},
-			{
-				"title": "Inquire why these actions were performed."
-			}
-		]
-	}
-}
-```
-Card:
-```
-{
-	"kind": "CARD",
-	"provider_id": "custom-provider",
-	"id": "ata-custom-card",
-	"short_description": "Custom Activity Insights:",
-	"long_description": "Analyzing your activities stored in Activity Tracker",
-	"reported_by": {
-		"id": "ata",
-		"title": "Security Advisor"
-	},
-	"card": {
-		"section": "Custom Activity Insights",
-		"title": "Access Analytics",
-		"subtitle": "Activity Insights",
-		"finding_note_names": [
-			"providers/custom-provider/notes/ata-custom-finding"
-		],
-		"elements": [
-			{
-				"kind": "NUMERIC",
-				"text": "Alerts on actions related to Custom",
-				"default_time_range": "1d",
-				"value_type": {
-					"kind": "FINDING_COUNT",
-					"finding_note_names": [
-						"providers/custom-provider/notes/ata-custom-finding"
-					]
-				}
-			},
-			{
-				"kind": "TIME_SERIES",
-				"text": "Activity related findings in the last 5 days",
-				"default_interval": "d",
-				"default_time_range": "4d",
-				"value_types": [{
-					"kind": "FINDING_COUNT",
-					"finding_note_names": [
-						"providers/custom-provider/notes/ata-custom-finding"
-					],
-					"text": "Custom"
-				}]
-			}
-		],
-		"badge_text": "No findings detected in the last 5 days",
-		"badge_image": ""
-	}
-}
-```
-
 {: screen}
+
+
+
+
+
 
 
 ### Rule type: aggregate
