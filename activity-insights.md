@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-14"
+lastupdated: "2020-07-22"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -197,26 +197,132 @@ Example:
 ### What is an event?
 {: #ai-event}
 
+When a rule that is in the package is broken, it's considered an event. When the event is reported to {{site.data.keyword.security-advisor_short}}, it is comprised of two fields: `type` and `params`. 
+
+A `type` is a unique identifier for the rule. `params` is an object that consists of the following information:
+
+- `findingType`: The name of the finding that is issued. The name is displayed on the {{site.data.keyword.security-advisor_short}} dashboard.
+
+- `custom`: A boolean value that indicates whether the finding is a custom finding or was triggered by a built-in rule. By default, `custom` is set to `false`, which indicates that the finding is triggered by a built-in rule. If the value is set to `true`, you must create a note and card before the rule is uploaded. For example, if the `findingType` is `custom-finding` a note with the ID `ata-custom-finding` must be created.
+
+- `providerId`: The provider that you used to create the custom-note. By default, this is set to `security-advisor`.
 
 
-An event is composed of two fields: type and params.findingType. The first is a unique identifier for a rule, while params.findingType is the name of the finding that is issued to the service. The finding name allows for the finding to be displayed on the Security Advisor dashboard.
-
-Example:
+#### Example event with `findingType: built-in`
 
 ```
 {
-    "conditions": {     … },
-    "event": {
-        "type": "IKS high risk API",
-        "params": {"findingType": "IKS-high-risk"}
-    }
+	"conditions": { 	… },
+	"event": {
+		"type": "IBM Cloud Kubernetes Service high risk API",
+		"params": {
+			"findingType": "Kubernetes-service-high-risk"
+		}
+	}
 }
 ```
 {: screen}
 
+#### Example event with `findingType: custom`
 
+```
+{
+	"conditions": { 	… },
+	"event": {
+		"type": "Custom high risk operation",
+		"params": {
+			"findingType": "custom-finding",
+			"custom": true,
+			"providerId": "custom-provider"
+		}
+	}
+}
+```
+{: screen}
 
+#### Example note with `findingType: custom`
 
+```
+{
+	"kind": "FINDING",
+	"provider_id": "custom-provider",
+	"id": "ata-custom-finding",
+	"short_description": "Custom service instance change detected.",
+	"long_description": "A change to Custom instance create, delete or update was detected.",
+	"reported_by": {
+		"id": "ata",
+		"title": "Security Advisor"
+	},
+	"finding": {
+		"severity": "HIGH",
+		"next_steps": [
+			{
+				"title": "Search in Activity Tracker for event with action equal to custom.instance.*"
+			},
+			{
+				"title": "Find the initiator.name and timestamp of this event"
+			},
+			{
+				"title": "Inquire why these actions were performed."
+			}
+		]
+	}
+}
+```
+{: screen}
+
+#### Example card with `findingType: custom`
+
+```
+{
+	"kind": "CARD",
+	"provider_id": "custom-provider",
+	"id": "ata-custom-card",
+	"short_description": "Custom Activity Insights:",
+	"long_description": "Analyzing your activities stored in Activity Tracker",
+	"reported_by": {
+		"id": "ata",
+		"title": "Security Advisor"
+	},
+	"card": {
+		"section": "Custom Activity Insights",
+		"title": "Access Analytics",
+		"subtitle": "Activity Insights",
+		"finding_note_names": [
+			"providers/custom-provider/notes/ata-custom-finding"
+		],
+		"elements": [
+			{
+				"kind": "NUMERIC",
+				"text": "Alerts on actions related to Custom",
+				"default_time_range": "1d",
+				"value_type": {
+					"kind": "FINDING_COUNT",
+					"finding_note_names": [
+						"providers/custom-provider/notes/ata-custom-finding"
+					]
+				}
+			},
+			{
+				"kind": "TIME_SERIES",
+				"text": "Activity related findings in the last 5 days",
+				"default_interval": "d",
+				"default_time_range": "4d",
+				"value_types": [{
+					"kind": "FINDING_COUNT",
+					"finding_note_names": [
+						"providers/custom-provider/notes/ata-custom-finding"
+					],
+					"text": "Custom"
+				}]
+			}
+		],
+		"badge_text": "No findings detected in the last 5 days",
+		"badge_image": ""
+	}
+}
+```
+{: screen}
 
 
 
