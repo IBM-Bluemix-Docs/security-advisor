@@ -201,7 +201,7 @@ When a rule that is in the package is broken, it's considered an event. When the
 
 A `type` is a unique identifier for the rule. `params` is an object that consists of the following information:
 
-- `findingType`: The name of the finding that is issued. The name is displayed on the {{site.data.keyword.security-advisor_short}} dashboard.
+- `findingType`: The name of the finding that is issued. The name allows for events to be displayed on the {{site.data.keyword.security-advisor_short}} dashboard.
 
 - `custom`: A boolean value that indicates whether the finding is a custom finding or was triggered by a built-in rule. By default, `custom` is set to `false`, which indicates that the finding is triggered by a built-in rule. If the value is set to `true`, you must create a note and card before the rule is uploaded. For example, if the `findingType` is `custom-finding` a note with the ID `ata-custom-finding` must be created.
 
@@ -209,6 +209,7 @@ A `type` is a unique identifier for the rule. `params` is an object that consist
 
 
 #### Example event with `findingType: built-in`
+{: #example-findingtype-builtin-event}
 
 ```
 {
@@ -224,6 +225,7 @@ A `type` is a unique identifier for the rule. `params` is an object that consist
 {: screen}
 
 #### Example event with `findingType: custom`
+{: #example-findingtype-custom-event}
 
 ```
 {
@@ -241,6 +243,7 @@ A `type` is a unique identifier for the rule. `params` is an object that consist
 {: screen}
 
 #### Example note with `findingType: custom`
+{: #example-findingtype-custom-note}
 
 ```
 {
@@ -272,21 +275,22 @@ A `type` is a unique identifier for the rule. `params` is an object that consist
 {: screen}
 
 #### Example card with `findingType: custom`
+{: #example-findingtype-custom-card}
 
 ```
 {
 	"kind": "CARD",
 	"provider_id": "custom-provider",
 	"id": "ata-custom-card",
-	"short_description": "Custom Activity Insights:",
+	"short_description": "Custom Activity Insights",
 	"long_description": "Analyzing your activities stored in Activity Tracker",
 	"reported_by": {
 		"id": "ata",
 		"title": "Security Advisor"
 	},
 	"card": {
-		"section": "Custom Activity Insights",
-		"title": "Access Analytics",
+		"section": "My custom Activity Insights",
+		"title": "My custom access analytics",
 		"subtitle": "Activity Insights",
 		"finding_note_names": [
 			"providers/custom-provider/notes/ata-custom-finding"
