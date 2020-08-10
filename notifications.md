@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-08-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -100,7 +100,7 @@ You can create up to 15 channels.
     </tr>
     <tr>
       <td>Severity</td>
-      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, and <code>high</code>. You must select at least one option when configuring your channel through the GUI.</td>
+      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, <code>high</code> and <code>critical</code>. You must select at least one option when configuring your channel through the GUI.</td>
     </tr>
     <tr>
       <td>Alert source</td>
@@ -196,7 +196,7 @@ You can create up to 15 channels.
     </tr>
     <tr>
       <td>Severity</td>
-      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, and <code>high</code>. By default, <code>medium</code> and <code>high</code> are turned on.</td>
+      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, <code>high</code> and <code>critical</code>. By default, <code>medium</code>, <code>high</code> and <code>critical</code> are turned on.</td>
     </tr>
     <tr>
       <td>Provider</td>
