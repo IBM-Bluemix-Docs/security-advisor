@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-14"
+lastupdated: "2020-08-26"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -92,9 +92,6 @@ The service receives findings from:
     <td>This person supports the CISO and executes the needed security checks and investigates any potential risks or issues. </td>
   </tr>
 </table>
-
-
-
 
 
 ## High-availability and disaster recovery
