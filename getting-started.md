@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-08-28"
 
 keywords: getting started tutorial, getting started, security advisor, centralized security, security management, alerts, security risk, insights, threat detection, security advisor
 
@@ -54,36 +54,21 @@ Through pre-integrated findings, you can monitor:
 ## Step 1: Get to the service dashboard
 {: #start-dashboard}
 
-Ready to get started? You can get to the service dashboard in one of the following ways:
+Ready to get started? You can get to the service dashboard by accessing the [{{site.data.keyword.compliance_full_notm}}](/docs/security-compliance?topic=security-compliance-getting-started). 
 
-<ul>
-  <li>By using the tile:
-    <ol>
-      <li>Log in to <a href="https://cloud.ibm.com/login" target="_blank">{{site.data.keyword.cloud_notm}}<img src="../icons/launch-glyph.svg" alt="External link icon"></a>.</li>
-      <li>Navigate to the **Catalog** and click **Security and Identity**.</li>
-      <li>Select the {{site.data.keyword.security-advisor_short}} tile. A dashboard opens where you can view security information for the preconfigured integrated tools such as Vulnerability Advisor and Certificate Manager.</li>
-    </ol>
-  </li>
-  <li>By using the menu:
-    <ol>
-      <li>Log in to <a href="https://cloud.ibm.com/login" target="_blank">{{site.data.keyword.cloud_notm}}<img src="../icons/launch-glyph.svg" alt="External link icon"></a>.</li>
-      <li>From your dashboard, click the Navigation menu to expand your options.</li>
-      <li>Click **Security**. An overview of the security dashboard opens.</li>
-      <li>Click **Getting Started** in the navigation to see general overview information about the service, or click **Dashboard** if you prefer to learn by seeing the service in action.</li>
-    </ol>
-  </li>
-</ul>
+1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) **> Security and Compliance**.
+2. In the _Gain insight_ section of the navigation, click **Dashboard**.
 
-Are your pre-integrated findings not displaying any information? You might not have any certificates or images for {{site.data.keyword.security-advisor_short}} to monitor. Learn more about what {{site.data.keyword.security-advisor_short}} needs to populate the dashboard cards in [Taking advantage of pre-integrated services](/docs/security-advisor?topic=security-advisor-setup-services).
+    A dashboard opens where you can view security information for the preconfigured integrated tools such as Vulnerability Advisor and Certificate Manager. Are your pre-integrated findings not displaying any information? You might not have any certificates or images for {{site.data.keyword.security-advisor_short}} to monitor. Learn more about what {{site.data.keyword.security-advisor_short}} needs to populate the dashboard cards in [Taking advantage of pre-integrated services](/docs/security-advisor?topic=security-advisor-setup-services).
 
 
 ## Next steps
 {: #start-next}
 
-Now that you've seen the dashboard in action, [learn more](/docs/security-advisor?topic=security-advisor-about) about how {{site.data.keyword.security-advisor_short}} can help you or start [integrating custom findings](/docs/security-advisor?topic=security-advisor-setup_custom).
+Now that you've seen the dashboard in action, [learn more about {{site.data.keyword.security-advisor_short}}](/docs/security-advisor?topic=security-advisor-about) or start [integrating custom findings](/docs/security-advisor?topic=security-advisor-setup_custom).
 
 
 ## Availability
 {: #start-availability}
 
-Currently, you can take advantage of {{site.data.keyword.security-advisor_short}} in the Dallas (us-south) and London (eu-gb) regions.
+Currently, you can take advantage of {{site.data.keyword.security-advisor_short}} in the Dallas (`us-south`) and London (`eu-gb`) regions.
