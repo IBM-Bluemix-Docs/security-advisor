@@ -59,7 +59,7 @@ Ready to get started? You can get to the service dashboard by accessing the [{{s
 1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) **> Security and Compliance**.
 2. In the _Gain insight_ section of the navigation, click **Dashboard**.
 
-    A dashboard opens where you can view security information for the preconfigured integrated tools such as Vulnerability Advisor and Certificate Manager. Are your pre-integrated findings not displaying any information? You might not have any certificates or images for {{site.data.keyword.security-advisor_short}} to monitor. Learn more about what {{site.data.keyword.security-advisor_short}} needs to populate the dashboard cards in [Taking advantage of pre-integrated services](/docs/security-advisor?topic=security-advisor-setup-services).
+    From the dashboard, you can view security information for the preconfigured integrated tools, such as Vulnerability Advisor and Certificate Manager. If your pre-integrated findings aren't displaying any information, you might not have any certificates or images for {{site.data.keyword.security-advisor_short}} to monitor. Learn more about what {{site.data.keyword.security-advisor_short}} needs to populate the dashboard cards in [Taking advantage of pre-integrated services](/docs/security-advisor?topic=security-advisor-setup-services).
 
 
 ## Next steps
