@@ -54,7 +54,7 @@ Through pre-integrated findings, you can monitor:
 ## Step 1: Get to the service dashboard
 {: #start-dashboard}
 
-Ready to get started? You can get to the service dashboard by accessing the [{{site.data.keyword.compliance_full_notm}}](/docs/security-compliance?topic=security-compliance-getting-started). 
+Ready to get started? You can get to the service dashboard by accessing the [{{site.data.keyword.compliance_long}}](/docs/security-compliance?topic=security-compliance-getting-started). 
 
 1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) **> Security and Compliance**.
 2. In the _Gain insight_ section of the navigation, click **Dashboard**.
