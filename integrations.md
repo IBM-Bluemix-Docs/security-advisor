@@ -91,7 +91,7 @@ For help with setting up your Twistlock instance, see [Partner solutions](/docs/
 ### Caveonix
 {: #integrate-caveonix}
 
-Caveonix RiskForesight a multi-tenant cyber and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads.
+Caveonix RiskForesight is a multi-tenant cyber and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads.
 
 Through it's three modules - detect, predict, and act - the service provides proactive workload protection from risks due to cyber threats as well as regulatory requirements. It provides a consistent security and policy framework for risk management that is fully integrated into virtualized technology stacks from VMWare to hyperscale public clouds. The automation gives you the ability to scale secure operatiosn that are difficult to manually achieve.
 

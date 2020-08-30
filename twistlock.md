@@ -57,14 +57,14 @@ When you configure the business partner connection, two cards are created in you
 Before you start integrating business partners, be sure that you have the following prerequisites.
 
 * Ensure that you have an account with the business partner that you want to integrate.
-* Ensure that you have the required administrative permissions to generate the integration URL for the business partner service.
-* Ensure that you have IAM administrative access to {{site.data.keyword.cloud_notm}} and manager access to {{site.data.keyword.security-advisor_short}}.
+* Ensure that you have the required permissions to generate the integration URL for the business partner service.
+* Ensure that you have IAM administrator access {{site.data.keyword.security-advisor_short}}.
 
 
 ## Integration wizard
 {: #wizard}
 
-As an administrator with administrative permissions in both the {{site.data.keyword.cloud_notm}} and business partner accounts, you can use the integration wizard to quickly get up and running with Twistlock. The wizard has four basic steps:
+As an administrator with the needed permissions in both the {{site.data.keyword.cloud_notm}} and business partner accounts, you can use the integration wizard to quickly get up and running with Twistlock. The wizard has four basic steps:
 
 * Establish trust and associate your {{site.data.keyword.cloud_notm}} and business partner accounts
 * Copy the required information such as credentials and URLs between the accounts
