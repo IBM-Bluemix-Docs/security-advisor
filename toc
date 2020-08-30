@@ -25,7 +25,13 @@ Security Advisor
     {: .topicgroup}
     Integrating third-parties
         direct-connect.md
-        partners.md
+
+            {: .topicgroup}
+            Business partners
+                partners.md
+                twistlock.md
+                caveonix.md
+
         custom.md
 
     {: .topicgroup}
