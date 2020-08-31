@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-08-26"
 
 keywords: Centralized security, security management, alerts, security risk, risk, insights, threat detection
 
@@ -161,9 +161,5 @@ Check out the following table for a list of the events that are sent to {{site.d
   <tr>
     <td><code>security-advisor.notification-channels.delete</code></td>
     <td>Delete a Security Advisor notification channel.</td>
-  </tr>
-  <tr>
-    <td><code>security-advisor.config-insights.scan</code></td>
-    <td>Invoke a Config Advisor scan.</td>
   </tr>
 </table>

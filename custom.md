@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-08-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -121,7 +121,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 
 | Finding | Description | 
 |:-----------------|:-----------------|
-| `severity` | The level of urgency that the finding presents.  |
+| `severity` | The level of urgency that the finding presents. Allowed values are LOW, MEDIUM, HIGH and CRITICAL. |
 | `next_steps` | The steps that can be taken to remediate the issue. |
 | `url` | A URL where the details of the finding can be found. |
 {: class="simple-tab-table"}
@@ -216,7 +216,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 
 | Finding | Description | 
 |:-----------------|:-----------------|
-| `severity` | The level of urgency that the finding presents.  |
+| `severity` | The level of urgency that the finding presents. Allowed values are LOW, MEDIUM, HIGH and CRITICAL. |
 | `next_steps` | The steps that can be taken to remediate the issue. |
 | `title` | The title of the finding. |
 {: class="simple-tab-table"}

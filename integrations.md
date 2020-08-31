@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-08-30"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -60,10 +60,10 @@ To learn more, check out [Taking advantage of pre-integrated services](/docs/sec
 ## Partner integrations
 {: #integrate-partner}
 
-Partner integrations are a way to enhance security for your {{site.data.keyword.cloud_notm}} deployments by creating a connection between {{site.data.keyword.security-advisor_short}} and other security tools that are working with IBM to ensure a seamless user experience.
+Partner integrations are a way to enhance security for your {{site.data.keyword.cloud_notm}} deployments by creating a connection between {{site.data.keyword.security-advisor_short}} and other security tools that are work with IBM to ensure a seamless user experience.
 {: shortdesc}
 
-Current {{site.data.keyword.security-advisor_short}} partners include NeuVector and Twistlock.
+Current {{site.data.keyword.security-advisor_short}} partners include NeuVector, Twistlock, and Caveonix.
 
 Are you a partner and interested in integrating your solution with {{site.data.keyword.security-advisor_short}}? Reach out to our team by contacting Tim Branter at timmy@us.ibm.com.
 {: tip}
@@ -75,7 +75,7 @@ Are you a partner and interested in integrating your solution with {{site.data.k
 
 With NeuVector, you can detect network threats and violations to prevent attacks of your container-based applications. Through monitoring, you can prevent exploits and breakouts by detecting root privilege escalations, port scans, reverse shells, and suspicious file system activity in your containers and hosts.
 
-For help with setting up your NeuVector instance, see [Partner solutions](/docs/security-advisor?topic=security-advisor-setup-partner#setup-neuvector).
+For help with setting up your NeuVector instance, see [Integrating NeuVector](/docs/security-advisor?topic=security-advisor-setup-neuvector).
 
 
 ### Twistlock
@@ -85,8 +85,18 @@ For help with setting up your NeuVector instance, see [Partner solutions](/docs/
 
 With a focus on having the most precise data available to cover all of the layers of your stack, so you have accurate visibility and the lowest rate of false positives. Twistlock combines this data with knowledge of your actual deployments such as which containers are exposed to the internet, which run with high privilege, and which have other security mitigations in place, so you can always see what vulnerabilities are most critical in your specific environment.
 
-For help with setting up your Twistlock instance, see [Partner solutions](/docs/security-advisor?topic=security-advisor-setup-partner#setup-twistlock).
-</br>
+For help with setting up your Twistlock instance, see [Integrating Twistlock](/docs/security-advisor?topic=security-advisor-setup-twistlock).
+
+
+### Caveonix
+{: #integrate-caveonix}
+
+[Caveonix RiskForesight](https://www.caveonix.com/){: external} is a multi-tenant cyber and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads.
+
+Through it's three modules - detect, predict, and act - the service provides proactive workload protection from risks due to cyber threats as well as regulatory requirements. It provides a consistent security and policy framework for risk management that is fully integrated into virtualized technology stacks from VMWare to hyperscale public clouds. The automation gives you the ability to scale secure operatiosn that are difficult to manually achieve.
+
+For help creating the connection with Caveonix, see [Integrating Caveonix](/docs/security-advisor?topic=security-advisor-setup-caveonix).
+
 
 
 ## Custom integrations

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-08-26"
 
-keywords: Centralized security, security management, alerts, security risk, insights, threat detection, notifications, callback URL, compliance, standards, roles, notification channel, verify payload, public key
+keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
 subcollection: security-advisor
 
@@ -33,7 +33,7 @@ subcollection: security-advisor
 {:tsSymptoms: .tsSymptoms}
 
 
-# Configuring notifications
+# Configuring alerts
 {: #notifications}
 
 By configuring an {{site.data.keyword.security-advisor_long}} notification channel, you can be alerted to any reported vulnerabilities as soon as the report is available. With a fast alert time, you're able to immediately start an investigation into any reported issue and fix the vulnerability before it becomes a larger problem in your application. 
@@ -43,9 +43,9 @@ With a process in place to handle alerts you can ensure that you're in complianc
 
 
 ## Before you begin
-{: #notifications-before}
+{: #alerts-before}
 
-Before you get started with notifications, you must have the following prerequisites:
+Before you get started with alerts, you must have the following prerequisites:
 
 * The [Manager IAM role](/docs/security-advisor?topic=security-advisor-service-access).
 * A configured webhook. If you don't have one already, try using [Cloud Functions](/docs/openwhisk?topic=openwhisk-getting-started).
@@ -53,7 +53,7 @@ Before you get started with notifications, you must have the following prerequis
 ## Configuring a notification method
 {: #notification-method}
 
-You can use a callback URL to post notifications to the tools that you use. For example, you can send notifications to report to PagerDuty or automatically open an issue in GitHub.
+You can use a callback URL to post alerts to the tools that you use. For example, you can send alerts to report to PagerDuty or automatically open an issue in GitHub.
 
 **Note:** Your callback URL endpoint must:
 * use the HTTPS protocol.
@@ -64,7 +64,7 @@ You can use a callback URL to post notifications to the tools that you use. For 
 ## Creating a notification channel
 {: #channel-create}
 
-To start receiving notifications immediately, you can configure a notification channel by using either the dashboard or the API.
+To start receiving alerts immediately, you can configure a notification channel by using either the dashboard or the API.
 
 You can create up to 15 channels.
 {: note}
@@ -72,12 +72,12 @@ You can create up to 15 channels.
 ### With the GUI
 {: #channel-create-gui}
 
-1. Go to the **Notifications channels** tab of the Security Advisor dashboard.
+1. Go to the **alerts channels** tab of the Security Advisor dashboard.
 2. Click **Add notification channel**.
 3. Using the following table as a guide, provide the following information.
   
  <table>
-    <caption>Table 1. Configuring notifications with the GUI</caption>
+    <caption>Table 1. Configuring alerts with the GUI</caption>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -88,7 +88,7 @@ You can create up to 15 channels.
     </tr>
     <tr>
       <td>Description</td>
-      <td>Describe what the channel is used for. For example: <i>This channel sends high severity notifications as they happen.</i></td>
+      <td>Describe what the channel is used for. For example: <i>This channel sends high severity alerts as they happen.</i></td>
     </tr>
     <tr>
       <td>Type</td>
@@ -100,11 +100,11 @@ You can create up to 15 channels.
     </tr>
     <tr>
       <td>Severity</td>
-      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, and <code>high</code>. You must select at least one option when configuring your channel through the GUI.</td>
+      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, <code>high</code> and <code>critical</code>. You must select at least one option when configuring your channel through the GUI.</td>
     </tr>
     <tr>
       <td>Alert source</td>
-      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include vulnerable images (<code>VA</code>), Network Insights (<code>NA</code>), Activity Insights (<code>ATA</code>), Certificate Manager (<code>CERT</code>), Config advisor (<code>config-advisor</code>) and <code>ALL</code>. Each built-in provider has their list of finding types.</td>
+      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include vulnerable images (<code>VA</code>), Network Insights (<code>NA</code>), Activity Insights (<code>ATA</code>), Certificate Manager (<code>CERT</code>), and <code>ALL</code>. Each built-in provider has their list of finding types.</td>
     </tr>
   </table>
   
@@ -152,7 +152,7 @@ You can create up to 15 channels.
 2. Run the following cURL command.
 
   ```
-  curl -x POST "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{account_id}/notifications/channels"
+  curl -x POST "https://{region}.secadvisor.cloud.ibm.com/alerts/v1/{account_id}/alerts/channels"
   -H "accept: application/json"
   -H "Authorization: Bearer <IAM_Token>"
   -d {
@@ -173,7 +173,7 @@ You can create up to 15 channels.
   {: code}
 
   <table>
-    <caption>Table 2. Configuring notifications with the API</caption>
+    <caption>Table 2. Configuring alerts with the API</caption>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -184,7 +184,7 @@ You can create up to 15 channels.
     </tr>
     <tr>
       <td>Description</td>
-      <td>Describe what the channel is used for. For example: <i>This channel sends high severity notifications as they happen.</i></td>
+      <td>Describe what the channel is used for. For example: <i>This channel sends high severity alerts as they happen.</i></td>
     </tr>
     <tr>
       <td>Type</td>
@@ -196,7 +196,7 @@ You can create up to 15 channels.
     </tr>
     <tr>
       <td>Severity</td>
-      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, and <code>high</code>. By default, <code>medium</code> and <code>high</code> are turned on.</td>
+      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, <code>high</code> and <code>critical</code>. By default, <code>medium</code>, <code>high</code> and <code>critical</code> are turned on.</td>
     </tr>
     <tr>
       <td>Provider</td>
@@ -252,11 +252,11 @@ You can create up to 15 channels.
 3. Test your connection.
 
   ```
-  curl -X GET "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{ACCOUNT_ID}/test/notification/channel/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
+  curl -X GET "https://{region}.secadvisor.cloud.ibm.com/alerts/v1/{ACCOUNT_ID}/test/notification/channel/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
 
-To edit your channel configuration, you can make an API call to the [`/update endpoint`](https://cloud.ibm.com/apidocs/security-advisor/notifications#update-a-channel){: external}.
+To edit your channel configuration, you can make an API call to the [`/update endpoint`](https://cloud.ibm.com/apidocs/security-advisor/alerts#update-a-channel){: external}.
 {: tip}
 
 
@@ -349,7 +349,7 @@ In the previous example, `payload-link` refers to the Security Advisor findings 
 You can obtain the payload by using the GUI.
 {: shortdesc}
 
-1. Navigate to the **Notifications channels** tab of the Security Advisor dashboard.
+1. Navigate to the **alerts channels** tab of the Security Advisor dashboard.
 2. Click **Download key**.
 
 ### Obtaining the public key with the API
@@ -380,7 +380,7 @@ You can obtain the payload by using the API.
 2. Download the public key.
 
   ```
-  curl -X GET "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{Account_ID}/download_public_key" -H "accept: application/json" -H "Authorization: {IAM-token}"
+  curl -X GET "https://{region}.secadvisor.cloud.ibm.com/alerts/v1/{Account_ID}/download_public_key" -H "accept: application/json" -H "Authorization: {IAM-token}"
   ```
   {: codeblock}
 
@@ -405,19 +405,19 @@ try {
 ## Deleting a notification channel
 {: #channel-delete}
 
-You can delete a channel if you no longer need to monitor the information that is sent as notifications.
+You can delete a channel if you no longer need to monitor the information that is sent as an alert.
 
-Want to take a break from receiving notifications but don't want to delete your configuration? No problem, disable your channel configuration instead. Then, when you're ready to use the configuration again, you can flip the switch to enabled and you're ready to go!
+Want to take a break from receiving alerts but don't want to delete your configuration? No problem, disable your channel configuration instead. Then, when you're ready to use the configuration again, you can flip the switch to enabled and you're ready to go!
 {: tip}
 
 
 ### With the GUI
 {: #channel-delete-gui}
 
-You can delete a single notification or bulk delete a group of notifications that you select.
+You can delete a single notification or bulk delete a group of alerts that you select.
 
 
-1. Navigate to the **Notifications channels** tab of the Security Advisor dashboard.
+1. Navigate to the **alerts channels** tab of the Security Advisor dashboard.
 
 2. Click the overflow menu in the row of the channel that you want to delete. Or, if you're deleting multiple channels at once, check the boxes for the channels that you would like to remove.
 
@@ -453,14 +453,14 @@ You can delete your channel configurations from the
 2. Obtain your channel ID.
 
   ```
-  curl -X GET "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{ACCOUNT_ID}/notifications/channels" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
+  curl -X GET "https://{region}.secadvisor.cloud.ibm.com/alerts/v1/{ACCOUNT_ID}/alerts/channels" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
 
 3. Delete the channel.
 
   ```
-  curl -X DELETE "https://{region}.secadvisor.cloud.ibm.com/notifications/v1/{ACCOUNT_ID}/notifications/channels/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
+  curl -X DELETE "https://{region}.secadvisor.cloud.ibm.com/alerts/v1/{ACCOUNT_ID}/alerts/channels/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
 

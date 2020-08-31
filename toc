@@ -25,7 +25,13 @@ Security Advisor
     {: .topicgroup}
     Integrating third-parties
         direct-connect.md
-        partners.md
+
+        {: .topicgroup}
+        Business partners
+            partners.md
+            twistlock.md
+            caveonix.md
+
         custom.md
 
     {: .topicgroup}
@@ -33,15 +39,11 @@ Security Advisor
         setup-network.md
         setup-activity.md
     
-    {: .topicgroup}
-    Config advisor (beta)
-        config-advisor-tutorial.md
-        config-advisor-findings.md
-    
     notifications.md
 
     {: topicgroup}
-    Enhancing security for Security Advisor
+    Enhancing security
+        data-security.md
         iam.md
         at-events.md
     {: .navgroup-end}
