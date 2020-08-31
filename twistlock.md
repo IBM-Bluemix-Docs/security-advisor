@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-30"
+lastupdated: "2020-08-31"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -52,7 +52,7 @@ When you configure the business partner connection, two cards are created in you
 
 
 ## Before you begin
-{: #partner-before}
+{: #twistlock-before}
 
 Before you start integrating business partners, be sure that you have the following prerequisites.
 
@@ -62,7 +62,7 @@ Before you start integrating business partners, be sure that you have the follow
 
 
 ## Integration wizard
-{: #wizard}
+{: #wizard-twistlock}
 
 As an administrator with the needed permissions in both the {{site.data.keyword.cloud_notm}} and business partner accounts, you can use the integration wizard to quickly get up and running with Twistlock. The wizard has four basic steps:
 

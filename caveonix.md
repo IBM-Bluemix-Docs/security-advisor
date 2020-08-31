@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-30"
+lastupdated: "2020-08-31"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -37,8 +37,11 @@ subcollection: security-advisor
 # Caveonix
 {: #setup-caveonix}
 
-Caveonix RiskForesight is a multi-tenant cyber and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads. By creating an integration between Cavenoix and {{site.data.keyword.security-advisor_short}}, you can manage the security of all of your {{site.data.keyword.cloud_notm}} services in the {{site.data.keyword.security-advisor_short}} even if you use Caveonix to monitor for risk.
+Caveonix RiskForesight is a multi-tenant cyber and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads. If you work with Caveonix, you can create an integration between Cavenoix and {{site.data.keyword.security-advisor_short}}, to see the findings for all of your IBM Cloud resources in the {{site.data.keyword.security-advisor_short}} dashbaord.
 {: shortdesc}
+
+## Understanding Caveonix findings
+{: #understand-caveonix}
 
 When you configure the connection, two cards are created in your dashboard that summarize the findings from Caveonix.
 
@@ -63,35 +66,51 @@ When you configure the connection, two cards are created in your dashboard that 
 {: caption="Table 2. Understanding the findings returned in the security posture summary" caption-side="top"}
 
 ## Before you begin
-{: #partner-before}
+{: #before-caveonix}
 
 Before you start integrating business partners, be sure that you have an account with Caveonix.
-And that you have the required level of access to create the connection. To integrate Caveonix, you need the *Manager* role or higher for the  {{site.data.keyword.security-advisor_short}}service.
+And that you have the required level of access to create the connection. To integrate Caveonix, you need the *Manager* role or higher for the {{site.data.keyword.security-advisor_short}}service.
 
-Be sure that you also have the following information ready to provide:
+Be sure that you also have the following {{site.data.keyword.cloud_notm}} information ready to provide:
 
-* Caveonix customer ID
+* Customer ID
 * Provider ID
 * An API key
+
+  If you don't already have an API key, you can create a new one. The key is used to gain access to all of the accounts that you apply policies to in RiskForesight. Be sure to assign the appropriate access.
+
 * Region
+
+  Region options include Dallas `us-south` and London `eu-gb`. 
 
 
 ## Create the connection
 {: #connect-caveonix}
 
-To start viewing your Caveonix findings in the Security Advisor dashboard, create a direct connection and an asset library.
+To start viewing your Caveonix findings in the {{site.data.keyword.security-advisor_short}} dashboard, you must first create a direct connection and an asset library.
 
 1. Create a [direct connection](/docs/security-advisor?topic=security-advisor-setup-custom-gui) in the {{site.data.keyword.security-advisor_short}} UI by adding the `RiskForsight FQDN` as your URL.
-
 2. In the Caveonix RiskForesight UI, go to **Admin > Admin Overview > CSP Management > Asset Repositories**.
-
 3. Click the **Create Asset Repository** icon.
-
 4. Select **{{site.data.keyword.security-advisor_short}}** as your **Type** of asset.
-
 5. Select a location and cloud provider for your repository.
+6. Provide the {{site.data.keyword.cloud_notm}} information that you obtained before getting started including your **Customer ID**, **API key**, **Region**, and **Provider ID**.
+7. Choose whether to enable the connection.
+8. Click **Test connection** to verify that the connection is in place.
+9. Click **Save**.
 
-6. Provide your {{site.data.keyword.cloud_notm}} **Customer ID**.
 
-7. 
+## Create the job
+{: #caveonix-job}
+
+To start sending findings to security advisor, create a job.
+
+1. In the RiskForesight UI, go to **Admin > Admin Overview > Organization Management > Schedule**.
+2. Click the **Create job** icon.
+3. Select **{{site.data.keyword.security-advisor_short}}** as your **Type** of asset.
+4. Provide a name and select an organization.
+5. Set the schedule on which you want to push findings to the **{{site.data.keyword.security-advisor_short}}** dashboard.
+6. Select the asset repository that you previously created.
+7. Choose whether to enable the job.
+8. Click **Save**.
 
