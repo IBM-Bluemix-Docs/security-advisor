@@ -46,7 +46,7 @@ When you configure the business partner connection, two cards are created in you
 * Total incidents and audits: Findings that are related to incidents or audits on your cloud-native workloads.
 * Total firewall audits: Findings that are related to issues with your firewall.
 
-**Twistlock vulnerabilities** introduce one KI:
+**Twistlock vulnerabilities** introduce one KPI:
 
 * Total images with new vulnerabilities: Findings that are related to vulnerabilities found in your container images.
 
