@@ -96,7 +96,7 @@ Be sure that you also have the following {{site.data.keyword.cloud_notm}} inform
 
 To start viewing your Caveonix findings in the {{site.data.keyword.security-advisor_short}} dashboard, you must first create a direct connection and an asset library.
 
-1. Optional: Create a [direct connection](/docs/security-advisor?topic=security-advisor-setup-custom-gui) in the {{site.data.keyword.security-advisor_short}} UI by adding the `RiskForsight FQDN` as your URL.
+1. Optional: Create a [direct connection](/docs/security-advisor?topic=security-advisor-direct-connections) in the {{site.data.keyword.security-advisor_short}} UI by adding the `RiskForsight FQDN` as your URL.
 2. In the Caveonix RiskForesight UI, go to **Admin > Admin Overview > CSP Management > Asset Repositories**.
 3. Click the **Create Asset Repository** icon.
 4. Select **{{site.data.keyword.security-advisor_short}}** as your **Type** of asset.

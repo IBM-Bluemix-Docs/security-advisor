@@ -56,7 +56,7 @@ Before you integrate findings from your third-party tool, be sure that you have 
   ```
   {: codeblock}
 
-3. Get your account ID. For more information about service roles, check out the [{{site.data.keyword.security-advisor_short}} access policies](/docs/account?topic=account-assign-access-resources#iammanidaccser).
+3. Get your account ID. For more information about service roles, check out the [{{site.data.keyword.security-advisor_short}} access policies](/docs/account?topic=account-assign-access-resources).
 
   ```
   ibmcloud account list org-account ORG_NAME [--guid]

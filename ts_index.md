@@ -50,7 +50,7 @@ You can find help by searching for information or by asking questions through a 
 
 If you have technical questions about {{site.data.keyword.security-advisor_short}}, post your question on [Stack Overflow](https://stackoverflow.com/){: external}. Be sure to include the `security-advisor` and `ibm-cloud` tags.
 
-For more information about getting support, see [how do I get the support that I need](/docs/get-support?topic=get-support-using-avatar#getting-customer-support).
+For more information about getting support, see [how do I get the support that I need](/docs/get-support?topic=get-support-using-avatar).
 
 
 

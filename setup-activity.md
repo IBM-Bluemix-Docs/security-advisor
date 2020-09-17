@@ -183,7 +183,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
-      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
+      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export) for your {{site.data.keyword.at_short}} instance.</td>
     </tr>
     <tr>
       <td><code>default_memory_request</code></td>
