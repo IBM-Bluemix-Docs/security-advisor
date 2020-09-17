@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-28"
+lastupdated: "2020-09-17"
 
 keywords: getting started tutorial, getting started, security advisor, centralized security, security management, alerts, security risk, insights, threat detection, security advisor
 
@@ -31,6 +31,7 @@ subcollection: security-advisor
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
 
 
 # Getting started with {{site.data.keyword.security-advisor_short}}

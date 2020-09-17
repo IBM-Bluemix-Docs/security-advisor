@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-09-17"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -31,6 +31,7 @@ subcollection: security-advisor
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
 
 
 # Tutorial: Integrating custom findings
@@ -94,7 +95,7 @@ In order for the executable to know where to display the findings, set your IBM 
 
 1. Find your account ID by navigating to **Manage > Account > Account Settings**. Your ID is listed in the account information.
 
-2. Obtain an {{site.data.keyword.cloud_notm}} API key. For more information about IAM, see the [documentation](/docs/iam?topic=iam-getstarted#getstarted).
+2. Obtain an {{site.data.keyword.cloud_notm}} API key. For more information about IAM, see the [documentation](/docs/account?topic=account-access-getstarted#getstarted).
 
     1. In the {{site.data.keyword.cloud_notm}} dashboard, click **Manage > Access (IAM)**.
     2. Select **{{site.data.keyword.cloud_notm}} API keys**.
