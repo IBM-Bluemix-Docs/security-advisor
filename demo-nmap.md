@@ -10,7 +10,7 @@ subcollection: security-advisor
 
 content-type: tutorial
 account-plan: lite
-completion-time: 1h
+completion-time: 30m
 
 ---
 
@@ -36,13 +36,14 @@ completion-time: 1h
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
 {:video: .video}
-
 {:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+
 
 # Tutorial: Integrating custom findings
 {: #integrate-nmap}
 {: toc-content-type="tutorial"}
-{: toc-completion-time="1h"}
+{: toc-completion-time="30m"}
 
 With {{site.data.keyword.security-advisor_short}}, you can integrate your existing custom security tools to see all of your security information in one location. By walking through this tutorial, you can learn about each of the steps that you must take to display your custom findings in the {{site.data.keyword.security-advisor_short}} dashboard.
 {: shortdesc}
