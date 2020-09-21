@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-26"
+lastupdated: "2020-09-21"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -31,6 +31,9 @@ subcollection: security-advisor
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
+{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
 
 
 # Managing access for {{site.data.keyword.security-advisor_short}}
@@ -39,7 +42,7 @@ subcollection: security-advisor
 As an account owner, you can manage access to instances of {{site.data.keyword.security-advisor_long}}, by using {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). By setting policies within your account that create different levels of access for different users, you can ensure that each instance of {{site.data.keyword.security-advisor_short}} is secure.
 {: shortdesc}
 
-For more information about IAM, see [IAM Access](/docs/iam?topic=iam-userroles).
+For more information about IAM, see [IAM Access](/docs/account?topic=account-userroles).
 
 ## {{site.data.keyword.security-advisor_short}} access policies
 {: #access}

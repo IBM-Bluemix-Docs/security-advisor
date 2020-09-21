@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-09-21"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -31,6 +31,9 @@ subcollection: security-advisor
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
+{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
 
 
 # Activity Insights (beta)
@@ -182,7 +185,7 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
-      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export#api) for your {{site.data.keyword.at_short}} instance.</td>
+      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export) for your {{site.data.keyword.at_short}} instance.</td>
     </tr>
     <tr>
       <td><code>default_memory_request</code></td>

@@ -18,8 +18,11 @@ Security Advisor
     [Blogs](https://www.ibm.com/cloud/blog)
     {: .navgroup-end}
 
-    {: .navgroup id="howto"}
+    {: .navgroup id="tutorial"}
     demo-nmap.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
     setup.md
 
     {: .topicgroup}

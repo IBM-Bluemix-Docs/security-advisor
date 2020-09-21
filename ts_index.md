@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-09-21"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -30,6 +30,9 @@ subcollection: security-advisor
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
+{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
 
 
 # Troubleshooting
@@ -49,7 +52,7 @@ You can find help by searching for information or by asking questions through a 
 
 If you have technical questions about {{site.data.keyword.security-advisor_short}}, post your question on [Stack Overflow](https://stackoverflow.com/){: external}. Be sure to include the `security-advisor` and `ibm-cloud` tags.
 
-For more information about getting support, see [how do I get the support that I need](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).
+For more information about getting support, see [how do I get the support that I need](/docs/get-support?topic=get-support-using-avatar).
 
 
 

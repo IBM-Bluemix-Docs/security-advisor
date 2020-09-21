@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-26"
+lastupdated: "2020-09-21"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -31,6 +31,9 @@ subcollection: security-advisor
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
+{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
 
 
 # Configuring alerts
@@ -130,7 +133,7 @@ You can create up to 15 channels.
 ### With the API
 {: #channel-create-api}
 
-1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/iam?topic=iam-getstarted).
+1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/account?topic=account-access-getstarted).
 
   1. In the IBM Cloud dashboard, click **Manage > Access (IAM)**.
   2. Select **IBM Cloud API keys**.
@@ -358,7 +361,7 @@ You can obtain the payload by using the GUI.
 You can obtain the payload by using the API.
 {: shortdesc}
 
-1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/iam?topic=iam-getstarted).
+1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/account?topic=account-access-getstarted).
 
   1. In the IBM Cloud dashboard, click **Manage > Access (IAM)**.
   2. Select **IBM Cloud API keys**.
@@ -431,7 +434,7 @@ You can delete a single notification or bulk delete a group of alerts that you s
 
 You can delete your channel configurations from the 
 
-1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/iam?topic=iam-getstarted).
+1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/account?topic=account-access-getstarted).
 
   1. In the IBM Cloud dashboard, click **Manage > Access (IAM)**.
   2. Select **IBM Cloud API keys**.

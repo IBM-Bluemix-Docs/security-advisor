@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-10"
+lastupdated: "2020-09-21"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -31,6 +31,9 @@ subcollection: security-advisor
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
+{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
 
 
 
@@ -55,7 +58,7 @@ Before you integrate findings from your third-party tool, be sure that you have 
   ```
   {: codeblock}
 
-3. Get your account ID. For more information about service roles, check out the [{{site.data.keyword.security-advisor_short}} access policies](/docs/iam?topic=iam-iammanidaccser#iammanidaccser).
+3. Get your account ID. For more information about service roles, check out the [{{site.data.keyword.security-advisor_short}} access policies](/docs/account?topic=account-assign-access-resources).
 
   ```
   ibmcloud account list org-account ORG_NAME [--guid]
@@ -69,7 +72,7 @@ Before you integrate findings from your third-party tool, be sure that you have 
   ```
   {: codeblock}
 
-  IAM tokens expire every 60 minutes. To learn how to [get a new token automatically](/docs/iam?topic=iam-iamtoken_from_apikey) by using an API key.
+  IAM tokens expire every 60 minutes. To learn how to [get a new token automatically](/docs/account?topic=account-iamtoken_from_apikey) by using an API key.
   {: tip}
 
 
