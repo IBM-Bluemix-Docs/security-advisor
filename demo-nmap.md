@@ -2,11 +2,15 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-17"
+lastupdated: "2020-09-21"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
 subcollection: security-advisor
+
+content-type: tutorial
+account-plan: lite
+completion-time: 1h
 
 ---
 
@@ -33,9 +37,12 @@ subcollection: security-advisor
 {:tsSymptoms: .tsSymptoms}
 {:video: .video}
 
+{:step: data-tutorial-type='step'}
 
 # Tutorial: Integrating custom findings
 {: #integrate-nmap}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="1h"}
 
 With {{site.data.keyword.security-advisor_short}}, you can integrate your existing custom security tools to see all of your security information in one location. By walking through this tutorial, you can learn about each of the steps that you must take to display your custom findings in the {{site.data.keyword.security-advisor_short}} dashboard.
 {: shortdesc}
@@ -64,8 +71,9 @@ Before you get started, be sure that you have the following prerequisites instal
 * [Node.js](https://nodejs.org/en/download/){: external}: The `node` command must be available in the system's path.
 
 
-## Step 1: Install sample code
+## Install sample code
 {: #nmap-install}
+{: step}
 
 To get started with {{site.data.keyword.security-advisor_short}}, install the sample code.
 {: shortdesc}
@@ -87,8 +95,9 @@ To get started with {{site.data.keyword.security-advisor_short}}, install the sa
     {: codeblock}
 
 
-## Step 2: Set your environment variables
+## Set your environment variables
 {: #nmap-variables}
+{: step}
 
 In order for the executable to know where to display the findings, set your IBM Cloud information as environment variables within the code.
 {: shortdesc}
@@ -133,8 +142,9 @@ In order for the executable to know where to display the findings, set your IBM 
     </table>
 
 
-## Step 3: Generate findings
+## Generate findings
 {: #nmap-generate}
+{: step}
 
 To generate findings, you must first define the card and format the results. Then, you can run the scan.
 {: shortdesc}
@@ -212,8 +222,9 @@ IPV6 and IP ranges are not currently supported.
 {: note}
 
 
-## Step 4 (Optional): Delete the card
+## (Optional): Delete the card
 {: #nmap-remove}
+{: step}
 
 The scan alerts are visible in the service dashboard cards for 24 hours after which they can be found in the Findings table. If you run the scan again within the initial 24 hours of the first scan, and the same findings are found, they are still added in the card. For example, if you run the scan and find an open port 22/ssh the KPI in the card shows as 1. If you run the scan again without fixing the existing vulnerability, the same finding is added to the KPI and the value is now 2. So, if you need to run the scan again within 24 hours and want to see only the latest vulnerabilities, clear the findings in the card by using the [Findings API](https://cloud.ibm.com/apidocs/security-advisor/findings){: external}.
 {: shortdesc}

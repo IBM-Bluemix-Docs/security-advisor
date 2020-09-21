@@ -2,11 +2,15 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-17"
+lastupdated: "2020-09-21"
 
 keywords: getting started tutorial, getting started, security advisor, centralized security, security management, alerts, security risk, insights, threat detection, security advisor
 
 subcollection: security-advisor
+
+content-type: tutorial
+account-plan: lite
+completion-time: 10m
 
 ---
 
@@ -33,9 +37,12 @@ subcollection: security-advisor
 {:tsSymptoms: .tsSymptoms}
 {:video: .video}
 
+{:step: data-tutorial-type='step'}
 
 # Getting started with {{site.data.keyword.security-advisor_short}}
 {: #getting-started}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="10m"}
 
 With {{site.data.keyword.security-advisor_long}}, you can instantly view the security posture of your {{site.data.keyword.cloud_notm}} services through a single, centralized dashboard.
 {:shortdesc}
@@ -52,8 +59,9 @@ Through pre-integrated findings, you can monitor:
 
 
 
-## Step 1: Get to the service dashboard
+## Get to the service dashboard
 {: #start-dashboard}
+{: step}
 
 Ready to get started? You can get to the service dashboard by accessing the [{{site.data.keyword.compliance_long}}](/docs/security-compliance?topic=security-compliance-getting-started). 
 
