@@ -40,7 +40,7 @@ completion-time: 30m
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-# Tutorial: Integrating custom findings
+# Integrating custom findings
 {: #integrate-nmap}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
