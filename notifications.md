@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-09-23"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -51,6 +51,8 @@ By configuring an {{site.data.keyword.security-advisor_long}} notification chann
 
 With a process in place to handle alerts you can ensure that you're in compliance and prepared if or when an issue occurs. For example, some compliance standards require that issues must be responded to and closed within 24 hours, and the response is audited. With Security Advisor alerts in place, you are notified and can start resolving issues immediately.
 
+To trigger alerts for Vulnerability Advisor, you must refresh the [Security Advisor dashboard](/security-advisor#/dashboard) page.
+{: note}
 
 ## Before you begin
 {: #alerts-before}
@@ -473,5 +475,4 @@ You can delete your channel configurations from the
   curl -X DELETE "https://{region}.secadvisor.cloud.ibm.com/alerts/v1/{ACCOUNT_ID}/alerts/channels/{CHANNEL_ID}" -H "accept: application/json" -H "Authorization: {IAM_BEARER_TOKEN}"
   ```
   {: codeblock}
-
 
