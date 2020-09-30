@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-23"
+lastupdated: "2020-09-30"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -240,7 +240,7 @@ You can create up to 15 channels.
     </tr>
     <tr>
       <td>config-advisor</td>
-      <td><code>appprotection-dns_not_proxied</code>, <code>appprotection-dnssec_off</code>, <code>appprotection-ssl_not_strict</code>, <code>appprotection-tls_min_version</code>, <code>appprotection-waf_off</code>, <code>appprotection-waf_rules</code>, <code>calico-deny_all_rule</code>, <code>calico-nonstandard_ports</code>, <code>calico-update_cis_whitelist</code>, <code>datacos-cos_managers</code>, <code>datacos-not_encrypted_via_kp</code>, <code>datacos-not_in_private_network</code>, <code>datacos-public_bucket_acl</code>, <code>datacos-public_bucket_iam</code>, <code>datacos-public_object_acl</code>, <code>iam-account_admins</code>, <code>iam-all_resource_managers</code>, <code>iam-all_resource_readers</code>, <code>iam-identity_admins</code>, <code>iam-kms_managers</code>, <code>iam-out_of_group</code></td>
+      <td><code>appprotection-dns_not_proxied</code>, <code>appprotection-dnssec_off</code>, <code>appprotection-ssl_not_strict</code>, <code>appprotection-tls_min_version</code>, <code>appprotection-waf_off</code>, <code>appprotection-waf_rules</code>, <code>calico-deny_all_rule</code>, <code>calico-nonstandard_ports</code>, <code>calico-update_cis_allow list</code>, <code>datacos-cos_managers</code>, <code>datacos-not_encrypted_via_kp</code>, <code>datacos-not_in_private_network</code>, <code>datacos-public_bucket_acl</code>, <code>datacos-public_bucket_iam</code>, <code>datacos-public_object_acl</code>, <code>iam-account_admins</code>, <code>iam-all_resource_managers</code>, <code>iam-all_resource_readers</code>, <code>iam-identity_admins</code>, <code>iam-kms_managers</code>, <code>iam-out_of_group</code></td>
     </tr>
     <tr>
       <td>ALL</td>

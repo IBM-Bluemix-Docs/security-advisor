@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-09-30"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -485,14 +485,14 @@ The following example demonstrates a rule that watches for a coincident of three
 ### Rule type: boolean
 {: #rule-boolean}
 
-A boolean rule is composed of a boolean condition and an event. Boolean rules are frequently used to monitor high-risk API usage, API usage that falls outside of the change control window, or API usage by an initiator that is not on a whitelist.
+A boolean rule is composed of a boolean condition and an event. Boolean rules are frequently used to monitor high-risk API usage, API usage that falls outside of the change control window, or API usage by an initiator that is not on a allow list.
 
 If a rule is not defined as `aggregate` or `coincident`, then it is evaluated as a `boolean` rule.
 
 #### Example
 {: #boolean-example}
 
-The following example demonstrates a rule that watches for the deletion of policy outside the change control window by a user that is not on the whitelist:
+The following example demonstrates a rule that watches for the deletion of policy outside the change control window by a user that is not on the allow list:
 
 ```
 {
