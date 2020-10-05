@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-05"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -74,7 +74,7 @@ The service receives findings from:
 * Pre-integrated {{site.data.keyword.cloud_notm}} services like Certificate Manager and Vulnerability Advisor
 * Network Insights
 * Activity Insights
-* IBM business partners like Neuvector and Twistlock
+* IBM business partners like NeuVector and Twistlock
 * Custom integrations with your other security tools
 
 

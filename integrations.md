@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-05"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -103,7 +103,7 @@ For help with setting up your Twistlock instance, see [Integrating Twistlock](/d
 
 [Caveonix RiskForesight](https://www.caveonix.com/){: external} is a multi-tenant cyber and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads.
 
-Through it's three modules - detect, predict, and act - the service provides proactive workload protection from risks due to cyber threats as well as regulatory requirements. It provides a consistent security and policy framework for risk management that is fully integrated into virtualized technology stacks from VMWare to hyperscale public clouds. The automation gives you the ability to scale secure operatiosn that are difficult to manually achieve.
+Through it's three modules - detect, predict, and act - the service provides proactive workload protection from risks due to cyber threats as well as regulatory requirements. It provides a consistent security and policy framework for risk management that is fully integrated into virtualized technology stacks from VMWare to hyper scale public clouds. The automation gives you the ability to scale secure operations that are difficult to manually achieve.
 
 For help creating the connection with Caveonix, see [Integrating Caveonix](/docs/security-advisor?topic=security-advisor-setup-caveonix).
 
