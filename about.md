@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-07"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -74,7 +74,7 @@ The service receives findings from:
 * Pre-integrated {{site.data.keyword.cloud_notm}} services like Certificate Manager and Vulnerability Advisor
 * Network Insights
 * Activity Insights
-* IBM business partners like Neuvector and Twistlock
+* IBM business partners like NeuVector and Twistlock
 * Custom integrations with your other security tools
 
 
@@ -103,13 +103,4 @@ The service receives findings from:
   </tr>
 </table>
 
-
-## High-availability and disaster recovery
-{: #ha-dr}
-
-{{site.data.keyword.security-advisor_short}} is a highly available, regional service that is supported in us-south and eu-gb regions. In each supported region, the service runs in several availability zones. The service supports manual cross-regional failover from `us-south` to `us-east` and from `eu-gb` to `eu-de`. 
-
-In every region, a highly available Cloudant cluster contains three copies of the data. A daily backup of data to Cloud Object Storage is done and the backup is kept for 7 days.
-
-If a regional disaster occurs, the available data is restored by {{site.data.keyword.security-advisor_short}} without any action from you.
 

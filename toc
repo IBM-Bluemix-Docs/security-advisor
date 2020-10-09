@@ -43,6 +43,7 @@ Security Advisor
         setup-activity.md
     
     notifications.md
+    ha-dr.md
 
     {: topicgroup}
     Enhancing security
