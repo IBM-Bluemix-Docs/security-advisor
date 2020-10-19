@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-19"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -45,7 +45,7 @@ subcollection: security-advisor
 # Network Insights (beta)
 {: #setup-network}
 
-With {{site.data.keyword.security-advisor_long}}, you can collect and analyze your Kubernetes cluster network flow logs to detect any suspicious network activity by using learned patterns and threat intelligence. Network Insights is built with a community version of Skydive. 
+With {{site.data.keyword.security-advisor_long}}, you can collect and analyze your Kubernetes cluster network flow logs to detect any suspicious network activity by using learned patterns and threat intelligence. Network Insights is built with a [community version of Skydive](https://github.com/skydive-project/skydive-operator){: external}. 
 {: shortdesc}
 
 
@@ -59,7 +59,10 @@ Before you get started, be sure that you have the following prerequistes:
 
 * A standard Kubernetes Service cluster version 1.14.10_1552 or higher.
 * The [{{site.data.keyword.cloud_notm}} CLI and Kubernetes Service plug-in](/docs/cli?topic=cli-install-ibmcloud-cli)
-* If you choose to install with Helm, you must also have the [Kubernetes Helm (package manager)](/docs/containers?topic=containers-helm) version 3 or higher
+* If you choose to install with Helm, you must also have the [Kubernetes Helm (package manager)](/docs/containers?topic=containers-helm) version 3 or higher.
+
+Have you tried using [Cloud Shell](/docs/cloud-shell?topic=cloud-shell-getting-started)? If you do, be sure to use Helm version 3.
+{: tip}
 
 
 ## Enabling Network Insights
@@ -70,8 +73,8 @@ You can connect an instance of Cloud Object Storage and enable Network Insights 
 1. Navigate to the [Security dashboard](https://{DomainName}/security-advisor#/overview) in the console.
 2. Go to the **Settings** tab.
 3. Click **Add bucket**. A modal appears.
-4. Choose whether to create a bucket or use a bucket that you already have.
-5. Select an option for **Resource group** and **Cloud Object Storage instance**. If you selected to use your own bucket, be sure to specify the bucket that you want to use.
+4. Choose whether to create a bucket or use a bucket that you already have. If you chose to use your own, be sure to specify the bucket that you want to use.
+5. Select an option for **Resource group** and **Cloud Object Storage instance**.
 6. Choose **Network Insights**.
 7. Describe what your bucket is used for and click **Add bucket**.
 8. Go to the **Integrations > Built-in Insights** tab.
@@ -91,8 +94,7 @@ After you've created your bucket, you can create a set of service credentials fo
 ## Installing {{site.data.keyword.security-advisor_short}} components
 {: #network-install-components}
 
-You can use Helm or Operator to install an agent that collects network flow logs from your Kubernetes cluster and store them in Cloud Object Storage. You can then enable Network Insights to analyze your logs and detect and alert you to suspicious network activity.
-{: shortdesc}
+You can use Helm or Operator to install an agent that collects network flow logs from your Kubernetes cluster and stores them in Cloud Object Storage. Then, you can enable Network Insights to analyze your logs and detect and alert you to suspicious network activity.
 
 Be sure to repeat the installation for each cluster that you want to monitor.
 {: note}
@@ -100,7 +102,6 @@ Be sure to repeat the installation for each cluster that you want to monitor.
 
 ### Installing with Helm
 {: #install-network-helm}
-
 
 
 To install the open source version of Skydive by using Helm, complete the following steps.
@@ -133,21 +134,28 @@ To install the open source version of Skydive by using Helm, complete the follow
     ```
     {: codeblock}
 
-5. Optional: Create a namespace in your cluster. If you choose not to create a namespace, you can install the components into your default namespace.
+5. Create a namespace in your cluster.
 
   ```
   kubectl create ns insight
   ```
   {: codeblock}
 
-6. Get your public subnet CIDR. If you don't currently have one, you can add a portable IP address. [Learn more](/docs/containers?topic=containers-subnets#adding_ips).
+6. Export your namespace to an environment variable.
+
+  ```
+  export SECURITY_INSIGHTS_NAMESPACE=insight
+  ```
+  {: codeblock}
+
+7. Get your public subnet CIDR. If you don't currently have one, you can add a portable IP address. [Learn more](/docs/containers?topic=containers-subnets#adding_ips).
 
   ```
   ibmcloud ks cluster get --cluster <cluster_name> --show-resources
   ```
   {: codeblock}
 
-7. To define your configuration, open the `values.yaml` file and use the following information as a guide to update the variables.
+8. To define your configuration, open the `values.yaml` file and use the following information as a guide to update the variables.
 
   ```
   exporter:
@@ -164,7 +172,6 @@ To install the open source version of Skydive by using Helm, complete the follow
     region: <bucket_region_name>
     use_api_key: true
     api_key: <api_key>
-
   ```
   {: screen}
 
@@ -211,10 +218,10 @@ To install the open source version of Skydive by using Helm, complete the follow
     </tr>
   </table>
 
-8. Install the components. If you encounter an error, try running `helm init --upgrade`.
+9. Install the components. If you encounter an error, try running `helm init --upgrade`.
 
   ```
-  helm install <release_name> -f values.yaml . --namespace insight
+  helm install <release_name> -f values.yaml . --namespace $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
 
@@ -239,24 +246,51 @@ To install the open source version of Skydive by using an operator, complete the
 
 2. Set the context for your cluster.
 
-    ```
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
-    ```
-    {: codeblock}
-
-3. Create the required resources and install the Skydive operator.
-
   ```
-  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_netflowcollectors_crd.yaml
-  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_skydives_crd.yaml
-  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/service_account.yaml
-  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role.yaml
-  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role_binding.yaml
-  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/operator.yaml
+  ibmcloud ks cluster config --cluster <cluster_name_or_ID>
   ```
   {: codeblock}
 
-4. Define your configuration by locally creating a file named `charts.helm.k8s.io_v1alpha1_netflowcollector_cr.yaml` using the following code block as a guide.
+3. Create a namespace in your cluster.
+
+  ```
+  kubectl create ns insight
+  ```
+  {: codeblock}
+
+4. Export your namespace to an environment variable.
+
+  ```
+  export SECURITY_INSIGHTS_NAMESPACE=insight
+  ```
+  {: codeblock}
+
+5. Create the required resources.
+
+  ```
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_netflowcollectors_crd.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_skydives_crd.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/service_account.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role_binding.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  ```
+  {: codeblock}
+
+6. Apply patch to skydive-operator ClusterRoleBinding.
+
+  ```
+  kubectl patch ClusterRoleBinding skydive-operator -p='{"subjects":[{"namespace":"'"$SECURITY_INSIGHTS_NAMESPACE"'","name":"skydive-operator","kind": "ServiceAccount"}]}'
+  ```
+  {: codeblock}
+
+7. Install the Skydive operator.
+
+  ```
+  kubectl create -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/operator.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  ```
+  {: codeblock}
+
+8. Define your configuration by locally creating a file named `charts.helm.k8s.io_v1alpha1_netflowcollector_cr.yaml` using the following code block as a guide.
 
   ```
   apiVersion: charts.helm.k8s.io/v1alpha1
@@ -324,10 +358,10 @@ To install the open source version of Skydive by using an operator, complete the
     </tr>
   </table>
 
-5. Create the deployment.
+9. Create the deployment.
 
   ```
-  kubectl create -f charts.helm.k8s.io_v1alpha1_netflowcollector_cr.yaml
+  kubectl create -f charts.helm.k8s.io_v1alpha1_netflowcollector_cr.yaml -n $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
 
@@ -341,14 +375,14 @@ To verify that everything is working correctly, you can check the logs and pod i
 1. List all of the Skydive pods, including the agent and analyzer pods.
 
   ```
-  kubectl get pods -n insight |grep 'skydive'
+  kubectl get pods -n $SECURITY_INSIGHTS_NAMESPACE |grep 'skydive'
   ```
   {: codeblock}
 
 2. Check the exporter logs to verify that objects are being sent to Cloud Object Storage.
 
   ```
-  kubectl logs -f <skydive-analyzer-pod-name> -n insight skydive-exporter
+  kubectl logs -f <skydive-analyzer-pod-name> -n $SECURITY_INSIGHTS_NAMESPACE skydive-exporter
   ```
   {: codeblock}
 
@@ -358,7 +392,6 @@ To verify that everything is working correctly, you can check the logs and pod i
 {: #network-delete}
 
 If you no longer have a need to use Network Insights, you can delete the service components from your cluster.
-{: shortdesc}
 
 
 
@@ -386,14 +419,14 @@ To uninstall the components by using Helm, you must have used Helm to install th
 3. Delete the components.
 
   ```
-  helm delete my-release -n insight
+  helm delete my-release -n $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
 
-4. Optional: If you created a namespace during installation, you can delete it.
+4. Delete the namespace.
 
   ```
-  kubectl delete ns insight
+  kubectl delete ns $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
 
@@ -422,29 +455,34 @@ Be sure to delete the components for each cluster that you want to remove the ag
 3. Delete the custom resource to remove all Skydive related components.
 
   ```
-  kubectl delete -f charts.helm.k8s.io_v1alpha1_netflowcollector_cr.yaml
+  kubectl delete -f charts.helm.k8s.io_v1alpha1_netflowcollector_cr.yaml  -n $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
 
 4. Delete the operator and related resources.
 
   ```
-  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/operator.yaml
-  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role_binding.yaml
-  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role.yaml
-  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/service_account.yaml
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/operator.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role_binding.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/role.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/service_account.yaml -n $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
 
 5. Optional: Remove the CRDs.
 
   ```
-  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_netflowcollectors_crd.yaml
-  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_skydives_crd.yaml
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_netflowcollectors_crd.yaml -n $SECURITY_INSIGHTS_NAMESPACE
+  kubectl delete -f https://raw.githubusercontent.com/skydive-project/skydive-operator/master/deploy/crds/charts.helm.k8s.io_skydives_crd.yaml -n $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
 
-To learn more about the [operator](https://github.com/skydive-project/skydive-operator)
+6. Delete the namespace.
+
+  ```
+  kubectl delete ns $SECURITY_INSIGHTS_NAMESPACE
+  ```
+  {: codeblock}
 
 
 
