@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-19"
+lastupdated: "2020-10-26"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -41,7 +41,6 @@ subcollection: security-advisor
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-
 # Network Insights (beta)
 {: #setup-network}
 
@@ -55,7 +54,7 @@ Built-in insights are available for Kubernetes clusters on classic infrastructur
 
 ## Before you begin
 {: #before-network}
-Before you get started, be sure that you have the following prerequistes:
+Before you get started, be sure that you have the following prerequisites:
 
 * A standard Kubernetes Service cluster version 1.14.10_1552 or higher.
 * The [{{site.data.keyword.cloud_notm}} CLI and Kubernetes Service plug-in](/docs/cli?topic=cli-install-ibmcloud-cli)
