@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-07"
+lastupdated: "2020-10-26"
 
 keywords: HA for {{site.data.keyword.security-advisor_short}}, DR for {{site.data.keyword.security-advisor_short}}, high availability for {{site.data.keyword.security-advisor_short}}, disaster recovery for {{site.data.keyword.security-advisor_short}}, failover for {{site.data.keyword.security-advisor_short}}
 
@@ -42,7 +42,6 @@ subcollection: appid
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-
 # Understanding high availability and disaster recovery for {{site.data.keyword.security-advisor_short}}
 {: #ha-dr}
 
@@ -50,7 +49,7 @@ subcollection: appid
 
 In each supported region, the service runs in several availability zones. The service supports manual cross-regional failover from `us-south` to `us-east` and from `eu-gb` to `eu-de`. A daily backup of data to Cloud Object Storage is done and the backup is kept for 7 days.
 
-If a regional disaster occurs, the avavailable data is restored by {{site.data.keyword.security-advisor_short}} without any action from you.
+If a regional disaster occurs, the available data is restored by {{site.data.keyword.security-advisor_short}} without any action from you.
 
 To learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime) or [Service Level Agreements](/docs/overview?topic=overview-slas).
 
