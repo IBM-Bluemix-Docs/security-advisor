@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-26"
+lastupdated: "2020-11-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -275,7 +275,7 @@ To install the open source version of Skydive by using an operator, complete the
   ```
   {: codeblock}
 
-6. Apply patch to skydive-operator ClusterRoleBinding.
+6. Apply a patch to `skydive-operator ClusterRoleBinding`.
 
   ```
   kubectl patch ClusterRoleBinding skydive-operator -p='{"subjects":[{"namespace":"'"$SECURITY_INSIGHTS_NAMESPACE"'","name":"skydive-operator","kind": "ServiceAccount"}]}'
