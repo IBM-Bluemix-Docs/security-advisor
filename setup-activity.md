@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-11-13"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -40,6 +40,7 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
+
 
 
 
@@ -268,5 +269,3 @@ If you no longer need to use Activity Insights, you can delete the service compo
   {: codeblock}
 
 
-  
-  
