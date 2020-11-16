@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-13"
+lastupdated: "2020-11-16"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -239,10 +239,10 @@ Want to use your own packages? Use one of the JSON files as a guide and create r
 {: tip}
 
 
-## Deleting the components
+## Deleting activity insights
 {: #activity-delete}
 
-If you no longer need to use Activity Insights, you can delete the service components from your cluster.
+If you no longer need to use activity insights, you can delete the service components from your cluster.
 {: shortdesc}
 
 1. Delete the service components by using Helm. Be sure to use the `-tls` flag if you have TLS enabled.
