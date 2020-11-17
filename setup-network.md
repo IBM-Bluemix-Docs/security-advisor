@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-12"
+lastupdated: "2020-11-17"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -39,6 +39,8 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
+
+
 
 
 # Network Insights (beta)
@@ -100,8 +102,7 @@ Be sure to repeat the installation for each cluster that you want to monitor.
 
 
 ### Installing with Helm
-{: #install-network-helm}
-
+{: #install-network-helm}z
 
 To install the open source version of Skydive by using Helm, complete the following steps.
 
@@ -482,6 +483,8 @@ Be sure to delete the components for each cluster that you want to remove the ag
   kubectl delete ns $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
+
+
 
 
 
