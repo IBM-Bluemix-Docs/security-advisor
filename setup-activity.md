@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-16"
+lastupdated: "2020-11-23"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -84,22 +84,36 @@ To get started with Activity Insights, be sure that you have the following prere
 
 You can connect an instance of Cloud Object Storage and enable Activity Insights by using the Security Advisor UI.
 
-1. Navigate to the [Security dashboard](https://{DomainName}/security-advisor#/overview) in the console.
-2. Go to the **Settings** tab.
-3. Click **Add bucket**. A modal appears.
-4. Choose whether to create a bucket or use a bucket that you already have.
-  
-  If you choose to create a bucket through Security Advisor, the naming convention `<bucketName><uuid>.<region>` is used. For example, `sa.telemetric.12ab45.us-south`. If you want to provide your own name, you can create a bucket in Cloud Object Storage and then connect it to Security Advisor by choosing the existing bucket option.
-  
+1. In the IBM Cloud console, navigate to [Security and compliance > Integrations > Data Settings](https://{DomainName}/security-advisor#/integrations).
+2. Click **Connect bucket**.
+
   Only one bucket can be used with Activity Insights at a time.
   {: tip}
 
-5. Select an option for **Resource group** and **Cloud Object Storage instance**. If you selected to use your own bucket, be sure to specify the bucket that you want to use.
-6. Choose **Activity Insights**.
-7. Describe your what your bucket is used for.
-8. Click **Add bucket**.
-9. Go to the **Integrations > Built-in Insights** tab.
-10. Enable analysis for **Activity Insights**. Don't forget to install the needed components to finish enabling the feature.
+3. Select whether to **Create a bucket** or to **Use an existing bucket**.
+
+  If you selected create a bucket:
+
+    1. Select a resource group and an instance of Cloud Object Storage.
+    2. Select **Activity insights**.
+    3. Optionally, provide a description.
+    4. Click **Connect bucket**.
+
+    If you choose to create a bucket through Security Advisor, the naming convention `<bucketName><uuid>.<region>` is used. For example, `sa.telemetric.12ab45.us-south`. If you want to provide your own name, you can create a bucket in Cloud Object Storage and then connect it to Security Advisor by choosing the existing bucket option.
+
+  A service to service authorization policy between Cloud Object Storage and Security Advisor is created on your behalf.
+  {: note}
+
+  If you selected use an existing bucket:
+
+    1. Select a resource group, an instance of Cloud Object Storage, and a bucket.
+    2. Select **Activity insights**.
+    3. Optionally, provide a description.
+    4. Click **Connect bucket**.
+    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}.cloud.ibm.com/iam/authorizations) between Cloud Object Storage and Security Advisor.
+
+4. Go to the **Integrations > Built-in Insights** tab.
+5. Enable analysis for **Activity Insights**. Don't forget to install the needed components to finish enabling the feature.
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-17"
+lastupdated: "2020-11-23"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -71,15 +71,34 @@ Have you tried using [Cloud Shell](/docs/cloud-shell?topic=cloud-shell-getting-s
 
 You can connect an instance of Cloud Object Storage and enable Network Insights by using the {{site.data.keyword.security-advisor_short}} UI.
 
-1. Navigate to the [Security dashboard](https://{DomainName}/security-advisor#/overview) in the console.
-2. Go to the **Settings** tab.
-3. Click **Add bucket**. A modal appears.
-4. Choose whether to create a bucket or use a bucket that you already have. If you chose to use your own, be sure to specify the bucket that you want to use.
-5. Select an option for **Resource group** and **Cloud Object Storage instance**.
-6. Choose **Network Insights**.
-7. Describe what your bucket is used for and click **Add bucket**.
-8. Go to the **Integrations > Built-in Insights** tab.
-9. Enable analysis for **Network Insights**.
+1. In the IBM Cloud console, navigate to [Security and compliance > Integrations > Data Settings](https://{DomainName}/security-advisor#/integrations).
+2. Click **Connect bucket**.
+
+  Only one bucket can be used with network insights at a time.
+  {: tip}
+
+3. Select whether to **Create a bucket** or to **Use an existing bucket**.
+
+  If you selected create a bucket:
+
+    1. Select a resource group and an instance of Cloud Object Storage.
+    2. Select **Network insights**.
+    3. Optionally, provide a description.
+    4. Click **Connect bucket**.
+
+  A service to service authorization policy between Cloud Object Storage and Security Advisor is created on your behalf.
+  {: note}
+
+  If you selected use an existing bucket:
+
+    1. Select a resource group, an instance of Cloud Object Storage, and a bucket.
+    2. Select **Network insights**.
+    3. Optionally, provide a description.
+    4. Click **Connect bucket**.
+    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}.cloud.ibm.com/iam/authorizations) between Cloud Object Storage and Security Advisor.
+
+4. Go to the **Integrations > Built-in Insights** tab.
+5. Enable analysis for **Network Insights**.
 
 ## Obtaining service credentials
 {: #cos-credentials}
@@ -483,8 +502,6 @@ Be sure to delete the components for each cluster that you want to remove the ag
   kubectl delete ns $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
-
-
 
 
 
