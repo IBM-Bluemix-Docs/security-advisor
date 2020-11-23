@@ -121,7 +121,7 @@ Be sure to repeat the installation for each cluster that you want to monitor.
 
 
 ### Installing with Helm
-{: #install-network-helm}z
+{: #install-network-helm}
 
 To install the open source version of Skydive by using Helm, complete the following steps.
 
