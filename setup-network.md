@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-23"
+lastupdated: "2020-11-24"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -502,7 +502,5 @@ Be sure to delete the components for each cluster that you want to remove the ag
   kubectl delete ns $SECURITY_INSIGHTS_NAMESPACE
   ```
   {: codeblock}
-
-
 
 
