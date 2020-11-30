@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-05"
+lastupdated: "2020-11-30"
 
 keywords: data encryption in {{site.data.keyword.security-advisor_short}}, data storage for {{site.data.keyword.security-advisor_short}}, personal data in {{site.data.keyword.security-advisor_short}}, data deletion for {{site.data.keyword.security-advisor_short}}, data in {{site.data.keyword.security-advisor_short}}, data security in {{site.data.keyword.security-advisor_short}}
 
@@ -43,12 +43,14 @@ subcollection: security-advisor
 
 
 
-
 # Securing your data in {{site.data.keyword.security-advisor_short}}
 {: #mng-data}
 
 To ensure that you can securely manage your data when you use {{site.data.keyword.security-advisor_full}}, it is important to know exactly what data is stored and encrypted.
 {: shortdesc}
+
+For information about bringing your own key (BYOK) or keeping your own key (KYOK) for {{site.data.keyword.security-advisor_short}}, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-data-storage).
+{: note}
 
 ## How your data is stored and encrypted in {{site.data.keyword.security-advisor_short}}
 {: #data-storage} 
