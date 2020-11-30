@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-11-30"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -40,7 +40,6 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 # Managing access for {{site.data.keyword.security-advisor_short}}
@@ -195,6 +194,7 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
     <td>Manager</td>
   </tr>
 </table>
+
 
 ## API mappings
 {: #api-map}
