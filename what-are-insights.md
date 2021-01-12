@@ -42,7 +42,7 @@ subcollection: security-advisor
 # What are Security Insights?
 {: #insights}
 
-With {{site.data.keyword.security-advisor_long}}, you can take advantage of built-in insights to analyze your user activty and network flowlogs in order to identify unauthorized or suspicious behavior in your {{site.data.keyword.cloud_notm}} resources or applications.
+With {{site.data.keyword.security-advisor_long}}, you can take advantage of built-in insights to analyze your user activity and network communication in order to identify unauthorized or suspicious behavior in your {{site.data.keyword.cloud_notm}} resources or applications.
 {: shortdesc}
 
 
@@ -54,8 +54,8 @@ You have the option to enable network or Activity Insights. Check out the follow
 
 | Feature          | Description | 
 |------------------|-------------|
-| Activty insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. |
-| Network Insights | By montioring and analyzing your VPC flow logs, you can identify Virtual Server Instances that might be compromised or attempts to compromise your VSIs. |
+| Activity insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. |
+| Network Insights | By monitoring and analyzing your VPC flow logs, you can identify Virtual Server Instances that might be compromised or attempts to compromise your VSIs. |
 {: caption="Table 1. Available insights features" caption-side="top"}
 
 
@@ -69,7 +69,7 @@ When you enable Activity Insights, a group of predefined rules are automatically
 ## What classifies as suspicious network traffic?
 {: #suspicious-traffic}
 
-The behavioral patterns of peers that are used as scanners, for mining cryptocurrency, as part of a botnet, for anonymization services, or have been found to distribute maleware are continously monitored by IBM X-Force. When you enable Network Insights, your VPC interface flow logs are analyzed for behavioral patterns and compared to the intelligence that is gathered by IBM X-Force to detect potentially compromised VSIs that run in your VPC. For example, if a VSI application sends an abnormally large payload to a peer that is flagged by the IBM X-Force threat intelligence database, a finding is issued. Additionally, any attempts to compromise a VSI are also reported. For example, if a peer that is flagged by IBM X-Force as suspicious repeatedly communicates with your VSI, a finding is issued.
+The behavioral patterns of peers that are used as scanners, for mining cryptocurrency, as part of a botnet, for anonymization services, or have been found to distribute malware are continuously monitored by IBM X-Force. When you enable Network Insights, your VPC interface flow logs are analyzed for behavioral patterns and compared to the intelligence that is gathered by IBM X-Force to detect potentially compromised VSIs that run in your VPC. For example, if a VSI application sends an abnormally large payload to a peer that is flagged by the IBM X-Force threat intelligence database, a finding is issued. Additionally, any attempts to compromise a VSI are also reported. For example, if a peer that is flagged by IBM X-Force as suspicious repeatedly communicates with your VSI, a finding is issued.
 
 
 
@@ -124,13 +124,13 @@ Collected and analyzed VPC flow log information includes:
 
 Collected and analyzed Activity Tracker information includes:
 
-* The IP address of the inititator of the API call
+* The IP address of the inititater of the API call
 * The user that authenticated
-* The acvitity type
+* The activity type
 * The activity result
 * Timestamps
 
-Because you own the data, you are responsible for ensuring that it is deleted in accordence with the legal requirements for your industry and your business. For more information, check out [Deleting objects](/docs/cloud-object-storage?topic=cloud-object-storage-security).
+Because you own the data, you are responsible for ensuring that it is deleted in accordance with the legal requirements for your industry and your business. For more information, check out [Deleting objects](/docs/cloud-object-storage?topic=cloud-object-storage-security).
 {: tip}
 
 
