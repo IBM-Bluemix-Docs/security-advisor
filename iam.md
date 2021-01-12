@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-07"
+lastupdated: "2021-01-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -150,42 +150,42 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
   </tr>
   <tr>
     <td><code>security-advisor.network-insights.enable</code></td>
-    <td>Enable network insights that are provided by the service.</td>
+    <td>Enable Network Insights that are provided by the service.</td>
     <td>Manager</td>
   </tr>
   <tr>
     <td><code>security-advisor.network-insights.disable</code></td>
-    <td>Disable network insights that are provided by the service.</td>
+    <td>Disable Network Insights that are provided by the service.</td>
     <td>Manager</td>
   </tr>
   <tr>
     <td><code>security-advisor.activity-insights.enable</code></td>
-    <td>Enable activity insights that are provided by the service.</td>
+    <td>Enable Activity Insights that are provided by the service.</td>
     <td>Manager</td>
   </tr>
   <tr>
     <td><code>security-advisor.activity-insights.disable</code></td>
-    <td>Disable activity insights that are provided by the service.</td>
+    <td>Disable Activity Insights that are provided by the service.</td>
     <td>Manager</td>
   </tr>
     <tr>
     <td><code>security-advisor.network-insights-cos.create</code></td>
-    <td>Add Cloud Object Storage bucket details for network insights.</td>
+    <td>Add Cloud Object Storage bucket details for Network Insights.</td>
     <td>Manager</td>
   </tr>
     <tr>
     <td><code>security-advisor.activity-insights-cos.create</code></td>
-    <td>Add Cloud Object Storage bucket details for activity insights.</td>
+    <td>Add Cloud Object Storage bucket details for Activity Insights.</td>
     <td>Manager</td>
   </tr>
     <tr>
     <td><code>security-advisor.network-insights-cos.delete</code></td>
-    <td>Delete Cloud Object Storage bucket details for network insights.</td>
+    <td>Delete Cloud Object Storage bucket details for Network Insights.</td>
     <td>Manager</td>
   </tr>
     <tr>
     <td><code>security-advisor.activity-insights-cos.delete</code></td>
-    <td>Delete Cloud Object Storage bucket details for activity insights.</td>
+    <td>Delete Cloud Object Storage bucket details for Activity Insights.</td>
     <td>Manager</td>
   </tr>
   <tr>

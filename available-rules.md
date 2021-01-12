@@ -4,7 +4,7 @@ copyright:
   years: 2021
 lastupdated: "2021-01-12"
 
-keywords: available insights rules, activity insights, network insights, iks, key protect, kms, rules, app id, iam, cos, certificates, bucket, object storage,  
+keywords: available insights rules, Activity Insights, Network Insights, iks, key protect, kms, rules, app id, iam, cos, certificates, bucket, object storage,  
 
 subcollection: security-advisor
 
@@ -45,7 +45,7 @@ subcollection: security-advisor
 # Available rule packages
 {: #insights-rules}
 
-Activity insights compares your user and application activity against predefined rule packages to identify suspicious behavior.
+Activity Insights compares your user and application activity against predefined rule packages to identify suspicious behavior.
 {: shortdesc}
 
 
@@ -53,7 +53,7 @@ Activity insights compares your user and application activity against predefined
 ## App ID
 {: #app-id}
 
-With App ID ... 
+The App ID service helps you to manage authentication and authorization of your applications. [Learn more](/docs/appid?topic=appid-getting-started).
 
 | Rule          |  Description     | 
 |:--------------|:-----------------|
@@ -67,7 +67,7 @@ With App ID ...
 ## Certificate Manager
 {: #certificate-manager}
 
-With Certificate Manager ... 
+The Certificate Manager service helps you to obtain, store, and manage the certificates that you use for cloud or on-premisis deployments. [Learn more](/docs/certificate-manager?topic=certificate-manager-getting-started).
 
 | Rule          |  Description     | 
 |:--------------|:-----------------|
@@ -81,7 +81,7 @@ With Certificate Manager ...
 ## Cloud Object Storage
 {: #cloud-object-storage}
 
-With Cloud Object Storage ... 
+The Cloud Object Storage service helps you to store encrypted and dispersed data across multiple geographic locations. [Learn more](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
 
 | Rule          |  Description     | 
@@ -94,7 +94,8 @@ With Cloud Object Storage ...
 ## Identity and Access Management
 {: #iam}
 
-With Identity and Access Management ... 
+Identity and Access Management enables you to securely authenticate users for platform services and control access to resources consistently across IBM Cloud. [Learn more](/docs/account?topic=account-iamoverview).
+
 
 | Rule          |  Description     | 
 |:--------------|:-----------------|
@@ -111,7 +112,8 @@ With Identity and Access Management ...
 ## Kubernetes Service
 {: #kubernetes-service}
 
-With Kubernetes Service ... 
+Kubernetes Service helps you to deploy highly available containerized apps in a way that allows you to automate, isolate, secure, manage, and monitor your workloads across zones and regions. [Learn more](/docs/containers?topic=containers-getting-started).
+
 
 | Rule          |  Description     | 
 |:--------------|:-----------------|
@@ -124,14 +126,15 @@ With Kubernetes Service ...
 
 
 
-## Kubernetes Service
-{: #kubernetes-service}
+## Key Protect
+{: #key-protect}
 
-With Kubernetes Service ... 
+Key Protect helps you provision encrypted keys for apps across IBM Cloud services. [Learn more](/docs/key-protect?topic=key-protect-getting-started-tutorial).
 
 | Rule          |  Description     | 
 |:--------------|:-----------------|
 | `kms secrets delete - high risk API` | Reports when a key is deleted. |
 | `kms.secrets.unwrap outside change control window - indicative API` | Reports when a key is unwrapped between 1700 and 0800 (next day). |
 | `The following is a service instance rule instantiated for KMS. high risk API.` | Reports when one of the following are observed: <ol><li>A KMS instance is created. </li><li>A KMS instance is renamed or service plan changed. </li><li>A KMS instance is deleted. </li><li>An API key is created for a KMS instance through the Service credentials section of the service instance UI. </li><li>An API key that is associated with a KMS instance is deleted from the Service credentials section of the service instance UI. </li><li>When binding a KMS instance to an application. </li><li>When unbinding a KMS instance to an application. </li></ol> |
-{: caption="Table 5. Rules that are available in the Key Protect rule package" caption-side="bottom"}
+{: caption="Table 6. Rules that are available in the Key Protect rule package" caption-side="bottom"}
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-08"
+lastupdated: "2021-01-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -95,7 +95,7 @@ You can connect an instance of Cloud Object Storage and enable Activity Insights
   If you selected create a bucket:
 
     1. Select a resource group and an instance of Cloud Object Storage.
-    2. Select **Activity insights**.
+    2. Select **Activity Insights**.
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
 
@@ -107,7 +107,7 @@ You can connect an instance of Cloud Object Storage and enable Activity Insights
   If you selected use an existing bucket:
 
     1. Select a resource group, an instance of Cloud Object Storage, and a bucket.
-    2. Select **Activity insights**.
+    2. Select **Activity Insights**.
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
     5. Create a *reader* [service-to-service authorization policy](https://{DomainName}.cloud.ibm.com/iam/authorizations) between Cloud Object Storage and Security Advisor.
@@ -253,10 +253,10 @@ Want to use your own packages? Use one of the JSON files as a guide and create r
 {: tip}
 
 
-## Deleting activity insights
+## Deleting Activity Insights
 {: #activity-delete}
 
-If you no longer need to use activity insights, you can delete the service components from your cluster.
+If you no longer need to use Activity Insights, you can delete the service components from your cluster.
 {: shortdesc}
 
 1. Delete the service components by using Helm. Be sure to use the `-tls` flag if you have TLS enabled.

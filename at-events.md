@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-01-12"
 
 keywords: Centralized security, security management, alerts, security risk, risk, insights, threat detection
 
@@ -157,16 +157,16 @@ Check out the following table for a list of the events that are sent to {{site.d
   </tr>
   </tr>
     <td><code>security-advisor.network-insights-cos.create</code></td>
-    <td>Add Cloud Object Storage bucket details for network insights.</td>
+    <td>Add Cloud Object Storage bucket details for Network Insights.</td>
   </tr>
     <td><code>security-advisor.activity-insights-cos.create</code></td>
-    <td>Add Cloud Object Storage bucket details for activity insights.</td>
+    <td>Add Cloud Object Storage bucket details for Activity Insights.</td>
   </tr>
     <td><code>security-advisor.network-insights-cos.delete</code></td>
-    <td>Delete Cloud Object Storage bucket details for network insights.</td>
+    <td>Delete Cloud Object Storage bucket details for Network Insights.</td>
   </tr>
     <td><code>security-advisor.activity-insights-cos.delete</code></td>
-    <td>Delete Cloud Object Storage bucket details for activity insights.</td>
+    <td>Delete Cloud Object Storage bucket details for Activity Insights.</td>
   </tr>
   <tr>
     <td><code>security-advisor.notification-channels.read</code></td>
