@@ -36,11 +36,13 @@ Security Advisor
             caveonix.md
 
         custom.md
-
+    
     {: .topicgroup}
-    Enabling Insights
-        setup-network.md
+    Gaining insight
+        what-are-insights.md
+        available-rules.md
         setup-activity.md
+        setup-network.md
     
     notifications.md
     ha-dr.md
