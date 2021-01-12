@@ -1,1 +1,3 @@
 https://neuvector.com/,
+https://docs.neuvector.com/integration/ibmsa,
+https://{DomainName}.cloud.ibm.com/iam/authorizations
