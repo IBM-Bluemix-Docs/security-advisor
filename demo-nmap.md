@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-21"
+  years: 2017, 2021
+lastupdated: "2021-01-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -44,7 +44,6 @@ completion-time: 30m
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 # Integrating custom findings
@@ -194,7 +193,7 @@ node ./src/app.js <scan_type> -t 'IPv4 address'
 ```
 {: codeblock}
 
-For MacOS/OSX and UNIX systems, append command with `sudo -E`:
+For macOS and UNIX systems, append command with `sudo -E`:
 
 ```
 sudo -E node ./src/app.js <scan_type> -t 'IPv4 address' --updateDashboardCard 'yes'
@@ -234,7 +233,7 @@ IPV6 and IP ranges are not currently supported.
 {: #nmap-remove}
 {: step}
 
-The scan alerts are visible in the service dashboard cards for 24 hours after which they can be found in the Findings table. If you run the scan again within the initial 24 hours of the first scan, and the same findings are found, they are still added in the card. For example, if you run the scan and find an open port 22/ssh the KPI in the card shows as 1. If you run the scan again without fixing the existing vulnerability, the same finding is added to the KPI and the value is now 2. So, if you need to run the scan again within 24 hours and want to see only the latest vulnerabilities, clear the findings in the card by using the [Findings API](https://cloud.ibm.com/apidocs/security-advisor/findings){: external}.
+The scan alerts are visible in the service dashboard cards for 24 hours after which they can be found in the Findings table. If you run the scan again within the initial 24 hours of the first scan, and the same findings are found, they are still added in the card. For example, if you run the scan and find an open port 22/SSH the KPI in the card shows as 1. If you run the scan again without fixing the existing vulnerability, the same finding is added to the KPI and the value is now 2. So, if you need to run the scan again within 24 hours and want to see only the latest vulnerabilities, clear the findings in the card by using the [Findings API](https://cloud.ibm.com/apidocs/security-advisor/findings){: external}.
 {: shortdesc}
 
 If you no longer have a need to see findings from Nmap in your dashboard, you can delete the card that displays the information.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-11-30"
+  years: 2017, 2021
+lastupdated: "2021-01-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -150,27 +150,42 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
   </tr>
   <tr>
     <td><code>security-advisor.network-insights.enable</code></td>
-    <td>Enable network insights that are provided by the service.</td>
+    <td>Enable Network Insights that are provided by the service.</td>
     <td>Manager</td>
   </tr>
   <tr>
     <td><code>security-advisor.network-insights.disable</code></td>
-    <td>Disable network insights that are provided by the service.</td>
+    <td>Disable Network Insights that are provided by the service.</td>
     <td>Manager</td>
   </tr>
   <tr>
     <td><code>security-advisor.activity-insights.enable</code></td>
-    <td>Enable activity insights that are provided by the service.</td>
+    <td>Enable Activity Insights that are provided by the service.</td>
     <td>Manager</td>
   </tr>
   <tr>
     <td><code>security-advisor.activity-insights.disable</code></td>
-    <td>Disable activity insights that are provided by the service.</td>
+    <td>Disable Activity Insights that are provided by the service.</td>
     <td>Manager</td>
   </tr>
-  <tr>
-    <td><code>security-advisor.insights-cos.create</code></td>
-    <td>Create a Cloud Object Storage instance through {{site.data.keyword.security-advisor_short}} for network and activity insights.</td>
+    <tr>
+    <td><code>security-advisor.network-insights-cos.create</code></td>
+    <td>Add Cloud Object Storage bucket details for Network Insights.</td>
+    <td>Manager</td>
+  </tr>
+    <tr>
+    <td><code>security-advisor.activity-insights-cos.create</code></td>
+    <td>Add Cloud Object Storage bucket details for Activity Insights.</td>
+    <td>Manager</td>
+  </tr>
+    <tr>
+    <td><code>security-advisor.network-insights-cos.delete</code></td>
+    <td>Delete Cloud Object Storage bucket details for Network Insights.</td>
+    <td>Manager</td>
+  </tr>
+    <tr>
+    <td><code>security-advisor.activity-insights-cos.delete</code></td>
+    <td>Delete Cloud Object Storage bucket details for Activity Insights.</td>
     <td>Manager</td>
   </tr>
   <tr>
@@ -217,4 +232,12 @@ How do those roles correspond to the API? Check out the following table to see h
 | GET    | /v1/{account_id}/providers/{provider_id}/occurrences/{occurrence_id}      | security-advisor.findings.read   |
 | PUT    | /v1/{account_id}/providers/{provider_id}/occurrences/{occurrence_id}      | security-advisor.findings.update |
 | DELETE | /v1/{account_id}/providers/{provider_id}/occurrences/{occurrence_id}      | security-advisor.findings.delete |
+| POST   | /v1/{account_id}/notifications/channels                                   | security-advisor.notification-channels.create |
+| PUT    | /v1/{account_id}/notifications/channels/{channel_id}                      | security-advisor.notification-channels.update |
+| GET    | /v1/{account_id}/notifications/channels/{channel_id}                      | security-advisor.notification-channels.read |
+| GET    | /v1/{account_id}/notifications/channels                                   | security-advisor.notification-channels.read |
+| DELETE | /v1/{account_id}/notifications/channels/{channel_id}                      | security-advisor.notification-channels.delete |
+| DELETE | /v1/{account_id}/notifications/channels                                   | security-advisor.notification-channels.delete |
+| GET    | /v1/{account_id}/notifications/channels/{channel_id}/test                 | security-advisor.notification-channels.read |
+| GET    | /v1/{account_id}/notifications/public_key                                 | security-advisor.notification-channels.read |
 {: caption="Table 2. API commands and role mappings" caption-side="top"}

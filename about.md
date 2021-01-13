@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-10-07"
+  years: 2017, 2021
+lastupdated: "2021-01-13"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -40,7 +40,6 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 # About {{site.data.keyword.security-advisor_short}}
@@ -81,7 +80,7 @@ The service receives findings from:
 ![This image shows the way in which the components of {{site.data.keyword.security-advisor_short}} fit together. The service receives findings from varying sources such as Built in insights or custom tools and then displays them in the dashboard where your security advisor can see an overview of your security posture.](images/how-it-works.png){: caption="Figure 2. How the components of {{site.data.keyword.security-advisor_short}} fit together" caption-side="bottom"}
 
 
-{{site.data.keyword.security-advisor_short}} is most helpful for security administrators. That role can take many names. The described roles might be performed by a single person or multiple people - depending on the size of your company. However, the offering was created to address the day-to-day requirements of a CISO or Security focal. Check out the following table for some example users:
+{{site.data.keyword.security-advisor_short}} is most helpful for security administrators. That role can take many names. The described roles might be performed by a single person or multiple people - depending on the size of your company. However, the offering was created to address the day-to-day requirements of a chief information security officer or Security focal. Check out the following table for some example users:
 
 <table>
   <caption>Table 1. Types of Security Administrators</caption>
@@ -90,16 +89,16 @@ The service receives findings from:
     <th>Description</th>
   </tr>
   <tr>
-    <td>CIO</td>
-    <td>A CIO or an Enterprise architecture team defines security and compliance policies at a high level for the entire company.</td>
+    <td>chief information officer</td>
+    <td>A chief information officer or an Enterprise architecture team defines security and compliance policies at a high level for the entire company.</td>
   </tr>
   <tr>
-    <td>CISO</td>
-    <td>A CISO decides how to implement the policies that are set by the CIO for the systems that are under their control. This could include middleware, servers, or architecture that is deployed. This person would define the security governance and security policies for the organization. They would monitor security risk and define controls to meet compliance standards such as ISO, or GDPR. This person also decides the tools that their teams use.</td>
+    <td>chief information security officer</td>
+    <td>A chief information security officer decides how to implement the policies that are set by the chief information officer for the systems that are under their control. This could include middleware, servers, or architecture that is deployed. This person would define the security governance and security policies for the organization. They would monitor security risk and define controls to meet compliance standards such as ISO, or GDPR. This person also decides the tools that their teams use.</td>
   </tr>
   <tr>
     <td>Security focal</td>
-    <td>This person supports the CISO and executes the needed security checks and investigates any potential risks or issues. </td>
+    <td>This person supports the chief information security officer and executes the needed security checks and investigates any potential risks or issues. </td>
   </tr>
 </table>
 

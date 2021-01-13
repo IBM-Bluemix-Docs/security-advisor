@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-21"
+  years: 2017, 2021
+lastupdated: "2021-01-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -40,7 +40,6 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 
@@ -98,7 +97,7 @@ From a security point of view, it's a good idea to purge your collected data whe
 {: shortdesc}
 
 
-The behavioral patterns of clients that are classified by IBM X-Force as distributing malware that is used as scanners, as part of a botnet, for mining cryptocurrency or for anonymization services are all continuously monitored. If that type of client approaches a monitored cluster and exhibits an alarming behavior, network insights issues a finding.
+The behavioral patterns of clients that are classified by IBM X-Force as distributing malware that is used as scanners, as part of a botnet, for mining cryptocurrency or for anonymization services are all continuously monitored. If that type of client approaches a monitored cluster and exhibits an alarming behavior, Network Insights issues a finding.
 
 
 The card introduces two Key Performance Indicators (KPIs):
@@ -121,7 +120,7 @@ Findings might include suspicious clients that:
 {{site.data.keyword.security-advisor_short}} informs you of any potentially compromised containers that run on your {{site.data.keyword.containershort_notm}} clusters in the **Suspicious Outbound Traffic** card in the service dashboard.
 {: shortdesc}
 
-The service continuously monitors the behavioral patterns of containers that access clients that are classified by IBM X-Force as distributing malware that is used as scanners, as part of a botnet, for mining cryptocurrency, or for anonymization services. After a container on a monitored cluster approaches the suspicious peers and exhibits alarming behavior, network insights issues a finding.
+The service continuously monitors the behavioral patterns of containers that access clients that are classified by IBM X-Force as distributing malware that is used as scanners, as part of a botnet, for mining cryptocurrency, or for anonymization services. After a container on a monitored cluster approaches the suspicious peers and exhibits alarming behavior, Network Insights issues a finding.
 
 The card introduces two KPIs:
 

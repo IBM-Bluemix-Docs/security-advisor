@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-21"
+  years: 2017, 2021
+lastupdated: "2021-01-13"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -43,11 +43,10 @@ subcollection: security-advisor
 
 
 
-
 # Caveonix
 {: #setup-caveonix}
 
-Caveonix RiskForesight is a multi-tenant cyber and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads. If you work with Caveonix, you can create an integration between Cavenoix and {{site.data.keyword.security-advisor_short}}, to see the findings for all of your IBM Cloud resources in the {{site.data.keyword.security-advisor_short}} dashboard.
+Caveonix RiskForesight is a multi-tenant cybersecurity and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads. If you work with Caveonix, you can create an integration between Caveonix and {{site.data.keyword.security-advisor_short}}, to see the findings for all of your IBM Cloud resources in the {{site.data.keyword.security-advisor_short}} dashboard.
 {: shortdesc}
 
 ## Understanding Caveonix findings
@@ -62,7 +61,7 @@ The compliance posture summary card contains information about your infrastructu
 
 | Finding | Description |
 |:--------|:------------|
-| Total infrastructure assets | The total number of your infrastructure assets in the SDDC environment, which might include vCenter, NSX-V, NSX-T, ESXi, and more. |
+| Total infrastructure assets | The total number of your infrastructure assets in the `SDDC` environment, which might include `vCenter`, `NSX-V`, `NSX-T`, `ESXi`, and more. |
 | Total application assets | The total number of your application assets, which might include virtual machines. |
 | Compliance controls passed | The total number of compliance controls that are deemed compliant to the compliance controls in your most recent evaluation. |
 | Compliance controls failed | The total number of compliance controls that are deemed noncompliant in your most recent evaluation. |
@@ -71,14 +70,14 @@ The compliance posture summary card contains information about your infrastructu
 ### Card 2: Security Posture Summary
 {: #caveonix-security-summary}
 
-The security posture summary card contains information about security vulnerabilities, or cyber risks, that are pulled from an NVD data source. The findings are classified as critical, high, and new. 
+The security posture summary card contains information about security vulnerabilities, or cybersecurity risks, that are pulled from a national vulnerability data source. The findings are classified as critical, high, and new. 
 
 | Finding | Description |
 |:--------|:------------|
-| Total CyberRisk findings | The total number of cyber risk findings that are found for your cloud services. |
-| Critical CyberRisk findings | The number of cyber risks that were found with a critical severity. Be sure to address critical findings immediately to mitigate and reduce the impact that they can have on your environment. |
-| High CyberRisk findings | The number of cyber risks that were found with a critical severity. Be sure to address these as quickly as possible to try to mitigate the impact. |
-| New CyberRisk findings | The number of cyber risks that were found for your cloud services in your latest scan. Be sure to review these closely to ensure that you don't miss a potential risk. |
+| Total CyberRisk findings | The total number of cybersecurity risk findings that are found for your cloud services. |
+| Critical CyberRisk findings | The number of cybersecurity risks that were found with a critical severity. Be sure to address critical findings immediately to mitigate and reduce the impact that they can have on your environment. |
+| High CyberRisk findings | The number of cybersecurity risks that were found with a critical severity. Be sure to address these as quickly as possible to try to mitigate the impact. |
+| New CyberRisk findings | The number of cybersecurity risks that were found for your cloud services in your latest scan. Be sure to review these closely to ensure that you don't miss a potential risk. |
 {: caption="Table 2. Understanding the findings returned in the security posture summary" caption-side="top"}
 
 ## Before you begin

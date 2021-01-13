@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-11-23"
+  years: 2017, 2021
+lastupdated: "2021-01-13"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -43,48 +43,41 @@ subcollection: security-advisor
 
 
 
-
-# Activity Insights (beta)
+# Enabling Activity Insights
 {: #setup-activity}
 
-With {{site.data.keyword.security-advisor_long}}, you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious behavior and changes in your resources. You can use rule packages that are based on best practices that are provided by the service or create your own custom rules.
+With {{site.data.keyword.security-advisor_long}}, you can continuously analyze your activity logs with predefined rule packages that can help you to identify unauthorized or suspicious behavior in your IBM Cloud resources or applications. The predefined rule packages are based on security monitoring best practices for specific IBM Cloud services.
 {: shortdesc}
 
-Built-in insights are available for Kubernetes clusters on classic infrastructure only.
+Activity Insights is available for Kubernetes Services clusters on classic infrastructure only.
 {: important}
 
 
 ## Before you begin
 {: #activity-prereq}
 
-To get started with Activity Insights, be sure that you have the following prerequisites.
 
-- If you are working on Windows 10, activate [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){: external}.
-- Install the yq CLI:
-  * For [macOS and Windows 10](http://mikefarah.github.io/yq/){: external}.
-  * For CentOS, Red Hat, and Ubuntu run the following commands to install version 1.15.
-    ```
-    wget https://github.com/mikefarah/yq/releases/download/1.15.0/yq_linux_amd64       
-    mv yq_linux_amd64 yq   
-    chmod +x yq    
-    mv yq /usr/local/bin/     
-    yq -V
-    ```
-    {: codeblock}     
-- Updated cURL binary: For CentOS and Red Hat, you can update by running `yum update -y nss curl libcurl`.
+Before you get started with Activity Insights, be sure that you have the following prerequisites.
+
+- A standard Kubernetes cluster version v1.10.11 or higher
+- The [`yq` CLI](https://mikefarah.gitbook.io/yq/){: external}
+- Updated cURL binary
+    For CentOS and Red Hat, you can update by running `yum update -y nss curl libcurl`
 - The [{{site.data.keyword.cloud_notm}} CLI and required plug-ins](/docs/cli/reference/ibmcloud?topic=cli-install-ibmcloud-cli)
 - The [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} v1.10.11 or higher
 - The [Kubernetes Helm (package manager)](/docs/containers?topic=containers-helm) v2.9.0 or higher.
-- A standard Kubernetes cluster version v1.10.11 or higher
 
+If you are working on Windows 10, activate [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){: external}
+{: note}
 
+## Connecting to Cloud Object Storage
+{: #activity-store-data}
 
-## Enabling Activity Insights
-{: #activity-enable}
+Before you can analyze your user and application activity, Security Advisor must have access to your activity flow logs that are stored in Cloud Object Storage. To create the connection between the services, you must store the logs in a Cloud Object Storage bucket and then grant the service access to the bucket.
 
-You can connect an instance of Cloud Object Storage and enable Activity Insights by using the Security Advisor UI.
+You can choose to use an existing bucket that you already have created in Cloud Object Storage. Or, you can choose to create a bucket through the Security Advisor UI. When you choose to create a bucket through Security Advisor, the naming convention `BucketName_UUID.Region` is used. So, for example, your bucket name might be similar to `sa.telemetric.12ab45.us-south`. If you want to provide your own name, you can create a bucket through Cloud Object Storage by choosing the existing bucket option.
 
-1. In the IBM Cloud console, navigate to [Security and compliance > Integrations > Data Settings](https://{DomainName}/security-advisor#/integrations).
+1. In the IBM Cloud console, navigate to [Security and compliance > Integrations > Data settings](https://{DomainName}/security-advisor#/integrations).
 2. Click **Connect bucket**.
 
   Only one bucket can be used with Activity Insights at a time.
@@ -95,43 +88,39 @@ You can connect an instance of Cloud Object Storage and enable Activity Insights
   If you selected create a bucket:
 
     1. Select a resource group and an instance of Cloud Object Storage.
-    2. Select **Activity insights**.
+    2. Select **Activity Insights**.
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
 
-    If you choose to create a bucket through Security Advisor, the naming convention `<bucketName><uuid>.<region>` is used. For example, `sa.telemetric.12ab45.us-south`. If you want to provide your own name, you can create a bucket in Cloud Object Storage and then connect it to Security Advisor by choosing the existing bucket option.
-
-  A service to service authorization policy between Cloud Object Storage and Security Advisor is created on your behalf.
+  If you create a new instance of Cloud Object Storage in addition to a new bucket, a service-to-service authorization policy between Security Advisor and Cloud Object Storage is created on your behalf. If you create a bucket within an instance of Cloud Object Storage that you already have provisioned, you must create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between the two services before an analysis can be complete.    
   {: note}
 
   If you selected use an existing bucket:
 
     1. Select a resource group, an instance of Cloud Object Storage, and a bucket.
-    2. Select **Activity insights**.
+    2. Select **Activity Insights**.
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
-    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}.cloud.ibm.com/iam/authorizations) between Cloud Object Storage and Security Advisor.
-
-4. Go to the **Integrations > Built-in Insights** tab.
-5. Enable analysis for **Activity Insights**. Don't forget to install the needed components to finish enabling the feature.
+    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between Cloud Object Storage and Security Advisor.
 
 
 
-## Installing {{site.data.keyword.security-advisor_short}} components
-{: #activity-install-components}
+## Collecting activity flow logs
+{: #collect-activity-logs}
 
-You can install an agent to collect audit flow logs from your {{site.data.keyword.cloud_notm}} account. The logs are stored in your Cloud Object Storage instance where you can enable Activity Insights to analyze your logs for suspicious behavior.
-{: shortdesc}
+To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} account and store them in Cloud Object Storage, you must install an agent on your Kubernetes Service cluster.
 
-1. Clone the [Activity Insights](https://github.com/ibm-cloud-security/security-advisor-activity-insights){: external} repository to your local system.
+
+
+1. Clone the [Activity Insights repository](https://github.ibm.com/security-services/security-advisor-activity-insights-installer){: external} to your local system.
 
   ```
-  git clone https://github.com/ibm-cloud-security/security-advisor-activity-insights.git
+  git clone https://github.ibm.com/security-services/security-advisor-activity-insights-installer.git
   ```
   {: codeblock}
 
 2. Change into the `security-advisor-activity-insights` folder.
-3. Change into the directory for the version of the chart that you're using. Current supported versions include `v2.0` and `v3.0`.       
+3. Change into the directory for the version of the chart that you're using. Currently, version `v3.0` is supported.       
 
 4. Extract the `.tar` file by running the following command.
 
@@ -171,12 +160,10 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
     ```
     {: codeblock}
 
-8. Install Helm by using the [Kubernetes Service integration docs](/docs/containers?topic=containers-helm).
-
-9. Run the following command to install the Insights. The command validates the naming convention of your bucket, creates Kubernetes secrets, updates the values with your cluster GUID, and deploys Activity Insights.
+8. Run the following command to install the agent. The command validates the naming convention of your bucket, creates Kubernetes secrets, updates the value with your cluster GUID, and deploys Activity Insights.
 
   ```
-  ./activity-insight-install.sh <cos_region> <cos_api_key> <cos_bucket> <at_region> <at_service_api_key> <default_memory_request> <memory_limit>
+  ./activity-insight-install.sh -c <cos_region> -k <cos_api_key> -b <cos_bucket> -a <at_region> -s <at_service_api_key> -m <default_memory_request> -l <memory_limit> -n <namespace>
   ```
   {: codeblock}
 
@@ -217,47 +204,29 @@ You can install an agent to collect audit flow logs from your {{site.data.keywor
       <td><code>memory_limit</code></td>
       <td>The maximum amount of memory that is provided to the pod by the cluster. If not provided, the default is <code>512Mi</code>.</td>
     </tr>
+    <tr>
+      <td><code>namespace</code></td>
+      <td>The Kubernetes namespace to install activity-insights-chart. Default: <code>security-advisor-activity-insights</code></td>
+    </tr>
   </table>
 
 
-## Adding rule packages to COS
-{: #activity-adding-rules}
+## Enabling analysis
+{: #enable-analysis-activity}
 
-A rule package is a JSON file that contains a list of rules that you want to monitor. You can download rule packages or [create your own](/docs/security-advisor?topic=security-advisor-activity#activity-packages). The {{site.data.keyword.security-advisor_short}} engine validates that each rule follows the correct syntax.
-{: shortdesc}
+Now that you've installed the collector agent and verified that your flow logs are being stored in your Cloud Object Storage bucket, you can enable Activity Insights to start analyzing them.
 
-1. Clone the following repository to get several preset rule packages. A folder is created on your local system with the name `security-advisor-activity-insights`.
+1. In the IBM Cloud console, navigate to [Security and compliance > Integrations > Built-in insights](https://{DomainName}/security-advisor#/integrations).
+2. Toggle Activity Insights to **On**.
 
-  ```
-  https://github.com/ibm-cloud-security/security-advisor-activity-insights.git
-  ```
-  {: codeblock}
-
-2. Locally, create a folder with the name `IBM.rules/activities`.
-
-3. Copy the JSON files from `security-advisor-activity-insights/security-advisor-ata-rule-packages` to `IBM.rules/activities`.
-
-4. Navigate to your {{site.data.keyword.cloud_notm}} dashboard and select the COS service instance that is associated with Activity Insights.
-
-5. On the **Buckets** tab of the service dashboard, select the bucket that is associated with Activity Insights.
-
-5. On the COS instance home page, click **Upload** and select **Folders**.
-
-6. If prompted, click **Install Aspera Connect client**. If you do not see a prompt, you already have the client installed. If you needed to install the client, repeat step 5 when the installation is finished.
-
-7. Select the *IBM.rules/activities* folder.
-
-8. Click **Upload**.
-
-Want to use your own packages? Use one of the JSON files as a guide and create rules that fit your organizations needs. After you create the file, add it to the *IBM.rules/activities* folder in your COS instance. For more information about the types of rules and formatting, check out [Understanding rule packages](/docs/security-advisor?topic=security-advisor-activity).
-{: tip}
+As results come in, you can see any flagged issues on the **Insights** or **Detailed findings** pages of the UI.
 
 
-## Deleting activity insights
+
+## Uninstalling Activity Insights
 {: #activity-delete}
 
-If you no longer need to use activity insights, you can delete the service components from your cluster.
-{: shortdesc}
+If you no longer need to use Activity Insights, you can delete the agent and other service components from your cluster.
 
 1. Delete the service components by using Helm. Be sure to use the `-tls` flag if you have TLS enabled.
 
@@ -271,15 +240,14 @@ If you no longer need to use activity insights, you can delete the service compo
   If you installed version 3 of the chart, use the following command to delete the components.
 
     ```
-    helm uninstall activity-insights --namespace security-advisor-activity-insights
+    helm uninstall activity-insights --namespace <namespace>
     ```
     {: codeblock}
 
 2. To clean up your cluster, run the following command.
 
   ```
-  kubectl delete ns security-advisor-activity-insights
+  kubectl delete ns <namespace>
   ```
   {: codeblock}
-
 

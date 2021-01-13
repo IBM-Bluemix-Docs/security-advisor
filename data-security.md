@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-12-09"
+  years: 2017, 2021
+lastupdated: "2021-01-13"
 
 keywords: data encryption in {{site.data.keyword.security-advisor_short}}, data storage for {{site.data.keyword.security-advisor_short}}, personal data in {{site.data.keyword.security-advisor_short}}, data deletion for {{site.data.keyword.security-advisor_short}}, data in {{site.data.keyword.security-advisor_short}}, data security in {{site.data.keyword.security-advisor_short}}
 
@@ -60,7 +60,7 @@ The raw data that is captured by {{site.data.keyword.security-advisor_short}} du
 
 * Does not contain any personally identifiable information.
 * Is encrypted at rest and and in transit.
-* Is stored in a managed Cloundant database within each region. 
+* Is stored in a managed Cloudant database within each region. 
 
 In each region, a highly available Cloudant cluster contains 3 copies of the data. A daily backup of data to Cloud Object Storage is done and the backup is kept for 7 days. In the event of a failure, the data is automatically recovered by {{site.data.keyword.security-advisor_short}}.
 

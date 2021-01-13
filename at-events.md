@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-21"
+  years: 2017, 2021
+lastupdated: "2021-01-13"
 
 keywords: Centralized security, security management, alerts, security risk, risk, insights, threat detection
 
@@ -40,7 +40,6 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 # Auditing events for {{site.data.keyword.security-advisor_short}}
@@ -155,6 +154,22 @@ Check out the following table for a list of the events that are sent to {{site.d
   <tr>
     <td><code>security-advisor.activity-insights.disable</code></td>
     <td>Disable the Activity Insights feature that is provided by {{site.data.keyword.security-advisor_short}}.</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.network-insights-cos.create</code></td>
+    <td>Add Cloud Object Storage bucket details for Network Insights.</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.activity-insights-cos.create</code></td>
+    <td>Add Cloud Object Storage bucket details for Activity Insights.</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.network-insights-cos.delete</code></td>
+    <td>Delete Cloud Object Storage bucket details for Network Insights.</td>
+  </tr>
+  <tr>
+    <td><code>security-advisor.activity-insights-cos.delete</code></td>
+    <td>Delete Cloud Object Storage bucket details for Activity Insights.</td>
   </tr>
   <tr>
     <td><code>security-advisor.notification-channels.read</code></td>

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-10-05"
+  years: 2017, 2021
+lastupdated: "2021-01-13"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -43,7 +43,6 @@ subcollection: security-advisor
 
 
 
-
 # Integrations
 {: #integrations}
 
@@ -75,7 +74,7 @@ Partner integrations are a way to enhance security for your {{site.data.keyword.
 
 Current {{site.data.keyword.security-advisor_short}} partners include NeuVector, Twistlock, and Caveonix.
 
-Are you a partner and interested in integrating your solution with {{site.data.keyword.security-advisor_short}}? Reach out to our team by contacting Tim Branter at timmy@us.ibm.com.
+Are you a partner and interested in integrating your solution with {{site.data.keyword.security-advisor_short}}? Reach out to our team by contacting *Tim Branter* at *timmy@us.ibm.com*.
 {: tip}
 
 ### NeuVector
@@ -101,9 +100,9 @@ For help with setting up your Twistlock instance, see [Integrating Twistlock](/d
 ### Caveonix
 {: #integrate-caveonix}
 
-[Caveonix RiskForesight](https://www.caveonix.com/){: external} is a multi-tenant cyber and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads.
+[Caveonix RiskForesight](https://www.caveonix.com/){: external} is a multi-tenant cybersecurity and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads.
 
-Through it's three modules - detect, predict, and act - the service provides proactive workload protection from risks due to cyber threats as well as regulatory requirements. It provides a consistent security and policy framework for risk management that is fully integrated into virtualized technology stacks from VMWare to hyper scale public clouds. The automation gives you the ability to scale secure operations that are difficult to manually achieve.
+Through it's three modules - detect, predict, and act - the service provides proactive workload protection from risks due to cybersecurity threats as well as regulatory requirements. It provides a consistent security and policy framework for risk management that is fully integrated into virtualized technology stacks from VMware to hyper scale public clouds. The automation gives you the ability to scale secure operations that are difficult to manually achieve.
 
 For help creating the connection with Caveonix, see [Integrating Caveonix](/docs/security-advisor?topic=security-advisor-setup-caveonix).
 
@@ -131,12 +130,13 @@ With the Findings API, you can integrate findings from your custom security tool
 With built-in insights, you can detect potential issues by continuously monitoring your cluster and account logs. By monitoring network traffic and user activity, you can help ensure that your {{site.data.keyword.cloud_notm}} resources remain protected.
 {: shortdesc}
 
-### Network Insights (beta)
-{: #integrate-network-insights}
 
-With Network Insights (beta), you can monitor and analyze cluster network communication, both incoming and outgoing, between your Kubernetes cluster and external entities. By using integrated threat intelligence and anomaly detection, the service can identify reconnaissance attacks and potentially compromised assets. To learn more, check out [Network Insights](/docs/security-advisor?topic=security-advisor-network).
+|                  | Description | 
+|------------------|-------------|
+| Activity Insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. [Learn more](/docs/security-advisor?topic=security-advisor-setup-activity). |
+| Network Insights | By monitoring and analyzing your VPC flow logs, you can identify Virtual Server Instances that might be compromised or attempts to compromise your VSIs. [Learn more](/docs/security-advisor?topic=security-advisor-setup-network).|
+{: row-headers}
+{: caption="Table 1. Available insights features" caption-side="top"}
 
-### Activity Insights (beta)
-{: #integrate-activity-insights}
 
-With Activity Insights (preview), you can continuously monitor your {{site.data.keyword.at_short}} logs to identify unauthorized or suspicious activity that is made by users or apps by using rule packages. You can use the rules packages that are provided by the service which are based on security best practices or you can customize the rules to fit your needs. To learn more, check out [Activity Insights](/docs/security-advisor?topic=security-advisor-activity).
+
