@@ -100,7 +100,7 @@ For help with setting up your Twistlock instance, see [Integrating Twistlock](/d
 ### Caveonix
 {: #integrate-caveonix}
 
-[Caveonix RiskForesight](https://www.caveonix.com/){: external} is a multi-tenant cyber and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads.
+[Caveonix RiskForesight](https://www.caveonix.com/){: external} is a multi-tenant cybersecurity and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads.
 
 Through it's three modules - detect, predict, and act - the service provides proactive workload protection from risks due to cyber threats as well as regulatory requirements. It provides a consistent security and policy framework for risk management that is fully integrated into virtualized technology stacks from VMware to hyper scale public clouds. The automation gives you the ability to scale secure operations that are difficult to manually achieve.
 
@@ -133,7 +133,7 @@ With built-in insights, you can detect potential issues by continuously monitori
 
 |                  | Description | 
 |------------------|-------------|
-| Activty insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. [Learn more](/docs/security-advisor?topic=security-advisor-setup-activity). |
+| Activity insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. [Learn more](/docs/security-advisor?topic=security-advisor-setup-activity). |
 | Network Insights | By monitoring and analyzing your VPC flow logs, you can identify Virtual Server Instances that might be compromised or attempts to compromise your VSIs. [Learn more](/docs/security-advisor?topic=security-advisor-setup-network).|
 {: row-headers}
 {: caption="Table 1. Available insights features" caption-side="top"}

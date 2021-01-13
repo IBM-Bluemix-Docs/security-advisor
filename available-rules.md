@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-01-12"
+lastupdated: "2021-01-13"
 
 keywords: available insights rules, Activity Insights, Network Insights, iks, key protect, kms, rules, app id, iam, cos, certificates, bucket, object storage,  
 
@@ -67,7 +67,7 @@ The App ID service helps you to manage authentication and authorization of your 
 ## Certificate Manager
 {: #certificate-manager}
 
-The Certificate Manager service helps you to obtain, store, and manage the certificates that you use for cloud or on-premisis deployments. [Learn more](/docs/certificate-manager?topic=certificate-manager-getting-started).
+The Certificate Manager service helps you to obtain, store, and manage the certificates that you use for cloud or on-premises deployments. [Learn more](/docs/certificate-manager?topic=certificate-manager-getting-started).
 
 | Rule          |  Description     | 
 |:--------------|:-----------------|
@@ -102,8 +102,8 @@ Identity and Access Management enables you to securely authenticate users for pl
 | `Very high risk IAM activity` | Reports when any one of the following is observed: <ol><li>A member is added to an access group. </li><li>A rule is added to an access group. </li><li>A rule name is modified. </li><li>An API key for a service ID is created. </li><li>An API key is created. </li><li>A policy to a user or access group is added. </li><li>A policy that is assigned to a user or access group is deleted. </li></ol> |
 | `Failed logins per account exceed threshold within time window` | Reports when within a 30 minute time window more than 100 login attempts fail. The login attempts can be one of the following: <ol><li>When a user logs in to the IBM Cloud by using an API key. </li><li>When logging in to the IBM Cloud by using an API key that is associated with a service ID. </li><li>When requesting an identity cookie to run an action.  </li><li>When logging in to the IBM Cloud or requests a new refresh token to run an action when already logged in to the IBM Cloud. </li></ol> |
 | `Account reads exceed threshold within time window` | Reports when within a 30 minutes time window more than 100 read events are observed. These read events include: <ol><li>Checking a member's membership. </li><li>Viewing a rule in an access group. </li><li>Looking at information that is related with access groups. </li></ol> |
-| `Account delete outside change control window` | Reports a delete event is observed occuring between 1700 and 0800 (next day). The delete event may be any of the following: <ol><li>Deleting an access group. </li><li>Removing a member from an access group. </li><li>Deleting a rule from an access group. </li><li>Deleting a service ID. </li><li>Deleting an API key. </li><li>Deleting an API key for a service ID. </li><li>Modifying permissions to a policy of a user or access group.</li></ol> |
-| `Account delete exceed threshold within time window` | Reports a delete event is observed occuring between 1700 and 0800 (next day). The delete event may be any of the following: <ol><li>Deleting an access group. </li><li>Removing a member from an access group. </li><li>Deleting a rule from an access group. </li><li>Deleting a service ID. </li><li>Deleting an API key. </li><li>Deleting an API key for a service ID. </li><li>Modifying permissions to a policy of a user or access group.</li></ol> |
+| `Account delete outside change control window` | Reports a delete event is observed occurring between 1700 and 0800 (next day). The delete event may be any of the following: <ol><li>Deleting an access group. </li><li>Removing a member from an access group. </li><li>Deleting a rule from an access group. </li><li>Deleting a service ID. </li><li>Deleting an API key. </li><li>Deleting an API key for a service ID. </li><li>Modifying permissions to a policy of a user or access group.</li></ol> |
+| `Account delete exceed threshold within time window` | Reports a delete event is observed occurring between 1700 and 0800 (next day). The delete event may be any of the following: <ol><li>Deleting an access group. </li><li>Removing a member from an access group. </li><li>Deleting a rule from an access group. </li><li>Deleting a service ID. </li><li>Deleting an API key. </li><li>Deleting an API key for a service ID. </li><li>Modifying permissions to a policy of a user or access group.</li></ol> |
 | `The following is a service instance rule instantiated for IAM. High risk API` | Reports when one of the following are observed: <ol><li>An IAM instance is created. </li><li>An IAM instance is deleted. </li><li>An API key is created for an IAM instance through the Service credentials section of the service instance UI. </li><li>An API key that is associated with an IAM instance is deleted from the Service credentials section of the service instance UI. </li><li>When binding an IAM instance to an application. </li><li>When unbinding an IAM instance to an application. </li></ol> |
 {: caption="Table 4. Rules that are available in the Identity and Access Management rule package" caption-side="bottom"}
 
