@@ -70,14 +70,14 @@ The compliance posture summary card contains information about your infrastructu
 ### Card 2: Security Posture Summary
 {: #caveonix-security-summary}
 
-The security posture summary card contains information about security vulnerabilities, or cyber risks, that are pulled from an NVD data source. The findings are classified as critical, high, and new. 
+The security posture summary card contains information about security vulnerabilities, or cybersecurity risks, that are pulled from a national vulnerability data source. The findings are classified as critical, high, and new. 
 
 | Finding | Description |
 |:--------|:------------|
-| Total CyberRisk findings | The total number of cyber risk findings that are found for your cloud services. |
-| Critical CyberRisk findings | The number of cyber risks that were found with a critical severity. Be sure to address critical findings immediately to mitigate and reduce the impact that they can have on your environment. |
-| High CyberRisk findings | The number of cyber risks that were found with a critical severity. Be sure to address these as quickly as possible to try to mitigate the impact. |
-| New CyberRisk findings | The number of cyber risks that were found for your cloud services in your latest scan. Be sure to review these closely to ensure that you don't miss a potential risk. |
+| Total CyberRisk findings | The total number of cybersecurity risk findings that are found for your cloud services. |
+| Critical CyberRisk findings | The number of cybersecurity risks that were found with a critical severity. Be sure to address critical findings immediately to mitigate and reduce the impact that they can have on your environment. |
+| High CyberRisk findings | The number of cybersecurity risks that were found with a critical severity. Be sure to address these as quickly as possible to try to mitigate the impact. |
+| New CyberRisk findings | The number of cybersecurity risks that were found for your cloud services in your latest scan. Be sure to review these closely to ensure that you don't miss a potential risk. |
 {: caption="Table 2. Understanding the findings returned in the security posture summary" caption-side="top"}
 
 ## Before you begin
