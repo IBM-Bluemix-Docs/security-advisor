@@ -9,12 +9,6 @@ Security Advisor
     about.md
     about-findings.md
     integrations.md
-
-    {: .topicgroup}
-    Built-in insights
-        network-insights.md
-        activity-insights.md
-   
     [Blogs](https://www.ibm.com/cloud/blog)
     {: .navgroup-end}
 
