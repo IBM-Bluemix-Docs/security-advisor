@@ -39,7 +39,7 @@ subcollection: security-advisor
 
 
 
-# What are Security Insights?
+# What is Security Insights?
 {: #insights}
 
 With {{site.data.keyword.security-advisor_long}}, you can take advantage of built-in insights to analyze your user activity and network communication in order to identify unauthorized or suspicious behavior in your {{site.data.keyword.cloud_notm}} resources or applications.
