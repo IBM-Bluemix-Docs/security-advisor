@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-12"
+lastupdated: "2021-01-13"
 keywords: 
 subcollection: security-advisor
 ---
@@ -124,7 +124,7 @@ Collected and analyzed VPC flow log information includes:
 
 Collected and analyzed Activity Tracker information includes:
 
-* The IP address of the inititater of the API call
+* The IP address of the initiator of the API call
 * The user that authenticated
 * The activity type
 * The activity result
