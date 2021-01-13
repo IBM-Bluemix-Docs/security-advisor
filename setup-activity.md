@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-12"
+lastupdated: "2021-01-13"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -92,7 +92,7 @@ You can choose to use an existing bucket that you already have created in Cloud 
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
 
-  A service to service authorization policy between Cloud Object Storage and Security Advisor is created on your behalf.
+  If you create a new instance of Cloud Object Storage in addition to a new bucket, a service-to-service authorization policy between Security Advisor and Cloud Object Storage is created on your behalf. If you create a bucket within an instance of Cloud Object Storage that you already have provisioned, you must create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between the two services before an analysis can be complete.    
   {: note}
 
   If you selected use an existing bucket:
@@ -101,7 +101,7 @@ You can choose to use an existing bucket that you already have created in Cloud 
     2. Select **Activity Insights**.
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
-    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}.cloud.ibm.com/iam/authorizations) between Cloud Object Storage and Security Advisor.
+    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between Cloud Object Storage and Security Advisor.
 
 
 
@@ -120,7 +120,7 @@ To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} acc
   {: codeblock}
 
 2. Change into the `security-advisor-activity-insights` folder.
-3. Change into the directory for the version of the chart that you're using. Current supported versions include `v2.0` and `v3.0`.       
+3. Change into the directory for the version of the chart that you're using. Currently, version `v3.0` is supported.       
 
 4. Extract the `.tar` file by running the following command.
 
@@ -163,7 +163,7 @@ To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} acc
 8. Run the following command to install the agent. The command validates the naming convention of your bucket, creates Kubernetes secrets, updates the value with your cluster GUID, and deploys Activity Insights.
 
   ```
-  ./activity-insight-install.sh <cos_region> <cos_api_key> <cos_bucket> <at_region> <at_service_api_key> <default_memory_request> <memory_limit>
+  ./activity-insight-install.sh -c <cos_region> -k <cos_api_key> -b <cos_bucket> -a <at_region> -s <at_service_api_key> -m <default_memory_request> -l <memory_limit> -n <namespace>
   ```
   {: codeblock}
 
@@ -204,6 +204,10 @@ To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} acc
       <td><code>memory_limit</code></td>
       <td>The maximum amount of memory that is provided to the pod by the cluster. If not provided, the default is <code>512Mi</code>.</td>
     </tr>
+    <tr>
+      <td><code>namespace</code></td>
+      <td>The Kubernetes namespace to install activity-insights-chart. Default: <code>security-advisor-activity-insights</code></td>
+    </tr>
   </table>
 
 
@@ -236,14 +240,14 @@ If you no longer need to use Activity Insights, you can delete the agent and oth
   If you installed version 3 of the chart, use the following command to delete the components.
 
     ```
-    helm uninstall activity-insights --namespace security-advisor-activity-insights
+    helm uninstall activity-insights --namespace <namespace>
     ```
     {: codeblock}
 
 2. To clean up your cluster, run the following command.
 
   ```
-  kubectl delete ns security-advisor-activity-insights
+  kubectl delete ns <namespace>
   ```
   {: codeblock}
 

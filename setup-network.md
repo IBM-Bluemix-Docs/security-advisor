@@ -68,10 +68,6 @@ You can choose to use an existing bucket that you already have created in Cloud 
 
 1. In the IBM Cloud console, navigate to [Security and compliance > Integrations > Data Settings](https://{DomainName}/security-advisor#/integrations).
 2. Click **Connect bucket**.
-
-  Only one bucket can be used with Network Insights at a time.
-  {: tip}
-
 3. Select whether to **Create a bucket** or to **Use an existing bucket**.
 
   If you selected create a bucket:
@@ -81,7 +77,7 @@ You can choose to use an existing bucket that you already have created in Cloud 
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
 
-  A service to service authorization policy between Cloud Object Storage and Security Advisor is created on your behalf.
+  If you create a new instance of Cloud Object Storage in addition to a new bucket, a service-to-service authorization policy between Security Advisor and Cloud Object Storage is created on your behalf. If you create a bucket within an instance of Cloud Object Storage that you already have provisioned, you must create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between the two services before an analysis can be complete.   
   {: note}
 
   If you selected use an existing bucket:
@@ -90,7 +86,7 @@ You can choose to use an existing bucket that you already have created in Cloud 
     2. Select **Network Insights**.
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
-    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}.cloud.ibm.com/iam/authorizations) between Cloud Object Storage and Security Advisor.
+    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between Cloud Object Storage and Security Advisor.
 
 
 
