@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-12"
+lastupdated: "2021-01-13"
 
 keywords: Centralized security, security management, alerts, security risk, risk, insights, threat detection
 
@@ -155,16 +155,19 @@ Check out the following table for a list of the events that are sent to {{site.d
     <td><code>security-advisor.activity-insights.disable</code></td>
     <td>Disable the Activity Insights feature that is provided by {{site.data.keyword.security-advisor_short}}.</td>
   </tr>
-  </tr>
+  <tr>
     <td><code>security-advisor.network-insights-cos.create</code></td>
     <td>Add Cloud Object Storage bucket details for Network Insights.</td>
   </tr>
+  <tr>
     <td><code>security-advisor.activity-insights-cos.create</code></td>
     <td>Add Cloud Object Storage bucket details for Activity Insights.</td>
   </tr>
+  <tr>
     <td><code>security-advisor.network-insights-cos.delete</code></td>
     <td>Delete Cloud Object Storage bucket details for Network Insights.</td>
   </tr>
+  <tr>
     <td><code>security-advisor.activity-insights-cos.delete</code></td>
     <td>Delete Cloud Object Storage bucket details for Activity Insights.</td>
   </tr>
