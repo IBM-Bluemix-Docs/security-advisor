@@ -46,7 +46,7 @@ subcollection: security-advisor
 # Caveonix
 {: #setup-caveonix}
 
-Caveonix RiskForesight is a multi-tenant cybersecurity and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads. If you work with Caveonix, you can create an integration between Cavenoix and {{site.data.keyword.security-advisor_short}}, to see the findings for all of your IBM Cloud resources in the {{site.data.keyword.security-advisor_short}} dashboard.
+Caveonix RiskForesight is a multi-tenant cybersecurity and compliance risk management platform for hybrid cloud. The platform provides the ability to detect, predict, and act on potential issues by providing continuous automated monitoring and analysis of cloud workloads. If you work with Caveonix, you can create an integration between Caveonix and {{site.data.keyword.security-advisor_short}}, to see the findings for all of your IBM Cloud resources in the {{site.data.keyword.security-advisor_short}} dashboard.
 {: shortdesc}
 
 ## Understanding Caveonix findings
