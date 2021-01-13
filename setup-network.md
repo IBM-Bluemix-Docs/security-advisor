@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-12"
+lastupdated: "2021-01-13"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -44,12 +44,9 @@ subcollection: security-advisor
 # Enabling Network Insights
 {: #setup-network}
 
-With {{site.data.keyword.security-advisor_long}}, you can continuously analyze your Virtual Private Cloud (VPC) network flow logs to detect any suspicious activity by using learned patterns and threat intelligence.
+With {{site.data.keyword.security-advisor_long}}, you can continuously analyze your Virtual Private Cloud (VPC) network interface flow logs to detect any suspicious activity by using learned patterns and threat intelligence.
 {: shortdesc}
 
-
-Built-in insights are available for VPC infrastructure only.
-{: note}
 
 
 ## Before you begin
