@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-13"
+lastupdated: "2021-02-03"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -110,12 +110,10 @@ You can choose to use an existing bucket that you already have created in Cloud 
 
 To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} account and store them in Cloud Object Storage, you must install an agent on your Kubernetes Service cluster.
 
-
-
 1. Clone the [Activity Insights repository](https://github.ibm.com/security-services/security-advisor-activity-insights-installer){: external} to your local system.
 
   ```
-  git clone https://github.ibm.com/security-services/security-advisor-activity-insights-installer.git
+  git clone https://github.com/ibm-cloud-security/security-advisor-activity-insights
   ```
   {: codeblock}
 

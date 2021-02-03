@@ -80,7 +80,7 @@ The service receives findings from:
 ![This image shows the way in which the components of {{site.data.keyword.security-advisor_short}} fit together. The service receives findings from varying sources such as Built in insights or custom tools and then displays them in the dashboard where your security advisor can see an overview of your security posture.](images/how-it-works.png){: caption="Figure 2. How the components of {{site.data.keyword.security-advisor_short}} fit together" caption-side="bottom"}
 
 
-{{site.data.keyword.security-advisor_short}} is most helpful for security administrators. That role can take many names. The described roles might be performed by a single person or multiple people - depending on the size of your company. However, the offering was created to address the day-to-day requirements of a chief information security officer or Security focal. Check out the following table for some example users:
+{{site.data.keyword.security-advisor_short}} is most helpful for security administrators. That role can take many names. The described roles might be performed by a single person or multiple people - depending on the size of your company. However, the offering is meant to address the day-to-day requirements of a chief information security officer or Security focal. Check out the following table for some example users:
 
 <table>
   <caption>Table 1. Types of Security Administrators</caption>
