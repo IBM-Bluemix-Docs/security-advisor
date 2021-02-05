@@ -127,7 +127,7 @@ As results come in, you can see any flagged issues on the **Insights** or **Deta
 
 After you've onboarded to the GA version of Network Insights, you can delete the beta service components from your cluster.
 
-The Network Insights beta is deprecated as of **12 February 2021**. To remove the Network Insights components from your cluster, you can use the following steps.
+The Network Insights beta is deprecated as of **13 January 2021** and will no longer be supported as of **12 February 2021**. To remove the Network Insights components from your cluster, you can use the following steps.
 {: deprecated}
 
 
