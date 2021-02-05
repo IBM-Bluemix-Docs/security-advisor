@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-13"
+lastupdated: "2021-02-05"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -122,12 +122,13 @@ Now that you've connected your Cloud Object Storage bucket and verified that you
 As results come in, you can see any flagged issues on the **Insights** or **Detailed findings** pages of the UI.
 
 
-## Uninstalling the Network Insights beta
+## Uninstalling Network Insights from your cluster
 {: #network-delete}
 
-If you no longer have a need to use Network Insights, you can delete the service components from your cluster.
+After you've onboarded to the GA version of Network Insights, you can delete the beta service components from your cluster.
 
-The Network Insights beta is deprecated as of __DATE__. To remove the Network Insights components from your cluster, you can use the following steps.
+The Network Insights beta is deprecated as of **13 January 2021** and will no longer be supported as of **12 February 2021**. To remove the Network Insights components from your cluster, you can use the following steps.
+{: deprecated}
 
 
 ### Uninstalling with Helm
