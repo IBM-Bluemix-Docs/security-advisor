@@ -9,7 +9,6 @@ Security Advisor
     about.md
     about-findings.md
     integrations.md
-    [Blogs](https://www.ibm.com/cloud/blog)
     {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
@@ -40,7 +39,6 @@ Security Advisor
         setup-network.md
     
     notifications.md
-    ha-dr.md
 
     {: topicgroup}
     Enhancing security
@@ -55,8 +53,13 @@ Security Advisor
         [Findings API](https://cloud.ibm.com/apidocs/security-advisor/findings)
         [Notifications API](https://cloud.ibm.com/apidocs/security-advisor/notifications)
     
-    [Service dashboard](https://cloud.ibm.com/security-advisor/#/dashboard)
+    {: .topicgroup}
+    Available insights
+        available-rules.md
+        available-ni-findings.md
+
     [Grafeas spec](https://grafeas.io/)
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
