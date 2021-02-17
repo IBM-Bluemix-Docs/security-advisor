@@ -53,7 +53,8 @@ Network Insights monitor and analyze your VPC flow logs and identify Virtual Ser
 ## Suspicious Outbound Traffic
 {: #suspicious-outbound-traffic}
 
-#### Outbound approaches to suspicious servers
+### Outbound approaches to suspicious servers
+{: #outbound-approaches}
 
 | Finding Type     |  Description     |
 |:-----------------|:-----------------|
@@ -67,7 +68,8 @@ Network Insights monitor and analyze your VPC flow logs and identify Virtual Ser
 | `xforce-server_response_multiple_flows` | Client performs multiple interactions with network destinations that have bad reputation. One of the clients in your asset repeatedly interacting with a suspicious services. |
 {: caption="Table 1. Finding Types that are referred in the Suspicious Outbound Traffic" caption-side="bottom"}
 
-#### Abnormally large payloads exchanged with suspicious servers
+### Abnormally large payloads exchanged with suspicious servers
+{: #abnormal-payloads}
 
 | Finding Type     |  Description     |
 |:-----------------|:-----------------|
@@ -81,7 +83,8 @@ Network Insights monitor and analyze your VPC flow logs and identify Virtual Ser
 ## Suspicious Inbound Traffic
 {: #suspicious-inbound-traffic}
 
-#### Reconnaissance by suspicious clients
+### Reconnaissance by suspicious clients
+{: #reconnaissance-client}
 
 | Finding Type     |  Description     |
 |:-----------------|:-----------------|
@@ -94,7 +97,8 @@ Network Insights monitor and analyze your VPC flow logs and identify Virtual Ser
 | `xforce-client_response` | Your asset was observed interacting with a suspicious client (two-way communication observed). |
 {: caption="Table 2. Finding Types that are referred in the Suspicious Inbound Traffic" caption-side="bottom"}
 
-#### Abnormally large payloads sent by suspicious clients
+### Abnormally large payloads sent by suspicious clients
+{: #abnormal-payload-suspicious-client}
 
 | Finding Type     |  Description     |
 |:-----------------|:-----------------|
