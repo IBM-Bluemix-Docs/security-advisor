@@ -116,10 +116,10 @@ IBM Cloud Shell is a cloud-based shell workspace that you can access through you
 {: caption="Table 5. Rules that are available in the Cloud Shell rule package" caption-side="bottom"}
 
 
-## Generation 1 Infrastructure
+## Classic Infrastructure
 {: #infra-gen1}
 
-Gen 1 Infrastructure is a type of cloud computing that allows you to allocate your resources on demand. You can monitor [Virtual Servers](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) or [Bare Metal Servers](/docs/bare-metal?topic=bare-metal-getting-started) with Activity Insights.
+Classic Gen 1 Infrastructure is a type of cloud computing that allows you to allocate your resources on demand. You can monitor [Virtual Servers](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) or [Bare Metal Servers](/docs/bare-metal?topic=bare-metal-getting-started) with Activity Insights.
 
 
 | Rule          |  Finding Type     |  Description     |
