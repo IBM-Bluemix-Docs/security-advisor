@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-21"
+  years: 2017, 2021
+lastupdated: "2021-02-25"
 
 keywords: getting started tutorial, getting started, security advisor, centralized security, security management, alerts, security risk, insights, threat detection, security advisor
 
@@ -44,8 +44,9 @@ completion-time: 10m
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
-
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 {:step: data-tutorial-type='step'}
 
 # Getting started with {{site.data.keyword.security-advisor_short}}

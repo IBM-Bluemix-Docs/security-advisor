@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-02-24"
+lastupdated: "2021-02-25"
 
 keywords: available insights rules, Activity Insights, Network Insights, iks, key protect, kms, rules, app id, iam, cos, certificates, bucket, object storage,  
 
@@ -40,7 +40,9 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 # Available rule packages
 {: #insights-rules}
