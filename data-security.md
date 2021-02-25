@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-17"
+lastupdated: "2021-02-25"
 
 keywords: data encryption in {{site.data.keyword.security-advisor_short}}, data storage for {{site.data.keyword.security-advisor_short}}, personal data in {{site.data.keyword.security-advisor_short}}, data deletion for {{site.data.keyword.security-advisor_short}}, data in {{site.data.keyword.security-advisor_short}}, data security in {{site.data.keyword.security-advisor_short}}
 
@@ -40,7 +40,9 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 
 # Securing your data in {{site.data.keyword.security-advisor_short}}

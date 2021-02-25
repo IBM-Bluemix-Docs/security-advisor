@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-13"
+lastupdated: "2021-02-25"
 keywords: 
 subcollection: security-advisor
 ---
@@ -36,7 +36,9 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 
 # What is Security Insights?

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-10-26"
+  years: 2017, 2021
+lastupdated: "2021-02-25"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -40,7 +40,9 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 # Configuring alerts
 {: #notifications}
@@ -56,96 +58,53 @@ To trigger alerts for Vulnerability Advisor, you must refresh the Security Advis
 ## Before you begin
 {: #alerts-before}
 
-Before you get started with alerts, you must have the following prerequisites:
-
-* The [Manager IAM role](/docs/security-advisor?topic=security-advisor-service-access).
-* A configured webhook. If you don't have one already, try using [Cloud Functions](/docs/openwhisk?topic=openwhisk-getting-started).
-
-## Configuring a notification method
-{: #notification-method}
-
-You can use a callback URL to post alerts to the tools that you use. For example, you can send alerts to report to PagerDuty or automatically open an issue in GitHub.
-
-**Note:** Your callback URL endpoint must:
-* use the HTTPS protocol.
-* not require HTTP headers. This requirement includes authorization headers.
-* return a `200 OK` status code to indicate a successful notification delivery.
+Before you begin, be sure that you are assigned [a manager IAM policy](/docs/account?topic=account-assign-access-resources). You must also have a webhook that is ready to use. If you don't have one already, try using [Cloud Functions](/docs/openwhisk?topic=openwhisk-getting-started) to create one.
 
 
-## Creating a notification channel
-{: #channel-create}
+## Creating an alert channel with the GUI
+{: #channel-create-gui}
+{: ui}
 
-To start receiving alerts immediately, you can configure a notification channel by using either the dashboard or the API.
+To start receiving alerts for findings, you can configure an alert channel by using the GUI.
 
 You can create up to 15 channels.
 {: note}
 
-### With the GUI
-{: #channel-create-gui}
+1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) **> Security and compliance** to access the {{site.data.keyword.compliance_short}}.
+2. In the navigation, click **Alerts**.
+3. Click **Create**.
+4. Provide a name and meaningful description for your channel.
+5. Select the severity of the notifications that you want to be alerted for. 
+6. Optional: Select the source of the findings that you want to receive alerts for.
 
-1. Go to the **alerts channels** tab of the Security Advisor dashboard.
-2. Click **Add notification channel**.
-3. Using the following table as a guide, provide the following information.
-  
- <table>
-    <caption>Table 1. Configuring alerts with the GUI</caption>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>Name</td>
-      <td>The name of the channel.</td>
-    </tr>
-    <tr>
-      <td>Description</td>
-      <td>Describe what the channel is used for. For example: <i>This channel sends high severity alerts as they happen.</i></td>
-    </tr>
-    <tr>
-      <td>Type</td>
-      <td>Current options include <code>Webhook</code>.</td>
-    </tr>
-    <tr>
-      <td>Channel endpoint</td>
-      <td>The location where you want to be notified. Options include a valid callback URL.</td>
-    </tr>
-    <tr>
-      <td>Severity</td>
-      <td>The level of severity for the notification received. Options include: <code>low</code>, <code>medium</code>, <code>high</code> and <code>critical</code>. You must select at least one option when configuring your channel through the GUI.</td>
-    </tr>
-    <tr>
-      <td>Alert source</td>
-      <td>The source and type of finding that is received. Options include all alert source providers in your account and the set of finding types for each. You can select any or all of the sources and any or all of the finding types for a source. In addition to the custom alert source providers, six built-in providers are also available, which include vulnerable images (<code>VA</code>), Network Insights (<code>NA</code>), Activity Insights (<code>ATA</code>), Certificate Manager (<code>CERT</code>), and <code>ALL</code>. Each built-in provider has their list of finding types.</td>
-    </tr>
-  </table>
-  
+  Check the box next to all of the sources and finding types that you want the channel to forward findings for. You can choose between any of the built-in integrations, business partners that you have configured, or any custom security tools that you previously connected.
 
-4. Click **Save**. The channel is added to a list where you can track all of your channel configurations.
+7. Click **Next**.
+8. Enter the callback endpoint where you want to receive the alerts.
 
-5. Test the connection by clicking the overflow menu in the row for the channel that you created. Select **Test the connection**. A test notification is sent to your endpoint. A test channel connection request triggers an alert as shown in the following example:
+  Your callback URL endpoint must [1] Use the HTTPS protocol. [2] Not require HTTP headers - including authorization headers. [3] Return a `200 OK` status code to indicate that the alert is successfully delievered.
 
-     ```
-     {
-        issuer : "Security Advisor Notification test",
-        payload : {}
-     }
-     ``` 
-     {: screen}
-     
-     Be sure to exclude alerts that are sent by the **Security Advisor Notification test** issuer from your final webhook implementation.
-     {: note}
+9. Click **Create**. You channel is listed in the **Alerts** table. 
+10. Verify that your channel is configured correctly by selecting **Test connection** in the overflow menu. A test alert is sent to your endpoint. Be sure to remove any alerts that are sent by *Security Advisor Notification Test* after you've completed your testing.
 
-7. Optional: Update your configuration by clicking **Edit** in the overflow menu of the connection that you want to change.
+Next, [verify that the payload](#verify-payload) is sent directly from the {{site.data.keyword.compliance_short}}.
 
 
-### With the API
+
+## Creating an alert channel with the API
 {: #channel-create-api}
+{: api}
+
+To start receiving alerts for findings, you can configure an alert channel by using the GUI.
+
+You can create up to 15 channels.
+{: note}
 
 1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/account?topic=account-access-getstarted).
 
-  1. In the IBM Cloud dashboard, click **Manage > Access (IAM)**.
-  2. Select **IBM Cloud API keys**.
-  3. Click **Create an IBM Cloud API key**
+  1. In the {{site.data.keyword.cloud_notm}} dashboard, click **Manage > Access (IAM)**.
+  2. Select **{{site.data.keyword.cloud_notm}} API keys**.
+  3. Click **Create an {{site.data.keyword.cloud_notm}} API key**
   4. Give your key a name and describe it. Click **Create**. A screen opens with your key.
   5. Click **Copy** or **Download** your key. When you close the screen, you can no longer access the key.
   6. Make the following cURL request with the API key that you created.
@@ -285,7 +244,7 @@ Example payload:
    "findings":[
       {
          "severity":"LOW",
-         "issuer":"IBM Cloud Security Advisor",
+         "issuer":"{{site.data.keyword.cloud_notm}} Security Advisor",
          "issuer-url":"https://cloud.ibm.com/security-advisor#/findings?id=291266ca760e037c079edd4523242386/providers/test-provider/occurrences/ce90dc1-1-1-7",
          "id":"291266ca760e037c079edd4523242386/providers/test-provider/occurrences/ce90dc1-1-1-7",
          "payload-type":"findings",
@@ -337,7 +296,7 @@ Example payload:
             "provider_name":"291266ca760e037c079edd4523242386/providers/test-provider",
             "reported_by":{
                "id":"certificate-manager",
-               "title":"IBM Cloud Certificate Manager",
+               "title":"{{site.data.keyword.cloud_notm}} Certificate Manager",
                "url":"https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-gettingstarted#gettingstarted"
             },
             "short_description":"Certificate expiring in 90 days",
@@ -356,6 +315,7 @@ In the previous example, `payload-link` refers to the Security Advisor findings 
 
 ### Obtaining the public key with the GUI
 {: #payload-gui}
+{: ui}
 
 You can obtain the payload by using the GUI.
 {: shortdesc}
@@ -365,15 +325,16 @@ You can obtain the payload by using the GUI.
 
 ### Obtaining the public key with the API
 {: #payload-api}
+{: api}
 
 You can obtain the payload by using the API.
 {: shortdesc}
 
 1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/account?topic=account-access-getstarted).
 
-  1. In the IBM Cloud dashboard, click **Manage > Access (IAM)**.
-  2. Select **IBM Cloud API keys**.
-  3. Click **Create an IBM Cloud API key**
+  1. In the {{site.data.keyword.cloud_notm}} dashboard, click **Manage > Access (IAM)**.
+  2. Select **{{site.data.keyword.cloud_notm}} API keys**.
+  3. Click **Create an {{site.data.keyword.cloud_notm}} API key**
   4. Give your key a name and describe it. Click **Create**. A screen opens with your key.
   5. Click **Copy** or **Download** your key. When you close the screen, you can no longer access the key.
   6. Make the following cURL request with the API key that you created.
@@ -413,40 +374,43 @@ try {
 {: codeblock}
 
 
-## Deleting a notification channel
-{: #channel-delete}
 
-You can delete a channel if you no longer need to monitor the information that is sent as an alert.
+
+## Deleting a channel with the GUI
+{: #channel-delete-gui}
+{: ui}
+
+You can delete a channel or group of channels if you no longer need to monitor the information that is sent as an alert.
 
 Want to take a break from receiving alerts but don't want to delete your configuration? No problem, disable your channel configuration instead. Then, when you're ready to use the configuration again, you can flip the switch to enabled and you're ready to go!
 {: tip}
 
+1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) **> Security and compliance** to access the {{site.data.keyword.compliance_short}}.
+2. In the navigation, click **Alerts**.
+3. Delete the channel or channels.
 
-### With the GUI
-{: #channel-delete-gui}
+  If you want to delete a single channel, open the overflow menu in the row of the channel that you want to delte.
 
-You can delete a single notification or bulk delete a group of alerts that you select.
+  If you want to delete multiple channels at once, check the boxes for the channels that you want to remove.
 
-
-1. Navigate to the **alerts channels** tab of the Security Advisor dashboard.
-
-2. Click the overflow menu in the row of the channel that you want to delete. Or, if you're deleting multiple channels at once, check the boxes for the channels that you would like to remove.
-
-3. Select **Delete**.
+4. Click **Delete**.
+5. Confirm that you want to delete the channel by clicking **Delete** again.
 
 
-
-
-### With the API
+## Deleting a channel with the API
 {: #channel-delete-api}
+{: api}
 
-You can delete your channel configurations from the 
+You can delete a channel or group of channels if you no longer need to monitor the information that is sent as an alert.
+
+Want to take a break from receiving alerts but don't want to delete your configuration? No problem, disable your channel configuration instead. Then, when you're ready to use the configuration again, you can flip the switch to enabled and you're ready to go!
+{: tip}
 
 1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/account?topic=account-access-getstarted).
 
-  1. In the IBM Cloud dashboard, click **Manage > Access (IAM)**.
-  2. Select **IBM Cloud API keys**.
-  3. Click **Create an IBM Cloud API key**
+  1. In the {{site.data.keyword.cloud_notm}} dashboard, click **Manage > Access (IAM)**.
+  2. Select **{{site.data.keyword.cloud_notm}} API keys**.
+  3. Click **Create an {{site.data.keyword.cloud_notm}} API key**
   4. Give your key a name and describe it. Click **Create**. A screen opens with your key.
   5. Click **Copy** or **Download** your key. When you close the screen, you can no longer access the key.
   6. Make the following cURL request with the API key that you created.

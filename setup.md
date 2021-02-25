@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2020
-lastupdated: "2020-09-21"
+  years: 2014, 2021
+lastupdated: "2021-02-25"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -39,8 +39,9 @@ subcollection: security-advisor
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
-
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 # Taking advantage of pre-integrated services
 {: #setup-services}
