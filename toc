@@ -33,8 +33,6 @@ Security Advisor
     {: .topicgroup}
     Gaining insight
         what-are-insights.md
-        available-rules.md
-        available-ni-findings.md
         setup-activity.md
         setup-network.md
     
