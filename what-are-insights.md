@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-10"
 keywords: 
 subcollection: security-advisor
 ---
@@ -51,15 +51,13 @@ With {{site.data.keyword.security-advisor_long}}, you can take advantage of buil
 ## What insights are available?
 {: #available-insights}
 
-
 You have the option to enable network or Activity Insights. Check out the following table to learn more.
 
 | Feature          | Description | 
 |------------------|-------------|
-| Activity insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. |
+| Activity Insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. |
 | Network Insights | By monitoring and analyzing your VPC flow logs, you can identify Virtual Server Instances that might be compromised or attempts to compromise your VSIs. |
 {: caption="Table 1. Available insights features" caption-side="top"}
-
 
 
 ## What classifies as suspicious activity?

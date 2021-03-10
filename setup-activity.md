@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -79,7 +79,7 @@ Before you can analyze your user and application activity, Security Advisor must
 
 You can choose to use an existing bucket that you already have created in Cloud Object Storage. Or, you can choose to create a bucket through the Security Advisor UI. When you choose to create a bucket through Security Advisor, the naming convention `BucketName_UUID.Region` is used. So, for example, your bucket name might be similar to `sa.telemetric.12ab45.us-south`. If you want to provide your own name, you can create a bucket through Cloud Object Storage by choosing the existing bucket option.
 
-1. In the IBM Cloud console, navigate to [Security and compliance > Integrations > Data settings](https://{DomainName}/security-advisor#/integrations).
+1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Integrations > Data settings](https://{DomainName}/security-advisor#/integrations).
 2. Click **Connect bucket**.
 
   Only one bucket can be used with Activity Insights at a time.

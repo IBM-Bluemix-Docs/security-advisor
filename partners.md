@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-10"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -64,7 +64,7 @@ Before you start integrating business partners, be sure that you have the follow
 
 * Ensure that you have an account with the business partner that you want to integrate.
 * Ensure that you have the required permissions to generate the integration URL for the business partner service.
-* Ensure that you have IAM administrator access to {{site.data.keyword.security-advisor_short}}.
+* Ensure that you have IAM administrator access to {{site.data.keyword.security-advisor_short_notm}}.
 
 
 ## Integration wizard
@@ -74,17 +74,17 @@ As an administrator with the needed permissions in both the {{site.data.keyword.
 
 * Establish trust and associate your {{site.data.keyword.cloud_notm}} and business partner accounts
 * Copy the required information such as credentials and URLs between the accounts
-* Install the business partner's finding metadata into {{site.data.keyword.security-advisor_short}}
-* Validate the pairing by posting a finding from the business partner into {{site.data.keyword.security-advisor_short}}
+* Install the business partner's finding metadata into {{site.data.keyword.security-advisor_short_notm}}
+* Validate the pairing by posting a finding from the business partner into {{site.data.keyword.security-advisor_short_notm}}
 
 
 
 ## Configuring NeuVector
 {: #configure-neuvector}
 
-1. In the {{site.data.keyword.security-advisor_short}} dashboard, navigate to **Integrations > Partner Integrations** and select **NeuVector** from the options provided.
+1. In the {{site.data.keyword.security-advisor_short_notm}} dashboard, navigate to **Integrations > Partner Integrations** and select **NeuVector** from the options provided.
 
-2. Click **Yes, connect my account to {{site.data.keyword.security-advisor_short}}**.
+2. Click **Yes, connect my account to {{site.data.keyword.security-advisor_short_notm}}**.
 
   If you don't already have an account, click **No, help me create an account > Create an account**. Fill out your information and wait for the NeuVector sales team to contact you to get started.
   {: note}
@@ -95,7 +95,7 @@ As an administrator with the needed permissions in both the {{site.data.keyword.
 
 5. [Get a setup URL](https://docs.neuvector.com/integration/ibmsa){: external} from NeuVector.
 
-6. In the {{site.data.keyword.security-advisor_short}} dashboard, paste the URL in the **Enter the NeuVector setup URL** box.
+6. In the {{site.data.keyword.security-advisor_short_notm}} dashboard, paste the URL in the **Enter the NeuVector setup URL** box.
 
 7. Click **Connect Partner > Next**.
 
@@ -105,7 +105,7 @@ As an administrator with the needed permissions in both the {{site.data.keyword.
 ## Verifying the connection
 {: #neuvector-verify}
 
-1. In the {{site.data.keyword.security-advisor_short}} dashboard, check whether the NeuVector card displays as expected.
+1. In the {{site.data.keyword.security-advisor_short_notm}} dashboard, check whether the NeuVector card displays as expected.
 
 2. Log in to NeuVector and [verify the connection](https://docs.neuvector.com/integration/ibmsa){: external}.
 
