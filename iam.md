@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -44,13 +44,13 @@ subcollection: security-advisor
 {:cli: .ph data-hd-interface='cli'}
 {:api: .ph data-hd-interface='api'}
 
-# Managing access for {{site.data.keyword.security-advisor_short_notm}}
+# Managing access for {{site.data.keyword.security-advisor_short}}
 {: #service-access}
 
-As an account owner, you can manage access to instances of {{site.data.keyword.security-advisor_long}}, by using {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). By setting policies within your account that create different levels of access for different users, you can ensure that each instance of {{site.data.keyword.security-advisor_short_notm}} is secure.
+As an account owner, you can manage access to {{site.data.keyword.security-advisor_full}}, by using {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). By setting policies within your account that create different levels of access for different users, you can ensure that each instance of {{site.data.keyword.security-advisor_short}} is secure.
 {: shortdesc}
 
 
-To see the roles that are required to work with the {{site.data.keyword.security-advisor_short_notm}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at-events). Note that {{site.data.keyword.security-advisor_short_notm}} is now known as Security Insights.
+To see the roles that are required to work with the {{site.data.keyword.security-advisor_short}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at-events). Note that {{site.data.keyword.security-advisor_short}} is now known as Security Insights.
 {: important}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -57,16 +57,16 @@ With {{site.data.keyword.security-advisor_long}}, you can continuously analyze y
 Before you get started with Network Insights, be sure that you have the following prerequisites.
 
 * [An instance of VPC](https://{DomainName}/vpc-ext/provision/vpc)
-* An {{site.data.keyword.cloud_notm}} account with *editor* permissions for {{site.data.keyword.security-advisor_short_notm}} and VPC
+* An {{site.data.keyword.cloud_notm}} account with *editor* permissions for {{site.data.keyword.security-advisor_short}} and VPC
 
 
 
 ## Connecting to Cloud Object Storage
 {: #network-store-data}
 
-Before you can analyze your network communication, {{site.data.keyword.security-advisor_short_notm}} must have access to your network flow logs that are stored in Cloud Object Storage. To create the connection between the services, you must store the logs in a Cloud Object Storage bucket and then grant the service access to the bucket. 
+Before you can analyze your network communication, {{site.data.keyword.security-advisor_short}} must have access to your network flow logs that are stored in Cloud Object Storage. To create the connection between the services, you must store the logs in a Cloud Object Storage bucket and then grant the service access to the bucket. 
 
-You can choose to use an existing bucket that you already have created in Cloud Object Storage. Or, you can choose to create a bucket through the {{site.data.keyword.security-advisor_short_notm}} UI. When you choose to create a bucket through {{site.data.keyword.security-advisor_short_notm}}, the naming convention `BucketName_UUID.Region` is used. So, for example, your bucket name might be similar to `sa.telemetric.12ab45.us-south`. If you want to provide your own name, you can create a bucket through Cloud Object Storage by choosing the existing bucket option.
+You can choose to use an existing bucket that you already have created in Cloud Object Storage. Or, you can choose to create a bucket through the {{site.data.keyword.security-advisor_short}} UI. When you choose to create a bucket through {{site.data.keyword.security-advisor_short}}, the naming convention `BucketName_UUID.Region` is used. So, for example, your bucket name might be similar to `sa.telemetric.12ab45.us-south`. If you want to provide your own name, you can create a bucket through Cloud Object Storage by choosing the existing bucket option.
 
 1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Integrations > Data Settings](https://{DomainName}/security-advisor#/integrations).
 2. Click **Connect bucket**.
@@ -79,7 +79,7 @@ You can choose to use an existing bucket that you already have created in Cloud 
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
 
-  If you create a new instance of Cloud Object Storage in addition to a new bucket, a service-to-service authorization policy between {{site.data.keyword.security-advisor_short_notm}} and Cloud Object Storage is created on your behalf. If you create a bucket within an instance of Cloud Object Storage that you already have provisioned, you must create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between the two services before an analysis can be complete.   
+  If you create a new instance of Cloud Object Storage in addition to a new bucket, a service-to-service authorization policy between {{site.data.keyword.security-advisor_short}} and Cloud Object Storage is created on your behalf. If you create a bucket within an instance of Cloud Object Storage that you already have provisioned, you must create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between the two services before an analysis can be complete.   
   {: note}
 
   If you selected use an existing bucket:
@@ -88,7 +88,7 @@ You can choose to use an existing bucket that you already have created in Cloud 
     2. Select **Network Insights**.
     3. Optionally, provide a description.
     4. Click **Connect bucket**.
-    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between Cloud Object Storage and {{site.data.keyword.security-advisor_short_notm}}.
+    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between Cloud Object Storage and {{site.data.keyword.security-advisor_short}}.
 
 
 
@@ -97,7 +97,7 @@ You can choose to use an existing bucket that you already have created in Cloud 
 
 Before it can be analyzed, you must collect your data. To do so, you can create a flow log that collects your network interface logs and funnels them into a Cloud Object Storage bucket.
 
-You must have a service-to-service authorization policy between VPC and the same Cloud Object Storage bucket that you connected to {{site.data.keyword.security-advisor_short_notm}} in order to ensure that the data can be analyzed.
+You must have a service-to-service authorization policy between VPC and the same Cloud Object Storage bucket that you connected to {{site.data.keyword.security-advisor_short}} in order to ensure that the data can be analyzed.
 {: note}
 
 1. In the {{site.data.keyword.cloud_notm}} console, navigate to **VPC Infrastructure > Flow logs**.
@@ -107,7 +107,7 @@ You must have a service-to-service authorization policy between VPC and the same
 5. Optionally, add tags.
 6. Select **Interface** for **Attach flow log connector to**.
 7. Select your VPC, virtual server instance, and network interface.
-8. Select the instance of Cloud Object Storage and the bucket that you connected to {{site.data.keyword.security-advisor_short_notm}}.
+8. Select the instance of Cloud Object Storage and the bucket that you connected to {{site.data.keyword.security-advisor_short}}.
 9. Click **Create flow log**.
 
 

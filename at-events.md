@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, risk, insights, threat detection
 
@@ -51,6 +51,6 @@ You can view, manage, and audit user-initiated activities made in your {{site.da
 {: shortdesc}
 
 
-To see the events that are forwarded to Activity Tracker with LogDNA by the {{site.data.keyword.security-advisor_short_notm}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at-events). Note that {{site.data.keyword.security-advisor_short_notm}} is now known as Security Insights.
+To see the events that are forwarded to Activity Tracker with LogDNA by the {{site.data.keyword.security-advisor_short}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at-events). Note that {{site.data.keyword.security-advisor_short}} is now known as Security Insights.
 {: important}
 

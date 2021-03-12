@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -48,7 +48,7 @@ subcollection: security-advisor
 # Enabling Activity Insights
 {: #setup-activity}
 
-With {{site.data.keyword.security-advisor_long}}, you can continuously analyze your activity logs with predefined rule packages that can help you to identify unauthorized or suspicious behavior in your IBM Cloud resources or applications. The predefined rule packages are based on security monitoring best practices for specific IBM Cloud services.
+With {{site.data.keyword.security-advisor_full}}, you can continuously analyze your activity logs with predefined rule packages that can help you to identify unauthorized or suspicious behavior in your IBM Cloud resources or applications. The predefined rule packages are based on security monitoring best practices for specific IBM Cloud services.
 {: shortdesc}
 
 Activity Insights is available for Kubernetes Services clusters on classic infrastructure only.

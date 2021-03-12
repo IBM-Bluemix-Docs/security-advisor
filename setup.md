@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -46,24 +46,24 @@ subcollection: security-advisor
 # Leveraging default services
 {: #setup-services}
 
-{{site.data.keyword.security-advisor_short_notm}} comes with several pre-populated cards that can help you to monitor for security risks and threats.
+{{site.data.keyword.security-advisor_short}} comes with several pre-populated cards that can help you to monitor for security risks and threats.
 {: shortdesc}
 
-The following services {{site.data.keyword.security-advisor_short_notm}} automatically creates a card for:
+The following services {{site.data.keyword.security-advisor_short}} automatically creates a card for:
 
-* {{site.data.keyword.registrylong_notm}}
-* {{site.data.keyword.cloudcerts_long_notm}}
+* {{site.data.keyword.registryshort}}
+* {{site.data.keyword.cloudcerts_short}}
 
-Although you do not have to do anything to create the connection between {{site.data.keyword.security-advisor_short_notm}} and the services, you must have instances of the services configured with information.
+Although you do not have to do anything to create the connection between {{site.data.keyword.security-advisor_short}} and the services, you must have instances of the services configured with information.
 
 
 ## Monitoring vulnerabilities in container images
 {: #setup-images}
 
-With {{site.data.keyword.registryshort_notm}}, you have access to Vulnerability Advisor, which continuously scans the images in your {{site.data.keyword.registryshort_notm}} instance for potential security issues. If issues are found, you are alerted and can view a comprehensive report in your {{site.data.keyword.security-advisor_short_notm}} dashboard.
+With {{site.data.keyword.registryshort}}, you have access to Vulnerability Advisor, which continuously scans the images in your {{site.data.keyword.registryshort_notm}} instance for potential security issues. If issues are found, you are alerted and can view a comprehensive report in your {{site.data.keyword.security-advisor_short}} dashboard.
 {:shortdesc}
 
-Learn more about [{{site.data.keyword.registryshort_notm}}](/docs/Registry?topic=Registry-getting-started).
+Learn more about [{{site.data.keyword.registryshort}}](/docs/Registry?topic=Registry-getting-started).
 
 
 ### Before you begin
@@ -124,14 +124,14 @@ After you push images to your {{site.data.keyword.registryshort_notm}} namespace
 ## Monitoring certificates
 {: #setup-certificates}
 
-Did you know that {{site.data.keyword.cloudcerts_long_notm}} can help to monitor and manage your SSL/TLS certificates? By integrating {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.security-advisor_short_notm}}, you can get alerts in advance about your certificates expiry which can help prevent a service or application outage.
+By integrating {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.security-advisor_short}}, you can get alerts in advance about your certificates expiry which can help prevent a service or application outage.
 {:shortdesc}
 
-Depending on the expiration data of the certificate that you upload to {{site.data.keyword.cloudcerts_short}}, the findings appear in the {{site.data.keyword.security-advisor_short_notm}} dashboard 90, 60, 10, and 1 day before the certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start the day after your certificate expires.
+Depending on the expiration data of the certificate that you upload to {{site.data.keyword.cloudcerts_short}}, the findings appear in the {{site.data.keyword.security-advisor_short}} dashboard 90, 60, 10, and 1 day before the certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start the day after your certificate expires.
 
-To trigger a manual update, you might try uploading a certificate that expires in a day to your {{site.data.keyword.cloudcerts_short}} instance. When the import is successful, you can see that the Key Performance Indicator (KPI) and findings are visible in the {{site.data.keyword.security-advisor_short_notm}} dashboard.
+To trigger a manual update, you might try uploading a certificate that expires in a day to your {{site.data.keyword.cloudcerts_short}} instance. When the import is successful, you can see that the Key Performance Indicator (KPI) and findings are visible in the {{site.data.keyword.security-advisor_short}} dashboard.
 
-You can learn more about [{{site.data.keyword.cloudcerts_long_notm}}](/docs/certificate-manager?topic=certificate-manager-getting-started) by reading the docs.
+You can learn more about [{{site.data.keyword.cloudcerts_short}}](/docs/certificate-manager?topic=certificate-manager-getting-started) by reading the docs.
 {: tip}
 
 ### Creating a certificate
@@ -153,7 +153,7 @@ openssl req -x509 -newkey rsa:2048 -keyout key.pem -subj "/CN=myservice.com" -ou
 3. Click **Create**.
 4. To import your organization's certificates into {{site.data.keyword.cloudcerts_short}}, click **Import Certificate**.
 
-Now that your certificates are imported, information such as expiration times and expired certificates, is shown on the **Certificates** card in the {{site.data.keyword.security-advisor_short_notm}} dashboard. By clicking the card, you can get more specific information about the certificates, such as which service instance that the certificates belong to. You can also see any steps that you can take to fix the security vulnerabilities.
+Now that your certificates are imported, information such as expiration times and expired certificates, is shown on the **Certificates** card in the {{site.data.keyword.security-advisor_short}} dashboard. By clicking the card, you can get more specific information about the certificates, such as which service instance that the certificates belong to. You can also see any steps that you can take to fix the security vulnerabilities.
 
 To stop the notifications, you must renew your certificate, upload the certificate to {{site.data.keyword.cloudcerts_short}}, and delete the expired certificate.
 {: tip}

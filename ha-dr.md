@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-12"
 
-keywords: HA for {{site.data.keyword.security-advisor_short_notm}}, DR for {{site.data.keyword.security-advisor_short_notm}}, high availability for {{site.data.keyword.security-advisor_short_notm}}, disaster recovery for {{site.data.keyword.security-advisor_short_notm}}, failover for {{site.data.keyword.security-advisor_short_notm}}
+keywords: HA for {{site.data.keyword.security-advisor_short}}, DR for {{site.data.keyword.security-advisor_short}}, high availability for {{site.data.keyword.security-advisor_short}}, disaster recovery for {{site.data.keyword.security-advisor_short}}, failover for {{site.data.keyword.security-advisor_short}}
 
 subcollection: appid
 
@@ -44,14 +44,14 @@ subcollection: appid
 {:cli: .ph data-hd-interface='cli'}
 {:api: .ph data-hd-interface='api'}
 
-# Understanding high availability and disaster recovery for {{site.data.keyword.security-advisor_short_notm}}
+# Understanding high availability and disaster recovery for {{site.data.keyword.security-advisor_short}}
 {: #ha-dr}
 
-{{site.data.keyword.security-advisor_long}} is a highly available, regional service that runs in the Dallas (`us-south`) and London (`eu-gb`) regions.
+{{site.data.keyword.security-advisor_full}} is a highly available, regional service that runs in the Dallas (`us-south`) and London (`eu-gb`) regions.
 
 In each supported region, the service runs in several availability zones. The service supports manual cross-regional failover from `us-south` to `us-east` and from `eu-gb` to `eu-de`. A daily backup of data to Cloud Object Storage is done and the backup is kept for 7 days.
 
-If a regional disaster occurs, the available data is restored by {{site.data.keyword.security-advisor_short_notm}} without any action from you.
+If a regional disaster occurs, the available data is restored by {{site.data.keyword.security-advisor_short}} without any action from you.
 
 To learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime) or [Service Level Agreements](/docs/overview?topic=overview-slas).
 

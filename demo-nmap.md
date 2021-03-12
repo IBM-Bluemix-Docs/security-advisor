@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -53,7 +53,7 @@ completion-time: 30m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
 
-With {{site.data.keyword.security-advisor_long}}, you can integrate your existing custom security tools to see all of your security information in one location. By walking through this tutorial, you can learn about each of the steps that you must take to display your custom findings in the {{site.data.keyword.security-advisor_short_notm}} dashboard.
+With {{site.data.keyword.security-advisor_full}}, you can integrate your existing custom security tools to see all of your security information in one location. By walking through this tutorial, you can learn about each of the steps that you must take to display your custom findings in {{site.data.keyword.security-advisor_short}}.
 {: shortdesc}
 
 
@@ -84,7 +84,7 @@ Before you get started, be sure that you have the following prerequisites instal
 {: #nmap-install}
 {: step}
 
-To get started with {{site.data.keyword.security-advisor_short_notm}}, install the sample code.
+To get started with {{site.data.keyword.security-advisor_short}}, install the sample code.
 {: shortdesc}
 
 1. Clone the following repository to use Nmap as an example or clone the repository for your own third-party tool or service. 

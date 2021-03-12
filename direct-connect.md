@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -48,16 +48,16 @@ subcollection: security-advisor
 # Bookmarks
 {: #direct-connections}
 
-With the Security and Compliance Center, you can manage all of your security tools in one location. Even if you choose not to fully integrate your other tools, you can always create a bookmark so that you and your team are able to quickly and easily access all of your security information.
+With the {{site.data.keyword.compliance_short}}, you can manage all of your security tools in one location. Even if you choose not to fully integrate your other tools, you can always create a bookmark so that you and your team are able to quickly and easily access all of your security information.
 {: shortdesc}
 
-The Security and Compliance Center does not persist any credentials that are related to your bookmark.
+The {{site.data.keyword.compliance_short}} does not persist any credentials that are related to your bookmark.
 {: note}
 
 ## Adding bookmarks
 {: #add-bookmark}
 
-You can use the Security and Compliance Center UI to bookmark links that your team might need.
+You can use the {{site.data.keyword.compliance_short}} UI to bookmark links that your team might need.
 
 1. In the IBM Cloud console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) **> Security and Compliance**.
 2. In the **Gain insight** section, click **Configure > Bookmarks**.
@@ -71,7 +71,7 @@ You can use the Security and Compliance Center UI to bookmark links that your te
 ## Editing bookmarks
 {: #edit-bookmark}
 
-If something has changed in your security tool and you need to edit your bookmark, you can use the Security and Compliance Center UI.
+If something has changed in your security tool and you need to edit your bookmark, you can use the {{site.data.keyword.compliance_short}} UI.
 
 1. In the IBM Cloud console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) **> Security and Compliance**.
 2. In the **Gain insight** section, click **Configure > Bookmarks**.
@@ -83,7 +83,7 @@ If something has changed in your security tool and you need to edit your bookmar
 ## Deleting bookmarks
 {: #delete-bookmark}
 
-If you no longer have a need to link to the security tool that you have bookmarked, you can remove the link from the Security and Compliance Center.
+If you no longer have a need to link to the security tool that you have bookmarked, you can remove the link from the {{site.data.keyword.compliance_short}}.
 
 1. In the IBM Cloud console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) **> Security and Compliance**.
 2. In the **Gain insight** section, click **Configure > Bookmarks**.

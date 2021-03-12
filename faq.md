@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -47,7 +47,7 @@ subcollection: security-advisor
 # Frequently asked questions (FAQ)
 {: #faq}
 
-This FAQ provides answers to common questions about the {{site.data.keyword.security-advisor_long}} service.
+This FAQ provides answers to common questions about the {{site.data.keyword.security-advisor_full}} service.
 {: shortdesc}
 
 
