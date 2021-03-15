@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-03-15"
 
 keywords: data encryption in {{site.data.keyword.security-advisor_short}}, data storage for {{site.data.keyword.security-advisor_short}}, personal data in {{site.data.keyword.security-advisor_short}}, data deletion for {{site.data.keyword.security-advisor_short}}, data in {{site.data.keyword.security-advisor_short}}, data security in {{site.data.keyword.security-advisor_short}}
 
@@ -52,6 +52,6 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 {: shortdesc}
 
 
-To see how data is managed by the {{site.data.keyword.security-advisor_short}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at-events). Note that {{site.data.keyword.security-advisor_short}} is now known as Security Insights.
+To see how data is managed by the {{site.data.keyword.security-advisor_short}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at_events). Note that {{site.data.keyword.security-advisor_short}} is now known as Security Insights.
 {: important}
 

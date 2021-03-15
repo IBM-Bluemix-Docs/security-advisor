@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-03-15"
 
 keywords: Centralized security, security management, alerts, security risk, risk, insights, threat detection
 
@@ -47,10 +47,10 @@ subcollection: security-advisor
 # Auditing events for {{site.data.keyword.security-advisor_short}}
 {: #at_events}
 
-You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_long}} service instance by using the {{site.data.keyword.at_short}} service. Keeping an eye on the actions performed by users in your account using {{site.data.keyword.security-advisor_short}} can help you keep track of and evaluate security risks in your account.
+You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.security-advisor_full}} service instance by using the {{site.data.keyword.at_short}} service. Keeping an eye on the actions performed by users in your account using {{site.data.keyword.security-advisor_short}} can help you keep track of and evaluate security risks in your account.
 {: shortdesc}
 
 
-To see the events that are forwarded to Activity Tracker with LogDNA by the {{site.data.keyword.security-advisor_short}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at-events). Note that {{site.data.keyword.security-advisor_short}} is now known as Security Insights.
+To see the events that are forwarded to Activity Tracker with LogDNA by the {{site.data.keyword.security-advisor_short}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at_events). Note that {{site.data.keyword.security-advisor_short}} is now known as Security Insights.
 {: important}
 

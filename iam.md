@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-03-15"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -51,6 +51,6 @@ As an account owner, you can manage access to {{site.data.keyword.security-advis
 {: shortdesc}
 
 
-To see the roles that are required to work with the {{site.data.keyword.security-advisor_short}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at-events). Note that {{site.data.keyword.security-advisor_short}} is now known as Security Insights.
+To see the roles that are required to work with the {{site.data.keyword.security-advisor_short}} service, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-at_events). Note that {{site.data.keyword.security-advisor_short}} is now known as Security Insights.
 {: important}
 
