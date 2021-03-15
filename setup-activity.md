@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-03-15"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -48,10 +48,10 @@ subcollection: security-advisor
 # Enabling Activity Insights
 {: #setup-activity}
 
-With {{site.data.keyword.security-advisor_full}}, you can continuously analyze your activity logs with predefined rule packages that can help you to identify unauthorized or suspicious behavior in your IBM Cloud resources or applications. The predefined rule packages are based on security monitoring best practices for specific IBM Cloud services.
+With {{site.data.keyword.security-advisor_full}}, you can continuously analyze your activity logs with predefined rule packages that can help you to identify unauthorized or suspicious behavior in your {{site.data.keyword.cloud_notm}} resources or applications. The predefined rule packages are based on security monitoring best practices for specific {{site.data.keyword.cloud_notm}} services.
 {: shortdesc}
 
-Activity Insights is available for Kubernetes Services clusters on classic infrastructure only.
+Activity Insights is available for {{site.data.keyword.containershort}} clusters on classic infrastructure only.
 {: important}
 
 
@@ -75,37 +75,15 @@ If you are working on Windows 10, activate [Windows Subsystem for Linux](https:/
 ## Connecting to Cloud Object Storage
 {: #activity-store-data}
 
-Before you can analyze your user and application activity, Security Advisor must have access to your activity flow logs that are stored in Cloud Object Storage. To create the connection between the services, you must store the logs in a Cloud Object Storage bucket and then grant the service access to the bucket.
+Before you can analyze your user and application activity, {{site.data.keyword.security-advisor_short}} must have access to your activity flow logs that are stored in Cloud Object Storage. To create the connection between the services, you must store the logs in a Cloud Object Storage bucket and then grant the service access to the bucket.
 
-You can choose to use an existing bucket that you already have created in Cloud Object Storage. Or, you can choose to create a bucket through the Security Advisor UI. When you choose to create a bucket through Security Advisor, the naming convention `BucketName_UUID.Region` is used. So, for example, your bucket name might be similar to `sa.telemetric.12ab45.us-south`. If you want to provide your own name, you can create a bucket through Cloud Object Storage by choosing the existing bucket option.
-
-1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Integrations > Data settings](https://{DomainName}/security-advisor#/integrations).
-2. Click **Connect bucket**.
-
-  Only one bucket can be used with Activity Insights at a time.
-  {: tip}
-
-3. Select whether to **Create a bucket** or to **Use an existing bucket**.
-
-  If you selected create a bucket:
-
-    1. Select a resource group and an instance of Cloud Object Storage.
-    2. Select **Activity Insights**.
-    3. Optionally, provide a description.
-    4. Click **Connect bucket**.
-
-  If you create a new instance of Cloud Object Storage in addition to a new bucket, a service-to-service authorization policy between Security Advisor and Cloud Object Storage is created on your behalf. If you create a bucket within an instance of Cloud Object Storage that you already have provisioned, you must create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between the two services before an analysis can be complete.    
-  {: note}
-
-  If you selected use an existing bucket:
-
-    1. Select a resource group, an instance of Cloud Object Storage, and a bucket.
-    2. Select **Activity Insights**.
-    3. Optionally, provide a description.
-    4. Click **Connect bucket**.
-    5. Create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between Cloud Object Storage and Security Advisor.
-
-
+1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Gain insight > Configure > Built-in Insights](https://{DomainName}/security-advisor#/integrations).
+2. Click **Connect**.
+3. Select a resource group, an instance of Cloud Object Storage, and a bucket.
+4. Optionally, provide a description.
+5. Click **Connect bucket**.
+6. Create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between Cloud Object Storage and {{site.data.keyword.security-advisor_short}}.
+ 
 
 ## Collecting activity flow logs
 {: #collect-activity-logs}
@@ -138,7 +116,7 @@ To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} acc
   {: codeblock}
 
   <table>
-    <caption>Table 1. IBM Cloud Endpoints by region</caption>
+    <caption>Table 1. {{site.data.keyword.cloud_notm}} Endpoints by region</caption>
     <tr>
       <th>Region</th>
       <th>Endpoint</th>
@@ -216,7 +194,7 @@ To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} acc
 
 Now that you've installed the collector agent and verified that your flow logs are being stored in your Cloud Object Storage bucket, you can enable Activity Insights to start analyzing them.
 
-1. In the IBM Cloud console, navigate to [Security and compliance > Integrations > Built-in insights](https://{DomainName}/security-advisor#/integrations).
+1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Integrations > Built-in insights](https://{DomainName}/security-advisor#/integrations).
 2. Toggle Activity Insights to **On**.
 
 As results come in, you can see any flagged issues on the **Insights** or **Detailed findings** pages of the UI.
