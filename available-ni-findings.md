@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-12"
 
-keywords: available network insights finding types, Network Insights,
+keywords: available Network Insights finding types, Network Insights,
 
 subcollection: security-advisor
 
@@ -44,7 +44,7 @@ subcollection: security-advisor
 {:cli: .ph data-hd-interface='cli'}
 {:api: .ph data-hd-interface='api'}
 
-# Available network insights finding types
+# Available Network Insights finding types
 {: #network-insights-finding-types}
 
 Network Insights monitor and analyze your VPC flow logs and identify Virtual Server Instances that might be compromised or attempts to compromise your VSI.

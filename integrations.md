@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -48,14 +48,14 @@ subcollection: security-advisor
 # Integrations
 {: #integrations}
 
-With {{site.data.keyword.security-advisor_long}}, you can integrate other built-in insights, partner solutions, or create your own custom integrations.
+With {{site.data.keyword.security-advisor_full}}, you can integrate other built-in insights, partner solutions, or create your own custom integrations.
 {: shortdesc}
 
 
 ## Pre-integrated findings
 {: #integrate-built-in}
 
-With {{site.data.keyword.security-advisor_long}}, you can gain insight into potential issues through built-in service capabilities.
+With {{site.data.keyword.security-advisor_short}}, you can gain insight into potential issues through built-in service capabilities.
 {: shortdesc}
 
 
@@ -66,7 +66,6 @@ Out of the box, {{site.data.keyword.security-advisor_short}} can integrate with:
 
 To learn more, check out [Taking advantage of pre-integrated services](/docs/security-advisor?topic=security-advisor-setup-services)!
 
-</br>
 
 ## Partner integrations
 {: #integrate-partner}
@@ -116,7 +115,7 @@ For help creating the connection with Caveonix, see [Integrating Caveonix](/docs
 You might already have a security tool that you depend on. You can integrate that tool with the {{site.data.keyword.security-advisor_short}} dashboard so that all of your security information is centralized in one place!
 {: shortdesc}
 
-### Creating a direct connection
+### Adding a bookmark
 {: #create-direct-connect}
 
 By using the {{site.data.keyword.security-advisor_short}} GUI, you can bookmark your internal and external security tools so that you have one point of access to everything from the {{site.data.keyword.security-advisor_short}} dashboard. For example, you could bookmark PagerDuty.
@@ -124,7 +123,7 @@ By using the {{site.data.keyword.security-advisor_short}} GUI, you can bookmark 
 ### Integrating your own tools with the API
 {: #integrate-tools-api}
 
-With the Findings API, you can integrate findings from your custom security tools into the {{site.data.keyword.security-advisor_short}} dashboard. This could be any custom or partner tool that generates a security alert or finding that also supports API-based interaction.
+With the findings API, you can integrate findings from your custom security tools into the {{site.data.keyword.security-advisor_short}} dashboard. This could be any custom or partner tool that generates a security alert or finding that also supports API-based interaction.
 
 ## Built-in Insights
 {: #integrate-insights}

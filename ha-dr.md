@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-15"
 
 keywords: HA for {{site.data.keyword.security-advisor_short}}, DR for {{site.data.keyword.security-advisor_short}}, high availability for {{site.data.keyword.security-advisor_short}}, disaster recovery for {{site.data.keyword.security-advisor_short}}, failover for {{site.data.keyword.security-advisor_short}}
 
-subcollection: appid
+subcollection: security-advisor
 
 ---
 
@@ -47,12 +47,10 @@ subcollection: appid
 # Understanding high availability and disaster recovery for {{site.data.keyword.security-advisor_short}}
 {: #ha-dr}
 
-{{site.data.keyword.security-advisor_short}} is a highly available, regional service that runs in the Dallas (`us-south`) and London (`eu-gb`) regions.
+{{site.data.keyword.security-advisor_full}} is a highly available, regional service that runs in the Dallas (`us-south`) and London (`eu-gb`) regions.
 
-In each supported region, the service runs in several availability zones. The service supports manual cross-regional failover from `us-south` to `us-east` and from `eu-gb` to `eu-de`. A daily backup of data to Cloud Object Storage is done and the backup is kept for 7 days.
+The {{site.data.keyword.security-advisor_short}} service is now part of the {{site.data.keyword.compliance_short}} and is known as Security Insights. For information about how {{site.data.keyword.security-advisor_short}} is highly available, see the [{{site.data.keyword.compliance_short}} documentation](/docs/security-compliance?topic=security-compliance-ha-dr).
+{: important}
 
-If a regional disaster occurs, the available data is restored by {{site.data.keyword.security-advisor_short}} without any action from you.
-
-To learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime) or [Service Level Agreements](/docs/overview?topic=overview-slas).
 
 

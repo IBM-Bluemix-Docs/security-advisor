@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-12"
 
 keywords: getting started tutorial, getting started, security advisor, centralized security, security management, alerts, security risk, insights, threat detection, security advisor
 
@@ -86,8 +86,3 @@ Ready to get started? You can get to the service dashboard by accessing the [{{s
 
 Now that you've seen the dashboard in action, [learn more about {{site.data.keyword.security-advisor_short}}](/docs/security-advisor?topic=security-advisor-about) or start [integrating custom findings](/docs/security-advisor?topic=security-advisor-setup_custom).
 
-
-## Availability
-{: #start-availability}
-
-Currently, you can take advantage of {{site.data.keyword.security-advisor_short}} in the Dallas (`us-south`) and London (`eu-gb`) regions.

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-12"
 keywords: 
 subcollection: security-advisor
 ---
@@ -51,15 +51,13 @@ With {{site.data.keyword.security-advisor_long}}, you can take advantage of buil
 ## What insights are available?
 {: #available-insights}
 
-
 You have the option to enable network or Activity Insights. Check out the following table to learn more.
 
 | Feature          | Description | 
 |------------------|-------------|
-| Activity insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. |
+| Activity Insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. |
 | Network Insights | By monitoring and analyzing your VPC flow logs, you can identify Virtual Server Instances that might be compromised or attempts to compromise your VSIs. |
-{: caption="Table 1. Available insights features" caption-side="top"}
-
+{: caption="Table 1. Available Insights features" caption-side="top"}
 
 
 ## What classifies as suspicious activity?
@@ -78,7 +76,7 @@ The behavioral patterns of peers that are used as scanners, for mining cryptocur
 ## What is an insights rule?
 {: #insights-rule-example}
 
-A rule is a combination of conditions and an event that is used to analyze your logs for potential security findings. A condition is the combination of a `fact`, `operator`, and `value` that is bound together by using `any` or `all` operators. When a rule is broken, it's considered an event. When the event is reported to Security Advisor, it is comprised of two fields: `type` and `params`.
+A rule is a combination of conditions and an event that is used to analyze your logs for potential security findings. A condition is the combination of a `fact`, `operator`, and `value` that is bound together by using `any` or `all` operators. When a rule is broken, it's considered an event. When the event is reported to {{site.data.keyword.security-advisor_short}}, it is comprised of two fields: `type` and `params`.
 
 Example rule:
 
@@ -107,14 +105,14 @@ Rule packages are available for the following services:
 * {{site.data.keyword.keymanagementservicelong_notm}}
 * {{site.data.keyword.cos_full_notm}}
 
-For more information about the rules in the predefined packages, see [Available insights rules](/docs/security-advisor?topic=security-advisor-insights-rules).
+For more information about the rules in the predefined packages, see [Available Insights rules](/docs/security-advisor?topic=security-advisor-insights-rules).
 
 
 
 ## What kind of data is analyzed?
 {: #collected-data}
 
-The data that is collected by VPC flow logs and {{site.data.keyword.at_short}} is stored in a Cloud Object Storage bucket in order for analysis to occur. You own and control the collected data, which means that you're responsible for storing, securing, and deleting it. For more information about the security of your collected data, see [Securing your data in Security Advisor](/docs/security-advisor?topic=security-advisor-mng-data).
+The data that is collected by VPC flow logs and {{site.data.keyword.at_short}} is stored in a Cloud Object Storage bucket in order for analysis to occur. You own and control the collected data, which means that you're responsible for storing, securing, and deleting it. For more information about the security of your collected data, see [Securing your data in {{site.data.keyword.compliance_short}}](/docs/security-compliance?topic=security-compliance-mng-data).
 
 
 Collected and analyzed VPC flow log information includes:

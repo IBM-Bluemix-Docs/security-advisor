@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -53,7 +53,7 @@ completion-time: 30m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
 
-With {{site.data.keyword.security-advisor_short}}, you can integrate your existing custom security tools to see all of your security information in one location. By walking through this tutorial, you can learn about each of the steps that you must take to display your custom findings in the {{site.data.keyword.security-advisor_short}} dashboard.
+With {{site.data.keyword.security-advisor_full}}, you can integrate your existing custom security tools to see all of your security information in one location. By walking through this tutorial, you can learn about each of the steps that you must take to display your custom findings in {{site.data.keyword.security-advisor_short}}.
 {: shortdesc}
 
 
