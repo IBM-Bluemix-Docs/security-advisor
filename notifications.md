@@ -52,8 +52,6 @@ By configuring a {{site.data.keyword.security-advisor_full}} notification channe
 
 With a process in place to handle alerts you can ensure that you're in compliance and prepared if or when an issue occurs. For example, some compliance standards require that issues must be responded to and closed within 24 hours, and the response is audited. With Security Advisor alerts in place, you are notified and can start resolving issues immediately.
 
-To trigger alerts for Vulnerability Advisor, you must refresh the Security Advisor dashboard.
-{: note}
 
 ## Before you begin
 {: #alerts-before}
