@@ -10,7 +10,6 @@ subcollection: security-advisor
 
 ---
 
-
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:download: .download}
@@ -66,7 +65,7 @@ Before you begin, be sure that you are assigned [a manager IAM policy](/docs/acc
 {: #channel-create-gui}
 {: ui}
 
-To start receiving alerts for findings, you can configure an alert channel by using the GUI.
+To start receiving alerts for findings, you can configure an alert channel by using the GUI. Alerts are configurable by severity and by source of the findings. 
 
 You can create up to 15 channels.
 {: note}
@@ -96,7 +95,7 @@ Next, [verify that the payload](#verify) is sent directly from the {{site.data.k
 {: #channel-create-api}
 {: api}
 
-To start receiving alerts for findings, you can configure an alert channel by using the GUI.
+To start receiving alerts for findings, you can configure an alert channel by using the GUI. Alerts are configurable by severity and by source of the findings. 
 
 You can create up to 15 channels.
 {: note}
