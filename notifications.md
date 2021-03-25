@@ -2,13 +2,14 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-15"
+lastupdated: "2021-03-25"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
 subcollection: security-advisor
 
 ---
+
 
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -47,7 +48,7 @@ subcollection: security-advisor
 # Configuring alerts
 {: #notifications}
 
-By configuring an {{site.data.keyword.security-advisor_long}} notification channel, you can be alerted to any reported vulnerabilities as soon as the report is available. With a fast alert time, you're able to immediately start an investigation into any reported issue and fix the vulnerability before it becomes a larger problem in your application. 
+By configuring a {{site.data.keyword.security-advisor_full}} notification channel, you can be alerted to any reported vulnerabilities as soon as the report is available. With a fast alert time, you're able to immediately start an investigation into any reported issue and fix the vulnerability before it becomes a larger problem in your application. 
 {: shortdesc}
 
 With a process in place to handle alerts you can ensure that you're in compliance and prepared if or when an issue occurs. For example, some compliance standards require that issues must be responded to and closed within 24 hours, and the response is audited. With Security Advisor alerts in place, you are notified and can start resolving issues immediately.
@@ -61,7 +62,7 @@ To trigger alerts for Vulnerability Advisor, you must refresh the Security Advis
 Before you begin, be sure that you are assigned [a manager IAM policy](/docs/account?topic=account-assign-access-resources). You must also have a webhook that is ready to use. If you don't have one already, try using [Cloud Functions](/docs/openwhisk?topic=openwhisk-getting-started) to create one.
 
 
-## Creating an alert channel with the GUI
+## Configuring alerts with the GUI
 {: #channel-create-gui}
 {: ui}
 
@@ -91,7 +92,7 @@ Next, [verify that the payload](#verify) is sent directly from the {{site.data.k
 
 
 
-## Creating an alert channel with the API
+## Configuring alerts with the API
 {: #channel-create-api}
 {: api}
 
