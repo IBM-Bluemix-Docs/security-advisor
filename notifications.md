@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-25"
+lastupdated: "2021-03-29"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -315,18 +315,16 @@ In the previous example, `payload-link` refers to the Security Advisor findings 
 {: #payload-gui}
 {: ui}
 
-You can obtain the payload by using the GUI.
-{: shortdesc}
 
-1. Navigate to the **alerts channels** tab of the Security Advisor dashboard.
-2. Click **Download key**.
+
+At this time, this action can be done through the API only. To see the steps, switch to the API instructions.
+{: note}
 
 ### Obtaining the public key with the API
 {: #payload-api}
 {: api}
 
-You can obtain the payload by using the API.
-{: shortdesc}
+You can obtain the public key by using the API.
 
 1. Obtain an IAM bearer token by using the following steps. For more information, see the [IAM documentation](/docs/account?topic=account-access-getstarted).
 
