@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-03-30"
 
 keywords: available Network Insights finding types, Network Insights,
 
@@ -51,34 +51,33 @@ Network Insights monitor and analyze your VPC flow logs and identify Virtual Ser
 {: shortdesc}
 
 
-
 ## Suspicious Outbound Traffic
 {: #suspicious-outbound-traffic}
 
 ### Outbound approaches to suspicious servers
 {: #outbound-approaches}
 
-| Finding Type     |  Description     |
-|:-----------------|:-----------------|
-| `xforce-anonym_server` | One of the services in your asset is approaching a server that appears to be concealing its identity behind anonymization services. This data is based on IBM threat intelligence. |
-| `xforce-malware_server` | One of the services in your asset is approaching a suspicious server, suspected of distributing malware. |
-| `xforce-bot_server` | One of the services in your asset is approaching a server suspected as a bot. |
-| `xforce-miner_server` | One of the services in your asset is approaching a server suspected as mining cryptocurrency. |
-| `xforce-server_suspected_ratio` | High % of approaches by a client to destinations with bad reputation. One of the clients in your asset is approaching network addresses considered suspicious suggesting that your asset may be compromised. |
-| `xforce-server_response_multiple_ips` | Client approaches and communicate with multiple destinations with bad reputation. One of the clients in your asset is interacting with multiple external services considered suspicious. |
-| `xforce-server_response` | One of the clients in your asset was observed interacting with a suspicious network destination (two-way communication observed). |
-| `xforce-server_response_multiple_flows` | Client performs multiple interactions with network destinations that have bad reputation. One of the clients in your asset repeatedly interacting with a suspicious services. |
+| Finding Type     | Severity         |  Description     |
+|:-----------------|:-----------------|:-----------------|
+| `xforce-anonym_server` | Medium | One of the services in your asset is approaching a server that appears to be concealing its identity behind anonymization services. This data is based on IBM threat intelligence. |
+| `xforce-malware_server` | Medium | One of the services in your asset is approaching a suspicious server, suspected of distributing malware. |
+| `xforce-bot_server` | Medium | One of the services in your asset is approaching a server suspected as a bot. |
+| `xforce-miner_server` | Medium | One of the services in your asset is approaching a server suspected as mining cryptocurrency. |
+| `xforce-server_suspected_ratio` | High | High % of approaches by a client to destinations with bad reputation. One of the clients in your asset is approaching network addresses considered suspicious suggesting that your asset may be compromised. |
+| `xforce-server_response_multiple_ips` | High | Client approaches and communicate with multiple destinations with bad reputation. One of the clients in your asset is interacting with multiple external services considered suspicious. |
+| `xforce-server_response` | High | One of the clients in your asset was observed interacting with a suspicious network destination (two-way communication observed). |
+| `xforce-server_response_multiple_flows` | High | Client performs multiple interactions with network destinations that have bad reputation. One of the clients in your asset repeatedly interacting with a suspicious services. |
 {: caption="Table 1. Finding Types that are referred in the Suspicious Outbound Traffic" caption-side="bottom"}
 
 ### Abnormally large payloads exchanged with suspicious servers
 {: #abnormal-payloads}
 
-| Finding Type     |  Description     |
-|:-----------------|:-----------------|
-| `xforce-data_extrusion_multi` | Total volume sent to server peers with bad reputation exceed a threshold. One of the clients in your asset was observed sending large amount of data to destinations considered suspicious. |
-| `xforce-data_extrusion` | Total volume sent to a server peer with bad reputation exceed a threshold. One of the clients in your asset was observed sending large amounts of data to a suspicious destination. |
-| `xforce-server_weaponized_total_multi` | Total volume downloaded from suspected network addresses exceed a threshold. One of the clients in your asset was observed receiving large amount of data from suspected external services, which is indicative of Malware Installation. |
-| `xforce-server_weaponized_total` | Total volume sent from a suspected external network address exceed a threshold. One of the clients in your asset was observed receiving large amounts of data from a suspicious service which may represent Malware Installation. |
+| Finding Type     | Severity         |  Description     |
+|:-----------------|:-----------------|:-----------------|
+| `xforce-data_extrusion_multi` | High | Total volume sent to server peers with bad reputation exceed a threshold. One of the clients in your asset was observed sending large amount of data to destinations considered suspicious. |
+| `xforce-data_extrusion` | High | Total volume sent to a server peer with bad reputation exceed a threshold. One of the clients in your asset was observed sending large amounts of data to a suspicious destination. |
+| `xforce-server_weaponized_total_multi` | High | Total volume downloaded from suspected network addresses exceed a threshold. One of the clients in your asset was observed receiving large amount of data from suspected external services, which is indicative of Malware Installation. |
+| `xforce-server_weaponized_total` | High | Total volume sent from a suspected external network address exceed a threshold. One of the clients in your asset was observed receiving large amounts of data from a suspicious service which may represent Malware Installation. |
 {: caption="Table 1. Finding Types that are referred in the Suspicious Outbound Traffic" caption-side="bottom"}
 
 
@@ -88,22 +87,22 @@ Network Insights monitor and analyze your VPC flow logs and identify Virtual Ser
 ### Reconnaissance by suspicious clients
 {: #reconnaissance-client}
 
-| Finding Type     |  Description     |
-|:-----------------|:-----------------|
-| `xforce-client_multiple_flows` | A peer with bad reputation is excessively approaching one or more closed port of your asset. An unexpectedly high number of approaches. |
-| `xforce-clients_multiple_ips` | Peers with bad reputation are excessively approaching one or more closed port of your asset. An unexpectedly high number of approaches. |
-| `xforce-distributed_vulnerability_scan` | Excessive number of unique peers with bad reputation are approaching open ports of the asset and might be scanning for the asset vulnerabilities. |
-| `xforce-reconnaissance_multi` | Peers with bad reputation are excessively approaching unique closed ports (scanning). Your asset may be under reconnaissance by suspicious clients. |
-| `xforce-vulnerability_scan` | A peer with bad reputation is excessively approaching open ports and might be scanning for asset vulnerabilities. |
-| `xforce-reconnaissance` | A peer with bad reputation is excessively approaching unique closed ports of your asset (scanning). Your asset may be under reconnaissance by a suspicious client. |
-| `xforce-client_response` | Your asset was observed interacting with a suspicious client (two-way communication observed). |
+| Finding Type     | Severity         |  Description     |
+|:-----------------|:-----------------|:-----------------|
+| `xforce-client_multiple_flows` | Low | A peer with bad reputation is excessively approaching one or more closed port of your asset. An unexpectedly high number of approaches. |
+| `xforce-clients_multiple_ips` | Low | Peers with bad reputation are excessively approaching one or more closed port of your asset. An unexpectedly high number of approaches. |
+| `xforce-distributed_vulnerability_scan` | Medium | Excessive number of unique peers with bad reputation are approaching open ports of the asset and might be scanning for the asset vulnerabilities. |
+| `xforce-reconnaissance_multi` | Low | Peers with bad reputation are excessively approaching unique closed ports (scanning). Your asset may be under reconnaissance by suspicious clients. |
+| `xforce-vulnerability_scan` | Medium | A peer with bad reputation is excessively approaching open ports and might be scanning for asset vulnerabilities. |
+| `xforce-reconnaissance` | Low  | A peer with bad reputation is excessively approaching unique closed ports of your asset (scanning). Your asset may be under reconnaissance by a suspicious client. |
+| `xforce-client_response` | Low | Your asset was observed interacting with a suspicious client (two-way communication observed). |
 {: caption="Table 2. Finding Types that are referred in the Suspicious Inbound Traffic" caption-side="bottom"}
 
 ### Abnormally large payloads sent by suspicious clients
 {: #abnormal-payload-suspicious-client}
 
-| Finding Type     |  Description     |
-|:-----------------|:-----------------|
-| `xforce-client_weaponized` | A peer with bad reputation sends a large payload to your asset. Your asset was observed receiving large amount of data from a suspicious client which may represent an attempt to exploit your service. |
-| `xforce-client_weaponized_total` | A peer with bad reputation sends accumulated large amount of data to your asset. Your asset was observed receiving large amounts of data from a suspicious client which may represent an attempt to exploit your service. |
+| Finding Type     | Severity         |  Description     |
+|:-----------------|:-----------------|:-----------------|
+| `xforce-client_weaponized` | Medium | A peer with bad reputation sends a large payload to your asset. Your asset was observed receiving large amount of data from a suspicious client which may represent an attempt to exploit your service. |
+| `xforce-client_weaponized_total` | Medium | A peer with bad reputation sends accumulated large amount of data to your asset. Your asset was observed receiving large amounts of data from a suspicious client which may represent an attempt to exploit your service. |
 {: caption="Table 2. Finding Types that are referred in the Suspicious Inbound Traffic" caption-side="bottom"}
