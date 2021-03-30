@@ -47,12 +47,14 @@ subcollection: security-advisor
 # Available Network Insights finding types
 {: #network-insights-finding-types}
 
-Network Insights monitor and analyze your VPC flow logs and identify Virtual Server Instances that might be compromised or attempts to compromise your VSI.
+With Network Insights, you can monitor an analyze your VPC flowlogs and identify potential attempts to compromise or compromised Virtual Server Instances. 
 {: shortdesc}
 
 
 ## Suspicious Outbound Traffic
 {: #suspicious-outbound-traffic}
+
+
 
 ### Outbound approaches to suspicious servers
 {: #outbound-approaches}
