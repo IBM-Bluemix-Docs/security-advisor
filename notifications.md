@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-03-30"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -72,18 +72,17 @@ You can create up to 15 channels.
 2. In the navigation, click **Alerts**.
 3. Click **Create**.
 4. Provide a name and meaningful description for your channel.
-5. Select the severity of the notifications that you want to be alerted for. 
-6. Optional: Select the source of the findings that you want to receive alerts for.
+5. To configure the threshold of alerts, select the severity of the notifications that you want to be alerted for and optionally select the source of the findings that you want to receive alerts for.
 
   Check the box next to all of the sources and finding types that you want the channel to forward findings for. You can choose between any of the built-in integrations, business partners that you have configured, or any custom security tools that you previously connected.
 
-7. Click **Next**.
-8. Enter the callback endpoint where you want to receive the alerts.
+6. Click **Next**.
+7. Enter the callback endpoint where you want to receive the alerts.
 
   Your callback URL endpoint must [1] Use the HTTPS protocol. [2] Not require HTTP headers - including authorization headers. [3] Return a `200 OK` status code to indicate that the alert is successfully delievered.
 
-9. Click **Create**. You channel is listed in the **Alerts** table. 
-10. Verify that your channel is configured correctly by selecting **Test connection** in the overflow menu. A test alert is sent to your endpoint. Be sure to remove any alerts that are sent by *Security Advisor Notification Test* after you've completed your testing.
+8. Click **Create**. You channel is listed in the **Alerts** table. 
+9. Verify that your channel is configured correctly by selecting **Test connection** in the overflow menu. A test alert is sent to your endpoint. Be sure to remove any alerts that are sent by *Security Advisor Notification Test* after you've completed your testing.
 
 Next, [verify that the payload](#verify) is sent directly from the {{site.data.keyword.compliance_short}}.
 

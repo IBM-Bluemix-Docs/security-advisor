@@ -1,8 +1,8 @@
 ---
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-12"
-keywords: 
+lastupdated: "2021-03-29"
+keywords:
 subcollection: security-advisor
 ---
 
@@ -53,9 +53,9 @@ With {{site.data.keyword.security-advisor_long}}, you can take advantage of buil
 
 You have the option to enable network or Activity Insights. Check out the following table to learn more.
 
-| Feature          | Description | 
+| Feature          | Description |
 |------------------|-------------|
-| Activity Insights | By comparing user activity that is logged by Activity Tracker with LogDNA against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. |
+| Activity Insights | By comparing user activity that is logged by {{site.data.keyword.at_short}} against predefined rule packages, you can identify suspicious behavior as it relates to your IBM Cloud resources, which can help to prevent malicious attacks on your applications. |
 | Network Insights | By monitoring and analyzing your VPC flow logs, you can identify Virtual Server Instances that might be compromised or attempts to compromise your VSIs. |
 {: caption="Table 1. Available Insights features" caption-side="top"}
 
@@ -63,7 +63,7 @@ You have the option to enable network or Activity Insights. Check out the follow
 ## What classifies as suspicious activity?
 {: #suspicious-activity}
 
-When you enable Activity Insights, a group of predefined rules are automatically used to analyze the Activity Tracker with LogDNA data that is collected. The rules are used to detect situations where any behavior in your account is out of the ordinary. For example, user activity that has a significant security implication or security sensitive activity that is performed at an odd hour.
+When you enable Activity Insights, a group of predefined rules are automatically used to analyze the {{site.data.keyword.at_short}} data that is collected. The rules are used to detect situations where any behavior in your account is out of the ordinary. For example, user activity that has a significant security implication or security sensitive activity that is performed at an odd hour.
 
 
 ## What classifies as suspicious network traffic?
