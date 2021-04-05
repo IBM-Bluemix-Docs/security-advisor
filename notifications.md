@@ -75,6 +75,7 @@ You can create up to 15 channels.
 5. To configure the threshold of alerts, select the severity of the notifications that you want to be alerted for. Severity choices include *critical*, *high*, *medium*, and *low*. Optionally, select the source of the findings that you want to receive alerts for. Check out the following table for more information about the available sources.
 
   <table>
+    <caption>Table 1. Alert sources</caption>
     <tr>
       <th>Source</th>
       <th>Description</th>
