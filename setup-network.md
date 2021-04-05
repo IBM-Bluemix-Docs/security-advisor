@@ -107,3 +107,4 @@ As results come in, you can see any flagged issues on the **Insights** or **Deta
 
 Now that you've configured Network Insights to analyze your flow logs, set up alerts so that you can be notified if an issue is found. [Learn more](/docs/security-advisor?topic=security-advisor-notifications).
 {: tip}
+
