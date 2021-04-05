@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-30"
+lastupdated: "2021-04-05"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -72,9 +72,27 @@ You can create up to 15 channels.
 2. In the navigation, click **Alerts**.
 3. Click **Create**.
 4. Provide a name and meaningful description for your channel.
-5. To configure the threshold of alerts, select the severity of the notifications that you want to be alerted for and optionally select the source of the findings that you want to receive alerts for.
+5. To configure the threshold of alerts, select the severity of the notifications that you want to be alerted for. Severity choices include *critical*, *high*, *medium*, and *low*. Optionally, select the source of the findings that you want to receive alerts for. Check out the following table for more information about the available sources.
 
-  Check the box next to all of the sources and finding types that you want the channel to forward findings for. You can choose between any of the built-in integrations, business partners that you have configured, or any custom security tools that you previously connected.
+  <table>
+    <caption>Table 1. Alert sources</caption>
+    <tr>
+      <th>Source</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>Built-in Insights</td>
+      <td>You can continuously monitor and analyze your {{site.data.keyword.cloud_notm}} resources and apps for risks that can impact your environment. Potential sources include: [Vulnerability Advisor](/docs/security-advisor?topic=security-advisor-setup-services), [Certificate Manager](/docs/security-advisor?topic=security-advisor-setup-services), [Network Insights](/docs/security-advisor?topic=security-advisor-setup-network), and [Activity Insights](/docs/security-advisor?topic=security-advisor-setup-activity).</td>
+    </tr>
+    <tr>
+      <td>Business partners</td>
+      <td>You can manage all of your security notifications in one place by connecting your instance of one of IBM business partners to the {{site.data.keyword.compliance_short}}. Current business partners include: [Caveonix](/docs/security-advisor?topic=security-advisor-setup-caveonix), [Nuevector](/docs/security-advisor?topic=security-advisor-setup-neuvector), and [Twistlock](/docs/security-advisor?topic=security-advisor-setup-twistlock).</td>
+    </tr>
+    <tr>
+      <td>Custom</td>
+      <td>You can connect a custom or proprietary security tool that your organization already works with in order to configure and manage alerts in one place. [Learn more](/docs/security-advisor?topic=security-advisor-setup_custom).</td>
+    </tr>
+  </table>
 
 6. Click **Next**.
 7. Enter the callback endpoint where you want to receive the alerts.
