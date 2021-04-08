@@ -57,7 +57,7 @@ completion-time: 10m
 With Security Insights, formerly known as {{site.data.keyword.security-advisor_full}}, you can continuously analyze your Virtual Private Cloud (VPC) network interface Flow Logs to detect any suspicious activity by using learned patterns and threat intelligence. By walking through this tutorial, you can learn about each of the steps that you must take to set up alerts for potential issues that are found in your Flow Logs.
 {: shortdesc}
 
-![The Network Insights Alert flow. The graphics in this image are explained fully in the surrounding text.](images/ni-alert-flow.png){: caption="Figure 1. Network Insights alerts flow" caption-side="bottom"}
+![The Network Insights Alert flow. The graphics in this image are explained fully in the surrounding text.](images/ni-alert-flow.svg){: caption="Figure 1. Network Insights alerts flow" caption-side="bottom"}
 
 1. A user configures a Flow Logs collector for their VPC.
 2. The collector interfaces with Cloud Object Storage and writes the logs to a bucket.
