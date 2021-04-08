@@ -68,8 +68,6 @@ With Security Insights, formerly known as {{site.data.keyword.security-advisor_f
 ## Before you begin
 {: #ni-before}
 
-Before you get started with this tutorial, be sure that you already have a Virtual Private Cloud that is sending network information. A
-
 To complete this tutorial, be sure that you have the following prerequistes and permissions.
 
 * A Virtual Private Cloud that is able to send network information.
@@ -77,7 +75,8 @@ To complete this tutorial, be sure that you have the following prerequistes and 
 * An *Editor* IAM permissions policy for both {{site.data.keyword.security-advisor_short}} and VPC.
 * Service-to-service authorization policies for the bucket that stores your logs. {{site.data.keyword.security-advisor_short}} must be able to *read* the information that is in the Cloud Object Storage bucket. VPC must be able to *write* your Flow Logs to the Cloud Object Storage bucket.
 
-## Collecting your Flow Logs
+
+## Collect your Flow Logs
 {: #collect-logs}
 {: step}
 
@@ -94,7 +93,7 @@ To start analyzing your Flow Logs, you must first collect them.
 9. Click **Create flow log**.
 
 
-## Enabling analysis with Security Insights
+## Enable analysis with Security Insights
 {: #enable-analysis}
 {: step}
 
@@ -114,16 +113,16 @@ Now that you've started collecting your Flow Logs to Cloud Object Storage, you c
 
 To start receiving alerts for potential issues related to your VPC FLow Logs, you can configure an alert channel by using the GUI. If you prefer to work with the API, see [Configuring alerts](/docs/security-advisor?topic=security-advisor-notifications).
 
-
-
 1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) **> Security and compliance** to access the {{site.data.keyword.compliance_short}}.
 2. In the navigation, click **Alerts**.
 3. Click **Create**.
 4. Provide a name and meaningful description for your channel.
 5. To configure the threshold for alerts, select the severity of the notifications that you want to be alerted for. Severity choices include *critical*, *high*, *medium*, and *low*. For more information about the types of findings that are returned for each severity, see [Available Network Insights finding types](/docs/security-advisor?topic=security-advisor-network-insights-finding-types).
 6. Select Network Insights as your source.
-6. Click **Next**.
-7. Enter the callback endpoint where you want to receive the alerts.
-8. Click **Create**. You channel is listed in the **Alerts** table. 
-9. Verify that your channel is configured correctly by selecting **Test connection** in the overflow menu. A test alert is sent to your endpoint. Be sure to remove any alerts that are sent by *{{site.data.keyword.security-advisor_short}} Notification Test* after you've completed your testing.
+7. Click **Next**.
+8. Enter the callback endpoint where you want to receive the alerts.
+9. Click **Create**. You channel is listed in the **Alerts** table. 
+
+
+To verify that your channel is configured correctly by selecting **Test connection** in the overflow menu. A test alert is sent to your endpoint. Be sure to remove any alerts that are sent by *{{site.data.keyword.security-advisor_short}} Notification Test* after you've completed your testing.
 
