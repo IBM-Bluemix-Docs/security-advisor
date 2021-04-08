@@ -9,7 +9,7 @@ keywords: Centralized security, security management, alerts, security risk, insi
 subcollection: security-advisor
 
 content-type: tutorial
-account-plan: lite
+services: security-compliance, vpc, cloud-object-storage
 completion-time: 10m
 
 ---
