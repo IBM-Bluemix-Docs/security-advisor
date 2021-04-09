@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-08"
+lastupdated: "2021-04-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, vpc, flow logs, flow log alerts, findings, network insights
 
@@ -48,7 +48,7 @@ completion-time: 10m
 {:cli: .ph data-hd-interface='cli'}
 {:api: .ph data-hd-interface='api'}
 
-# Generating alerts for your VPC Flow Logs
+# Generating alerts for potential issues found in your VPC Flow Logs
 {: #ni-alerts}
 {: toc-content-type="tutorial"}
 {: toc-services="security-advisor, vpc, cloud-object-storage"}
@@ -72,7 +72,8 @@ To complete this tutorial, be sure that you have the following prerequistes and 
 
 * A Virtual Private Cloud that is able to send network information.
 * A Cloud Object Storage bucket that you are able to store your logs in.
-* An *Editor* IAM permissions policy for both {{site.data.keyword.security-advisor_short}} and VPC.
+* An *Editor* IAM permissions policy for VPC.
+* A *Manager* IAM permissions policy for {{site.data.keyword.security-advisor_short}}
 * Service-to-service authorization policies for the bucket that stores your logs. {{site.data.keyword.security-advisor_short}} must be able to *read* the information that is in the Cloud Object Storage bucket. VPC must be able to *write* your Flow Logs to the Cloud Object Storage bucket.
 
 
