@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-30"
+lastupdated: "2021-04-09"
 
 keywords: available Network Insights finding types, Network Insights,
 
@@ -47,7 +47,7 @@ subcollection: security-advisor
 # Available Network Insights finding types
 {: #network-insights-finding-types}
 
-With Network Insights, you can monitor an analyze your VPC flowlogs and identify potential attempts to compromise or compromised Virtual Server Instances. 
+With Network Insights, you can monitor and analyze your VPC flow logs and identify potential attempts to compromise or compromised Virtual Server Instances.
 {: shortdesc}
 
 

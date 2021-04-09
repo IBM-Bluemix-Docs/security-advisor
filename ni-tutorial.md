@@ -61,14 +61,14 @@ With Security Insights, formerly known as {{site.data.keyword.security-advisor_f
 
 1. A user configures a Flow Logs collector for their VPC.
 2. The collector interfaces with Cloud Object Storage and writes the logs to a bucket.
-3. The Security Insights component of the {{site.data.keyword.compliance_short}} analyzses the logs that are stored in the bucket.
+3. The Security Insights component of the {{site.data.keyword.compliance_short}} analyzes the logs that are stored in the bucket.
 4. When a finding is flagged, an alert is triggered.
 
 
 ## Before you begin
 {: #ni-before}
 
-To complete this tutorial, be sure that you have the following prerequistes and permissions.
+To complete this tutorial, be sure that you have the following prerequisites and permissions.
 
 * A Virtual Private Cloud that is able to send network information.
 * A Cloud Object Storage bucket that you are able to store your logs in.
@@ -109,7 +109,7 @@ Now that you've started collecting your Flow Logs to Cloud Object Storage, you c
 
 
 ## Configure alerts
-{: #ni-alerts}
+{: #configure-alerts}
 {: step}
 
 To start receiving alerts for potential issues related to your VPC FLow Logs, you can configure an alert channel by using the GUI. If you prefer to work with the API, see [Configuring alerts](/docs/security-advisor?topic=security-advisor-notifications).
@@ -122,7 +122,7 @@ To start receiving alerts for potential issues related to your VPC FLow Logs, yo
 6. Select Network Insights as your source.
 7. Click **Next**.
 8. Enter the callback endpoint where you want to receive the alerts.
-9. Click **Create**. You channel is listed in the **Alerts** table. 
+9. Click **Create**. You channel is listed in the **Alerts** table.
 
 
 To verify that your channel is configured correctly by selecting **Test connection** in the overflow menu. A test alert is sent to your endpoint. Be sure to remove any alerts that are sent by *{{site.data.keyword.security-advisor_short}} Notification Test* after you've completed your testing.
