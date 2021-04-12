@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-04-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, vpc, flow logs, flow log alerts, findings, network insights
 
@@ -49,9 +49,9 @@ completion-time: 10m
 {:api: .ph data-hd-interface='api'}
 
 # Generating alerts for potential issues found in your VPC Flow Logs
-{: #ni-alerts}
+{: #ni-vpc-alerts}
 {: toc-content-type="tutorial"}
-{: toc-services="security-advisor, vpc, cloud-object-storage"}
+{: toc-services="security-compliance, vpc, cloud-object-storage"}
 {: toc-completion-time="10m"}
 
 With Security Insights, formerly known as {{site.data.keyword.security-advisor_full}}, you can continuously analyze your Virtual Private Cloud (VPC) network interface Flow Logs to detect any suspicious activity by using learned patterns and threat intelligence. By walking through this tutorial, you can learn about each of the steps that you must take to set up alerts for potential issues that are found in your Flow Logs.
@@ -61,14 +61,14 @@ With Security Insights, formerly known as {{site.data.keyword.security-advisor_f
 
 1. A user configures a Flow Logs collector for their VPC.
 2. The collector interfaces with Cloud Object Storage and writes the logs to a bucket.
-3. The Security Insights component of the {{site.data.keyword.compliance_short}} analyzes the logs that are stored in the bucket.
+3. The Security Insights component of the {{site.data.keyword.compliance_short}} analyzses the logs that are stored in the bucket.
 4. When a finding is flagged, an alert is triggered.
 
 
 ## Before you begin
 {: #ni-before}
 
-To complete this tutorial, be sure that you have the following prerequisites and permissions.
+To complete this tutorial, be sure that you have the following prerequistes and permissions.
 
 * A Virtual Private Cloud that is able to send network information.
 * A Cloud Object Storage bucket that you are able to store your logs in.
@@ -109,7 +109,7 @@ Now that you've started collecting your Flow Logs to Cloud Object Storage, you c
 
 
 ## Configure alerts
-{: #configure-alerts}
+{: #ni-alerts}
 {: step}
 
 To start receiving alerts for potential issues related to your VPC FLow Logs, you can configure an alert channel by using the GUI. If you prefer to work with the API, see [Configuring alerts](/docs/security-advisor?topic=security-advisor-notifications).
@@ -122,7 +122,7 @@ To start receiving alerts for potential issues related to your VPC FLow Logs, yo
 6. Select Network Insights as your source.
 7. Click **Next**.
 8. Enter the callback endpoint where you want to receive the alerts.
-9. Click **Create**. You channel is listed in the **Alerts** table.
+9. Click **Create**. You channel is listed in the **Alerts** table. 
 
 
 To verify that your channel is configured correctly by selecting **Test connection** in the overflow menu. A test alert is sent to your endpoint. Be sure to remove any alerts that are sent by *{{site.data.keyword.security-advisor_short}} Notification Test* after you've completed your testing.
