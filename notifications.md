@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -47,7 +47,7 @@ subcollection: security-advisor
 # Configuring alerts
 {: #notifications}
 
-By configuring a {{site.data.keyword.security-advisor_full}} notification channel, you can be alerted to any reported vulnerabilities as soon as the report is available. With a fast alert time, you're able to immediately start an investigation into any reported issue and fix the vulnerability before it becomes a larger problem in your application. 
+By configuring an {{site.data.keyword.security-advisor_full}} notification channel, you can be alerted to any reported vulnerabilities as soon as the report is available. With a fast alert time, you're able to immediately start an investigation into any reported issue and fix the vulnerability before it becomes a larger problem in your application.
 {: shortdesc}
 
 With a process in place to handle alerts you can ensure that you're in compliance and prepared if or when an issue occurs. For example, some compliance standards require that issues must be responded to and closed within 24 hours, and the response is audited. With Security Advisor alerts in place, you are notified and can start resolving issues immediately.
@@ -63,7 +63,7 @@ Before you begin, be sure that you are assigned [a manager IAM policy](/docs/acc
 {: #channel-create-gui}
 {: ui}
 
-To start receiving alerts for findings, you can configure an alert channel by using the GUI. Alerts are configurable by severity and by source of the findings. 
+To start receiving alerts for findings, you can configure an alert channel by using the GUI. Alerts are configurable by severity and by source of the findings.
 
 You can create up to 15 channels.
 {: note}
@@ -72,7 +72,7 @@ You can create up to 15 channels.
 2. In the navigation, click **Alerts**.
 3. Click **Create**.
 4. Provide a name and meaningful description for your channel.
-5. To configure the threshold of alerts, select the severity of the notifications that you want to be alerted for. Severity choices include *critical*, *high*, *medium*, and *low*. Optionally, select the source of the findings that you want to receive alerts for. Check out the following table for more information about the available sources.
+5. To configure the threshold for alerts, select the severity of the notifications that you want to be alerted for. Severity choices include *critical*, *high*, *medium*, and *low*. Optionally, select the source of the findings that you want to receive alerts for. Check out the following table for more information about the available sources.
 
   <table>
     <caption>Table 1. Alert sources</caption>
@@ -94,12 +94,15 @@ You can create up to 15 channels.
     </tr>
   </table>
 
+  As an example, if you wanted to configure alerts for your [network flow logs](/docs/vpc?topic=vpc-flow-logs), you would select Network Insights as your source and then create a threshold for the alerts that you receive by selecting a severity.
+  {: tip}
+
 6. Click **Next**.
 7. Enter the callback endpoint where you want to receive the alerts.
 
-  Your callback URL endpoint must [1] Use the HTTPS protocol. [2] Not require HTTP headers - including authorization headers. [3] Return a `200 OK` status code to indicate that the alert is successfully delievered.
+  Your callback URL endpoint must [1] Use the HTTPS protocol. [2] Not require HTTP headers - including authorization headers. [3] Return a `200 OK` status code to indicate that the alert is successfully delivered.
 
-8. Click **Create**. You channel is listed in the **Alerts** table. 
+8. Click **Create**. You channel is listed in the **Alerts** table.
 9. Verify that your channel is configured correctly by selecting **Test connection** in the overflow menu. A test alert is sent to your endpoint. Be sure to remove any alerts that are sent by *Security Advisor Notification Test* after you've completed your testing.
 
 Next, [verify that the payload](#verify) is sent directly from the {{site.data.keyword.compliance_short}}.
@@ -110,7 +113,7 @@ Next, [verify that the payload](#verify) is sent directly from the {{site.data.k
 {: #channel-create-api}
 {: api}
 
-To start receiving alerts for findings, you can configure an alert channel by using the GUI. Alerts are configurable by severity and by source of the findings. 
+To start receiving alerts for findings, you can configure an alert channel by using the GUI. Alerts are configurable by severity and by source of the findings.
 
 You can create up to 15 channels.
 {: note}
@@ -188,7 +191,7 @@ You can create up to 15 channels.
       <td>The source and type of the finding that is received. <code>provider_name</code> is the ID of any provider in the account. If you're not sure which providers are available in your account, you can query the providers API: <code>/findings/v1/{accountId}/providers</code>. <code>finding_types</code> is the list of valid finding types for the provider name. If you're not sure which notes are available for each provider in your account, you can query the notes API: <code>/findings/v1/{account_id}/providers/{provider_id}/notes</code>. The <code>ALL</code> option can be specified for the <code>finding_types</code> which means that all notes for that provider are selected. There are 4 built-in providers in addition to custom alert source providers. For more information about the 4 providers and the supported finding types for each, review the following table.</td>
     </tr>
   </table>
-  
+
   <table>
     <caption>Table 3. Built-in providers and supported finding types</caption>
     <tr>
@@ -220,7 +223,7 @@ You can create up to 15 channels.
       <td><code>ALL</code></td>
     </tr>
    </table>
-   
+
    `ALL` can be selected as the `provider_name`, which includes all providers and finding types. If `ALL` is specified as the `provider_name`, then a specific value can't be provided for `finding_types`. In this case, you can omit `finding_types` or specify `ALL`.
    {: tip}
 
@@ -402,7 +405,7 @@ Want to take a break from receiving alerts but don't want to delete your configu
 2. In the navigation, click **Alerts**.
 3. Delete the channel or channels.
 
-  If you want to delete a single channel, open the overflow menu in the row of the channel that you want to delte.
+  If you want to delete a single channel, open the overflow menu in the row of the channel that you want to delete.
 
   If you want to delete multiple channels at once, check the boxes for the channels that you want to remove.
 

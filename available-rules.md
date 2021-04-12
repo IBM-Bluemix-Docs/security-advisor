@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-04-09"
 
-keywords: available insights rules, Activity Insights, Network Insights, iks, key protect, kms, rules, app id, iam, cos, certificates, bucket, object storage,  
+keywords: available insights rules, Activity Insights, Network Insights, iks, key protect, kms, rules, app id, iam, cos, certificates, bucket, object storage,
 
 subcollection: security-advisor
 
@@ -171,7 +171,7 @@ Kubernetes Service helps you to deploy highly available containerized apps in a 
 
 | Rule          |  Finding Type     |  Description     |
 |:--------------|:------------------|:-----------------|
-| `Very high risk Kubernetes Service activity` | `ata-iks-high-risk` | Reports when one of the following behaviors are observed: <ol><li>A public or private ALB is created in the cluster. </li><li>An existing IBM Cloud infrastructure subnet is added to a cluster. </li> <li>Public endpoint is enabled for a cluster. </li> <li>A subnet is created for public endpoint.</li> <li>Enables the private service endpoint allowlist feature for a cluster.</li> <li>Add/Remove subnets from a cluster's private service endpoint allowlist.</li> <li>Cluster is accessed via kuberenetes native dashboard, web terminal.</li></ol> |
+| `Very high risk Kubernetes Service activity` | `ata-iks-high-risk` | Reports when one of the following behaviors are observed: <ol><li>A public or private ALB is created in the cluster. </li><li>An existing IBM Cloud infrastructure subnet is added to a cluster. </li> <li>Public endpoint is enabled for a cluster. </li> <li>A subnet is created for public endpoint.</li> <li>Enables the private service endpoint allowlist feature for a cluster.</li> <li>Add/Remove subnets from a cluster's private service endpoint allowlist.</li> <li>Cluster is accessed via Kubernetes native dashboard, web terminal.</li></ol> |
 | `Kubernetes Service change to logging detected` | `ata-iks-logging-change` | Reports when changes to logging settings occur. These changes include the following: <ol><li>A logging filter is created. </li><li>A logging filter is updated. </li><li>A log forwarding configuration is created. </li><li>An API key is created. </li><li>A log forwarding configuration is deleted. </li><li>A log forwarding configuration is refreshed. </li></ol> |
 | `Indicative IKS API exceed threshold within time window` | `ata-iks-indicative-api-threshold` |  Reports when within 30 minutes more than 10 worker nodes are updated. |
 | `Indicative IKS API outside of change control window` | `ata-iks-indicative-api-ccw` | Reports when a worker node is updated between 1700 and 0800 (next day). |

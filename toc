@@ -12,6 +12,7 @@ Security Advisor
     {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
+    ni-tutorial.md
     demo-nmap.md
     {: .navgroup-end}
     

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-15"
+lastupdated: "2021-04-09"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -83,7 +83,7 @@ Before you can analyze your user and application activity, {{site.data.keyword.s
 4. Optionally, provide a description.
 5. Click **Connect bucket**.
 6. Create a *reader* [service-to-service authorization policy](https://{DomainName}/iam/authorizations) between Cloud Object Storage and {{site.data.keyword.security-advisor_short}}.
- 
+
 
 ## Collecting activity flow logs
 {: #collect-activity-logs}
@@ -98,7 +98,7 @@ To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} acc
   {: codeblock}
 
 2. Change into the `security-advisor-activity-insights` folder.
-3. Change into the directory for the version of the chart that you're using. Currently, version `v3.0` is supported.       
+3. Change into the directory for the version of the chart that you're using. Currently, version `v3.0` is supported.
 
 4. Extract the `.tar` file by running the following command.
 
@@ -168,11 +168,11 @@ To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} acc
     </tr>
     <tr>
       <td><code>at_region</code></td>
-      <td>The region of the <a href="/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
+      <td>The region of the <a href="docs/log-analysis?topic=log-analysis-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
-      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export) for your {{site.data.keyword.at_short}} instance.</td>
+      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/log-analysis?topic=log-analysis-export) for your {{site.data.keyword.at_short}} instance.</td>
     </tr>
     <tr>
       <td><code>default_memory_request</code></td>
@@ -214,7 +214,7 @@ If you no longer need to use Activity Insights, you can delete the agent and oth
     helm del --purge activity-insights [--tls]
     ```
     {: codeblock}
-  
+
   If you installed version 3 of the chart, use the following command to delete the components.
 
     ```

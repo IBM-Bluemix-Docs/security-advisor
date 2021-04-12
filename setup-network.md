@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-08"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -46,8 +46,10 @@ subcollection: security-advisor
 # Enabling Network Insights
 {: #setup-network}
 
-With {{site.data.keyword.security-advisor_full}}, you can continuously analyze your Virtual Private Cloud (VPC) network interface flow logs to detect any suspicious activity by using learned patterns and threat intelligence.
+With Security Insights, formerly known as {{site.data.keyword.security-advisor_full}}, you can continuously analyze your Virtual Private Cloud (VPC) network interface flow logs to detect any suspicious activity by using learned patterns and threat intelligence.
 {: shortdesc}
+
+
 
 ## Before you begin
 {: #before-network}
@@ -100,7 +102,7 @@ Now that you've connected your Cloud Object Storage bucket and verified that you
 
 
 1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Integrations > Built-in insights](https://{DomainName}/security-advisor#/integrations).
-2. Toggle Activity Insights to **On**.
+2. Toggle Network Insights to **On**.
 
 As results come in, you can see any flagged issues on the **Insights** or **Detailed findings** pages of the UI.
 
