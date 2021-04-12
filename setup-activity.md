@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-04-12"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -168,11 +168,11 @@ To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} acc
     </tr>
     <tr>
       <td><code>at_region</code></td>
-      <td>The region of the <a href="docs/log-analysis?topic=log-analysis-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
+      <td>The region of the <a href="/docs/activity-tracker?topic=activity-tracker-regions">{{site.data.keyword.at_short}} instance</a>. Example: <code>us-south</code>.</td>
     </tr>
     <tr>
       <td><code>at_service_api_key</code></td>
-      <td>Is a {{site.data.keyword.at_short}} [service key](/docs/log-analysis?topic=log-analysis-export) for your {{site.data.keyword.at_short}} instance.</td>
+      <td>Is an IAM service API key for your {{site.data.keyword.at_short}} instance.</td>
     </tr>
     <tr>
       <td><code>default_memory_request</code></td>
