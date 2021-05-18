@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-05-18"
 
 keywords: available insights rules, Activity Insights, Network Insights, iks, key protect, kms, rules, app id, iam, cos, certificates, bucket, object storage,
 
@@ -84,7 +84,7 @@ The Certificate Manager service helps you to obtain, store, and manage the certi
 ## Cloud Databases
 {: #icd}
 
-IBM Cloud Databases allow you to take control of your highly sensitive data by storing it in a tamper-proof environment. Rules apply to IBM Cloud Databases for [MongoDB](/docs/databases-for-mongodb?topic=databases-for-mongodb-getting-started), [PostgreSQL](/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started), [Redis](/docs/databases-for-redis?topic=databases-for-redis-getting-started), [etcd](/docs/databases-for-etcd?topic=databases-for-etcd-getting-started), and [Elasticsearch](/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-getting-started).
+IBM Cloud Databases allow you to take control of your highly sensitive data by storing it in a tamper-proof environment. Rules apply to IBM Cloud Databases for [MongoDB](/docs/databases-for-mongodb?topic=databases-for-mongodb-getting-started), [PostgreSQL](/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started), [Redis](/docs/databases-for-redis?topic=databases-for-redis-getting-started), [etcd](/docs/databases-for-etcd?topic=databases-for-etcd-getting-started), and [ElasticSearch](/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-getting-started).
 
 
 | Rule          |  Finding Type     |  Description     |

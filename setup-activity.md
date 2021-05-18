@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-12"
+lastupdated: "2021-05-18"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -77,7 +77,7 @@ If you are working on Windows 10, activate [Windows Subsystem for Linux](https:/
 
 Before you can analyze your user and application activity, {{site.data.keyword.security-advisor_short}} must have access to your activity flow logs that are stored in Cloud Object Storage. To create the connection between the services, you must store the logs in a Cloud Object Storage bucket and then grant the service access to the bucket.
 
-1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Gain insight > Configure > Built-in Insights](https://{DomainName}/security-advisor#/integrations).
+1. In the {{site.data.keyword.cloud_notm}} console, navigate to **Security and compliance > Gain insight > Configure > Built-in Insights**.
 2. Click **Connect**.
 3. Select a resource group, an instance of Cloud Object Storage, and a bucket.
 4. Optionally, provide a description.
@@ -90,10 +90,10 @@ Before you can analyze your user and application activity, {{site.data.keyword.s
 
 To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} account and store them in Cloud Object Storage, you must install an agent on your Kubernetes Service cluster.
 
-1. Clone the [Activity Insights repository](https://github.ibm.com/security-services/security-advisor-activity-insights-installer){: external} to your local system.
+1. Clone the [Activity Insights repository](https://github.com/ibm-cloud-security/security-advisor-activity-insights){: external} to your local system.
 
   ```
-  git clone https://github.com/ibm-cloud-security/security-advisor-activity-insights
+  git clone https://github.com/ibm-cloud-security/security-advisor-activity-insights.git
   ```
   {: codeblock}
 
@@ -194,7 +194,7 @@ To collect the activity flow logs from your {{site.data.keyword.cloud_notm}} acc
 
 Now that you've installed the collector agent and verified that your flow logs are being stored in your Cloud Object Storage bucket, you can enable Activity Insights to start analyzing them.
 
-1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Integrations > Built-in insights](https://{DomainName}/security-advisor#/integrations).
+1. In the {{site.data.keyword.cloud_notm}} console, navigate to **Security and compliance > Integrations > Built-in insights**.
 2. Toggle Activity Insights to **On**.
 
 As results come in, you can see any flagged issues on the **Insights** or **Detailed findings** pages of the UI.
