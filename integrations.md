@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-05-18"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -75,7 +75,7 @@ Partner integrations are a way to enhance security for your {{site.data.keyword.
 
 Current {{site.data.keyword.security-advisor_short}} partners include NeuVector, Twistlock, and Caveonix.
 
-Are you a partner and interested in integrating your solution with {{site.data.keyword.security-advisor_short}}? Reach out to our team by contacting *Tim Branter* at *timmy@us.ibm.com*.
+Are you a partner and interested in integrating your solution with {{site.data.keyword.security-advisor_short}}? Reach out to our team by contacting *Tim Brantner* at *timmy@us.ibm.com*.
 {: tip}
 
 ### NeuVector

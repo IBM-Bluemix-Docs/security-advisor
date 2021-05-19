@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-08"
+lastupdated: "2021-05-18"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -66,7 +66,7 @@ Before you get started with Network Insights, be sure that you have the followin
 
 Before you can analyze your network communication, {{site.data.keyword.security-advisor_short}} must have access to your network flow logs that are stored in Cloud Object Storage. To create the connection between the services, you must store the logs in a Cloud Object Storage bucket and then grant the service access to the bucket. 
 
-1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Gain insight > Configure > Built-in Insights](https://{DomainName}/security-advisor#/integrations).
+1. In the {{site.data.keyword.cloud_notm}} console, navigate to **Security and compliance > Gain insight > Configure > Built-in Insights**.
 2. Click **Connect**.
 3. Select a resource group, an instance of Cloud Object Storage, and a bucket.
 4. Optionally, provide a description.
@@ -101,7 +101,7 @@ You must have a service-to-service authorization policy between VPC and the same
 Now that you've connected your Cloud Object Storage bucket and verified that your flow logs are being stored correctly, you can enable Network Insights to start analyzing them.
 
 
-1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Integrations > Built-in insights](https://{DomainName}/security-advisor#/integrations).
+1. In the {{site.data.keyword.cloud_notm}} console, navigate to **Security and compliance > Integrations > Built-in insights**.
 2. Toggle Network Insights to **On**.
 
 As results come in, you can see any flagged issues on the **Insights** or **Detailed findings** pages of the UI.

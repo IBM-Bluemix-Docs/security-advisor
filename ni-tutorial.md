@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-12"
+lastupdated: "2021-05-18"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, vpc, flow logs, flow log alerts, findings, network insights
 
@@ -61,14 +61,14 @@ With Security Insights, formerly known as {{site.data.keyword.security-advisor_f
 
 1. A user configures a Flow Logs collector for their VPC.
 2. The collector interfaces with Cloud Object Storage and writes the logs to a bucket.
-3. The Security Insights component of the {{site.data.keyword.compliance_short}} analyzses the logs that are stored in the bucket.
+3. The Security Insights component of the {{site.data.keyword.compliance_short}} analyzes the logs that are stored in the bucket.
 4. When a finding is flagged, an alert is triggered.
 
 
 ## Before you begin
 {: #ni-before}
 
-To complete this tutorial, be sure that you have the following prerequistes and permissions.
+To complete this tutorial, be sure that you have the following prerequisites and permissions.
 
 * A Virtual Private Cloud that is able to send network information.
 * A Cloud Object Storage bucket that you are able to store your logs in.
@@ -100,7 +100,7 @@ To start analyzing your Flow Logs, you must first collect them.
 
 Now that you've started collecting your Flow Logs to Cloud Object Storage, you can enable Network Insights to start analyzing them.
 
-1. In the {{site.data.keyword.cloud_notm}} console, navigate to [Security and compliance > Integrations > Built-in insights](https://{DomainName}/security-advisor#/integrations).
+1. In the {{site.data.keyword.cloud_notm}} console, navigate to **Security and compliance > Integrations > Built-in insights**.
 2. Toggle Network Insights to **On**.
 3. Click **Connect**.
 4. Select a resource group, an instance of Cloud Object Storage, and a bucket.
