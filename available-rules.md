@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-18"
+lastupdated: "2021-05-19"
 
 keywords: available insights rules, Activity Insights, Network Insights, iks, key protect, kms, rules, app id, iam, cos, certificates, bucket, object storage,
 
@@ -89,7 +89,7 @@ IBM Cloud Databases allow you to take control of your highly sensitive data by s
 
 | Rule          |  Finding Type     |  Description     |
 |:--------------|:------------------|:-----------------|
-| `ICD service endpoints, allowlist-ips update - high risk API` | `ata-icd-high-risk` | Reports when one of the following are observed: <ol><li>A change was made to the service endpoints configuration of MongoDB, Redis, PostgreSQL, Elasticsearch or etcd instance. </li><li>The allowlist IPs were modified for MongoDB, Redis, PostgreSQL, Elasticsearch or etcd instance. </li></ol> |
+| `ICD service endpoints, allowlist-ips update - high risk API` | `ata-icd-high-risk` | Reports when one of the following are observed: <ol><li>A change was made to the service endpoints configuration of MongoDB, Redis, PostgreSQL, Elasticsearch or etcd instance. </li><li>The allowlist IPs were modified for MongoDB, Redis, PostgreSQL, ElasticSearch or etcd instance. </li></ol> |
 {: caption="Table 3. Rules that are available in the Cloud Databases rule package" caption-side="bottom"}
 
 
