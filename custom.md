@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-06-02"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -114,7 +114,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `provider_id` | Your custom security tool. |
 | `id` | An ID for the type of finding that your security tool found. |
 {: class="simple-tab-table"}
-{: caption="Table 1a. Understanding the command's general components" caption-side="top"}
+{: caption="Table 1. Understanding the command's general components" caption-side="top"}
 {: #registerfindingtable1}
 {: tab-title="General"}
 {: tab-group="register"}
@@ -127,7 +127,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `resource_type` | The type of resource. |
 | `service_name` | The name of the service. |
 {: class="simple-tab-table"}
-{: caption="Table 1b. Understanding the command's context components" caption-side="top"}
+{: caption="Table 1. Understanding the command's context components" caption-side="top"}
 {: #registerfinding2}
 {: tab-title="Context"}
 {: tab-group="register"}
@@ -138,7 +138,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `next_steps` | The steps that can be taken to remediate the issue. |
 | `url` | A URL where the details of the finding can be found. |
 {: class="simple-tab-table"}
-{: caption="Table 1c. Understanding the command's finding components" caption-side="top"}
+{: caption="Table 1. Understanding the command's finding components" caption-side="top"}
 {: #registerfinding3}
 {: tab-title="Finding"}
 {: tab-group="register"}
@@ -212,7 +212,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `provider_id` | Your custom security tool. |
 | `id` | An ID for the type of finding that your security tool found. |
 {: class="simple-tab-table"}
-{: caption="Table 2a. Understanding the command's general components" caption-side="top"}
+{: caption="Table 2. Understanding the command's general components" caption-side="top"}
 {: #postfinding1}
 {: tab-title="General"}
 {: tab-group="post"}
@@ -222,7 +222,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `id` | The ID of the security tool that reported the finding.  |
 | `title` | The title of the security tool that reported the finding. |
 {: class="simple-tab-table"}
-{: caption="Table 2b. Understanding the command's reported by components" caption-side="top"}
+{: caption="Table 2. Understanding the command's reported by components" caption-side="top"}
 {: #postfinding2}
 {: tab-title="Reported by"}
 {: tab-group="post"}
@@ -233,7 +233,7 @@ curl -X POST "https://{region}.secadvisor.cloud.ibm.com/findings/v1/<account_id>
 | `next_steps` | The steps that can be taken to remediate the issue. |
 | `title` | The title of the finding. |
 {: class="simple-tab-table"}
-{: caption="Table 2c. Understanding the command's finding components" caption-side="top"}
+{: caption="Table 2. Understanding the command's finding components" caption-side="top"}
 {: #postfinding3}
 {: tab-title="Finding"}
 {: tab-group="post"}
@@ -307,7 +307,7 @@ curl -X POST "https://<region>.secadvisor.cloud.ibm.com/findings/v1/<account_ID>
 | `short_description` | A short description that summaries the finding; no more than a couple of words. |
 | `long_description` | A longer description that contains more details about the finding. For formatting purposes, the following HTML tags are supported: `<br>, <i>, </i>, <b>, </b>, <br/>`.|
 {: class="simple-tab-table"}
-{: caption="Table 3a. Understanding the command's general components" caption-side="top"}
+{: caption="Table 3. Understanding the command's general components" caption-side="top"}
 {: #definecard1}
 {: tab-title="General"}
 {: tab-group="card"}
@@ -317,7 +317,7 @@ curl -X POST "https://<region>.secadvisor.cloud.ibm.com/findings/v1/<account_ID>
 | `id` | The ID of the security tool that reported the finding.  |
 | `title` | The title of the security tool that reported the finding. |
 {: class="simple-tab-table"}
-{: caption="Table 3b. Understanding the command's reported by components" caption-side="top"}
+{: caption="Table 3. Understanding the command's reported by components" caption-side="top"}
 {: #definecard2}
 {: tab-title="Reported by"}
 {: tab-group="card"}
@@ -332,7 +332,7 @@ curl -X POST "https://<region>.secadvisor.cloud.ibm.com/findings/v1/<account_ID>
 | `badge_image` | The image that displays in the event that there are no findings to show. |
 | `finding_note_names` | `providers/my-custom-tool/notes/my-custom-tool-findings-type` |
 {: class="simple-tab-table"}
-{: caption="Table 3c. Understanding the command's card components" caption-side="top"}
+{: caption="Table 3. Understanding the command's card components" caption-side="top"}
 {: #definecard3}
 {: tab-title="Card"}
 {: tab-group="card"}
@@ -348,7 +348,7 @@ curl -X POST "https://<region>.secadvisor.cloud.ibm.com/findings/v1/<account_ID>
 | `value_type`: `kpi_note_names` | If `kind` is `KPI`, the name of the findings that you want to see in your card, which is specified as an array. |
 | `value_type`: `text` | The text of the element type. The maximum number of characters is 22. This is a mandatory in case of `TIME_SERIES` or `BREAKDOWN`. |
 {: class="simple-tab-table"}
-{: caption="Table 3d. Understanding the command's element components" caption-side="top"}
+{: caption="Table 3. Understanding the command's element components" caption-side="top"}
 {: #definecard4}
 {: tab-title="Elements"}
 {: tab-group="card"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-06-02"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection
 
@@ -222,7 +222,7 @@ sudo -E node ./src/app.js <scan_type> -t 'IPv4 address' --updateDashboardCard 'y
 | `--excludePorts` | The port or range of ports that you want to exclude from the scan. |
 | `--updateDashboardCard` | The type of resource. |
 {: class="simple-tab-table"}
-{: caption="Table 4. Understanding the command's components" caption-side="top"}
+{: caption="Table 3. Understanding the command's components" caption-side="top"}
 {: #nmap2}
 {: tab-title="Options"}
 {: tab-group="run-scan"}
