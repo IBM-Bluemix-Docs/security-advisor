@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-03"
+lastupdated: "2021-06-04"
 
 keywords: Centralized security, security management, alerts, security risk, insights, threat detection, alerts, callback URL, compliance, standards, roles, notification channel, verify payload, public key
 
@@ -105,7 +105,7 @@ You can create up to 15 channels.
 
   Your callback URL endpoint must [1] Use the HTTPS protocol. [2] Not require HTTP headers - including authorization headers. [3] Return a `200 OK` status code to indicate that the alert is successfully delivered.
 
-8. Click **Create**. You channel is listed in the **Alerts** table.
+8. Click **Create**. Your channel is listed in the **Alerts** table.
 9. Verify that your channel is configured correctly by selecting **Test connection** in the overflow menu. A test alert is sent to your endpoint. Be sure to remove any alerts that are sent by *Security Advisor Notification Test* after you've completed your testing.
 
 Next, [verify that the payload](#verify) is sent directly from the {{site.data.keyword.compliance_short}}.
