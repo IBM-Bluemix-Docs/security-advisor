@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-06-02"
 
 keywords: Centralized security, security management, alerts, security alert, security risk, insights, threat detection
 
@@ -84,24 +84,11 @@ The service receives findings from:
 
 {{site.data.keyword.security-advisor_short}} is most helpful for security administrators. That role can take many names. The described roles might be performed by a single person or multiple people - depending on the size of your company. However, the offering is meant to address the day-to-day requirements of a chief information security officer or Security focal. Check out the following table for some example users:
 
-<table>
-  <caption>Table 1. Types of Security Administrators</caption>
-  <tr>
-    <th>Security role</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>chief information officer</td>
-    <td>A chief information officer or an Enterprise architecture team defines security and compliance policies at a high level for the entire company.</td>
-  </tr>
-  <tr>
-    <td>chief information security officer</td>
-    <td>A chief information security officer decides how to implement the policies that are set by the chief information officer for the systems that are under their control. This could include middleware, servers, or architecture that is deployed. This person would define the security governance and security policies for the organization. They would monitor security risk and define controls to meet compliance standards such as ISO, or GDPR. This person also decides the tools that their teams use.</td>
-  </tr>
-  <tr>
-    <td>Security focal</td>
-    <td>This person supports the chief information security officer and executes the needed security checks and investigates any potential risks or issues. </td>
-  </tr>
-</table>
+| Security role | Description | 
+|-----|----| 
+| chief information officer | A chief information officer or an Enterprise architecture team defines security and compliance policies at a high level for the entire company. |
+| chief information security officer | A chief information security officer decides how to implement the policies that are set by the chief information officer for the systems that are under their control. This could include middleware, servers, or architecture that is deployed. This person would define the security governance and security policies for the organization. They would monitor security risk and define controls to meet compliance standards such as ISO, or GDPR. This person also decides the tools that their teams use. |
+| Security focal | This person supports the chief information security officer and executes the needed security checks and investigates any potential risks or issues. |
+{: caption="Table 1. Types of Security Administrators" caption-side="top"}
 
 
